@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dotnet
 {
-    public partial class toast : UserControl
+    public partial class UCListePersonnel : UserControl
     {
-        public toast()
+        public UCListePersonnel()
         {
             InitializeComponent();
         }

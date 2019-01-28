@@ -29,90 +29,202 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FenetrePrincipale));
-            this.acceuil = new System.Windows.Forms.ToolStripMenuItem();
-            this.diplomes = new System.Windows.Forms.ToolStripMenuItem();
-            this.personnel = new System.Windows.Forms.ToolStripMenuItem();
-            this.baremes = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toast = new dotnet.toast();
-            this.menuStrip1.SuspendLayout();
+            this.miAcceuil = new System.Windows.Forms.ToolStripMenuItem();
+            this.miDiplome = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPersonnel = new System.Windows.Forms.ToolStripMenuItem();
+            this.miGestion = new System.Windows.Forms.ToolStripMenuItem();
+            this.msMenu = new System.Windows.Forms.MenuStrip();
+            this.miRecherche = new System.Windows.Forms.ToolStripMenuItem();
+            this.ucAccueil1 = new dotnet.UCAccueil();
+            this.ucListeDiplome1 = new dotnet.UCListeDiplome();
+            this.ucAnnee1 = new dotnet.UCAnnee();
+            this.ucPeriode1 = new dotnet.UCPeriode();
+            this.ucListeUE1 = new dotnet.UCListeUE();
+            this.ucue1 = new dotnet.UCUE();
+            this.ucListePersonnel1 = new dotnet.UCListePersonnel();
+            this.ucPersonnel1 = new dotnet.UCPersonnel();
+            this.ucGestion1 = new dotnet.UCGestion();
+            this.ucRecherche1 = new dotnet.UCRecherche();
+            this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // acceuil
+            // miAcceuil
             // 
-            this.acceuil.Image = ((System.Drawing.Image)(resources.GetObject("acceuil.Image")));
-            this.acceuil.Name = "acceuil";
-            this.acceuil.Size = new System.Drawing.Size(100, 20);
-            this.acceuil.Text = "Accueil";
-            this.acceuil.Click += new System.EventHandler(this.acceuilClick);
+            this.miAcceuil.Image = ((System.Drawing.Image)(resources.GetObject("miAcceuil.Image")));
+            this.miAcceuil.Name = "miAcceuil";
+            this.miAcceuil.Size = new System.Drawing.Size(143, 35);
+            this.miAcceuil.Text = "Accueil";
+            this.miAcceuil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.miAcceuil.Click += new System.EventHandler(this.miAcceuil_Click);
             // 
-            // diplomes
+            // miDiplome
             // 
-            this.diplomes.Name = "diplomes";
-            this.diplomes.Size = new System.Drawing.Size(100, 19);
-            this.diplomes.Text = "Diplomes";
-            this.diplomes.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.miDiplome.Image = ((System.Drawing.Image)(resources.GetObject("miDiplome.Image")));
+            this.miDiplome.Name = "miDiplome";
+            this.miDiplome.Size = new System.Drawing.Size(143, 35);
+            this.miDiplome.Text = "Diplome";
+            this.miDiplome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.miDiplome.Click += new System.EventHandler(this.miDiplome_Click);
             // 
-            // personnel
+            // miPersonnel
             // 
-            this.personnel.Name = "personnel";
-            this.personnel.Size = new System.Drawing.Size(100, 19);
-            this.personnel.Text = "Personnel";
-            this.personnel.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.miPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("miPersonnel.Image")));
+            this.miPersonnel.Name = "miPersonnel";
+            this.miPersonnel.Size = new System.Drawing.Size(143, 35);
+            this.miPersonnel.Text = "Personnel";
+            this.miPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.miPersonnel.Click += new System.EventHandler(this.miPersonnel_Click);
             // 
-            // baremes
+            // miGestion
             // 
-            this.baremes.Name = "baremes";
-            this.baremes.Size = new System.Drawing.Size(100, 19);
-            this.baremes.Text = "Gestion barêmes";
-            this.baremes.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            this.miGestion.Image = ((System.Drawing.Image)(resources.GetObject("miGestion.Image")));
+            this.miGestion.Name = "miGestion";
+            this.miGestion.Size = new System.Drawing.Size(143, 35);
+            this.miGestion.Text = "Gestion";
+            this.miGestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.miGestion.Click += new System.EventHandler(this.miGestion_Click);
             // 
-            // menuStrip1
+            // msMenu
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acceuil,
-            this.diplomes,
-            this.personnel,
-            this.baremes});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(113, 656);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.msMenu.AutoSize = false;
+            this.msMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.msMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miAcceuil,
+            this.miDiplome,
+            this.miPersonnel,
+            this.miGestion,
+            this.miRecherche});
+            this.msMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.msMenu.Location = new System.Drawing.Point(0, 0);
+            this.msMenu.Name = "msMenu";
+            this.msMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.msMenu.Size = new System.Drawing.Size(150, 682);
+            this.msMenu.TabIndex = 0;
+            this.msMenu.Text = "Menu";
             // 
-            // toast
+            // miRecherche
             // 
-            this.toast.Location = new System.Drawing.Point(212, 30);
-            this.toast.Name = "toast";
-            this.toast.Size = new System.Drawing.Size(542, 421);
-            this.toast.TabIndex = 1;
+            this.miRecherche.Image = ((System.Drawing.Image)(resources.GetObject("miRecherche.Image")));
+            this.miRecherche.Name = "miRecherche";
+            this.miRecherche.Size = new System.Drawing.Size(143, 35);
+            this.miRecherche.Text = "Recherche";
+            this.miRecherche.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.miRecherche.Click += new System.EventHandler(this.miRecherche_Click);
+            // 
+            // ucAccueil1
+            // 
+            this.ucAccueil1.Location = new System.Drawing.Point(153, 0);
+            this.ucAccueil1.Name = "ucAccueil1";
+            this.ucAccueil1.Size = new System.Drawing.Size(1112, 682);
+            this.ucAccueil1.TabIndex = 1;
+            // 
+            // ucListeDiplome1
+            // 
+            this.ucListeDiplome1.Location = new System.Drawing.Point(153, 0);
+            this.ucListeDiplome1.Name = "ucListeDiplome1";
+            this.ucListeDiplome1.Size = new System.Drawing.Size(1112, 682);
+            this.ucListeDiplome1.TabIndex = 2;
+            // 
+            // ucAnnee1
+            // 
+            this.ucAnnee1.Location = new System.Drawing.Point(153, 121);
+            this.ucAnnee1.Name = "ucAnnee1";
+            this.ucAnnee1.Size = new System.Drawing.Size(1112, 561);
+            this.ucAnnee1.TabIndex = 3;
+            // 
+            // ucPeriode1
+            // 
+            this.ucPeriode1.Location = new System.Drawing.Point(153, 121);
+            this.ucPeriode1.Name = "ucPeriode1";
+            this.ucPeriode1.Size = new System.Drawing.Size(1112, 561);
+            this.ucPeriode1.TabIndex = 4;
+            // 
+            // ucListeUE1
+            // 
+            this.ucListeUE1.Location = new System.Drawing.Point(153, 121);
+            this.ucListeUE1.Name = "ucListeUE1";
+            this.ucListeUE1.Size = new System.Drawing.Size(1112, 561);
+            this.ucListeUE1.TabIndex = 5;
+            // 
+            // ucue1
+            // 
+            this.ucue1.Location = new System.Drawing.Point(153, 121);
+            this.ucue1.Name = "ucue1";
+            this.ucue1.Size = new System.Drawing.Size(1112, 561);
+            this.ucue1.TabIndex = 6;
+            // 
+            // ucListePersonnel1
+            // 
+            this.ucListePersonnel1.Location = new System.Drawing.Point(153, 0);
+            this.ucListePersonnel1.Name = "ucListePersonnel1";
+            this.ucListePersonnel1.Size = new System.Drawing.Size(1112, 682);
+            this.ucListePersonnel1.TabIndex = 7;
+            // 
+            // ucPersonnel1
+            // 
+            this.ucPersonnel1.Location = new System.Drawing.Point(153, 121);
+            this.ucPersonnel1.Name = "ucPersonnel1";
+            this.ucPersonnel1.Size = new System.Drawing.Size(1112, 561);
+            this.ucPersonnel1.TabIndex = 8;
+            // 
+            // ucGestion1
+            // 
+            this.ucGestion1.Location = new System.Drawing.Point(153, 0);
+            this.ucGestion1.Name = "ucGestion1";
+            this.ucGestion1.Size = new System.Drawing.Size(1112, 682);
+            this.ucGestion1.TabIndex = 9;
+            // 
+            // ucRecherche1
+            // 
+            this.ucRecherche1.Location = new System.Drawing.Point(153, 0);
+            this.ucRecherche1.Name = "ucRecherche1";
+            this.ucRecherche1.Size = new System.Drawing.Size(1112, 682);
+            this.ucRecherche1.TabIndex = 10;
             // 
             // FenetrePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 656);
-            this.Controls.Add(this.toast);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.Controls.Add(this.ucRecherche1);
+            this.Controls.Add(this.ucGestion1);
+            this.Controls.Add(this.ucPersonnel1);
+            this.Controls.Add(this.ucListePersonnel1);
+            this.Controls.Add(this.ucue1);
+            this.Controls.Add(this.ucListeUE1);
+            this.Controls.Add(this.ucPeriode1);
+            this.Controls.Add(this.ucAnnee1);
+            this.Controls.Add(this.ucListeDiplome1);
+            this.Controls.Add(this.ucAccueil1);
+            this.Controls.Add(this.msMenu);
             this.Name = "FenetrePrincipale";
-            this.Text = "Form1";
+            this.Text = "Application de gestion";
             this.Load += new System.EventHandler(this.FenetrePrincipale_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.msMenu.ResumeLayout(false);
+            this.msMenu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem acceuil;
-        private System.Windows.Forms.ToolStripMenuItem diplomes;
-        private System.Windows.Forms.ToolStripMenuItem personnel;
-        private System.Windows.Forms.ToolStripMenuItem baremes;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private toast toast;
+        private System.Windows.Forms.ToolStripMenuItem miAcceuil;
+        private System.Windows.Forms.ToolStripMenuItem miDiplome;
+        private System.Windows.Forms.ToolStripMenuItem miPersonnel;
+        private System.Windows.Forms.ToolStripMenuItem miGestion;
+        private System.Windows.Forms.MenuStrip msMenu;
+        private System.Windows.Forms.ToolStripMenuItem miRecherche;
+        private UCAccueil ucAccueil1;
+        private UCListeDiplome ucListeDiplome1;
+        private UCAnnee ucAnnee1;
+        private UCPeriode ucPeriode1;
+        private UCListeUE ucListeUE1;
+        private UCUE ucue1;
+        private UCListePersonnel ucListePersonnel1;
+        private UCPersonnel ucPersonnel1;
+        private UCGestion ucGestion1;
+        private UCRecherche ucRecherche1;
     }
 }
 

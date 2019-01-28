@@ -19,28 +19,32 @@ namespace dotnet
 
         private void FenetrePrincipale_Load(object sender, EventArgs e)
         {
-
+            ucAccueil1.BringToFront();
         }
 
-        private void acceuilClick(object sender, EventArgs e)
+        private void miAcceuil_Click(object sender, EventArgs e)
         {
-
+            ucAccueil1.BringToFront();
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void miDiplome_Click(object sender, EventArgs e)
         {
-
+            ucListeDiplome1.BringToFront();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void miPersonnel_Click(object sender, EventArgs e)
         {
-
+            ucListePersonnel1.BringToFront();
         }
 
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        private void miGestion_Click(object sender, EventArgs e)
         {
-
+            ucGestion1.BringToFront();
         }
 
+        private void miRecherche_Click(object sender, EventArgs e)
+        {
+            ucRecherche1.BringToFront();
+        }
     }
 }
