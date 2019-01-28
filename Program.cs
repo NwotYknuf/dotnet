@@ -14,6 +14,7 @@ namespace dotnet
         [STAThread]
         static void Main()
         {
+            //Bonjour
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FenetrePrincipale());
