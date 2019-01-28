@@ -28,61 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FenetrePrincipale));
+            this.acceuil = new System.Windows.Forms.ToolStripMenuItem();
+            this.diplomes = new System.Windows.Forms.ToolStripMenuItem();
+            this.personnel = new System.Windows.Forms.ToolStripMenuItem();
+            this.baremes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toast = new dotnet.toast();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripMenuItem1
+            // acceuil
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(113, 19);
-            this.toolStripMenuItem1.Text = "Accueil";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.acceuil.Image = ((System.Drawing.Image)(resources.GetObject("acceuil.Image")));
+            this.acceuil.Name = "acceuil";
+            this.acceuil.Size = new System.Drawing.Size(100, 20);
+            this.acceuil.Text = "Accueil";
+            this.acceuil.Click += new System.EventHandler(this.acceuilClick);
             // 
-            // toolStripMenuItem2
+            // diplomes
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(113, 19);
-            this.toolStripMenuItem2.Text = "Diplomes";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.diplomes.Name = "diplomes";
+            this.diplomes.Size = new System.Drawing.Size(100, 19);
+            this.diplomes.Text = "Diplomes";
+            this.diplomes.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // toolStripMenuItem3
+            // personnel
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(113, 19);
-            this.toolStripMenuItem3.Text = "Professeurs";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.personnel.Name = "personnel";
+            this.personnel.Size = new System.Drawing.Size(100, 19);
+            this.personnel.Text = "Personnel";
+            this.personnel.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // toolStripMenuItem4
+            // baremes
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(113, 19);
-            this.toolStripMenuItem4.Text = "Gestion barêmes";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            this.baremes.Name = "baremes";
+            this.baremes.Size = new System.Drawing.Size(100, 19);
+            this.baremes.Text = "Gestion barêmes";
+            this.baremes.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
+            this.acceuil,
+            this.diplomes,
+            this.personnel,
+            this.baremes});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(126, 656);
+            this.menuStrip1.Size = new System.Drawing.Size(113, 656);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toast
+            // 
+            this.toast.Location = new System.Drawing.Point(212, 30);
+            this.toast.Name = "toast";
+            this.toast.Size = new System.Drawing.Size(542, 421);
+            this.toast.TabIndex = 1;
             // 
             // FenetrePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 656);
+            this.Controls.Add(this.toast);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FenetrePrincipale";
             this.Text = "Form1";
@@ -96,11 +107,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem acceuil;
+        private System.Windows.Forms.ToolStripMenuItem diplomes;
+        private System.Windows.Forms.ToolStripMenuItem personnel;
+        private System.Windows.Forms.ToolStripMenuItem baremes;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private toast toast;
     }
 }
 

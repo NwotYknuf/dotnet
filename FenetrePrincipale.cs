@@ -22,7 +22,7 @@ namespace dotnet
 
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void acceuilClick(object sender, EventArgs e)
         {
 
         }
@@ -42,14 +42,5 @@ namespace dotnet
 
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
