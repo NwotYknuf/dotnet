@@ -3,3 +3,4 @@ App.config
 */bin/*
 */Debug/*
 dotnet.csproj
+dotnet.csproj.user
