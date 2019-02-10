@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sysModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="annee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_diplome" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_ec" Type="int" />
+          <Property Name="id_personnel" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="id_type" Type="int" />
+        </EntityType>
+        <EntityType Name="diplome">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ec">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_ue" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="equivalent_td">
+          <Key>
+            <PropertyRef Name="id_categ" />
+            <PropertyRef Name="id_type_cours" />
+          </Key>
+          <Property Name="id_categ" Type="int" Nullable="false" />
+          <Property Name="id_type_cours" Type="int" Nullable="false" />
+          <Property Name="ratio" Type="double" />
+        </EntityType>
+        <EntityType Name="periode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_annee" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="personnel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_categorie" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="type_cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_periode" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="equivalent_td_ibfk_1">
+          <End Role="categorie" Type="Self.categorie" Multiplicity="1" />
+          <End Role="equivalent_td" Type="Self.equivalent_td" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="equivalent_td">
+              <PropertyRef Name="id_categ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="equivalent_td_ibfk_2">
+          <End Role="type_cours" Type="Self.type_cours" Multiplicity="1" />
+          <End Role="equivalent_td" Type="Self.equivalent_td" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_cours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="equivalent_td">
+              <PropertyRef Name="id_type_cours" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_annee">
+          <End Role="annee" Type="Self.annee" Multiplicity="0..1" />
+          <End Role="periode" Type="Self.periode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="annee">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="periode">
+              <PropertyRef Name="id_annee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_categorie">
+          <End Role="categorie" Type="Self.categorie" Multiplicity="0..1" />
+          <End Role="personnel" Type="Self.personnel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personnel">
+              <PropertyRef Name="id_categorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_diplome">
+          <End Role="diplome" Type="Self.diplome" Multiplicity="0..1" />
+          <End Role="annee" Type="Self.annee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diplome">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="annee">
+              <PropertyRef Name="id_diplome" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_ec">
+          <End Role="ec" Type="Self.ec" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ec">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_ec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_periode">
+          <End Role="periode" Type="Self.periode" Multiplicity="0..1" />
+          <End Role="ue" Type="Self.ue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periode">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ue">
+              <PropertyRef Name="id_periode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_personnel">
+          <End Role="personnel" Type="Self.personnel" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personnel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_personnel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_type">
+          <End Role="type_cours" Type="Self.type_cours" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_cours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_ue">
+          <End Role="ue" Type="Self.ue" Multiplicity="0..1" />
+          <End Role="ec" Type="Self.ec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ec">
+              <PropertyRef Name="id_ue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="sysModelStoreContainer">
+          <EntitySet Name="annee" EntityType="Self.annee" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="categorie" EntityType="Self.categorie" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="cours" EntityType="Self.cours" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="diplome" EntityType="Self.diplome" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="ec" EntityType="Self.ec" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="equivalent_td" EntityType="Self.equivalent_td" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="periode" EntityType="Self.periode" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="personnel" EntityType="Self.personnel" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="type_cours" EntityType="Self.type_cours" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="ue" EntityType="Self.ue" Schema="sys" store:Type="Tables" />
+          <AssociationSet Name="equivalent_td_ibfk_1" Association="Self.equivalent_td_ibfk_1">
+            <End Role="categorie" EntitySet="categorie" />
+            <End Role="equivalent_td" EntitySet="equivalent_td" />
+          </AssociationSet>
+          <AssociationSet Name="equivalent_td_ibfk_2" Association="Self.equivalent_td_ibfk_2">
+            <End Role="type_cours" EntitySet="type_cours" />
+            <End Role="equivalent_td" EntitySet="equivalent_td" />
+          </AssociationSet>
+          <AssociationSet Name="id_annee" Association="Self.id_annee">
+            <End Role="annee" EntitySet="annee" />
+            <End Role="periode" EntitySet="periode" />
+          </AssociationSet>
+          <AssociationSet Name="id_categorie" Association="Self.id_categorie">
+            <End Role="categorie" EntitySet="categorie" />
+            <End Role="personnel" EntitySet="personnel" />
+          </AssociationSet>
+          <AssociationSet Name="id_diplome" Association="Self.id_diplome">
+            <End Role="diplome" EntitySet="diplome" />
+            <End Role="annee" EntitySet="annee" />
+          </AssociationSet>
+          <AssociationSet Name="id_ec" Association="Self.id_ec">
+            <End Role="ec" EntitySet="ec" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_periode" Association="Self.id_periode">
+            <End Role="periode" EntitySet="periode" />
+            <End Role="ue" EntitySet="ue" />
+          </AssociationSet>
+          <AssociationSet Name="id_personnel" Association="Self.id_personnel">
+            <End Role="personnel" EntitySet="personnel" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_type" Association="Self.id_type">
+            <End Role="type_cours" EntitySet="type_cours" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_ue" Association="Self.id_ue">
+            <End Role="ue" EntitySet="ue" />
+            <End Role="ec" EntitySet="ec" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="annee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_diplome" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="periode" Relationship="Self.id_annee" FromRole="annee" ToRole="periode" />
+          <NavigationProperty Name="diplome" Relationship="Self.id_diplome" FromRole="annee" ToRole="diplome" />
+        </EntityType>
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="equivalent_td" Relationship="Self.equivalent_td_ibfk_1" FromRole="categorie" ToRole="equivalent_td" />
+          <NavigationProperty Name="personnel" Relationship="Self.id_categorie" FromRole="categorie" ToRole="personnel" />
+        </EntityType>
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_ec" Type="Int32" />
+          <Property Name="id_personnel" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_type" Type="Int32" />
+          <NavigationProperty Name="ec" Relationship="Self.id_ec" FromRole="cours" ToRole="ec" />
+          <NavigationProperty Name="personnel" Relationship="Self.id_personnel" FromRole="cours" ToRole="personnel" />
+          <NavigationProperty Name="type_cours" Relationship="Self.id_type" FromRole="cours" ToRole="type_cours" />
+        </EntityType>
+        <EntityType Name="diplome">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="annee" Relationship="Self.id_diplome" FromRole="diplome" ToRole="annee" />
+        </EntityType>
+        <EntityType Name="ec">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_ue" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="cours" Relationship="Self.id_ec" FromRole="ec" ToRole="cours" />
+          <NavigationProperty Name="ue" Relationship="Self.id_ue" FromRole="ec" ToRole="ue" />
+        </EntityType>
+        <EntityType Name="equivalent_td">
+          <Key>
+            <PropertyRef Name="id_categ" />
+            <PropertyRef Name="id_type_cours" />
+          </Key>
+          <Property Name="id_categ" Type="Int32" Nullable="false" />
+          <Property Name="id_type_cours" Type="Int32" Nullable="false" />
+          <Property Name="ratio" Type="Double" />
+          <NavigationProperty Name="categorie" Relationship="Self.equivalent_td_ibfk_1" FromRole="equivalent_td" ToRole="categorie" />
+          <NavigationProperty Name="type_cours" Relationship="Self.equivalent_td_ibfk_2" FromRole="equivalent_td" ToRole="type_cours" />
+        </EntityType>
+        <EntityType Name="periode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_annee" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="annee" Relationship="Self.id_annee" FromRole="periode" ToRole="annee" />
+          <NavigationProperty Name="ue" Relationship="Self.id_periode" FromRole="periode" ToRole="ue" />
+        </EntityType>
+        <EntityType Name="personnel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_categorie" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="categorie" Relationship="Self.id_categorie" FromRole="personnel" ToRole="categorie" />
+          <NavigationProperty Name="cours" Relationship="Self.id_personnel" FromRole="personnel" ToRole="cours" />
+        </EntityType>
+        <EntityType Name="type_cours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="cours" Relationship="Self.id_type" FromRole="type_cours" ToRole="cours" />
+          <NavigationProperty Name="equivalent_td" Relationship="Self.equivalent_td_ibfk_2" FromRole="type_cours" ToRole="equivalent_td" />
+        </EntityType>
+        <EntityType Name="ue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_periode" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ec" Relationship="Self.id_ue" FromRole="ue" ToRole="ec" />
+          <NavigationProperty Name="periode" Relationship="Self.id_periode" FromRole="ue" ToRole="periode" />
+        </EntityType>
+        <Association Name="id_annee">
+          <End Role="annee" Type="Self.annee" Multiplicity="0..1" />
+          <End Role="periode" Type="Self.periode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="annee">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="periode">
+              <PropertyRef Name="id_annee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_diplome">
+          <End Role="diplome" Type="Self.diplome" Multiplicity="0..1" />
+          <End Role="annee" Type="Self.annee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diplome">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="annee">
+              <PropertyRef Name="id_diplome" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="equivalent_td_ibfk_1">
+          <End Role="categorie" Type="Self.categorie" Multiplicity="1" />
+          <End Role="equivalent_td" Type="Self.equivalent_td" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="equivalent_td">
+              <PropertyRef Name="id_categ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_categorie">
+          <End Role="categorie" Type="Self.categorie" Multiplicity="0..1" />
+          <End Role="personnel" Type="Self.personnel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="personnel">
+              <PropertyRef Name="id_categorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_ec">
+          <End Role="ec" Type="Self.ec" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ec">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_ec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_personnel">
+          <End Role="personnel" Type="Self.personnel" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="personnel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_personnel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_type">
+          <End Role="type_cours" Type="Self.type_cours" Multiplicity="0..1" />
+          <End Role="cours" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_cours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cours">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_ue">
+          <End Role="ue" Type="Self.ue" Multiplicity="0..1" />
+          <End Role="ec" Type="Self.ec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ec">
+              <PropertyRef Name="id_ue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="equivalent_td_ibfk_2">
+          <End Role="type_cours" Type="Self.type_cours" Multiplicity="1" />
+          <End Role="equivalent_td" Type="Self.equivalent_td" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_cours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="equivalent_td">
+              <PropertyRef Name="id_type_cours" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_periode">
+          <End Role="periode" Type="Self.periode" Multiplicity="0..1" />
+          <End Role="ue" Type="Self.ue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="periode">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ue">
+              <PropertyRef Name="id_periode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="sysEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="annee" EntityType="Self.annee" />
+          <EntitySet Name="categorie" EntityType="Self.categorie" />
+          <EntitySet Name="cours" EntityType="Self.cours" />
+          <EntitySet Name="diplome" EntityType="Self.diplome" />
+          <EntitySet Name="ec" EntityType="Self.ec" />
+          <EntitySet Name="equivalent_td" EntityType="Self.equivalent_td" />
+          <EntitySet Name="periode" EntityType="Self.periode" />
+          <EntitySet Name="personnel" EntityType="Self.personnel" />
+          <EntitySet Name="type_cours" EntityType="Self.type_cours" />
+          <EntitySet Name="ue" EntityType="Self.ue" />
+          <AssociationSet Name="id_annee" Association="Self.id_annee">
+            <End Role="annee" EntitySet="annee" />
+            <End Role="periode" EntitySet="periode" />
+          </AssociationSet>
+          <AssociationSet Name="id_diplome" Association="Self.id_diplome">
+            <End Role="diplome" EntitySet="diplome" />
+            <End Role="annee" EntitySet="annee" />
+          </AssociationSet>
+          <AssociationSet Name="equivalent_td_ibfk_1" Association="Self.equivalent_td_ibfk_1">
+            <End Role="categorie" EntitySet="categorie" />
+            <End Role="equivalent_td" EntitySet="equivalent_td" />
+          </AssociationSet>
+          <AssociationSet Name="id_categorie" Association="Self.id_categorie">
+            <End Role="categorie" EntitySet="categorie" />
+            <End Role="personnel" EntitySet="personnel" />
+          </AssociationSet>
+          <AssociationSet Name="id_ec" Association="Self.id_ec">
+            <End Role="ec" EntitySet="ec" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_personnel" Association="Self.id_personnel">
+            <End Role="personnel" EntitySet="personnel" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_type" Association="Self.id_type">
+            <End Role="type_cours" EntitySet="type_cours" />
+            <End Role="cours" EntitySet="cours" />
+          </AssociationSet>
+          <AssociationSet Name="id_ue" Association="Self.id_ue">
+            <End Role="ue" EntitySet="ue" />
+            <End Role="ec" EntitySet="ec" />
+          </AssociationSet>
+          <AssociationSet Name="equivalent_td_ibfk_2" Association="Self.equivalent_td_ibfk_2">
+            <End Role="type_cours" EntitySet="type_cours" />
+            <End Role="equivalent_td" EntitySet="equivalent_td" />
+          </AssociationSet>
+          <AssociationSet Name="id_periode" Association="Self.id_periode">
+            <End Role="periode" EntitySet="periode" />
+            <End Role="ue" EntitySet="ue" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sysModelStoreContainer" CdmEntityContainer="sysEntities">
+          <EntitySetMapping Name="annee">
+            <EntityTypeMapping TypeName="sysModel.annee">
+              <MappingFragment StoreEntitySet="annee">
+                <ScalarProperty Name="id_diplome" ColumnName="id_diplome" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categorie">
+            <EntityTypeMapping TypeName="sysModel.categorie">
+              <MappingFragment StoreEntitySet="categorie">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cours">
+            <EntityTypeMapping TypeName="sysModel.cours">
+              <MappingFragment StoreEntitySet="cours">
+                <ScalarProperty Name="id_ec" ColumnName="id_ec" />
+                <ScalarProperty Name="id_personnel" ColumnName="id_personnel" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="id_type" ColumnName="id_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diplome">
+            <EntityTypeMapping TypeName="sysModel.diplome">
+              <MappingFragment StoreEntitySet="diplome">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ec">
+            <EntityTypeMapping TypeName="sysModel.ec">
+              <MappingFragment StoreEntitySet="ec">
+                <ScalarProperty Name="id_ue" ColumnName="id_ue" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="equivalent_td">
+            <EntityTypeMapping TypeName="sysModel.equivalent_td">
+              <MappingFragment StoreEntitySet="equivalent_td">
+                <ScalarProperty Name="id_categ" ColumnName="id_categ" />
+                <ScalarProperty Name="id_type_cours" ColumnName="id_type_cours" />
+                <ScalarProperty Name="ratio" ColumnName="ratio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="periode">
+            <EntityTypeMapping TypeName="sysModel.periode">
+              <MappingFragment StoreEntitySet="periode">
+                <ScalarProperty Name="id_annee" ColumnName="id_annee" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personnel">
+            <EntityTypeMapping TypeName="sysModel.personnel">
+              <MappingFragment StoreEntitySet="personnel">
+                <ScalarProperty Name="id_categorie" ColumnName="id_categorie" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="type_cours">
+            <EntityTypeMapping TypeName="sysModel.type_cours">
+              <MappingFragment StoreEntitySet="type_cours">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ue">
+            <EntityTypeMapping TypeName="sysModel.ue">
+              <MappingFragment StoreEntitySet="ue">
+                <ScalarProperty Name="id_periode" ColumnName="id_periode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
