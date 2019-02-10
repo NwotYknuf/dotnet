@@ -35,16 +35,17 @@
             this.miGestion = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.miRecherche = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucAccueil1 = new dotnet.UCAccueil();
-            this.ucListeDiplome1 = new dotnet.UCListeDiplome();
-            this.ucAnnee1 = new dotnet.UCAnnee();
-            this.ucPeriode1 = new dotnet.UCPeriode();
-            this.ucListeUE1 = new dotnet.UCListeUE();
-            this.ucue1 = new dotnet.UCUE();
-            this.ucListePersonnel1 = new dotnet.UCListePersonnel();
-            this.ucPersonnel1 = new dotnet.UCPersonnel();
-            this.ucGestion1 = new dotnet.UCGestion();
+            this.label1 = new System.Windows.Forms.Label();
             this.ucRecherche1 = new dotnet.UCRecherche();
+            this.ucGestion1 = new dotnet.UCGestion();
+            this.ucPersonnel1 = new dotnet.UCPersonnel();
+            this.ucListePersonnel1 = new dotnet.UCListePersonnel();
+            this.ucue1 = new dotnet.UCUE();
+            this.ucListeUE1 = new dotnet.UCListeUE();
+            this.ucPeriode1 = new dotnet.UCPeriode();
+            this.ucAnnee1 = new dotnet.UCAnnee();
+            this.ucListeDiplome1 = new dotnet.UCListeDiplome();
+            this.ucAccueil1 = new dotnet.UCAccueil();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,68 +113,14 @@
             this.miRecherche.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miRecherche.Click += new System.EventHandler(this.miRecherche_Click);
             // 
-            // ucAccueil1
+            // label1
             // 
-            this.ucAccueil1.Location = new System.Drawing.Point(153, 0);
-            this.ucAccueil1.Name = "ucAccueil1";
-            this.ucAccueil1.Size = new System.Drawing.Size(1112, 682);
-            this.ucAccueil1.TabIndex = 1;
-            // 
-            // ucListeDiplome1
-            // 
-            this.ucListeDiplome1.Location = new System.Drawing.Point(153, 0);
-            this.ucListeDiplome1.Name = "ucListeDiplome1";
-            this.ucListeDiplome1.Size = new System.Drawing.Size(1112, 682);
-            this.ucListeDiplome1.TabIndex = 2;
-            // 
-            // ucAnnee1
-            // 
-            this.ucAnnee1.Location = new System.Drawing.Point(153, 121);
-            this.ucAnnee1.Name = "ucAnnee1";
-            this.ucAnnee1.Size = new System.Drawing.Size(1112, 561);
-            this.ucAnnee1.TabIndex = 3;
-            // 
-            // ucPeriode1
-            // 
-            this.ucPeriode1.Location = new System.Drawing.Point(153, 121);
-            this.ucPeriode1.Name = "ucPeriode1";
-            this.ucPeriode1.Size = new System.Drawing.Size(1112, 561);
-            this.ucPeriode1.TabIndex = 4;
-            // 
-            // ucListeUE1
-            // 
-            this.ucListeUE1.Location = new System.Drawing.Point(153, 121);
-            this.ucListeUE1.Name = "ucListeUE1";
-            this.ucListeUE1.Size = new System.Drawing.Size(1112, 561);
-            this.ucListeUE1.TabIndex = 5;
-            // 
-            // ucue1
-            // 
-            this.ucue1.Location = new System.Drawing.Point(153, 121);
-            this.ucue1.Name = "ucue1";
-            this.ucue1.Size = new System.Drawing.Size(1112, 561);
-            this.ucue1.TabIndex = 6;
-            // 
-            // ucListePersonnel1
-            // 
-            this.ucListePersonnel1.Location = new System.Drawing.Point(153, 0);
-            this.ucListePersonnel1.Name = "ucListePersonnel1";
-            this.ucListePersonnel1.Size = new System.Drawing.Size(1112, 682);
-            this.ucListePersonnel1.TabIndex = 7;
-            // 
-            // ucPersonnel1
-            // 
-            this.ucPersonnel1.Location = new System.Drawing.Point(153, 121);
-            this.ucPersonnel1.Name = "ucPersonnel1";
-            this.ucPersonnel1.Size = new System.Drawing.Size(1112, 561);
-            this.ucPersonnel1.TabIndex = 8;
-            // 
-            // ucGestion1
-            // 
-            this.ucGestion1.Location = new System.Drawing.Point(153, 0);
-            this.ucGestion1.Name = "ucGestion1";
-            this.ucGestion1.Size = new System.Drawing.Size(1112, 682);
-            this.ucGestion1.TabIndex = 9;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 304);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
             // 
             // ucRecherche1
             // 
@@ -182,11 +129,75 @@
             this.ucRecherche1.Size = new System.Drawing.Size(1112, 682);
             this.ucRecherche1.TabIndex = 10;
             // 
+            // ucGestion1
+            // 
+            this.ucGestion1.Location = new System.Drawing.Point(153, 0);
+            this.ucGestion1.Name = "ucGestion1";
+            this.ucGestion1.Size = new System.Drawing.Size(1112, 682);
+            this.ucGestion1.TabIndex = 9;
+            // 
+            // ucPersonnel1
+            // 
+            this.ucPersonnel1.Location = new System.Drawing.Point(153, 121);
+            this.ucPersonnel1.Name = "ucPersonnel1";
+            this.ucPersonnel1.Size = new System.Drawing.Size(1112, 561);
+            this.ucPersonnel1.TabIndex = 8;
+            // 
+            // ucListePersonnel1
+            // 
+            this.ucListePersonnel1.Location = new System.Drawing.Point(153, 0);
+            this.ucListePersonnel1.Name = "ucListePersonnel1";
+            this.ucListePersonnel1.Size = new System.Drawing.Size(1112, 682);
+            this.ucListePersonnel1.TabIndex = 7;
+            // 
+            // ucue1
+            // 
+            this.ucue1.Location = new System.Drawing.Point(153, 121);
+            this.ucue1.Name = "ucue1";
+            this.ucue1.Size = new System.Drawing.Size(1112, 561);
+            this.ucue1.TabIndex = 6;
+            // 
+            // ucListeUE1
+            // 
+            this.ucListeUE1.Location = new System.Drawing.Point(153, 121);
+            this.ucListeUE1.Name = "ucListeUE1";
+            this.ucListeUE1.Size = new System.Drawing.Size(1112, 561);
+            this.ucListeUE1.TabIndex = 5;
+            // 
+            // ucPeriode1
+            // 
+            this.ucPeriode1.Location = new System.Drawing.Point(153, 121);
+            this.ucPeriode1.Name = "ucPeriode1";
+            this.ucPeriode1.Size = new System.Drawing.Size(1112, 561);
+            this.ucPeriode1.TabIndex = 4;
+            // 
+            // ucAnnee1
+            // 
+            this.ucAnnee1.Location = new System.Drawing.Point(153, 121);
+            this.ucAnnee1.Name = "ucAnnee1";
+            this.ucAnnee1.Size = new System.Drawing.Size(1112, 561);
+            this.ucAnnee1.TabIndex = 3;
+            // 
+            // ucListeDiplome1
+            // 
+            this.ucListeDiplome1.Location = new System.Drawing.Point(153, 0);
+            this.ucListeDiplome1.Name = "ucListeDiplome1";
+            this.ucListeDiplome1.Size = new System.Drawing.Size(1112, 682);
+            this.ucListeDiplome1.TabIndex = 2;
+            // 
+            // ucAccueil1
+            // 
+            this.ucAccueil1.Location = new System.Drawing.Point(153, 0);
+            this.ucAccueil1.Name = "ucAccueil1";
+            this.ucAccueil1.Size = new System.Drawing.Size(1112, 682);
+            this.ucAccueil1.TabIndex = 1;
+            // 
             // FenetrePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ucRecherche1);
             this.Controls.Add(this.ucGestion1);
             this.Controls.Add(this.ucPersonnel1);
@@ -204,6 +215,7 @@
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,6 +237,7 @@
         private UCPersonnel ucPersonnel1;
         private UCGestion ucGestion1;
         private UCRecherche ucRecherche1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
