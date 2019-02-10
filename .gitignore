@@ -4,3 +4,4 @@ App.config
 */Debug/*
 dotnet.csproj
 dotnet.csproj.user
+packages.config
