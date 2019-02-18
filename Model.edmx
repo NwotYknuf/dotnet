@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="sysModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="sysModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="annee">
           <Key>
             <PropertyRef Name="id" />
@@ -29,6 +29,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_type" Type="int" />
+          <Property Name="volume_horraire" Type="int" />
         </EntityType>
         <EntityType Name="diplome">
           <Key>
@@ -36,6 +37,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="5000" />
         </EntityType>
         <EntityType Name="ec">
           <Key>
@@ -69,6 +71,10 @@
           <Property Name="id_categorie" Type="int" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="prenom" Type="varchar" MaxLength="100" />
+          <Property Name="telephone" Type="varchar" MaxLength="15" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="adresse" Type="varchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="type_cours">
           <Key>
@@ -257,8 +263,7 @@
             <End Role="ec" EntitySet="ec" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="sysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -293,6 +298,7 @@
           <NavigationProperty Name="ec" Relationship="Self.id_ec" FromRole="cours" ToRole="ec" />
           <NavigationProperty Name="personnel" Relationship="Self.id_personnel" FromRole="cours" ToRole="personnel" />
           <NavigationProperty Name="type_cours" Relationship="Self.id_type" FromRole="cours" ToRole="type_cours" />
+          <Property Name="volume_horraire" Type="Int32" />
         </EntityType>
         <EntityType Name="diplome">
           <Key>
@@ -301,6 +307,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="annee" Relationship="Self.id_diplome" FromRole="diplome" ToRole="annee" />
+          <Property Name="description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ec">
           <Key>
@@ -342,6 +349,10 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="categorie" Relationship="Self.id_categorie" FromRole="personnel" ToRole="categorie" />
           <NavigationProperty Name="cours" Relationship="Self.id_personnel" FromRole="personnel" ToRole="cours" />
+          <Property Name="prenom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="adresse" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="type_cours">
           <Key>
@@ -560,6 +571,7 @@
           <EntitySetMapping Name="cours">
             <EntityTypeMapping TypeName="sysModel.cours">
               <MappingFragment StoreEntitySet="cours">
+                <ScalarProperty Name="volume_horraire" ColumnName="volume_horraire" />
                 <ScalarProperty Name="id_ec" ColumnName="id_ec" />
                 <ScalarProperty Name="id_personnel" ColumnName="id_personnel" />
                 <ScalarProperty Name="id" ColumnName="id" />
@@ -571,6 +583,7 @@
           <EntitySetMapping Name="diplome">
             <EntityTypeMapping TypeName="sysModel.diplome">
               <MappingFragment StoreEntitySet="diplome">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
               </MappingFragment>
@@ -606,6 +619,10 @@
           <EntitySetMapping Name="personnel">
             <EntityTypeMapping TypeName="sysModel.personnel">
               <MappingFragment StoreEntitySet="personnel">
+                <ScalarProperty Name="adresse" ColumnName="adresse" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
                 <ScalarProperty Name="id_categorie" ColumnName="id_categorie" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />

@@ -19,6 +19,7 @@ namespace dotnet
         public int id { get; set; }
         public string nom { get; set; }
         public Nullable<int> id_type { get; set; }
+        public Nullable<int> volume_horraire { get; set; }
     
         public virtual ec ec { get; set; }
         public virtual personnel personnel { get; set; }

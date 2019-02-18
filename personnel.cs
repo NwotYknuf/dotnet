@@ -23,6 +23,10 @@ namespace dotnet
         public Nullable<int> id_categorie { get; set; }
         public int id { get; set; }
         public string nom { get; set; }
+        public string prenom { get; set; }
+        public string telephone { get; set; }
+        public string email { get; set; }
+        public string adresse { get; set; }
     
         public virtual categorie categorie { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
