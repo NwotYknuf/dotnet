@@ -15,12 +15,12 @@ namespace dotnet
         public FenetrePrincipale()
         {
             InitializeComponent();
-
+            /*
             using(sysEntities db = new sysEntities())
             {
                 personnel p = db.personnel.FirstOrDefault<personnel>();
                 label1.Text = p.nom;
-            }
+            }*/
 
         }
 
