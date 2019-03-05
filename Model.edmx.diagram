@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="df1a82c9e18149acb87a41e9b25fb55b" Name="Diagram1">
-        <EntityTypeShape EntityType="sysModel.annee" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.categorie" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.cours" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.diplome" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.ec" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.equivalent_td" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.periode" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.personnel" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.annee" Width="1.5" PointX="11.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.categorie" Width="1.5" PointX="3.125" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.cours" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.diplome" Width="1.5" PointX="13.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.ec" Width="1.5" PointX="5.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.equivalent_td" Width="1.5" PointX="0.875" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.periode" Width="1.5" PointX="9.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.personnel" Width="1.5" PointX="5.5" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="sysModel.type_cours" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sysModel.ue" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sysModel.ue" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="sysModel.id_annee" ManuallyRouted="false" />
         <AssociationConnector Association="sysModel.id_diplome" ManuallyRouted="false" />
         <AssociationConnector Association="sysModel.equivalent_td_ibfk_1" ManuallyRouted="false" />

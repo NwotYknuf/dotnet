@@ -43,7 +43,7 @@
             this.ucListeUE1 = new dotnet.UCListeUE();
             this.ucPeriode1 = new dotnet.UCPeriode();
             this.ucAnnee1 = new dotnet.UCAnnee();
-            this.ucListeDiplome1 = new dotnet.UCListeDiplome();
+            this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
             this.ucAccueil1 = new dotnet.UCAccueil();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
@@ -216,7 +216,7 @@
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem miRecherche;
         private UCAccueil ucAccueil1;
-        private UCListeDiplome ucListeDiplome1;
+        private UC_OngletDiplomes ucListeDiplome1;
         private UCAnnee ucAnnee1;
         private UCPeriode ucPeriode1;
         private UCListeUE ucListeUE1;
