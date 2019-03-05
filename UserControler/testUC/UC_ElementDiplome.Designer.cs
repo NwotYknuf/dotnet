@@ -36,6 +36,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // label1
             // 
