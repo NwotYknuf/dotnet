@@ -13,7 +13,7 @@ namespace dotnet.UserControler.testUC
     public partial class UC_Element : UserControl
     {
 
-        private UC_OngletDiplomes _cadre;
+        protected UC_OngletDiplomes _cadre;
 
         public UC_Element()
         {
