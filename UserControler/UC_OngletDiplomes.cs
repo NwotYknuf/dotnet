@@ -20,11 +20,12 @@ namespace dotnet
 
             using (sysEntities db = new sysEntities())
             {
-                List<diplome> diplomes = db.diplome.ToList();
+                var diplomes = db.diplome;
                 
                 foreach(diplome d in diplomes){
                     uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
                 }
+
                 uC_Affichage1.updateAffichage();
 
 

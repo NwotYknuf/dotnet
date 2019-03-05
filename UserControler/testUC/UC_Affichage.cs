@@ -32,11 +32,11 @@ namespace dotnet.UserControler.testUC
 
         public void updateAffichage()
         {
-            groupBox1.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
 
             foreach(UC_Element e in elements)
             {
-                groupBox1.Controls.Add(e);
+                flowLayoutPanel1.Controls.Add(e);
             }
 
         }
