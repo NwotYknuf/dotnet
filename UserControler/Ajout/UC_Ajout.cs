@@ -16,7 +16,7 @@ namespace dotnet {
             InitializeComponent();
         }
 
-        public UC_Ajout(UC_OngletDiplomes cadre) {
+        public UC_Ajout(UC_OngletDiplomes cadre) : this() {
             this._cadre = cadre;
         }
 

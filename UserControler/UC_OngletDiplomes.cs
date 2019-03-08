@@ -22,7 +22,7 @@ namespace dotnet {
             //TODO : Remplacer cette section par un truc plus propre
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutDiplome();
+            uC_Ajout1 = new UC_AjoutDiplome(this);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
