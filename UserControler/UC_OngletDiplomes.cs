@@ -50,5 +50,9 @@ namespace dotnet {
         public void afficheAnnee(annee a) {
 
         }
+
+        private void bFilAriane2_Click(object sender, EventArgs e) {
+
+        }
     }
 }
