@@ -8,27 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet
-{
-    public partial class UC_ElementDiplome : UC_Element
-    {
+namespace dotnet {
+    public partial class UC_ElementDiplome : UC_Element {
         private diplome _diplome;
 
-        public UC_ElementDiplome()
-        {
+        public UC_ElementDiplome() {
             InitializeComponent();
         }
 
-        public UC_ElementDiplome(UC_OngletDiplomes cadre, diplome d) : base(cadre)
-        {
+        public UC_ElementDiplome(UC_OngletDiplomes cadre, diplome d) : base(cadre) {
             _diplome = d;
             InitializeComponent();
             groupBox1.Text = d.nom;
             label1.Text = d.description;
         }
 
-        private void panel1_Click(object sender, EventArgs e)
-        {
+        private void panel1_Click(object sender, EventArgs e) {
             _cadre.afficheDiplome(_diplome);
 
             //Changer l'UC ajout en accord

@@ -8,20 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet
-{
-    public partial class UC_Element : UserControl
-    {
+namespace dotnet {
+    public partial class UC_Element : UserControl {
 
         protected UC_OngletDiplomes _cadre;
 
-        public UC_Element()
-        {
+        public UC_Element() {
             InitializeComponent();
         }
 
-        public UC_Element(UC_OngletDiplomes cadre)
-        {
+        public UC_Element(UC_OngletDiplomes cadre) {
             InitializeComponent();
             this._cadre = cadre;
         }

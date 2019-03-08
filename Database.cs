@@ -4,16 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotnet
-{
-    public class Database : sysEntities
-    {
+namespace dotnet {
+    public class Database : sysEntities {
         private static Database _instance = null;
 
         public static Database instance {
             get {
-                if (_instance == null)
-                {
+                if (_instance == null) {
                     _instance = new Database();
                 }
                 return _instance;
@@ -21,6 +18,6 @@ namespace dotnet
         }
 
         private Database() : base() { }
-        
+
     }
 }

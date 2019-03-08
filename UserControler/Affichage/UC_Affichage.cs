@@ -8,34 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet
-{
-    public partial class UC_Affichage : UserControl
-    {
-        private List<UC_Element> elements;          
+namespace dotnet {
+    public partial class UC_Affichage : UserControl {
+        private List<UC_Element> elements;
 
-        public UC_Affichage()
-        {
+        public UC_Affichage() {
             InitializeComponent();
             elements = new List<UC_Element>();
         }
 
-        public void addElement(UC_Element element)
-        {
+        public void addElement(UC_Element element) {
             elements.Add(element);
         }
 
-        public void clearElements()
-        {
+        public void clearElements() {
             elements.Clear();
         }
 
-        public void updateAffichage()
-        {
+        public void updateAffichage() {
             flowLayoutPanel1.Controls.Clear();
 
-            foreach(UC_Element e in elements)
-            {
+            foreach (UC_Element e in elements) {
                 flowLayoutPanel1.Controls.Add(e);
             }
 
