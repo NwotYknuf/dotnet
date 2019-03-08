@@ -18,18 +18,8 @@ namespace dotnet
         {
             InitializeComponent();
 
-            using (sysEntities db = new sysEntities())
-            {
-                var diplomes = db.diplome;
-                
-                foreach(diplome d in diplomes){
-                    uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
-                }
-
-                uC_Affichage1.updateAffichage();
-
-
-            }
+            afficheRacine();
+            
             
         }
 
@@ -37,7 +27,27 @@ namespace dotnet
 
         public void afficheRacine()
         {
-            //Afficher les diplomes
+            //TODO : Remplacer cette section par un truc plus propre
+            Point loc  = uC_Ajout1.Location;
+            uC_Ajout1.Dispose();
+            uC_Ajout1 = new UC_AjoutDiplome();
+            uC_Ajout1.Location = loc;
+            Controls.Add(uC_Ajout1);
+
+            uC_Affichage1.clearElements();
+
+            using (sysEntities db = new sysEntities())
+            {
+                var diplomes = db.diplome;
+
+                foreach (diplome d in diplomes)
+                {
+                    uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
+                }
+
+                uC_Affichage1.updateAffichage();
+                
+            }
         }
 
         public void afficheDiplome(diplome d)
