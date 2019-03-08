@@ -1,4 +1,4 @@
-﻿namespace dotnet.UserControler.testUC
+﻿namespace dotnet
 {
     partial class UC_Ajout
     {

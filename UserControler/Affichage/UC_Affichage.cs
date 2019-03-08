@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.testUC
+namespace dotnet
 {
     public partial class UC_Affichage : UserControl
     {

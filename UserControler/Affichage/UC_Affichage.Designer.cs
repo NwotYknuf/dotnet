@@ -1,6 +1,6 @@
-﻿namespace dotnet.UserControler.testUC
+﻿namespace dotnet
 {
-    partial class UC_Element
+    partial class UC_Affichage
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -29,34 +29,37 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(539, 150);
+            this.groupBox1.Size = new System.Drawing.Size(605, 360);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // panel1
+            // flowLayoutPanel1
             // 
-            this.panel1.Location = new System.Drawing.Point(7, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 124);
-            this.panel1.TabIndex = 0;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 37);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(571, 306);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
-            // UC_Element
+            // UC_Affichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "UC_Element";
-            this.Size = new System.Drawing.Size(539, 150);
+            this.Name = "UC_Affichage";
+            this.Size = new System.Drawing.Size(609, 364);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -64,7 +67,7 @@
 
         #endregion
 
-        protected System.Windows.Forms.GroupBox groupBox1;
-        protected System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

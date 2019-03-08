@@ -33,9 +33,9 @@
             this.bFilAriane2 = new System.Windows.Forms.Button();
             this.bFilAriane3 = new System.Windows.Forms.Button();
             this.bFilAriane4 = new System.Windows.Forms.Button();
-            this.uC_Ajout1 = new dotnet.UserControler.testUC.UC_Ajout();
+            this.uC_Ajout1 = new UC_Ajout();
             this.ucAccueil1 = new dotnet.UCAccueil();
-            this.uC_Affichage1 = new dotnet.UserControler.testUC.UC_Affichage();
+            this.uC_Affichage1 = new UC_Affichage();
             this.SuspendLayout();
             // 
             // lTitre
@@ -135,8 +135,8 @@
         private System.Windows.Forms.Button bFilAriane2;
         private System.Windows.Forms.Button bFilAriane3;
         private System.Windows.Forms.Button bFilAriane4;
-        private UserControler.testUC.UC_Ajout uC_Ajout1;
+        private UC_Ajout uC_Ajout1;
         private UCAccueil ucAccueil1;
-        private UserControler.testUC.UC_Affichage uC_Affichage1;
+        private UC_Affichage uC_Affichage1;
     }
 }

@@ -8,22 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.testUC
+namespace dotnet
 {
-    public partial class UC_Element : UserControl
+    public partial class UC_AjoutDiplome : UC_Ajout
     {
-
-        protected UC_OngletDiplomes _cadre;
-
-        public UC_Element()
+        public UC_AjoutDiplome()
         {
             InitializeComponent();
+            this.groupBox.Text = "Ajouter un Diplome";
         }
 
-        public UC_Element(UC_OngletDiplomes cadre)
+        private void bCreer_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this._cadre = cadre;
+            //ajouter un 
         }
     }
 }
