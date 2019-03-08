@@ -34,36 +34,27 @@ namespace dotnet
             Controls.Add(uC_Ajout1);
 
             uC_Affichage1.clearElements();
-
-            using (sysEntities db = new sysEntities())
+            
+            var diplomes = Database.instance.diplome;
+            foreach (diplome d in diplomes)
             {
-                var diplomes = db.diplome;
-
-                foreach (diplome d in diplomes)
-                {
-                    uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
-                }
-
-                uC_Affichage1.updateAffichage();
-                
+                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
             }
+            uC_Affichage1.updateAffichage();
+                
         }
 
         public void afficheDiplome(diplome d)
         {
             lTitre.Text = "Annees";
-
-            using (sysEntities db = new sysEntities())
+            
+            foreach (annee a in d.annee)
             {
-
-                var annees = db.annee.Where<annee>(a => a.diplome == d);
-                foreach (annee a in annees)
-                {
-                    // uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
-                }
+                //uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
+            }
             }
             // changer l'UC ajout
-        }
+        
 
         public void afficheAnnee(annee a)
         {
