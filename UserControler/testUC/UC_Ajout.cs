@@ -12,7 +12,7 @@ namespace dotnet.UserControler.testUC
 {
     public partial class UC_Ajout : UserControl
     {
-        UC_OngletDiplomes _cadre;
+        protected UC_OngletDiplomes _cadre;
 
         public UC_Ajout()
         {
@@ -26,7 +26,7 @@ namespace dotnet.UserControler.testUC
 
         public UC_Ajout(string titre)
         {
-            groupBox1.Text = titre;
+            groupBox.Text = titre;
         }
     }
 }

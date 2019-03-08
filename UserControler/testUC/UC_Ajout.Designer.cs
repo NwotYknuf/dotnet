@@ -28,47 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bCreerAnnee = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.bCreer = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox
             // 
-            this.groupBox1.Controls.Add(this.bCreerAnnee);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(569, 150);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox.Controls.Add(this.bCreer);
+            this.groupBox.Controls.Add(this.panel);
+            this.groupBox.Location = new System.Drawing.Point(0, 0);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(569, 150);
+            this.groupBox.TabIndex = 0;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "groupBox1";
             // 
-            // bCreerAnnee
+            // bCreer
             // 
-            this.bCreerAnnee.AutoSize = true;
-            this.bCreerAnnee.Location = new System.Drawing.Point(446, 118);
-            this.bCreerAnnee.Name = "bCreerAnnee";
-            this.bCreerAnnee.Size = new System.Drawing.Size(117, 26);
-            this.bCreerAnnee.TabIndex = 2;
-            this.bCreerAnnee.Text = "Créer l\'année";
-            this.bCreerAnnee.UseVisualStyleBackColor = true;
+            this.bCreer.AutoSize = true;
+            this.bCreer.Location = new System.Drawing.Point(446, 118);
+            this.bCreer.Name = "bCreer";
+            this.bCreer.Size = new System.Drawing.Size(117, 26);
+            this.bCreer.TabIndex = 2;
+            this.bCreer.Text = "Créer";
+            this.bCreer.UseVisualStyleBackColor = true;
+            // 
+            // panel
+            // 
+            this.panel.Location = new System.Drawing.Point(7, 20);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(556, 124);
+            this.panel.TabIndex = 3;
             // 
             // UC_Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox);
             this.Name = "UC_Ajout";
             this.Size = new System.Drawing.Size(569, 150);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button bCreerAnnee;
+        protected System.Windows.Forms.GroupBox groupBox;
+        protected System.Windows.Forms.Button bCreer;
+        protected System.Windows.Forms.Panel panel;
     }
 }
