@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dotnet
 {
-    public partial class UCRecherche : UserControl
+    public partial class UC_OngletAccueil : UserControl
     {
-        public UCRecherche()
+        public UC_OngletAccueil()
         {
             InitializeComponent();
         }

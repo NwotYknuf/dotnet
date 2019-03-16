@@ -34,23 +34,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox
             // 
             this.groupBox.Controls.Add(this.textBoxNom);
             this.groupBox.Controls.Add(this.label3);
-            this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Controls.Add(this.textBoxDesc);
+            this.groupBox.Text = "Ajouter un diplôme : ";
+            this.groupBox.Controls.SetChildIndex(this.panel, 0);
             this.groupBox.Controls.SetChildIndex(this.bCreer, 0);
-            this.groupBox.Controls.SetChildIndex(this.textBoxDesc, 0);
-            this.groupBox.Controls.SetChildIndex(this.label2, 0);
             this.groupBox.Controls.SetChildIndex(this.label3, 0);
             this.groupBox.Controls.SetChildIndex(this.textBoxNom, 0);
             // 
             // bCreer
             // 
+            this.bCreer.Text = "Créer un diplôme";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.label2);
+            this.panel.Controls.Add(this.textBoxDesc);
             // 
             // label1
             // 
@@ -63,7 +68,7 @@
             // 
             // textBoxDesc
             // 
-            this.textBoxDesc.Location = new System.Drawing.Point(332, 19);
+            this.textBoxDesc.Location = new System.Drawing.Point(104, 21);
             this.textBoxDesc.Name = "textBoxDesc";
             this.textBoxDesc.Size = new System.Drawing.Size(231, 89);
             this.textBoxDesc.TabIndex = 3;
@@ -72,24 +77,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(266, 22);
+            this.label2.Location = new System.Drawing.Point(17, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Description";
+            this.label2.Text = "Description : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Nom du diplome";
+            this.label3.Text = "Nom : ";
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(113, 19);
+            this.textBoxNom.Location = new System.Drawing.Point(111, 19);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(100, 20);
             this.textBoxNom.TabIndex = 6;
@@ -101,6 +106,8 @@
             this.Name = "UC_AjoutDiplome";
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }

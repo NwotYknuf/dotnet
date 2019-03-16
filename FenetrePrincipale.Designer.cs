@@ -35,16 +35,16 @@
             this.miGestion = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.miRecherche = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucRecherche1 = new dotnet.UCRecherche();
-            this.ucGestion1 = new dotnet.UCGestion();
+            this.ucRecherche1 = new dotnet.UC_OngletRecherche();
+            this.ucGestion1 = new dotnet.UC_OngletGestion();
             this.ucPersonnel1 = new dotnet.UCPersonnel();
-            this.ucListePersonnel1 = new dotnet.UCListePersonnel();
+            this.ucListePersonnel1 = new dotnet.UC_OngletPersonnel();
             this.ucue1 = new dotnet.UCUE();
             this.ucListeUE1 = new dotnet.UCListeUE();
             this.ucPeriode1 = new dotnet.UCPeriode();
             this.ucAnnee1 = new dotnet.UCAnnee();
             this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
-            this.ucAccueil1 = new dotnet.UCAccueil();
+            this.ucAccueil1 = new dotnet.UC_OngletAccueil();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,16 +215,16 @@
         private System.Windows.Forms.ToolStripMenuItem miGestion;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem miRecherche;
-        private UCAccueil ucAccueil1;
+        private UC_OngletAccueil ucAccueil1;
         private UC_OngletDiplomes ucListeDiplome1;
         private UCAnnee ucAnnee1;
         private UCPeriode ucPeriode1;
         private UCListeUE ucListeUE1;
         private UCUE ucue1;
-        private UCListePersonnel ucListePersonnel1;
+        private UC_OngletPersonnel ucListePersonnel1;
         private UCPersonnel ucPersonnel1;
-        private UCGestion ucGestion1;
-        private UCRecherche ucRecherche1;
+        private UC_OngletGestion ucGestion1;
+        private UC_OngletRecherche ucRecherche1;
     }
 }
 

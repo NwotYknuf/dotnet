@@ -30,7 +30,7 @@
         {
             this.lTitre = new System.Windows.Forms.Label();
             this.uC_Affichage1 = new dotnet.UC_Affichage();
-            this.ucAccueil1 = new dotnet.UCAccueil();
+            this.ucAccueil1 = new dotnet.UC_OngletAccueil();
             this.uC_Ajout1 = new dotnet.UC_Ajout();
             this.filArianne1 = new dotnet.FilArianne();
             this.SuspendLayout();
@@ -93,7 +93,7 @@
 
         private System.Windows.Forms.Label lTitre;
         private UC_Ajout uC_Ajout1;
-        private UCAccueil ucAccueil1;
+        private UC_OngletAccueil ucAccueil1;
         private UC_Affichage uC_Affichage1;
         private FilArianne filArianne1;
     }

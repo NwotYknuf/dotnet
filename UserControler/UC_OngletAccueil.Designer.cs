@@ -1,6 +1,6 @@
 ﻿namespace dotnet
 {
-    partial class UCAccueil
+    partial class UC_OngletAccueil
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

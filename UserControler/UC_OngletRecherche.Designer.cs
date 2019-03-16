@@ -1,6 +1,6 @@
 ﻿namespace dotnet
 {
-    partial class UCRecherche
+    partial class UC_OngletRecherche
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

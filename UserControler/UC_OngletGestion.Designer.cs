@@ -1,6 +1,6 @@
 ﻿namespace dotnet
 {
-    partial class UCGestion
+    partial class UC_OngletGestion
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

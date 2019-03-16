@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dotnet
 {
-    public partial class UCListePersonnel : UserControl
+    public partial class UC_OngletGestion : UserControl
     {
-        public UCListePersonnel()
+        public UC_OngletGestion()
         {
             InitializeComponent();
         }

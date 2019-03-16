@@ -1,6 +1,6 @@
 ﻿namespace dotnet
 {
-    partial class UCListePersonnel
+    partial class UC_OngletPersonnel
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
