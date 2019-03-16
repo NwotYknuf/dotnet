@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.lTitre = new System.Windows.Forms.Label();
+            this.filArianne1 = new dotnet.FilArianne();
             this.uC_Affichage1 = new dotnet.UC_Affichage();
             this.ucAccueil1 = new dotnet.UC_OngletAccueil();
             this.uC_Ajout1 = new dotnet.UC_Ajout();
-            this.filArianne1 = new dotnet.FilArianne();
             this.SuspendLayout();
             // 
             // lTitre
@@ -45,11 +45,18 @@
             this.lTitre.TabIndex = 0;
             this.lTitre.Text = "Titre";
             // 
+            // filArianne1
+            // 
+            this.filArianne1.Location = new System.Drawing.Point(71, 72);
+            this.filArianne1.Name = "filArianne1";
+            this.filArianne1.Size = new System.Drawing.Size(1068, 45);
+            this.filArianne1.TabIndex = 13;
+            // 
             // uC_Affichage1
             // 
-            this.uC_Affichage1.Location = new System.Drawing.Point(71, 310);
+            this.uC_Affichage1.Location = new System.Drawing.Point(67, 236);
             this.uC_Affichage1.Name = "uC_Affichage1";
-            this.uC_Affichage1.Size = new System.Drawing.Size(959, 364);
+            this.uC_Affichage1.Size = new System.Drawing.Size(982, 364);
             this.uC_Affichage1.TabIndex = 12;
             // 
             // ucAccueil1
@@ -63,15 +70,8 @@
             // 
             this.uC_Ajout1.Location = new System.Drawing.Point(71, 142);
             this.uC_Ajout1.Name = "uC_Ajout1";
-            this.uC_Ajout1.Size = new System.Drawing.Size(569, 150);
+            this.uC_Ajout1.Size = new System.Drawing.Size(982, 88);
             this.uC_Ajout1.TabIndex = 10;
-            // 
-            // filArianne1
-            // 
-            this.filArianne1.Location = new System.Drawing.Point(71, 72);
-            this.filArianne1.Name = "filArianne1";
-            this.filArianne1.Size = new System.Drawing.Size(1068, 45);
-            this.filArianne1.TabIndex = 13;
             // 
             // UC_OngletDiplomes
             // 

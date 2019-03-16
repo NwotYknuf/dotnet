@@ -26,10 +26,10 @@ namespace dotnet {
         }
 
         public void updateAffichage() {
-            flowLayoutPanel1.Controls.Clear();
+            flowLPanel.Controls.Clear();
 
             foreach (UC_Element e in elements) {
-                flowLayoutPanel1.Controls.Add(e);
+                flowLPanel.Controls.Add(e);
             }
 
         }

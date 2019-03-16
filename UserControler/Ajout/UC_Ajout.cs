@@ -21,7 +21,7 @@ namespace dotnet {
         }
 
         public UC_Ajout(string titre) {
-            groupBox.Text = titre;
+            gBTitreAjout.Text = titre;
         }
     }
 }

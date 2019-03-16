@@ -28,24 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDesc = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.groupBox.SuspendLayout();
+            this.lDescription = new System.Windows.Forms.Label();
+            this.rtBDesc = new System.Windows.Forms.RichTextBox();
+            this.lNom = new System.Windows.Forms.Label();
+            this.tBNom = new System.Windows.Forms.TextBox();
+            this.gBTitreAjout.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox
+            // gBTitre
             // 
-            this.groupBox.Controls.Add(this.textBoxNom);
-            this.groupBox.Controls.Add(this.label3);
-            this.groupBox.Text = "Ajouter un diplôme : ";
-            this.groupBox.Controls.SetChildIndex(this.panel, 0);
-            this.groupBox.Controls.SetChildIndex(this.bCreer, 0);
-            this.groupBox.Controls.SetChildIndex(this.label3, 0);
-            this.groupBox.Controls.SetChildIndex(this.textBoxNom, 0);
+            this.gBTitreAjout.Text = "Ajouter un diplôme : ";
             // 
             // bCreer
             // 
@@ -54,58 +47,55 @@
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.label2);
-            this.panel.Controls.Add(this.textBoxDesc);
+            this.panel.Controls.Add(this.tBNom);
+            this.panel.Controls.Add(this.lNom);
+            this.panel.Controls.Add(this.lDescription);
+            this.panel.Controls.Add(this.rtBDesc);
+            this.panel.Controls.SetChildIndex(this.rtBDesc, 0);
+            this.panel.Controls.SetChildIndex(this.lDescription, 0);
+            this.panel.Controls.SetChildIndex(this.lNom, 0);
+            this.panel.Controls.SetChildIndex(this.tBNom, 0);
+            this.panel.Controls.SetChildIndex(this.bCreer, 0);
             // 
-            // label1
+            // lDescription
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.lDescription.AutoSize = true;
+            this.lDescription.Location = new System.Drawing.Point(332, 20);
+            this.lDescription.Name = "lDescription";
+            this.lDescription.Size = new System.Drawing.Size(69, 13);
+            this.lDescription.TabIndex = 4;
+            this.lDescription.Text = "Description : ";
             // 
-            // textBoxDesc
+            // rtBDesc
             // 
-            this.textBoxDesc.Location = new System.Drawing.Point(104, 21);
-            this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(231, 89);
-            this.textBoxDesc.TabIndex = 3;
-            this.textBoxDesc.Text = "";
+            this.rtBDesc.Location = new System.Drawing.Point(426, 1);
+            this.rtBDesc.Name = "rtBDesc";
+            this.rtBDesc.Size = new System.Drawing.Size(231, 47);
+            this.rtBDesc.TabIndex = 3;
+            this.rtBDesc.Text = "";
             // 
-            // label2
+            // lNom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Description : ";
+            this.lNom.AutoSize = true;
+            this.lNom.Location = new System.Drawing.Point(17, 20);
+            this.lNom.Name = "lNom";
+            this.lNom.Size = new System.Drawing.Size(38, 13);
+            this.lNom.TabIndex = 5;
+            this.lNom.Text = "Nom : ";
             // 
-            // label3
+            // tBNom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nom : ";
-            // 
-            // textBoxNom
-            // 
-            this.textBoxNom.Location = new System.Drawing.Point(111, 19);
-            this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNom.TabIndex = 6;
+            this.tBNom.Location = new System.Drawing.Point(104, 17);
+            this.tBNom.Name = "tBNom";
+            this.tBNom.Size = new System.Drawing.Size(100, 20);
+            this.tBNom.TabIndex = 6;
             // 
             // UC_AjoutDiplome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_AjoutDiplome";
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
+            this.gBTitreAjout.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -114,10 +104,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox textBoxDesc;
+        private System.Windows.Forms.Label lNom;
+        private System.Windows.Forms.Label lDescription;
+        private System.Windows.Forms.RichTextBox rtBDesc;
+        private System.Windows.Forms.TextBox tBNom;
     }
 }

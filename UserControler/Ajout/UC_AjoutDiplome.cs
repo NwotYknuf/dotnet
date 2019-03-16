@@ -17,11 +17,11 @@ namespace dotnet {
 
         public UC_AjoutDiplome(UC_OngletDiplomes cadre) : base(cadre) {
             InitializeComponent();
-            this.groupBox.Text = "Ajouter un Diplome";
+            //this.gBTitre.Text = "Ajouter un Diplome : ";
         }
 
         private void bCreer_Click(object sender, EventArgs e) {
-            //ajouter un 
+            //ajouter un diplome
         }
     }
 }

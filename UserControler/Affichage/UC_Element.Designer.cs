@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
+            this.gBAffElement = new System.Windows.Forms.GroupBox();
+            this.panel = new System.Windows.Forms.Panel();
+            this.gBAffElement.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gBAffElement
             // 
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(539, 150);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gBAffElement.Controls.Add(this.panel);
+            this.gBAffElement.Location = new System.Drawing.Point(3, 0);
+            this.gBAffElement.Name = "gBAffElement";
+            this.gBAffElement.Size = new System.Drawing.Size(951, 147);
+            this.gBAffElement.TabIndex = 0;
+            this.gBAffElement.TabStop = false;
+            this.gBAffElement.Text = "TitreElement";
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.Location = new System.Drawing.Point(7, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 124);
-            this.panel1.TabIndex = 0;
+            this.panel.Location = new System.Drawing.Point(6, 17);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(938, 124);
+            this.panel.TabIndex = 0;
             // 
             // UC_Element
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gBAffElement);
             this.Name = "UC_Element";
-            this.Size = new System.Drawing.Size(539, 150);
-            this.groupBox1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(955, 150);
+            this.gBAffElement.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        protected System.Windows.Forms.GroupBox groupBox1;
-        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.GroupBox gBAffElement;
+        protected System.Windows.Forms.Panel panel;
     }
 }

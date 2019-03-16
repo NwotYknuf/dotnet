@@ -28,39 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.lNomDiplome = new System.Windows.Forms.Label();
+            this.gBAffElement.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // gBAffElement
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.gBAffElement.Text = "TitreElementDiplôme";
             // 
-            // label1
+            // panel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.panel.Controls.Add(this.lNomDiplome);
+            this.panel.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // lNomDiplome
+            // 
+            this.lNomDiplome.AutoSize = true;
+            this.lNomDiplome.Location = new System.Drawing.Point(23, 13);
+            this.lNomDiplome.Name = "lNomDiplome";
+            this.lNomDiplome.Size = new System.Drawing.Size(67, 13);
+            this.lNomDiplome.TabIndex = 0;
+            this.lNomDiplome.Text = "NomDiplôme";
             // 
             // UC_ElementDiplome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementDiplome";
-            this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.gBAffElement.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lNomDiplome;
     }
 }

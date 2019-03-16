@@ -19,8 +19,8 @@ namespace dotnet {
         public UC_ElementDiplome(UC_OngletDiplomes cadre, diplome d) : base(cadre) {
             _diplome = d;
             InitializeComponent();
-            groupBox1.Text = d.nom;
-            label1.Text = d.description;
+            gBAffElement.Text = d.nom;
+            lNomDiplome.Text = d.description;
         }
 
         private void panel1_Click(object sender, EventArgs e) {

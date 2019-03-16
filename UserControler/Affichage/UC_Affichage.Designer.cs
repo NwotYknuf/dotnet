@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1.SuspendLayout();
+            this.gBTitreAffichage = new System.Windows.Forms.GroupBox();
+            this.flowLPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.gBTitreAffichage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gBTitreAffichage
             // 
-            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(605, 360);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gBTitreAffichage.Controls.Add(this.flowLPanel);
+            this.gBTitreAffichage.Location = new System.Drawing.Point(4, 4);
+            this.gBTitreAffichage.Name = "gBTitreAffichage";
+            this.gBTitreAffichage.Size = new System.Drawing.Size(975, 357);
+            this.gBTitreAffichage.TabIndex = 0;
+            this.gBTitreAffichage.TabStop = false;
+            this.gBTitreAffichage.Text = "TitreAffichage";
             // 
-            // flowLayoutPanel1
+            // flowLPanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 37);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(571, 306);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.flowLPanel.AutoScroll = true;
+            this.flowLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLPanel.Location = new System.Drawing.Point(6, 19);
+            this.flowLPanel.Name = "flowLPanel";
+            this.flowLPanel.Size = new System.Drawing.Size(963, 332);
+            this.flowLPanel.TabIndex = 0;
+            this.flowLPanel.WrapContents = false;
             // 
             // UC_Affichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gBTitreAffichage);
             this.Name = "UC_Affichage";
-            this.Size = new System.Drawing.Size(609, 364);
-            this.groupBox1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(980, 364);
+            this.gBTitreAffichage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox gBTitreAffichage;
+        private System.Windows.Forms.FlowLayoutPanel flowLPanel;
     }
 }

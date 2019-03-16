@@ -28,56 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox = new System.Windows.Forms.GroupBox();
-            this.bCreer = new System.Windows.Forms.Button();
+            this.gBTitreAjout = new System.Windows.Forms.GroupBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.groupBox.SuspendLayout();
+            this.bCreer = new System.Windows.Forms.Button();
+            this.gBTitreAjout.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox
+            // gBTitreAjout
             // 
-            this.groupBox.Controls.Add(this.bCreer);
-            this.groupBox.Controls.Add(this.panel);
-            this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(569, 150);
-            this.groupBox.TabIndex = 0;
-            this.groupBox.TabStop = false;
-            this.groupBox.Text = "groupBox1";
+            this.gBTitreAjout.Controls.Add(this.panel);
+            this.gBTitreAjout.Location = new System.Drawing.Point(0, 0);
+            this.gBTitreAjout.Name = "gBTitreAjout";
+            this.gBTitreAjout.Size = new System.Drawing.Size(975, 77);
+            this.gBTitreAjout.TabIndex = 0;
+            this.gBTitreAjout.TabStop = false;
+            this.gBTitreAjout.Text = "TitreAjout";
+            // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.bCreer);
+            this.panel.Location = new System.Drawing.Point(7, 20);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(962, 51);
+            this.panel.TabIndex = 3;
             // 
             // bCreer
             // 
             this.bCreer.AutoSize = true;
-            this.bCreer.Location = new System.Drawing.Point(446, 118);
+            this.bCreer.Location = new System.Drawing.Point(842, 13);
             this.bCreer.Name = "bCreer";
             this.bCreer.Size = new System.Drawing.Size(117, 26);
             this.bCreer.TabIndex = 2;
             this.bCreer.Text = "Créer";
             this.bCreer.UseVisualStyleBackColor = true;
             // 
-            // panel
-            // 
-            this.panel.Location = new System.Drawing.Point(7, 20);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(556, 124);
-            this.panel.TabIndex = 3;
-            // 
             // UC_Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox);
+            this.Controls.Add(this.gBTitreAjout);
             this.Name = "UC_Ajout";
-            this.Size = new System.Drawing.Size(569, 150);
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
+            this.Size = new System.Drawing.Size(980, 80);
+            this.gBTitreAjout.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        protected System.Windows.Forms.GroupBox groupBox;
+        protected System.Windows.Forms.GroupBox gBTitreAjout;
         protected System.Windows.Forms.Button bCreer;
         protected System.Windows.Forms.Panel panel;
     }
