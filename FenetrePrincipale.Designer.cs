@@ -39,10 +39,6 @@
             this.ucGestion1 = new dotnet.UC_OngletGestion();
             this.ucPersonnel1 = new dotnet.UCPersonnel();
             this.ucListePersonnel1 = new dotnet.UC_OngletPersonnel();
-            this.ucue1 = new dotnet.UCUE();
-            this.ucListeUE1 = new dotnet.UCListeUE();
-            this.ucPeriode1 = new dotnet.UCPeriode();
-            this.ucAnnee1 = new dotnet.UCAnnee();
             this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
             this.ucAccueil1 = new dotnet.UC_OngletAccueil();
             this.msMenu.SuspendLayout();
@@ -140,34 +136,6 @@
             this.ucListePersonnel1.Size = new System.Drawing.Size(1112, 682);
             this.ucListePersonnel1.TabIndex = 7;
             // 
-            // ucue1
-            // 
-            this.ucue1.Location = new System.Drawing.Point(153, 121);
-            this.ucue1.Name = "ucue1";
-            this.ucue1.Size = new System.Drawing.Size(1112, 561);
-            this.ucue1.TabIndex = 6;
-            // 
-            // ucListeUE1
-            // 
-            this.ucListeUE1.Location = new System.Drawing.Point(153, 121);
-            this.ucListeUE1.Name = "ucListeUE1";
-            this.ucListeUE1.Size = new System.Drawing.Size(1112, 561);
-            this.ucListeUE1.TabIndex = 5;
-            // 
-            // ucPeriode1
-            // 
-            this.ucPeriode1.Location = new System.Drawing.Point(153, 121);
-            this.ucPeriode1.Name = "ucPeriode1";
-            this.ucPeriode1.Size = new System.Drawing.Size(1112, 561);
-            this.ucPeriode1.TabIndex = 4;
-            // 
-            // ucAnnee1
-            // 
-            this.ucAnnee1.Location = new System.Drawing.Point(153, 121);
-            this.ucAnnee1.Name = "ucAnnee1";
-            this.ucAnnee1.Size = new System.Drawing.Size(1112, 561);
-            this.ucAnnee1.TabIndex = 3;
-            // 
             // ucListeDiplome1
             // 
             this.ucListeDiplome1.Location = new System.Drawing.Point(153, 0);
@@ -191,10 +159,6 @@
             this.Controls.Add(this.ucGestion1);
             this.Controls.Add(this.ucPersonnel1);
             this.Controls.Add(this.ucListePersonnel1);
-            this.Controls.Add(this.ucue1);
-            this.Controls.Add(this.ucListeUE1);
-            this.Controls.Add(this.ucPeriode1);
-            this.Controls.Add(this.ucAnnee1);
             this.Controls.Add(this.ucListeDiplome1);
             this.Controls.Add(this.ucAccueil1);
             this.Controls.Add(this.msMenu);
@@ -217,10 +181,6 @@
         private System.Windows.Forms.ToolStripMenuItem miRecherche;
         private UC_OngletAccueil ucAccueil1;
         private UC_OngletDiplomes ucListeDiplome1;
-        private UCAnnee ucAnnee1;
-        private UCPeriode ucPeriode1;
-        private UCListeUE ucListeUE1;
-        private UCUE ucue1;
         private UC_OngletPersonnel ucListePersonnel1;
         private UCPersonnel ucPersonnel1;
         private UC_OngletGestion ucGestion1;

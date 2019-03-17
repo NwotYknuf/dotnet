@@ -20,6 +20,8 @@ namespace dotnet {
 
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
+            lTitre.Text = "Diplômes : ";
+
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
             uC_Ajout1 = new UC_AjoutDiplome(this);
@@ -36,18 +38,32 @@ namespace dotnet {
 
         }
 
-        public void afficheDiplome(diplome d) {
+        public void afficheDiplomeSelectionne(diplome d) {
 
             // changer l'UC ajout
 
-            lTitre.Text = "Annees";
+            lTitre.Text = "Années : ";
 
             foreach (annee a in d.annee) {
                 //uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
             }
         }
         
-        public void afficheAnnee(annee a) {
+        public void afficheAnneeSelectionnee(annee a) {
+            lTitre.Text = "Période : ";
+
+
+        }
+
+        public void affichePeriodeSelectionnee(periode p) {
+            lTitre.Text = "UE : ";
+
+
+        }
+
+        public void afficheUESelectionnee(ue u) {
+            lTitre.Text = "Cours : ";
+
 
         }
 

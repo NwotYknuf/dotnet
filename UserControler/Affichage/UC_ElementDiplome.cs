@@ -24,7 +24,7 @@ namespace dotnet {
         }
 
         private void panel1_Click(object sender, EventArgs e) {
-            _cadre.afficheDiplome(_diplome);
+            _cadre.afficheDiplomeSelectionne(_diplome);
 
             //Changer l'UC ajout en accord
 
