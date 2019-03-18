@@ -34,5 +34,10 @@ namespace dotnet {
 
         }
 
+        public void setGroupBoxTiTre(String titre)
+        {
+            gBTitreAffichage.Text = titre;
+        }
+
     }
 }

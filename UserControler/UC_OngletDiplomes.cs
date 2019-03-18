@@ -21,6 +21,7 @@ namespace dotnet {
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
             lTitre.Text = "Diplômes : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des diplômes : ");
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
@@ -43,6 +44,7 @@ namespace dotnet {
             // changer l'UC ajout
 
             lTitre.Text = "Années : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
 
             foreach (annee a in d.annee) {
                 //uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
@@ -51,18 +53,21 @@ namespace dotnet {
         
         public void afficheAnneeSelectionnee(annee a) {
             lTitre.Text = "Période : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
 
 
         }
 
         public void affichePeriodeSelectionnee(periode p) {
             lTitre.Text = "UE : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
 
 
         }
 
         public void afficheUESelectionnee(ue u) {
             lTitre.Text = "Cours : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 
 
         }
