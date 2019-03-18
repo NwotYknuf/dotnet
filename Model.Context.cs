@@ -35,5 +35,6 @@ namespace dotnet
         public virtual DbSet<personnel> personnel { get; set; }
         public virtual DbSet<type_cours> type_cours { get; set; }
         public virtual DbSet<ue> ue { get; set; }
+        public virtual DbSet<sys_config> sys_config { get; set; }
     }
 }
