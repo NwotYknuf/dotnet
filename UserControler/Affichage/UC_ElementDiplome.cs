@@ -19,11 +19,16 @@ namespace dotnet {
         public UC_ElementDiplome(UC_OngletDiplomes cadre, diplome d) : base(cadre) {
             _diplome = d;
             InitializeComponent();
-            gBAffElement.Text = d.nom;
-            lNomDiplome.Text = d.description;
+            gBAffElement.Text = _diplome.nom;
+            tBDesc.Text = _diplome.description;
         }
 
         private void panel1_Click(object sender, EventArgs e) {
+            
+        }
+
+        private void lDescDiplome_DoubleClick(object sender, EventArgs e)
+        {
             _cadre.afficheDiplomeSelectionne(_diplome);
 
             //Changer l'UC ajout en accord

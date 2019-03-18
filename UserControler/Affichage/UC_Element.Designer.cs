@@ -38,7 +38,7 @@
             this.gBAffElement.Controls.Add(this.panel);
             this.gBAffElement.Location = new System.Drawing.Point(3, 0);
             this.gBAffElement.Name = "gBAffElement";
-            this.gBAffElement.Size = new System.Drawing.Size(951, 147);
+            this.gBAffElement.Size = new System.Drawing.Size(951, 66);
             this.gBAffElement.TabIndex = 0;
             this.gBAffElement.TabStop = false;
             this.gBAffElement.Text = "TitreElement";
@@ -47,7 +47,7 @@
             // 
             this.panel.Location = new System.Drawing.Point(6, 17);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(938, 124);
+            this.panel.Size = new System.Drawing.Size(938, 42);
             this.panel.TabIndex = 0;
             // 
             // UC_Element
@@ -56,7 +56,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gBAffElement);
             this.Name = "UC_Element";
-            this.Size = new System.Drawing.Size(955, 150);
+            this.Size = new System.Drawing.Size(955, 70);
             this.gBAffElement.ResumeLayout(false);
             this.ResumeLayout(false);
 
