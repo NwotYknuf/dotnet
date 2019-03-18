@@ -23,6 +23,7 @@ namespace dotnet
         public Nullable<int> id_diplome { get; set; }
         public int id { get; set; }
         public string nom { get; set; }
+        public string description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<periode> periode { get; set; }

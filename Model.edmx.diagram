@@ -25,6 +25,7 @@
         <AssociationConnector Association="sysModel.id_ue" ManuallyRouted="false" />
         <AssociationConnector Association="sysModel.equivalent_td_ibfk_2" ManuallyRouted="false" />
         <AssociationConnector Association="sysModel.id_periode" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sysModel.sys_config" Width="1.5" PointX="0.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

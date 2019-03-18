@@ -12,6 +12,7 @@
           <Property Name="id_diplome" Type="int" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="categorie">
           <Key>
@@ -46,6 +47,7 @@
           <Property Name="id_ue" Type="int" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="equivalent_td">
           <Key>
@@ -63,6 +65,7 @@
           <Property Name="id_annee" Type="int" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="personnel">
           <Key>
@@ -75,6 +78,15 @@
           <Property Name="telephone" Type="varchar" MaxLength="15" />
           <Property Name="email" Type="varchar" MaxLength="100" />
           <Property Name="adresse" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="sys_config">
+          <Key>
+            <PropertyRef Name="variable" />
+          </Key>
+          <Property Name="variable" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="value" Type="varchar" MaxLength="128" />
+          <Property Name="set_time" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" />
+          <Property Name="set_by" Type="varchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="type_cours">
           <Key>
@@ -90,6 +102,7 @@
           <Property Name="id_periode" Type="int" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="equivalent_td_ibfk_1">
           <End Role="categorie" Type="Self.categorie" Multiplicity="1" />
@@ -220,6 +233,7 @@
           <EntitySet Name="equivalent_td" EntityType="Self.equivalent_td" Schema="sys" store:Type="Tables" />
           <EntitySet Name="periode" EntityType="Self.periode" Schema="sys" store:Type="Tables" />
           <EntitySet Name="personnel" EntityType="Self.personnel" Schema="sys" store:Type="Tables" />
+          <EntitySet Name="sys_config" EntityType="Self.sys_config" Schema="sys" store:Type="Tables" />
           <EntitySet Name="type_cours" EntityType="Self.type_cours" Schema="sys" store:Type="Tables" />
           <EntitySet Name="ue" EntityType="Self.ue" Schema="sys" store:Type="Tables" />
           <AssociationSet Name="equivalent_td_ibfk_1" Association="Self.equivalent_td_ibfk_1">
@@ -276,6 +290,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="periode" Relationship="Self.id_annee" FromRole="annee" ToRole="periode" />
           <NavigationProperty Name="diplome" Relationship="Self.id_diplome" FromRole="annee" ToRole="diplome" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="categorie">
           <Key>
@@ -318,6 +333,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="cours" Relationship="Self.id_ec" FromRole="ec" ToRole="cours" />
           <NavigationProperty Name="ue" Relationship="Self.id_ue" FromRole="ec" ToRole="ue" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="equivalent_td">
           <Key>
@@ -339,6 +355,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="annee" Relationship="Self.id_annee" FromRole="periode" ToRole="annee" />
           <NavigationProperty Name="ue" Relationship="Self.id_periode" FromRole="periode" ToRole="ue" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="personnel">
           <Key>
@@ -372,6 +389,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="ec" Relationship="Self.id_ue" FromRole="ue" ToRole="ec" />
           <NavigationProperty Name="periode" Relationship="Self.id_periode" FromRole="ue" ToRole="periode" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="id_annee">
           <End Role="annee" Type="Self.annee" Multiplicity="0..1" />
@@ -544,7 +562,17 @@
             <End Role="periode" EntitySet="periode" />
             <End Role="ue" EntitySet="ue" />
           </AssociationSet>
+          <EntitySet Name="sys_config" EntityType="sysModel.sys_config" />
         </EntityContainer>
+        <EntityType Name="sys_config">
+          <Key>
+            <PropertyRef Name="variable" />
+          </Key>
+          <Property Name="variable" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="value" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="set_time" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="set_by" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -554,6 +582,7 @@
           <EntitySetMapping Name="annee">
             <EntityTypeMapping TypeName="sysModel.annee">
               <MappingFragment StoreEntitySet="annee">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_diplome" ColumnName="id_diplome" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
@@ -592,6 +621,7 @@
           <EntitySetMapping Name="ec">
             <EntityTypeMapping TypeName="sysModel.ec">
               <MappingFragment StoreEntitySet="ec">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_ue" ColumnName="id_ue" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
@@ -610,6 +640,7 @@
           <EntitySetMapping Name="periode">
             <EntityTypeMapping TypeName="sysModel.periode">
               <MappingFragment StoreEntitySet="periode">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_annee" ColumnName="id_annee" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
@@ -640,9 +671,20 @@
           <EntitySetMapping Name="ue">
             <EntityTypeMapping TypeName="sysModel.ue">
               <MappingFragment StoreEntitySet="ue">
+                <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_periode" ColumnName="id_periode" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sys_config">
+            <EntityTypeMapping TypeName="sysModel.sys_config">
+              <MappingFragment StoreEntitySet="sys_config">
+                <ScalarProperty Name="set_by" ColumnName="set_by" />
+                <ScalarProperty Name="set_time" ColumnName="set_time" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="variable" ColumnName="variable" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
