@@ -24,7 +24,7 @@ namespace dotnet.UserControler.Affichage
             _periode = p;
             InitializeComponent();
             gBAffElement.Text = _periode.nom;
-            //tBDesc.Text = _periode.description;
+            tBDesc.Text = _periode.description;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)

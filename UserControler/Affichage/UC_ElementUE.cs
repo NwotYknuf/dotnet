@@ -24,7 +24,7 @@ namespace dotnet.UserControler.Affichage
             _ue = u;
             InitializeComponent();
             gBAffElement.Text = _ue.nom;
-            //tBDesc.Text = _ue.description;
+            tBDesc.Text = _ue.description;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace dotnet.UserControler.Affichage
             _annee = a;
             InitializeComponent();
             gBAffElement.Text = _annee.nom;
-            //tBDesc.Text = _annee.description;
+            tBDesc.Text = _annee.description;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
