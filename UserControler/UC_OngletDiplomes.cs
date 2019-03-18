@@ -66,6 +66,14 @@ namespace dotnet {
         }
 
         public void afficheUESelectionnee(ue u) {
+            lTitre.Text = "EC : ";
+            uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
+
+
+        }
+
+        public void afficheECSelectionnee(ec e)
+        {
             lTitre.Text = "Cours : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 

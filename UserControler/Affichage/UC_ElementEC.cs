@@ -10,26 +10,27 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementAnnee : UC_Element
+    public partial class UC_ElementEC : UC_Element
     {
-        private annee _annee;
+        private ec _ec;
 
-        public UC_ElementAnnee()
+        public UC_ElementEC()
         {
             InitializeComponent();
         }
 
-        public UC_ElementAnnee(UC_OngletDiplomes cadre, annee a) : base(cadre) {
-            _annee = a;
+        public UC_ElementEC(UC_OngletDiplomes cadre, ec e) : base(cadre)
+        {
+            _ec = e;
             InitializeComponent();
-            gBAffElement.Text = _annee.nom;
-            //tBDesc.Text = _annee.description;
+            gBAffElement.Text = _ec.nom;
+            //tBDesc.Text = _ec.description;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
-            // Afficher les périodes de l'année séléctionnée
-            _cadre.afficheAnneeSelectionnee(_annee);
+            // Affiche les cours de l'EC selectionnée
+            _cadre.afficheECSelectionnee(_ec);
         }
     }
 }

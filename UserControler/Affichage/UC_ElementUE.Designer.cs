@@ -1,6 +1,6 @@
-﻿namespace dotnet
+﻿namespace dotnet.UserControler.Affichage
 {
-    partial class UC_ElementDiplome
+    partial class UC_ElementUE
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,30 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lDescDiplome = new System.Windows.Forms.Label();
             this.tBDesc = new System.Windows.Forms.TextBox();
+            this.lDescAnnee = new System.Windows.Forms.Label();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBAffElement
             // 
-            this.gBAffElement.Text = "Nom du diplôme";
+            this.gBAffElement.Text = "Nom de l\'UE";
             // 
             // panel
             // 
             this.panel.Controls.Add(this.tBDesc);
-            this.panel.Controls.Add(this.lDescDiplome);
+            this.panel.Controls.Add(this.lDescAnnee);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            // 
-            // lDescDiplome
-            // 
-            this.lDescDiplome.AutoSize = true;
-            this.lDescDiplome.Location = new System.Drawing.Point(24, 15);
-            this.lDescDiplome.Name = "lDescDiplome";
-            this.lDescDiplome.Size = new System.Drawing.Size(69, 13);
-            this.lDescDiplome.TabIndex = 0;
-            this.lDescDiplome.Text = "Description : ";
             // 
             // tBDesc
             // 
@@ -59,13 +50,22 @@
             this.tBDesc.Location = new System.Drawing.Point(99, 12);
             this.tBDesc.Name = "tBDesc";
             this.tBDesc.Size = new System.Drawing.Size(799, 20);
-            this.tBDesc.TabIndex = 3;
+            this.tBDesc.TabIndex = 4;
             // 
-            // UC_ElementDiplome
+            // lDescAnnee
+            // 
+            this.lDescAnnee.AutoSize = true;
+            this.lDescAnnee.Location = new System.Drawing.Point(24, 15);
+            this.lDescAnnee.Name = "lDescAnnee";
+            this.lDescAnnee.Size = new System.Drawing.Size(69, 13);
+            this.lDescAnnee.TabIndex = 3;
+            this.lDescAnnee.Text = "Description : ";
+            // 
+            // UC_ElementUE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UC_ElementDiplome";
+            this.Name = "UC_ElementUE";
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
@@ -75,7 +75,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lDescDiplome;
         private System.Windows.Forms.TextBox tBDesc;
+        private System.Windows.Forms.Label lDescAnnee;
     }
 }
