@@ -23,7 +23,7 @@ namespace dotnet {
             tBDesc.Text = _diplome.description;
         }
 
-        private void panel_DoubleClick(object sender, EventArgs e)
+        private void pannel_Click(object sender, EventArgs e)
         {
             // Afficher les années du diplôme séléctionné 
             _cadre.afficheDiplomeSelectionne(_diplome);
