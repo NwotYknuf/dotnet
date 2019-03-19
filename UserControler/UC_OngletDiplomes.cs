@@ -29,13 +29,7 @@ namespace dotnet {
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
-            uC_Affichage1.clearElements();
-
-            var diplomes = Database.instance.diplome;
-            foreach (diplome d in diplomes) {
-                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
-            }
-            uC_Affichage1.updateAffichage();
+            updateList();
 
         }
 
@@ -46,9 +40,8 @@ namespace dotnet {
             lTitre.Text = "Années : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
 
-            foreach (annee a in d.annee) {
-                //uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
-            }
+            updateList(d);
+           
         }
         
         public void afficheAnneeSelectionnee(annee a) {
@@ -80,8 +73,35 @@ namespace dotnet {
 
         }
 
-        private void bFilAriane2_Click(object sender, EventArgs e) {
+        private void updateList() {
+            uC_Affichage1.clearElements();
 
+            var diplomes = Database.instance.diplome;
+            foreach (diplome d in diplomes) {
+                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
+            }
+            uC_Affichage1.updateAffichage();
         }
+
+        private void updateList(diplome d) {
+            uC_Affichage1.clearElements();
+
+            foreach (annee a in d.annee) {
+                uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
+            }
+
+            uC_Affichage1.updateAffichage();
+        }
+
+        private void updateList(annee a) {
+            uC_Affichage1.clearElements();
+
+            foreach (periode p in a.periode) {
+                uC_Affichage1.addElement(new UC_ElementPeriode(this, p));
+            }
+
+            uC_Affichage1.updateAffichage();
+        }
+
     }
 }

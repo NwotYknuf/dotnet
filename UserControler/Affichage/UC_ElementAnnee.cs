@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.Affichage
+namespace dotnet
 {
     public partial class UC_ElementAnnee : UC_Element
     {

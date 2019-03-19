@@ -1,4 +1,4 @@
-﻿namespace dotnet.UserControler.Affichage
+﻿namespace dotnet
 {
     partial class UC_ElementAnnee
     {
@@ -66,6 +66,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementAnnee";
+            this.Click += new System.EventHandler(this.panel_DoubleClick);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

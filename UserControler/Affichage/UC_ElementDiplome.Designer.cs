@@ -42,7 +42,6 @@
             // 
             this.panel.Controls.Add(this.tBDesc);
             this.panel.Controls.Add(this.lDescDiplome);
-            this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
             // 
             // lDescDiplome
             // 
@@ -66,6 +65,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementDiplome";
+            this.Click += new System.EventHandler(this.pannel_Click);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

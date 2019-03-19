@@ -8,30 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.Affichage
-{
-    public partial class UC_ElementPeriode : UC_Element
-    {
+namespace dotnet {
+    public partial class UC_ElementPeriode : UC_Element {
+
         private periode _periode;
 
-        public UC_ElementPeriode()
-        {
+        public UC_ElementPeriode() {
             InitializeComponent();
         }
 
-        public UC_ElementPeriode(UC_OngletDiplomes cadre, periode p) : base(cadre)
-        {
+        public UC_ElementPeriode(UC_OngletDiplomes cadre, periode p) : base(cadre) {
             _periode = p;
             InitializeComponent();
-            gBAffElement.Text = _periode.nom;
-            tBDesc.Text = _periode.description;
         }
 
-        private void panel_DoubleClick(object sender, EventArgs e)
-        {
-            // Afficher les UE de la période séléctionnée
+        private void UC_ElementPeriode_Click(object sender, EventArgs e) {
             _cadre.affichePeriodeSelectionnee(_periode);
-
         }
     }
 }
