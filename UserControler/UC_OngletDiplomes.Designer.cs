@@ -1,4 +1,7 @@
-﻿namespace dotnet
+﻿using dotnet;
+using dotnet.UserControler.FilArianne;
+
+namespace dotnet
 {
     partial class UC_OngletDiplomes
     {
@@ -29,10 +32,10 @@
         private void InitializeComponent()
         {
             this.lTitre = new System.Windows.Forms.Label();
-            this.filArianne1 = new dotnet.FilArianne();
-            this.uC_Affichage1 = new dotnet.UC_Affichage();
-            this.ucAccueil1 = new dotnet.UC_OngletAccueil();
-            this.uC_Ajout1 = new dotnet.UC_Ajout();
+            this.uC_Affichage1 = new UC_Affichage();
+            this.ucAccueil1 = new UC_OngletAccueil();
+            this.uC_Ajout1 = new UC_Ajout();
+            this.uC_FilArianeDiplome1 = new UC_FilArianeDiplome();
             this.SuspendLayout();
             // 
             // lTitre
@@ -44,13 +47,6 @@
             this.lTitre.Size = new System.Drawing.Size(68, 29);
             this.lTitre.TabIndex = 0;
             this.lTitre.Text = "Titre";
-            // 
-            // filArianne1
-            // 
-            this.filArianne1.Location = new System.Drawing.Point(71, 72);
-            this.filArianne1.Name = "filArianne1";
-            this.filArianne1.Size = new System.Drawing.Size(1068, 45);
-            this.filArianne1.TabIndex = 13;
             // 
             // uC_Affichage1
             // 
@@ -73,17 +69,25 @@
             this.uC_Ajout1.Size = new System.Drawing.Size(982, 88);
             this.uC_Ajout1.TabIndex = 10;
             // 
+            // uC_FilArianeDiplome1
+            // 
+            this.uC_FilArianeDiplome1.Location = new System.Drawing.Point(67, 72);
+            this.uC_FilArianeDiplome1.Name = "uC_FilArianeDiplome1";
+            this.uC_FilArianeDiplome1.Size = new System.Drawing.Size(980, 42);
+            this.uC_FilArianeDiplome1.TabIndex = 14;
+            // 
             // UC_OngletDiplomes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.filArianne1);
+            this.Controls.Add(this.uC_FilArianeDiplome1);
             this.Controls.Add(this.uC_Affichage1);
             this.Controls.Add(this.ucAccueil1);
             this.Controls.Add(this.uC_Ajout1);
             this.Controls.Add(this.lTitre);
             this.Name = "UC_OngletDiplomes";
             this.Size = new System.Drawing.Size(1112, 682);
+            this.Load += new System.EventHandler(this.UC_OngletDiplomes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,6 +99,6 @@
         private UC_Ajout uC_Ajout1;
         private UC_OngletAccueil ucAccueil1;
         private UC_Affichage uC_Affichage1;
-        private FilArianne filArianne1;
+        private UC_FilArianeDiplome uC_FilArianeDiplome1;
     }
 }

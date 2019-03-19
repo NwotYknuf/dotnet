@@ -22,7 +22,8 @@ namespace dotnet {
         }
 
         public void clearElements() {
-            elements.Clear();
+           // for (int i = 0; i < elements.Count(); i++)
+                elements.Clear();
         }
 
         public void updateAffichage() {

@@ -47,6 +47,7 @@
             // miAcceuil
             // 
             this.miAcceuil.Image = ((System.Drawing.Image)(resources.GetObject("miAcceuil.Image")));
+            this.miAcceuil.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
             this.miAcceuil.Name = "miAcceuil";
             this.miAcceuil.Size = new System.Drawing.Size(143, 35);
             this.miAcceuil.Text = "Accueil";
@@ -56,6 +57,7 @@
             // miDiplome
             // 
             this.miDiplome.Image = ((System.Drawing.Image)(resources.GetObject("miDiplome.Image")));
+            this.miDiplome.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
             this.miDiplome.Name = "miDiplome";
             this.miDiplome.Size = new System.Drawing.Size(143, 35);
             this.miDiplome.Text = "Diplome";
@@ -65,6 +67,7 @@
             // miPersonnel
             // 
             this.miPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("miPersonnel.Image")));
+            this.miPersonnel.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
             this.miPersonnel.Name = "miPersonnel";
             this.miPersonnel.Size = new System.Drawing.Size(143, 35);
             this.miPersonnel.Text = "Personnel";
@@ -74,6 +77,7 @@
             // miGestion
             // 
             this.miGestion.Image = ((System.Drawing.Image)(resources.GetObject("miGestion.Image")));
+            this.miGestion.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
             this.miGestion.Name = "miGestion";
             this.miGestion.Size = new System.Drawing.Size(143, 35);
             this.miGestion.Text = "Gestion";
@@ -102,6 +106,7 @@
             // miRecherche
             // 
             this.miRecherche.Image = ((System.Drawing.Image)(resources.GetObject("miRecherche.Image")));
+            this.miRecherche.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
             this.miRecherche.Name = "miRecherche";
             this.miRecherche.Size = new System.Drawing.Size(143, 35);
             this.miRecherche.Text = "Recherche";
@@ -155,13 +160,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
-            this.Controls.Add(this.ucRecherche1);
-            this.Controls.Add(this.ucGestion1);
-            this.Controls.Add(this.ucPersonnel1);
-            this.Controls.Add(this.ucListePersonnel1);
             this.Controls.Add(this.ucListeDiplome1);
             this.Controls.Add(this.ucAccueil1);
             this.Controls.Add(this.msMenu);
+            this.Controls.Add(this.ucRecherche1);
+            this.Controls.Add(this.ucGestion1);
+            this.Controls.Add(this.ucListePersonnel1);
+            this.Controls.Add(this.ucPersonnel1);
             this.Name = "FenetrePrincipale";
             this.Text = "Application de gestion";
             this.Load += new System.EventHandler(this.FenetrePrincipale_Load);
