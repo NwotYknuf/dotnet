@@ -34,7 +34,15 @@ namespace dotnet {
             uC_Ajout1 = new UC_AjoutDiplome(this);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
-            
+
+            uC_Affichage1.clearElements();
+
+            var diplomes = Database.instance.diplome;
+            foreach (diplome d in diplomes)
+            {
+                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
+            }
+            uC_Affichage1.updateAffichage();
         }
 
         public void afficheDiplomeSelectionne(diplome d) {
