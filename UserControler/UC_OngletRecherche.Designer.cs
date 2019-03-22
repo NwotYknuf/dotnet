@@ -30,9 +30,12 @@
         {
             this.lTitre = new System.Windows.Forms.Label();
             this.tbRecherche = new System.Windows.Forms.TextBox();
-            this.bRechercher = new System.Windows.Forms.Button();
+            this.bLancerRech = new System.Windows.Forms.Button();
             this.gbResultats = new System.Windows.Forms.GroupBox();
             this.gbRecherche = new System.Windows.Forms.GroupBox();
+            this.lMotClef = new System.Windows.Forms.Label();
+            this.lCritere = new System.Windows.Forms.Label();
+            this.cBCritere = new System.Windows.Forms.ComboBox();
             this.gbRecherche.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,20 +51,20 @@
             // 
             // tbRecherche
             // 
-            this.tbRecherche.Location = new System.Drawing.Point(6, 39);
+            this.tbRecherche.Location = new System.Drawing.Point(158, 31);
             this.tbRecherche.Name = "tbRecherche";
-            this.tbRecherche.Size = new System.Drawing.Size(195, 22);
+            this.tbRecherche.Size = new System.Drawing.Size(112, 22);
             this.tbRecherche.TabIndex = 3;
             // 
-            // bRechercher
+            // bLancerRech
             // 
-            this.bRechercher.AutoSize = true;
-            this.bRechercher.Location = new System.Drawing.Point(211, 37);
-            this.bRechercher.Name = "bRechercher";
-            this.bRechercher.Size = new System.Drawing.Size(117, 26);
-            this.bRechercher.TabIndex = 1;
-            this.bRechercher.Text = "Rechercher";
-            this.bRechercher.UseVisualStyleBackColor = true;
+            this.bLancerRech.AutoSize = true;
+            this.bLancerRech.Location = new System.Drawing.Point(357, 39);
+            this.bLancerRech.Name = "bLancerRech";
+            this.bLancerRech.Size = new System.Drawing.Size(101, 26);
+            this.bLancerRech.TabIndex = 1;
+            this.bLancerRech.Text = "Lancer";
+            this.bLancerRech.UseVisualStyleBackColor = true;
             // 
             // gbResultats
             // 
@@ -75,24 +78,53 @@
             // 
             // gbRecherche
             // 
+            this.gbRecherche.Controls.Add(this.cBCritere);
+            this.gbRecherche.Controls.Add(this.lCritere);
+            this.gbRecherche.Controls.Add(this.lMotClef);
             this.gbRecherche.Controls.Add(this.tbRecherche);
-            this.gbRecherche.Controls.Add(this.bRechercher);
+            this.gbRecherche.Controls.Add(this.bLancerRech);
             this.gbRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRecherche.Location = new System.Drawing.Point(71, 76);
             this.gbRecherche.Name = "gbRecherche";
-            this.gbRecherche.Size = new System.Drawing.Size(337, 100);
+            this.gbRecherche.Size = new System.Drawing.Size(464, 100);
             this.gbRecherche.TabIndex = 12;
             this.gbRecherche.TabStop = false;
-            this.gbRecherche.Text = "Entrer vos mots-clefs : ";
+            this.gbRecherche.Text = "Effectuer une recherche : ";
             // 
-            // UCRecherche
+            // lMotClef
+            // 
+            this.lMotClef.AutoSize = true;
+            this.lMotClef.Location = new System.Drawing.Point(17, 34);
+            this.lMotClef.Name = "lMotClef";
+            this.lMotClef.Size = new System.Drawing.Size(135, 16);
+            this.lMotClef.TabIndex = 4;
+            this.lMotClef.Text = "Entrer votre mot-clef : ";
+            // 
+            // lCritere
+            // 
+            this.lCritere.AutoSize = true;
+            this.lCritere.Location = new System.Drawing.Point(17, 62);
+            this.lCritere.Name = "lCritere";
+            this.lCritere.Size = new System.Drawing.Size(189, 16);
+            this.lCritere.TabIndex = 5;
+            this.lCritere.Text = "Rechercher dans quel critère : ";
+            // 
+            // cBCritere
+            // 
+            this.cBCritere.FormattingEnabled = true;
+            this.cBCritere.Location = new System.Drawing.Point(212, 59);
+            this.cBCritere.Name = "cBCritere";
+            this.cBCritere.Size = new System.Drawing.Size(121, 24);
+            this.cBCritere.TabIndex = 6;
+            // 
+            // UC_OngletRecherche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lTitre);
             this.Controls.Add(this.gbResultats);
             this.Controls.Add(this.gbRecherche);
-            this.Name = "UCRecherche";
+            this.Name = "UC_OngletRecherche";
             this.Size = new System.Drawing.Size(1112, 682);
             this.gbRecherche.ResumeLayout(false);
             this.gbRecherche.PerformLayout();
@@ -105,8 +137,11 @@
 
         private System.Windows.Forms.Label lTitre;
         private System.Windows.Forms.TextBox tbRecherche;
-        private System.Windows.Forms.Button bRechercher;
+        private System.Windows.Forms.Button bLancerRech;
         private System.Windows.Forms.GroupBox gbResultats;
         private System.Windows.Forms.GroupBox gbRecherche;
+        private System.Windows.Forms.ComboBox cBCritere;
+        private System.Windows.Forms.Label lCritere;
+        private System.Windows.Forms.Label lMotClef;
     }
 }
