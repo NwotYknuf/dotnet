@@ -145,7 +145,7 @@ namespace dotnet {
             uC_Affichage1.clearElements();
             foreach (cours c in e.cours)
             {
-                uC_Affichage1.addElement(new UC_ElementCours(this, c));
+                uC_Affichage1.addElement(new UC_ElementCoursDiplome(this, c));
             }
             uC_Affichage1.updateAffichage();
         }

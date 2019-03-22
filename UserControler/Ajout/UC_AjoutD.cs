@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet {
-    public partial class UC_Ajout : UserControl
+namespace dotnet.UserControler.Ajout
+{
+    public partial class UC_AjoutD : UC_Ajout
     {
-       
-        public UC_Ajout() {
+        protected UC_OngletDiplomes _cadre;
+
+        public UC_AjoutD()
+        {
             InitializeComponent();
         }
         
-        public UC_Ajout(string titre) {
-            gBTitreAjout.Text = titre;
+        public UC_AjoutD(UC_OngletDiplomes cadre) : this()
+        {
+            this._cadre = cadre;
         }
     }
 }

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet {
-    public partial class UC_AjoutDiplome : UC_Ajout {
+namespace dotnet.UserControler.Ajout {
+    public partial class UC_AjoutDiplome : UC_AjoutD
+    {
         
         public UC_AjoutDiplome() {
             InitializeComponent();

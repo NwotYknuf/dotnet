@@ -1,4 +1,4 @@
-﻿namespace dotnet
+﻿namespace dotnet.UserControler.Affichage
 {
     partial class UC_ElementDiplome
     {

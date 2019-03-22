@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementCours : UC_Element
+    public partial class UC_ElementCoursDiplome : UC_ElementD
     {
         private cours _cours;
 
-        public UC_ElementCours()
+        public UC_ElementCoursDiplome()
         {
             InitializeComponent();
         }
 
-        public UC_ElementCours(UC_OngletDiplomes cadre, cours c) : base(cadre)
+        public UC_ElementCoursDiplome(UC_OngletDiplomes cadre, cours c) : base(cadre)
         {
             _cours = c;
             InitializeComponent();

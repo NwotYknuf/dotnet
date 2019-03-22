@@ -65,7 +65,7 @@
             // 
             // lDiplome
             // 
-            this.lDiplome.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lDiplome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lDiplome.Image = ((System.Drawing.Image)(resources.GetObject("lDiplome.Image")));
             this.lDiplome.Location = new System.Drawing.Point(122, 2);
             this.lDiplome.Name = "lDiplome";
@@ -78,7 +78,7 @@
             // 
             // lAnnee
             // 
-            this.lAnnee.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lAnnee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lAnnee.Image = ((System.Drawing.Image)(resources.GetObject("lAnnee.Image")));
             this.lAnnee.Location = new System.Drawing.Point(241, 2);
             this.lAnnee.Name = "lAnnee";
@@ -91,7 +91,7 @@
             // 
             // lPeriode
             // 
-            this.lPeriode.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lPeriode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lPeriode.Image = ((System.Drawing.Image)(resources.GetObject("lPeriode.Image")));
             this.lPeriode.Location = new System.Drawing.Point(360, 2);
             this.lPeriode.Name = "lPeriode";
@@ -104,7 +104,7 @@
             // 
             // lUE
             // 
-            this.lUE.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lUE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lUE.Image = ((System.Drawing.Image)(resources.GetObject("lUE.Image")));
             this.lUE.Location = new System.Drawing.Point(479, 2);
             this.lUE.Name = "lUE";

@@ -38,7 +38,7 @@
             this.ucRecherche1 = new dotnet.UC_OngletRecherche();
             this.ucGestion1 = new dotnet.UC_OngletGestion();
             this.ucPersonnel1 = new dotnet.UCPersonnel();
-            this.ucListePersonnel1 = new dotnet.UC_OngletPersonnel();
+            this.ucListePersonnel1 = new dotnet.UC_OngletPersonnels();
             this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
             this.ucAccueil1 = new dotnet.UC_OngletAccueil();
             this.msMenu.SuspendLayout();
@@ -186,7 +186,7 @@
         private System.Windows.Forms.ToolStripMenuItem miRecherche;
         private UC_OngletAccueil ucAccueil1;
         private UC_OngletDiplomes ucListeDiplome1;
-        private UC_OngletPersonnel ucListePersonnel1;
+        private UC_OngletPersonnels ucListePersonnel1;
         private UCPersonnel ucPersonnel1;
         private UC_OngletGestion ucGestion1;
         private UC_OngletRecherche ucRecherche1;

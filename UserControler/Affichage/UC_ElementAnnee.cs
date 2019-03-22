@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementAnnee : UC_Element
+    public partial class UC_ElementAnnee : UC_ElementD
     {
         private annee _annee;
 

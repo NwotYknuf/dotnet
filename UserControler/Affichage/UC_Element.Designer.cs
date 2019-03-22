@@ -1,4 +1,4 @@
-﻿namespace dotnet
+﻿namespace dotnet.UserControler.Affichage
 {
     partial class UC_Element
     {
@@ -36,6 +36,7 @@
             // gBAffElement
             // 
             this.gBAffElement.Controls.Add(this.panel);
+            this.gBAffElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBAffElement.Location = new System.Drawing.Point(3, 0);
             this.gBAffElement.Name = "gBAffElement";
             this.gBAffElement.Size = new System.Drawing.Size(951, 66);
@@ -45,6 +46,8 @@
             // 
             // panel
             // 
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Location = new System.Drawing.Point(6, 17);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(938, 42);

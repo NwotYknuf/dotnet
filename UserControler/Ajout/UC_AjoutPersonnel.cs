@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Ajout
 {
-    public partial class UC_AjoutPeriode : UC_AjoutD
+    public partial class UC_AjoutPersonnel : UC_AjoutP
     {
-        public UC_AjoutPeriode()
+        public UC_AjoutPersonnel()
         {
             InitializeComponent();
         }
 
-        public UC_AjoutPeriode(UC_OngletDiplomes cadre) : base(cadre)
+        public UC_AjoutPersonnel(UC_OngletPersonnels cadre) : base(cadre)
         {
             InitializeComponent();
-            //this.gBTitre.Text = "Ajouter une période : ";
+            //this.gBTitre.Text = "Ajouter un personnel : ";
         }
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            // Créer une période
+            // Ajouter un personnel
         }
     }
 }

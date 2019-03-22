@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet {
+namespace dotnet.UserControler.Affichage
+{
     public partial class UC_Affichage : UserControl {
         private List<UC_Element> elements;
 

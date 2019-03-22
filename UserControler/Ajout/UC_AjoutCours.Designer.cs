@@ -31,7 +31,7 @@
             this.tBNom = new System.Windows.Forms.TextBox();
             this.lNom = new System.Windows.Forms.Label();
             this.lTypeCours = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cBType = new System.Windows.Forms.ComboBox();
             this.lHoraires = new System.Windows.Forms.Label();
             this.tBHoraires = new System.Windows.Forms.TextBox();
             this.gBTitreAjout.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             this.panel.Controls.Add(this.tBHoraires);
             this.panel.Controls.Add(this.lHoraires);
-            this.panel.Controls.Add(this.comboBox1);
+            this.panel.Controls.Add(this.cBType);
             this.panel.Controls.Add(this.tBNom);
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.lTypeCours);
@@ -59,7 +59,7 @@
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.bCreer, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
-            this.panel.Controls.SetChildIndex(this.comboBox1, 0);
+            this.panel.Controls.SetChildIndex(this.cBType, 0);
             this.panel.Controls.SetChildIndex(this.lHoraires, 0);
             this.panel.Controls.SetChildIndex(this.tBHoraires, 0);
             // 
@@ -88,13 +88,13 @@
             this.lTypeCours.TabIndex = 16;
             this.lTypeCours.Text = "Type de cours : ";
             // 
-            // comboBox1
+            // cBType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(344, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 19;
+            this.cBType.FormattingEnabled = true;
+            this.cBType.Location = new System.Drawing.Point(344, 16);
+            this.cBType.Name = "cBType";
+            this.cBType.Size = new System.Drawing.Size(121, 21);
+            this.cBType.TabIndex = 19;
             // 
             // lHoraires
             // 
@@ -131,6 +131,6 @@
         private System.Windows.Forms.Label lTypeCours;
         private System.Windows.Forms.TextBox tBHoraires;
         private System.Windows.Forms.Label lHoraires;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cBType;
     }
 }

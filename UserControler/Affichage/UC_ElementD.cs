@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_Element : UserControl {
-        
-        public UC_Element()
+    public partial class UC_ElementD : UC_Element
+    {
+        protected UC_OngletDiplomes _cadre;
+
+        public UC_ElementD()
         {
             InitializeComponent();
+        }
+
+        public UC_ElementD(UC_OngletDiplomes cadre)
+        {
+            InitializeComponent();
+            this._cadre = cadre;
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementPeriode : UC_Element
+    public partial class UC_ElementPeriode : UC_ElementD
     {
         private periode _periode;
 

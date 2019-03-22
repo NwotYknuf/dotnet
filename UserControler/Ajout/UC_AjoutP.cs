@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet
+namespace dotnet.UserControler.Ajout
 {
-    public partial class UC_OngletPersonnel : UserControl
+    public partial class UC_AjoutP : UC_Ajout
     {
-        public UC_OngletPersonnel()
+        protected UC_OngletPersonnels _cadre;
+
+        public UC_AjoutP()
         {
             InitializeComponent();
+        }
+
+        public UC_AjoutP(UC_OngletPersonnels cadre) : this()
+        {
+            this._cadre = cadre;
         }
     }
 }

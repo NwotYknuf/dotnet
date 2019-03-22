@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementUE : UC_Element
+    public partial class UC_ElementUE : UC_ElementD
     {
         private ue _ue;
 

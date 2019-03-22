@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Ajout
 {
-    public partial class UC_AjoutCours : UC_Ajout
+    public partial class UC_AjoutCours : UC_AjoutD
     {
         public UC_AjoutCours()
         {

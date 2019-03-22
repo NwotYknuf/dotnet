@@ -17,10 +17,10 @@ namespace dotnet.UserControler.FilArianne
         //private static string path = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\Images\FilAriane\FilDebutBlanc.png";
 
             //Je sais c'est pas propre et ça marchera pas chez vous mais j'arrive pas le traduire en relatif..
-        private Image imgDebBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace C#\dotnet\dotnet\Images\FilAriane\FilDebutBlanc.png");
-        private Image imgDebBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace C#\dotnet\dotnet\Images\FilAriane\FilDebutBleu.png");
-        private Image imgBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace C#\dotnet\dotnet\Images\FilAriane\FilBlanc.png");
-        private Image imgBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace C#\dotnet\dotnet\Images\FilAriane\FilBleu.png");
+        //private Image imgDebBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBlanc.png");
+        //private Image imgDebBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBleu.png");
+        private Image imgBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBlanc.png");
+        private Image imgBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBleu.png");
 
         private diplome _d;
         private annee _a;
@@ -52,7 +52,7 @@ namespace dotnet.UserControler.FilArianne
         private void couleurdeFondBlanche(Label l)
         {
             l.Image = imgBlanche;
-            l.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            l.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
         }
 
         private void lRacine_Click(object sender, EventArgs e)

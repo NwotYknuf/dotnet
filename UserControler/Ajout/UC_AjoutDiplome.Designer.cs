@@ -1,4 +1,4 @@
-﻿namespace dotnet
+﻿namespace dotnet.UserControler.Ajout
 {
     partial class UC_AjoutDiplome
     {

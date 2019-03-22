@@ -1,6 +1,6 @@
 ﻿namespace dotnet.UserControler.Affichage
 {
-    partial class UC_ElementCours
+    partial class UC_ElementCoursDiplome
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
