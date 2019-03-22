@@ -16,11 +16,12 @@ namespace dotnet.UserControler.FilArianne
 
         //private static string path = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\Images\FilAriane\FilDebutBlanc.png";
 
-            //Je sais c'est pas propre et ça marchera pas chez vous mais j'arrive pas le traduire en relatif..
-        //private Image imgDebBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBlanc.png");
-        //private Image imgDebBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBleu.png");
-        private Image imgBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBlanc.png");
-        private Image imgBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBleu.png");
+         //Je sais c'est pas propre et ça marchera pas chez vous mais j'arrive pas le traduire en relatif..
+        private Image imgDebBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
+        private Image imgDebBleue = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");
+        private Image imgBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilBlanc.png");
+        private Image imgBleue = Image.FromFile(@"..\..\Images\FilAriane\FilBleu.png");
+
 
         private diplome _d;
         private annee _a;
