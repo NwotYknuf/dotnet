@@ -37,7 +37,6 @@
             this.miRecherche = new System.Windows.Forms.ToolStripMenuItem();
             this.ucRecherche1 = new dotnet.UC_OngletRecherche();
             this.ucGestion1 = new dotnet.UC_OngletGestion();
-            this.ucPersonnel1 = new dotnet.UCPersonnel();
             this.ucListePersonnel1 = new dotnet.UC_OngletPersonnels();
             this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
             this.ucAccueil1 = new dotnet.UC_OngletAccueil();
@@ -127,13 +126,6 @@
             this.ucGestion1.Size = new System.Drawing.Size(1112, 682);
             this.ucGestion1.TabIndex = 9;
             // 
-            // ucPersonnel1
-            // 
-            this.ucPersonnel1.Location = new System.Drawing.Point(153, 121);
-            this.ucPersonnel1.Name = "ucPersonnel1";
-            this.ucPersonnel1.Size = new System.Drawing.Size(1112, 561);
-            this.ucPersonnel1.TabIndex = 8;
-            // 
             // ucListePersonnel1
             // 
             this.ucListePersonnel1.Location = new System.Drawing.Point(153, 0);
@@ -166,7 +158,6 @@
             this.Controls.Add(this.ucRecherche1);
             this.Controls.Add(this.ucGestion1);
             this.Controls.Add(this.ucListePersonnel1);
-            this.Controls.Add(this.ucPersonnel1);
             this.Name = "FenetrePrincipale";
             this.Text = "Application de gestion";
             this.Load += new System.EventHandler(this.FenetrePrincipale_Load);
@@ -187,7 +178,6 @@
         private UC_OngletAccueil ucAccueil1;
         private UC_OngletDiplomes ucListeDiplome1;
         private UC_OngletPersonnels ucListePersonnel1;
-        private UCPersonnel ucPersonnel1;
         private UC_OngletGestion ucGestion1;
         private UC_OngletRecherche ucRecherche1;
     }
