@@ -14,10 +14,10 @@ namespace dotnet.UserControler.FilArianne
     {
         protected UC_OngletPersonnels _cadre;
 
-        //private Image imgDebBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBlanc.png");
-        //private Image imgDebBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilDebutBleu.png");
-        private Image imgBlanche = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBlanc.png");
-        private Image imgBleue = Image.FromFile(@"D:\Vincent\Documents\Workspace_C#\dotnet\dotnet\Images\FilAriane\FilBleu.png");
+        private Image imgDebBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
+        private Image imgDebBleue = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");
+        private Image imgBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilBlanc.png");
+        private Image imgBleue = Image.FromFile(@"..\..\Images\FilAriane\FilBleu.png");
 
         private personnel _p;
 

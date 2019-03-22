@@ -13,10 +13,7 @@ namespace dotnet.UserControler.FilArianne
     public partial class UC_FilArianeDiplome : UserControl
     {
         protected UC_OngletDiplomes _cadre;
-
-        //private static string path = System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + @"\Images\FilAriane\FilDebutBlanc.png";
-
-         //Je sais c'est pas propre et ça marchera pas chez vous mais j'arrive pas le traduire en relatif..
+        
         private Image imgDebBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
         private Image imgDebBleue = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");
         private Image imgBlanche = Image.FromFile(@"..\..\Images\FilAriane\FilBlanc.png");
