@@ -33,5 +33,15 @@ namespace dotnet.UserControler.Affichage
             _cadre.affichePeriodeSelectionnee(_periode);
 
         }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

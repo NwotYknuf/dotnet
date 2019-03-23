@@ -8,24 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.Affichage
+namespace dotnet.UserControler.Affichage.Accueil
 {
-    public partial class UC_ElementCoursDiplome : UC_ElementD
+    public partial class UC_ElementCoursAccueil : UC_ElementA
     {
         private cours _cours;
 
-        public UC_ElementCoursDiplome()
+        public UC_ElementCoursAccueil()
         {
             InitializeComponent();
         }
 
-        public UC_ElementCoursDiplome(UC_OngletDiplomes cadre, cours c) : base(cadre)
+        public UC_ElementCoursAccueil(UC_OngletAccueil cadre, cours c) : base(cadre)
         {
-            _cours = c;
             InitializeComponent();
+            _cours = c;
             gBAffElement.Text = _cours.nom;
-            tBCours.Text = _cours.type_cours.ToString();
+            tBCours.Text = _cours.id_type.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();
+            tBPersonnel.Text = _cours.personnel.ToString();
 
             if (_cours.personnel.ToString() == "")
             {
@@ -34,7 +35,7 @@ namespace dotnet.UserControler.Affichage
                 {
                     pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -65,12 +66,12 @@ namespace dotnet.UserControler.Affichage
             }
         }
 
-        private void pBModifier_Click(object sender, EventArgs e)
+        private void pBSupprimer_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pBSupprimer_Click(object sender, EventArgs e)
+        private void pBModifier_Click(object sender, EventArgs e)
         {
 
         }

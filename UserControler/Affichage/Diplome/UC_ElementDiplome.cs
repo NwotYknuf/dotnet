@@ -34,5 +34,15 @@ namespace dotnet.UserControler.Affichage
 
             //update le fils d'Arianne
         }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

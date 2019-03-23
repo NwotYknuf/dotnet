@@ -23,7 +23,8 @@ namespace dotnet.UserControler.Affichage
         {
             _personnel = p;
             InitializeComponent();
-            gBAffElement.Text = _personnel.nom;
+            gBAffElement.Text = "";
+            tBNom.Text = _personnel.nom;
             tBPrenom.Text = _personnel.prenom;
             //tBCategorie.Text = _personnel.categorie.ToString();
         }
@@ -33,6 +34,16 @@ namespace dotnet.UserControler.Affichage
             // Afficher les informations du personnel et la liste des cours qu'il présente
 
             _cadre.affichePersonnelSelectionne(_personnel);
+        }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

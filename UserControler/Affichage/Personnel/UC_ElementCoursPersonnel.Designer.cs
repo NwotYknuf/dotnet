@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bRetirer = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementCoursPersonnel));
             this.tBEC = new System.Windows.Forms.TextBox();
             this.lEC = new System.Windows.Forms.Label();
             this.tBHoraires = new System.Windows.Forms.TextBox();
             this.tBCours = new System.Windows.Forms.TextBox();
             this.lHoraires = new System.Windows.Forms.Label();
             this.lTypeCours = new System.Windows.Forms.Label();
+            this.pBAjouterRetirer = new System.Windows.Forms.PictureBox();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).BeginInit();
             this.SuspendLayout();
             // 
             // gBAffElement
@@ -45,7 +49,7 @@
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.bRetirer);
+            this.panel.Controls.Add(this.pBAjouterRetirer);
             this.panel.Controls.Add(this.tBEC);
             this.panel.Controls.Add(this.lEC);
             this.panel.Controls.Add(this.tBHoraires);
@@ -53,16 +57,25 @@
             this.panel.Controls.Add(this.lHoraires);
             this.panel.Controls.Add(this.lTypeCours);
             this.panel.Size = new System.Drawing.Size(938, 100);
+            this.panel.Controls.SetChildIndex(this.lTypeCours, 0);
+            this.panel.Controls.SetChildIndex(this.lHoraires, 0);
+            this.panel.Controls.SetChildIndex(this.tBCours, 0);
+            this.panel.Controls.SetChildIndex(this.tBHoraires, 0);
+            this.panel.Controls.SetChildIndex(this.lEC, 0);
+            this.panel.Controls.SetChildIndex(this.tBEC, 0);
+            this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
+            this.panel.Controls.SetChildIndex(this.pBModifier, 0);
+            this.panel.Controls.SetChildIndex(this.pBAjouterRetirer, 0);
             // 
-            // bRetirer
+            // pBModifier
             // 
-            this.bRetirer.Location = new System.Drawing.Point(807, 39);
-            this.bRetirer.Name = "bRetirer";
-            this.bRetirer.Size = new System.Drawing.Size(128, 23);
-            this.bRetirer.TabIndex = 13;
-            this.bRetirer.Text = "Retirer ce cours";
-            this.bRetirer.UseVisualStyleBackColor = true;
-            this.bRetirer.Click += new System.EventHandler(this.bRetirer_Click);
+            this.pBModifier.Location = new System.Drawing.Point(896, 8);
+            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
+            // 
+            // pBSupprimer
+            // 
+            this.pBSupprimer.Location = new System.Drawing.Point(897, 55);
+            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // tBEC
             // 
@@ -115,6 +128,18 @@
             this.lTypeCours.TabIndex = 7;
             this.lTypeCours.Text = "Type de cours : ";
             // 
+            // pBAjouterRetirer
+            // 
+            this.pBAjouterRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterRetirer.Image")));
+            this.pBAjouterRetirer.InitialImage = null;
+            this.pBAjouterRetirer.Location = new System.Drawing.Point(829, 29);
+            this.pBAjouterRetirer.Name = "pBAjouterRetirer";
+            this.pBAjouterRetirer.Size = new System.Drawing.Size(61, 48);
+            this.pBAjouterRetirer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBAjouterRetirer.TabIndex = 19;
+            this.pBAjouterRetirer.TabStop = false;
+            this.pBAjouterRetirer.Click += new System.EventHandler(this.pBAjouterRetirer_Click);
+            // 
             // UC_ElementCoursPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,18 +149,20 @@
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bRetirer;
         private System.Windows.Forms.TextBox tBEC;
         private System.Windows.Forms.Label lEC;
         private System.Windows.Forms.TextBox tBHoraires;
         private System.Windows.Forms.TextBox tBCours;
         private System.Windows.Forms.Label lHoraires;
         private System.Windows.Forms.Label lTypeCours;
+        protected System.Windows.Forms.PictureBox pBAjouterRetirer;
     }
 }

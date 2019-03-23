@@ -32,32 +32,25 @@
             this.lBienvenu = new System.Windows.Forms.Label();
             this.pBienvenu = new System.Windows.Forms.Panel();
             this.pAccueil = new System.Windows.Forms.Panel();
+            this.pAffCours = new System.Windows.Forms.Panel();
+            this.pAffPersonnel = new System.Windows.Forms.Panel();
+            this.lDate = new System.Windows.Forms.Label();
             this.lHorloge = new System.Windows.Forms.Label();
             this.timerBienvenu = new System.Windows.Forms.Timer(this.components);
             this.timerHorloge = new System.Windows.Forms.Timer(this.components);
-            this.lDate = new System.Windows.Forms.Label();
-            this.pAffPersonnel = new System.Windows.Forms.Panel();
-            this.pAffCours = new System.Windows.Forms.Panel();
-            this.gBAffPersonnel = new System.Windows.Forms.GroupBox();
-            this.gBAffCours = new System.Windows.Forms.GroupBox();
-            this.fLPAffPersonnel = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lElement1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
+            this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pBienvenu.SuspendLayout();
             this.pAccueil.SuspendLayout();
-            this.pAffPersonnel.SuspendLayout();
             this.pAffCours.SuspendLayout();
-            this.gBAffPersonnel.SuspendLayout();
-            this.gBAffCours.SuspendLayout();
-            this.fLPAffPersonnel.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.pAffPersonnel.SuspendLayout();
             this.SuspendLayout();
             // 
             // lBienvenu
             // 
             this.lBienvenu.AutoEllipsis = true;
             this.lBienvenu.AutoSize = true;
+            this.lBienvenu.BackColor = System.Drawing.Color.Transparent;
             this.lBienvenu.Font = new System.Drawing.Font("Pristina", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBienvenu.ForeColor = System.Drawing.Color.White;
             this.lBienvenu.Location = new System.Drawing.Point(143, 194);
@@ -87,6 +80,32 @@
             this.pAccueil.Size = new System.Drawing.Size(1106, 676);
             this.pAccueil.TabIndex = 1;
             // 
+            // pAffCours
+            // 
+            this.pAffCours.Controls.Add(this.uC_AffCours);
+            this.pAffCours.Location = new System.Drawing.Point(553, 96);
+            this.pAffCours.Name = "pAffCours";
+            this.pAffCours.Size = new System.Drawing.Size(550, 577);
+            this.pAffCours.TabIndex = 3;
+            // 
+            // pAffPersonnel
+            // 
+            this.pAffPersonnel.Controls.Add(this.uC_AffPersonnel);
+            this.pAffPersonnel.Location = new System.Drawing.Point(3, 96);
+            this.pAffPersonnel.Name = "pAffPersonnel";
+            this.pAffPersonnel.Size = new System.Drawing.Size(550, 577);
+            this.pAffPersonnel.TabIndex = 2;
+            // 
+            // lDate
+            // 
+            this.lDate.AutoSize = true;
+            this.lDate.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDate.Location = new System.Drawing.Point(829, 18);
+            this.lDate.Name = "lDate";
+            this.lDate.Size = new System.Drawing.Size(249, 31);
+            this.lDate.TabIndex = 1;
+            this.lDate.Text = "Jour Num Mois Année";
+            // 
             // lHorloge
             // 
             this.lHorloge.AutoSize = true;
@@ -105,91 +124,19 @@
             // 
             this.timerHorloge.Tick += new System.EventHandler(this.timerHorloge_Tick);
             // 
-            // lDate
+            // uC_AffPersonnel
             // 
-            this.lDate.AutoSize = true;
-            this.lDate.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDate.Location = new System.Drawing.Point(829, 18);
-            this.lDate.Name = "lDate";
-            this.lDate.Size = new System.Drawing.Size(249, 31);
-            this.lDate.TabIndex = 1;
-            this.lDate.Text = "Jour Num Mois Année";
+            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
+            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
+            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
+            this.uC_AffPersonnel.TabIndex = 0;
             // 
-            // pAffPersonnel
+            // uC_AffCours
             // 
-            this.pAffPersonnel.Controls.Add(this.gBAffPersonnel);
-            this.pAffPersonnel.Location = new System.Drawing.Point(3, 96);
-            this.pAffPersonnel.Name = "pAffPersonnel";
-            this.pAffPersonnel.Size = new System.Drawing.Size(550, 577);
-            this.pAffPersonnel.TabIndex = 2;
-            // 
-            // pAffCours
-            // 
-            this.pAffCours.Controls.Add(this.gBAffCours);
-            this.pAffCours.Location = new System.Drawing.Point(553, 96);
-            this.pAffCours.Name = "pAffCours";
-            this.pAffCours.Size = new System.Drawing.Size(550, 577);
-            this.pAffCours.TabIndex = 3;
-            // 
-            // gBAffPersonnel
-            // 
-            this.gBAffPersonnel.Controls.Add(this.fLPAffPersonnel);
-            this.gBAffPersonnel.Location = new System.Drawing.Point(15, 12);
-            this.gBAffPersonnel.Name = "gBAffPersonnel";
-            this.gBAffPersonnel.Size = new System.Drawing.Size(519, 550);
-            this.gBAffPersonnel.TabIndex = 0;
-            this.gBAffPersonnel.TabStop = false;
-            this.gBAffPersonnel.Text = "Les personnels qui n\'ont pas toutes leurs heures affectées : ";
-            // 
-            // gBAffCours
-            // 
-            this.gBAffCours.Controls.Add(this.flowLayoutPanel1);
-            this.gBAffCours.Location = new System.Drawing.Point(16, 13);
-            this.gBAffCours.Name = "gBAffCours";
-            this.gBAffCours.Size = new System.Drawing.Size(519, 550);
-            this.gBAffCours.TabIndex = 1;
-            this.gBAffCours.TabStop = false;
-            this.gBAffCours.Text = "Les cours non affectés : ";
-            // 
-            // fLPAffPersonnel
-            // 
-            this.fLPAffPersonnel.Controls.Add(this.lElement1);
-            this.fLPAffPersonnel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fLPAffPersonnel.Location = new System.Drawing.Point(6, 19);
-            this.fLPAffPersonnel.Name = "fLPAffPersonnel";
-            this.fLPAffPersonnel.Padding = new System.Windows.Forms.Padding(10);
-            this.fLPAffPersonnel.Size = new System.Drawing.Size(507, 525);
-            this.fLPAffPersonnel.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 18);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(507, 525);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // lElement1
-            // 
-            this.lElement1.AutoSize = true;
-            this.lElement1.Location = new System.Drawing.Point(13, 10);
-            this.lElement1.Name = "lElement1";
-            this.lElement1.Size = new System.Drawing.Size(88, 13);
-            this.lElement1.TabIndex = 0;
-            this.lElement1.Text = "Tout est en ordre";
-            this.lElement1.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tout est en ordre";
-            this.label1.Visible = false;
+            this.uC_AffCours.Location = new System.Drawing.Point(13, 8);
+            this.uC_AffCours.Name = "uC_AffCours";
+            this.uC_AffCours.Size = new System.Drawing.Size(525, 555);
+            this.uC_AffCours.TabIndex = 0;
             // 
             // UC_OngletAccueil
             // 
@@ -204,14 +151,8 @@
             this.pBienvenu.PerformLayout();
             this.pAccueil.ResumeLayout(false);
             this.pAccueil.PerformLayout();
-            this.pAffPersonnel.ResumeLayout(false);
             this.pAffCours.ResumeLayout(false);
-            this.gBAffPersonnel.ResumeLayout(false);
-            this.gBAffCours.ResumeLayout(false);
-            this.fLPAffPersonnel.ResumeLayout(false);
-            this.fLPAffPersonnel.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.pAffPersonnel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,12 +167,8 @@
         private System.Windows.Forms.Timer timerHorloge;
         private System.Windows.Forms.Label lDate;
         private System.Windows.Forms.Panel pAffCours;
-        private System.Windows.Forms.GroupBox gBAffCours;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pAffPersonnel;
-        private System.Windows.Forms.GroupBox gBAffPersonnel;
-        private System.Windows.Forms.FlowLayoutPanel fLPAffPersonnel;
-        private System.Windows.Forms.Label lElement1;
+        private UserControler.Affichage.UC_AffichageA uC_AffPersonnel;
+        private UserControler.Affichage.UC_AffichageA uC_AffCours;
     }
 }

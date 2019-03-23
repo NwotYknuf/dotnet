@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.UserControler.Affichage;
+using dotnet.UserControler.Affichage.Accueil;
 
 namespace dotnet
 {
@@ -19,6 +21,11 @@ namespace dotnet
 
         private void UC_OngletAccueil_Load(object sender, EventArgs e)
         {
+            pBienvenu.BringToFront();
+            
+            initialisePersonnels(uC_AffPersonnel);
+            initialiseCours(uC_AffCours);
+
             timerBienvenu.Interval = 3000; // 3 secondes
             timerBienvenu.Enabled = true;
             timerBienvenu.Start();
@@ -27,7 +34,34 @@ namespace dotnet
             timerHorloge.Enabled = true;
             timerHorloge.Start();
 
-            pBienvenu.BringToFront();
+        }
+
+        public void initialisePersonnels(UC_AffichageA uc)
+        {
+            uc.setGroupBoxTiTre("Les personnels qui n'ont pas toutes leurs heures affectées : ");
+
+            uc.clearElements();
+
+            var personnels = Database.instance.personnel;
+            foreach (personnel p in personnels)
+            {
+                uc.addElement(new UC_ElementPersonnelAccueil(this, p));
+            }
+            uc.updateAffichage();
+        }
+
+        public void initialiseCours(UC_AffichageA uc)
+        {
+            uC_AffCours.setGroupBoxTiTre("Les cours non affectés : ");
+
+            uc.clearElements();
+
+            var cours = Database.instance.cours;
+            foreach (cours c in cours)
+            {
+                uc.addElement(new UC_ElementCoursAccueil(this, c));
+            }
+            uc.updateAffichage();
         }
 
         //Après 3 secondes, fais disparaitre le panel de Bienvenu

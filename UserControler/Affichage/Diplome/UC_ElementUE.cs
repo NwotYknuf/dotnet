@@ -32,5 +32,15 @@ namespace dotnet.UserControler.Affichage
             // Afficher les EC de l'UE selectionnée
             _cadre.afficheUESelectionnee(_ue);
         }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,5 +32,15 @@ namespace dotnet.UserControler.Affichage
             // Affiche les cours de l'EC selectionnée
             _cadre.afficheECSelectionnee(_ec);
         }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

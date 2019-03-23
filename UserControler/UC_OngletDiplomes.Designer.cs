@@ -33,11 +33,10 @@ namespace dotnet
         private void InitializeComponent()
         {
             this.lTitre = new System.Windows.Forms.Label();
-            this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
-            this.ucAccueil1 = new dotnet.UC_OngletAccueil();
-            this.uC_Ajout1 = new dotnet.UC_Ajout();
-            this.uC_FilArianeDiplome1 = new dotnet.UserControler.FilArianne.UC_FilArianeDiplome();
             this.cBActif = new System.Windows.Forms.CheckBox();
+            this.uC_FilArianeDiplome1 = new dotnet.UserControler.FilArianne.UC_FilArianeDiplome();
+            this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
+            this.uC_Ajout1 = new dotnet.UC_Ajout();
             this.SuspendLayout();
             // 
             // lTitre
@@ -49,34 +48,6 @@ namespace dotnet
             this.lTitre.Size = new System.Drawing.Size(68, 29);
             this.lTitre.TabIndex = 0;
             this.lTitre.Text = "Titre";
-            // 
-            // uC_Affichage1
-            // 
-            this.uC_Affichage1.Location = new System.Drawing.Point(67, 236);
-            this.uC_Affichage1.Name = "uC_Affichage1";
-            this.uC_Affichage1.Size = new System.Drawing.Size(982, 364);
-            this.uC_Affichage1.TabIndex = 12;
-            // 
-            // ucAccueil1
-            // 
-            this.ucAccueil1.Location = new System.Drawing.Point(316, 214);
-            this.ucAccueil1.Name = "ucAccueil1";
-            this.ucAccueil1.Size = new System.Drawing.Size(40, 11);
-            this.ucAccueil1.TabIndex = 11;
-            // 
-            // uC_Ajout1
-            // 
-            this.uC_Ajout1.Location = new System.Drawing.Point(71, 142);
-            this.uC_Ajout1.Name = "uC_Ajout1";
-            this.uC_Ajout1.Size = new System.Drawing.Size(982, 88);
-            this.uC_Ajout1.TabIndex = 10;
-            // 
-            // uC_FilArianeDiplome1
-            // 
-            this.uC_FilArianeDiplome1.Location = new System.Drawing.Point(67, 22);
-            this.uC_FilArianeDiplome1.Name = "uC_FilArianeDiplome1";
-            this.uC_FilArianeDiplome1.Size = new System.Drawing.Size(980, 42);
-            this.uC_FilArianeDiplome1.TabIndex = 14;
             // 
             // cBActif
             // 
@@ -95,6 +66,27 @@ namespace dotnet
             this.cBActif.UseVisualStyleBackColor = false;
             this.cBActif.Visible = false;
             // 
+            // uC_FilArianeDiplome1
+            // 
+            this.uC_FilArianeDiplome1.Location = new System.Drawing.Point(67, 22);
+            this.uC_FilArianeDiplome1.Name = "uC_FilArianeDiplome1";
+            this.uC_FilArianeDiplome1.Size = new System.Drawing.Size(980, 42);
+            this.uC_FilArianeDiplome1.TabIndex = 14;
+            // 
+            // uC_Affichage1
+            // 
+            this.uC_Affichage1.Location = new System.Drawing.Point(67, 236);
+            this.uC_Affichage1.Name = "uC_Affichage1";
+            this.uC_Affichage1.Size = new System.Drawing.Size(982, 364);
+            this.uC_Affichage1.TabIndex = 12;
+            // 
+            // uC_Ajout1
+            // 
+            this.uC_Ajout1.Location = new System.Drawing.Point(71, 142);
+            this.uC_Ajout1.Name = "uC_Ajout1";
+            this.uC_Ajout1.Size = new System.Drawing.Size(982, 88);
+            this.uC_Ajout1.TabIndex = 10;
+            // 
             // UC_OngletDiplomes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +94,6 @@ namespace dotnet
             this.Controls.Add(this.cBActif);
             this.Controls.Add(this.uC_FilArianeDiplome1);
             this.Controls.Add(this.uC_Affichage1);
-            this.Controls.Add(this.ucAccueil1);
             this.Controls.Add(this.uC_Ajout1);
             this.Controls.Add(this.lTitre);
             this.Name = "UC_OngletDiplomes";
@@ -117,7 +108,6 @@ namespace dotnet
 
         private System.Windows.Forms.Label lTitre;
         private UC_Ajout uC_Ajout1;
-        private UC_OngletAccueil ucAccueil1;
         private UC_Affichage uC_Affichage1;
         private UC_FilArianeDiplome uC_FilArianeDiplome1;
         private System.Windows.Forms.CheckBox cBActif;

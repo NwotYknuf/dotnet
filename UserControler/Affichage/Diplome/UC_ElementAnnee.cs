@@ -31,5 +31,15 @@ namespace dotnet.UserControler.Affichage
             // Afficher les périodes de l'année séléctionnée
             _cadre.afficheAnneeSelectionnee(_annee);
         }
+
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,17 @@ namespace dotnet.UserControler.Affichage
             
         }
 
-        private void bRetirer_Click(object sender, EventArgs e)
+        private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBAjouterRetirer_Click(object sender, EventArgs e)
         {
             // Retirer ce cours à ce personnel
         }
