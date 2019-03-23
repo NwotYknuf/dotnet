@@ -31,11 +31,11 @@
             this.lTitre = new System.Windows.Forms.Label();
             this.tbRecherche = new System.Windows.Forms.TextBox();
             this.bLancerRech = new System.Windows.Forms.Button();
-            this.gbResultats = new System.Windows.Forms.GroupBox();
             this.gbRecherche = new System.Windows.Forms.GroupBox();
-            this.lMotClef = new System.Windows.Forms.Label();
-            this.lCritere = new System.Windows.Forms.Label();
             this.cBCritere = new System.Windows.Forms.ComboBox();
+            this.lCritere = new System.Windows.Forms.Label();
+            this.lMotClef = new System.Windows.Forms.Label();
+            this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
             this.gbRecherche.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,16 +65,7 @@
             this.bLancerRech.TabIndex = 1;
             this.bLancerRech.Text = "Lancer";
             this.bLancerRech.UseVisualStyleBackColor = true;
-            // 
-            // gbResultats
-            // 
-            this.gbResultats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbResultats.Location = new System.Drawing.Point(71, 196);
-            this.gbResultats.Name = "gbResultats";
-            this.gbResultats.Size = new System.Drawing.Size(975, 464);
-            this.gbResultats.TabIndex = 17;
-            this.gbResultats.TabStop = false;
-            this.gbResultats.Text = "Résultats de la recherche : ";
+            this.bLancerRech.Click += new System.EventHandler(this.bLancerRech_Click);
             // 
             // gbRecherche
             // 
@@ -91,14 +82,13 @@
             this.gbRecherche.TabStop = false;
             this.gbRecherche.Text = "Effectuer une recherche : ";
             // 
-            // lMotClef
+            // cBCritere
             // 
-            this.lMotClef.AutoSize = true;
-            this.lMotClef.Location = new System.Drawing.Point(17, 34);
-            this.lMotClef.Name = "lMotClef";
-            this.lMotClef.Size = new System.Drawing.Size(135, 16);
-            this.lMotClef.TabIndex = 4;
-            this.lMotClef.Text = "Entrer votre mot-clef : ";
+            this.cBCritere.FormattingEnabled = true;
+            this.cBCritere.Location = new System.Drawing.Point(212, 59);
+            this.cBCritere.Name = "cBCritere";
+            this.cBCritere.Size = new System.Drawing.Size(121, 24);
+            this.cBCritere.TabIndex = 6;
             // 
             // lCritere
             // 
@@ -109,23 +99,32 @@
             this.lCritere.TabIndex = 5;
             this.lCritere.Text = "Rechercher dans quel critère : ";
             // 
-            // cBCritere
+            // lMotClef
             // 
-            this.cBCritere.FormattingEnabled = true;
-            this.cBCritere.Location = new System.Drawing.Point(212, 59);
-            this.cBCritere.Name = "cBCritere";
-            this.cBCritere.Size = new System.Drawing.Size(121, 24);
-            this.cBCritere.TabIndex = 6;
+            this.lMotClef.AutoSize = true;
+            this.lMotClef.Location = new System.Drawing.Point(17, 34);
+            this.lMotClef.Name = "lMotClef";
+            this.lMotClef.Size = new System.Drawing.Size(135, 16);
+            this.lMotClef.TabIndex = 4;
+            this.lMotClef.Text = "Entrer votre mot-clef : ";
+            // 
+            // uC_Affichage1
+            // 
+            this.uC_Affichage1.Location = new System.Drawing.Point(66, 198);
+            this.uC_Affichage1.Name = "uC_Affichage1";
+            this.uC_Affichage1.Size = new System.Drawing.Size(980, 364);
+            this.uC_Affichage1.TabIndex = 13;
             // 
             // UC_OngletRecherche
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uC_Affichage1);
             this.Controls.Add(this.lTitre);
-            this.Controls.Add(this.gbResultats);
             this.Controls.Add(this.gbRecherche);
             this.Name = "UC_OngletRecherche";
             this.Size = new System.Drawing.Size(1112, 682);
+            this.Load += new System.EventHandler(this.UC_OngletRecherche_Load);
             this.gbRecherche.ResumeLayout(false);
             this.gbRecherche.PerformLayout();
             this.ResumeLayout(false);
@@ -138,10 +137,10 @@
         private System.Windows.Forms.Label lTitre;
         private System.Windows.Forms.TextBox tbRecherche;
         private System.Windows.Forms.Button bLancerRech;
-        private System.Windows.Forms.GroupBox gbResultats;
         private System.Windows.Forms.GroupBox gbRecherche;
         private System.Windows.Forms.ComboBox cBCritere;
         private System.Windows.Forms.Label lCritere;
         private System.Windows.Forms.Label lMotClef;
+        private UserControler.Affichage.UC_Affichage uC_Affichage1;
     }
 }

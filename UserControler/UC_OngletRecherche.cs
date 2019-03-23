@@ -16,5 +16,15 @@ namespace dotnet
         {
             InitializeComponent();
         }
+
+        private void UC_OngletRecherche_Load(object sender, EventArgs e)
+        {
+            uC_Affichage1.setGroupBoxTiTre("Résultats de la recherche : ");
+        }
+
+        private void bLancerRech_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

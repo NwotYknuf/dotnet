@@ -57,6 +57,8 @@
             // 
             // lPersonnel
             // 
+            this.lPersonnel.AutoEllipsis = true;
+            this.lPersonnel.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPersonnel.ForeColor = System.Drawing.Color.White;
             this.lPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("lPersonnel.Image")));
             this.lPersonnel.Location = new System.Drawing.Point(122, 2);

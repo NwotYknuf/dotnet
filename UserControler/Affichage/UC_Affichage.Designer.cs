@@ -47,7 +47,6 @@
             // flowLPanel
             // 
             this.flowLPanel.AutoScroll = true;
-            this.flowLPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLPanel.Location = new System.Drawing.Point(6, 19);
             this.flowLPanel.Name = "flowLPanel";

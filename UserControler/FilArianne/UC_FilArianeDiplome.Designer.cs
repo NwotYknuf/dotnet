@@ -65,6 +65,8 @@
             // 
             // lDiplome
             // 
+            this.lDiplome.AutoEllipsis = true;
+            this.lDiplome.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDiplome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lDiplome.Image = ((System.Drawing.Image)(resources.GetObject("lDiplome.Image")));
             this.lDiplome.Location = new System.Drawing.Point(122, 2);
@@ -78,6 +80,8 @@
             // 
             // lAnnee
             // 
+            this.lAnnee.AutoEllipsis = true;
+            this.lAnnee.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lAnnee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lAnnee.Image = ((System.Drawing.Image)(resources.GetObject("lAnnee.Image")));
             this.lAnnee.Location = new System.Drawing.Point(241, 2);
@@ -91,6 +95,8 @@
             // 
             // lPeriode
             // 
+            this.lPeriode.AutoEllipsis = true;
+            this.lPeriode.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPeriode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lPeriode.Image = ((System.Drawing.Image)(resources.GetObject("lPeriode.Image")));
             this.lPeriode.Location = new System.Drawing.Point(360, 2);
@@ -104,6 +110,8 @@
             // 
             // lUE
             // 
+            this.lUE.AutoEllipsis = true;
+            this.lUE.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lUE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lUE.Image = ((System.Drawing.Image)(resources.GetObject("lUE.Image")));
             this.lUE.Location = new System.Drawing.Point(479, 2);
@@ -117,6 +125,8 @@
             // 
             // lEC
             // 
+            this.lEC.AutoEllipsis = true;
+            this.lEC.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEC.ForeColor = System.Drawing.Color.White;
             this.lEC.Image = ((System.Drawing.Image)(resources.GetObject("lEC.Image")));
             this.lEC.Location = new System.Drawing.Point(598, 2);

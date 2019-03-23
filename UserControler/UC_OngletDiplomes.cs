@@ -29,6 +29,8 @@ namespace dotnet {
             lTitre.Text = "Diplômes : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des diplômes : ");
 
+            cBActif.Visible = false;
+
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
             uC_Ajout1 = new UC_AjoutDiplome(this);
@@ -51,7 +53,9 @@ namespace dotnet {
 
             lTitre.Text = "Années : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
-            
+
+            cBActif.Visible = false;
+
             uC_FilArianeDiplome1.filArianeDiplomeApparait(d);
 
             Point loc = uC_Ajout1.Location;
@@ -73,6 +77,8 @@ namespace dotnet {
             lTitre.Text = "Période : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
 
+            cBActif.Visible = false;
+
             uC_FilArianeDiplome1.filArianeAnneeApparait(a);
 
             Point loc = uC_Ajout1.Location;
@@ -92,6 +98,8 @@ namespace dotnet {
         public void affichePeriodeSelectionnee(periode p) {
             lTitre.Text = "UE : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
+
+            cBActif.Visible = false;
 
             uC_FilArianeDiplome1.filArianePeriodeApparait(p);
 
@@ -113,6 +121,16 @@ namespace dotnet {
             lTitre.Text = "EC : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
 
+            cBActif.Visible = true;
+
+            // Ajouter la compossante actif dans la table UE
+            /*if (u.actif == "oui")
+                cBActif.Checked = true;
+            else
+                cBActif.Checked = false;*/
+            
+            
+
             uC_FilArianeDiplome1.filArianeUEApparait(u);
 
             Point loc = uC_Ajout1.Location;
@@ -133,6 +151,8 @@ namespace dotnet {
         {
             lTitre.Text = "Cours : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
+
+            cBActif.Visible = false;
 
             uC_FilArianeDiplome1.filArianeECApparait(e);
 

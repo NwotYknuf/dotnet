@@ -43,7 +43,7 @@ namespace dotnet
             // 
             this.lTitre.AutoSize = true;
             this.lTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.Location = new System.Drawing.Point(66, 23);
+            this.lTitre.Location = new System.Drawing.Point(66, 80);
             this.lTitre.Name = "lTitre";
             this.lTitre.Size = new System.Drawing.Size(68, 29);
             this.lTitre.TabIndex = 11;
@@ -65,7 +65,7 @@ namespace dotnet
             // 
             // uC_FilArianePersonnel1
             // 
-            this.uC_FilArianePersonnel1.Location = new System.Drawing.Point(68, 72);
+            this.uC_FilArianePersonnel1.Location = new System.Drawing.Point(67, 22);
             this.uC_FilArianePersonnel1.Name = "uC_FilArianePersonnel1";
             this.uC_FilArianePersonnel1.Size = new System.Drawing.Size(980, 49);
             this.uC_FilArianePersonnel1.TabIndex = 20;
