@@ -24,7 +24,23 @@ namespace dotnet
 
         private void bLancerRech_Click(object sender, EventArgs e)
         {
-            
+            if((tbRecherche.Text.Trim().Length > 2) && (cBCritere.Text.Length > 0))
+            {
+                lErreur.Visible = false;
+
+                // Rechercher
+
+                /*var resultats = Database.instance;
+                foreach (resultats)
+                {
+                    uC_Affichage1.addElement(new UC_Element(this, d));
+                }
+                uC_Affichage1.updateAffichage();*/
+            }
+            else
+            {
+                lErreur.Visible = true;
+            }
         }
     }
 }

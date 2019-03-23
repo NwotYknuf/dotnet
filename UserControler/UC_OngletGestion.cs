@@ -36,19 +36,29 @@ namespace dotnet
             
         }
 
+        public void ajout(String element, String nom)
+        {
+            if ( element == "colonne" )
+                dataGridView1.Columns.Add("Column", nom);
+            else
+                dataGridView1.Rows.Add(nom);
+        }
+
         private void bAjoutColonne_Click(object sender, EventArgs e)
         {
-            
+            new FenetreAjout("Entrez le nom de la colonne :", this, "colonne").Show();
         }
 
         private void bAjoutLigne_Click(object sender, EventArgs e)
         {
-
+            new FenetreAjout("Entrez le nom de la ligne :", this, "ligne").Show();
         }
 
         private void bEnregistrer_Click(object sender, EventArgs e)
         {
             //Enregistrer dans les tables les modifications et / ou ajouts
+
+
         }
     }
 }

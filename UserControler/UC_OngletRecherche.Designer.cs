@@ -36,6 +36,7 @@
             this.lCritere = new System.Windows.Forms.Label();
             this.lMotClef = new System.Windows.Forms.Label();
             this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
+            this.lErreur = new System.Windows.Forms.Label();
             this.gbRecherche.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             // tbRecherche
             // 
-            this.tbRecherche.Location = new System.Drawing.Point(158, 31);
+            this.tbRecherche.Location = new System.Drawing.Point(134, 29);
             this.tbRecherche.Name = "tbRecherche";
             this.tbRecherche.Size = new System.Drawing.Size(112, 22);
             this.tbRecherche.TabIndex = 3;
@@ -59,6 +60,7 @@
             // bLancerRech
             // 
             this.bLancerRech.AutoSize = true;
+            this.bLancerRech.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLancerRech.Location = new System.Drawing.Point(357, 39);
             this.bLancerRech.Name = "bLancerRech";
             this.bLancerRech.Size = new System.Drawing.Size(101, 26);
@@ -69,6 +71,7 @@
             // 
             // gbRecherche
             // 
+            this.gbRecherche.Controls.Add(this.lErreur);
             this.gbRecherche.Controls.Add(this.cBCritere);
             this.gbRecherche.Controls.Add(this.lCritere);
             this.gbRecherche.Controls.Add(this.lMotClef);
@@ -84,8 +87,24 @@
             // 
             // cBCritere
             // 
+            this.cBCritere.AutoCompleteCustomSource.AddRange(new string[] {
+            "diplome",
+            "annee",
+            "periode",
+            "ue",
+            "ec",
+            "cours",
+            "personnel"});
             this.cBCritere.FormattingEnabled = true;
-            this.cBCritere.Location = new System.Drawing.Point(212, 59);
+            this.cBCritere.Items.AddRange(new object[] {
+            "diplome",
+            "annee",
+            "periode",
+            "ue",
+            "ec",
+            "cours",
+            "personnel"});
+            this.cBCritere.Location = new System.Drawing.Point(176, 57);
             this.cBCritere.Name = "cBCritere";
             this.cBCritere.Size = new System.Drawing.Size(121, 24);
             this.cBCritere.TabIndex = 6;
@@ -93,18 +112,20 @@
             // lCritere
             // 
             this.lCritere.AutoSize = true;
+            this.lCritere.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCritere.Location = new System.Drawing.Point(17, 62);
             this.lCritere.Name = "lCritere";
-            this.lCritere.Size = new System.Drawing.Size(189, 16);
+            this.lCritere.Size = new System.Drawing.Size(153, 13);
             this.lCritere.TabIndex = 5;
             this.lCritere.Text = "Rechercher dans quel critère : ";
             // 
             // lMotClef
             // 
             this.lMotClef.AutoSize = true;
+            this.lMotClef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lMotClef.Location = new System.Drawing.Point(17, 34);
             this.lMotClef.Name = "lMotClef";
-            this.lMotClef.Size = new System.Drawing.Size(135, 16);
+            this.lMotClef.Size = new System.Drawing.Size(111, 13);
             this.lMotClef.TabIndex = 4;
             this.lMotClef.Text = "Entrer votre mot-clef : ";
             // 
@@ -114,6 +135,19 @@
             this.uC_Affichage1.Name = "uC_Affichage1";
             this.uC_Affichage1.Size = new System.Drawing.Size(980, 364);
             this.uC_Affichage1.TabIndex = 13;
+            // 
+            // lErreur
+            // 
+            this.lErreur.AutoSize = true;
+            this.lErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lErreur.ForeColor = System.Drawing.Color.Red;
+            this.lErreur.Location = new System.Drawing.Point(364, 71);
+            this.lErreur.Name = "lErreur";
+            this.lErreur.Size = new System.Drawing.Size(88, 13);
+            this.lErreur.TabIndex = 7;
+            this.lErreur.Text = "Erreur, réessayez";
+            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lErreur.Visible = false;
             // 
             // UC_OngletRecherche
             // 
@@ -142,5 +176,6 @@
         private System.Windows.Forms.Label lCritere;
         private System.Windows.Forms.Label lMotClef;
         private UserControler.Affichage.UC_Affichage uC_Affichage1;
+        private System.Windows.Forms.Label lErreur;
     }
 }

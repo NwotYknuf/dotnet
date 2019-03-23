@@ -49,6 +49,7 @@
             // panel
             // 
             this.panel.Controls.Add(this.bCreer);
+            this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel.Location = new System.Drawing.Point(7, 20);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(962, 51);
