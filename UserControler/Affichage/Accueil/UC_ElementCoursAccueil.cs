@@ -27,43 +27,7 @@ namespace dotnet.UserControler.Affichage.Accueil
             tBCours.Text = _cours.id_type.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();
             tBPersonnel.Text = _cours.personnel.ToString();
-
-            if (_cours.personnel.ToString() == "")
-            {
-                tBPersonnel.Text = "Aucun";
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-            else
-            {
-                tBPersonnel.Text = _cours.personnel.ToString();
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_personnel.png");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-        }
-
-        private void pBAjouterRetirer_Click(object sender, EventArgs e)
-        {
-            if (_cours.personnel.ToString() == "")
-            {
-                // Ajouter un personnel
-            }
-            else
-            {
-                // Retirer un personnel
-            }
+            
         }
 
         private void pBSupprimer_Click(object sender, EventArgs e)
@@ -72,6 +36,11 @@ namespace dotnet.UserControler.Affichage.Accueil
         }
 
         private void pBModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_DoubleClick(object sender, EventArgs e)
         {
 
         }

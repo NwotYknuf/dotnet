@@ -1,4 +1,4 @@
-﻿namespace dotnet.UserControler.Affichage
+﻿namespace dotnet.UserControler.Affichage.Personnel
 {
     partial class UC_ElementPersonnel
     {

@@ -46,12 +46,12 @@
             // 
             // gBTitreAjout
             // 
-            this.gBTitreAjout.Size = new System.Drawing.Size(975, 107);
+            this.gBTitreAjout.Size = new System.Drawing.Size(994, 107);
             this.gBTitreAjout.Text = "Ajouter un personnel : ";
             // 
             // bCreer
             // 
-            this.bCreer.Location = new System.Drawing.Point(842, 26);
+            this.bCreer.Location = new System.Drawing.Point(862, 29);
             this.bCreer.Text = "Créer un personnel";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
             // 
@@ -69,7 +69,7 @@
             this.panel.Controls.Add(this.tBNom);
             this.panel.Controls.Add(this.lAdressePost);
             this.panel.Controls.Add(this.tBAdressePost);
-            this.panel.Size = new System.Drawing.Size(962, 81);
+            this.panel.Size = new System.Drawing.Size(982, 81);
             this.panel.Controls.SetChildIndex(this.tBAdressePost, 0);
             this.panel.Controls.SetChildIndex(this.lAdressePost, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
@@ -186,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_AjoutPersonnel";
-            this.Size = new System.Drawing.Size(980, 110);
+            this.Size = new System.Drawing.Size(1000, 110);
             this.gBTitreAjout.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

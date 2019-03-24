@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementPersonnelAccueil));
             this.lPrenom = new System.Windows.Forms.Label();
             this.tBPrenom = new System.Windows.Forms.TextBox();
             this.lNom = new System.Windows.Forms.Label();
@@ -37,17 +36,18 @@
             this.tBNbHeuresNonAttrib = new System.Windows.Forms.TextBox();
             this.lNbHeuresNonAttrib = new System.Windows.Forms.Label();
             this.lNbHeuresAttrib = new System.Windows.Forms.Label();
-            this.pBAjouterRetirer = new System.Windows.Forms.PictureBox();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gBAffElement
+            // 
+            this.gBAffElement.Size = new System.Drawing.Size(477, 114);
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.pBAjouterRetirer);
             this.panel.Controls.Add(this.tBNbHeuresAttrib);
             this.panel.Controls.Add(this.tBNbHeuresNonAttrib);
             this.panel.Controls.Add(this.lNbHeuresNonAttrib);
@@ -56,6 +56,8 @@
             this.panel.Controls.Add(this.tBPrenom);
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.tBNom);
+            this.panel.Size = new System.Drawing.Size(465, 90);
+            this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
@@ -66,16 +68,15 @@
             this.panel.Controls.SetChildIndex(this.lNbHeuresNonAttrib, 0);
             this.panel.Controls.SetChildIndex(this.tBNbHeuresNonAttrib, 0);
             this.panel.Controls.SetChildIndex(this.tBNbHeuresAttrib, 0);
-            this.panel.Controls.SetChildIndex(this.pBAjouterRetirer, 0);
             // 
             // pBModifier
             // 
-            this.pBModifier.Location = new System.Drawing.Point(453, 6);
+            this.pBModifier.Location = new System.Drawing.Point(423, 6);
             this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
             // 
             // pBSupprimer
             // 
-            this.pBSupprimer.Location = new System.Drawing.Point(454, 49);
+            this.pBSupprimer.Location = new System.Drawing.Point(424, 49);
             this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // lPrenom
@@ -146,18 +147,6 @@
             this.lNbHeuresAttrib.TabIndex = 47;
             this.lNbHeuresAttrib.Text = "Heures attribuées : ";
             // 
-            // pBAjouterRetirer
-            // 
-            this.pBAjouterRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterRetirer.Image")));
-            this.pBAjouterRetirer.InitialImage = null;
-            this.pBAjouterRetirer.Location = new System.Drawing.Point(388, 20);
-            this.pBAjouterRetirer.Name = "pBAjouterRetirer";
-            this.pBAjouterRetirer.Size = new System.Drawing.Size(59, 46);
-            this.pBAjouterRetirer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBAjouterRetirer.TabIndex = 51;
-            this.pBAjouterRetirer.TabStop = false;
-            this.pBAjouterRetirer.Click += new System.EventHandler(this.pBAjouterRetirer_Click);
-            // 
             // UC_ElementPersonnelAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,7 +157,6 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,6 +170,5 @@
         private System.Windows.Forms.TextBox tBNbHeuresNonAttrib;
         private System.Windows.Forms.Label lNbHeuresNonAttrib;
         private System.Windows.Forms.Label lNbHeuresAttrib;
-        protected System.Windows.Forms.PictureBox pBAjouterRetirer;
     }
 }

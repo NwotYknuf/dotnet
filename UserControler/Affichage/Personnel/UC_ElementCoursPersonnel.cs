@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.Affichage
+namespace dotnet.UserControler.Affichage.Personnel
 {
     public partial class UC_ElementCoursPersonnel : UC_ElementP
     {
@@ -40,9 +40,11 @@ namespace dotnet.UserControler.Affichage
 
         }
 
-        private void pBAjouterRetirer_Click(object sender, EventArgs e)
+        private void pBRetirer_Click(object sender, EventArgs e)
         {
             // Retirer ce cours à ce personnel
+
+            //_cadre.retirerCours(  );
         }
     }
 }

@@ -24,5 +24,10 @@ namespace dotnet.UserControler.Affichage.Accueil
             InitializeComponent();
             this._cadre = cadre;
         }
+
+        private void UC_ElementA_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace dotnet.UserControler.Affichage
+﻿namespace dotnet.UserControler.Affichage.Personnel
 {
     partial class UC_ElementCoursPersonnel
     {
@@ -35,12 +35,12 @@
             this.tBCours = new System.Windows.Forms.TextBox();
             this.lHoraires = new System.Windows.Forms.Label();
             this.lTypeCours = new System.Windows.Forms.Label();
-            this.pBAjouterRetirer = new System.Windows.Forms.PictureBox();
+            this.pBRetirer = new System.Windows.Forms.PictureBox();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBRetirer)).BeginInit();
             this.SuspendLayout();
             // 
             // gBAffElement
@@ -49,7 +49,7 @@
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.pBAjouterRetirer);
+            this.panel.Controls.Add(this.pBRetirer);
             this.panel.Controls.Add(this.tBEC);
             this.panel.Controls.Add(this.lEC);
             this.panel.Controls.Add(this.tBHoraires);
@@ -65,7 +65,7 @@
             this.panel.Controls.SetChildIndex(this.tBEC, 0);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
-            this.panel.Controls.SetChildIndex(this.pBAjouterRetirer, 0);
+            this.panel.Controls.SetChildIndex(this.pBRetirer, 0);
             // 
             // pBModifier
             // 
@@ -128,17 +128,17 @@
             this.lTypeCours.TabIndex = 7;
             this.lTypeCours.Text = "Type de cours : ";
             // 
-            // pBAjouterRetirer
+            // pBRetirer
             // 
-            this.pBAjouterRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterRetirer.Image")));
-            this.pBAjouterRetirer.InitialImage = null;
-            this.pBAjouterRetirer.Location = new System.Drawing.Point(829, 29);
-            this.pBAjouterRetirer.Name = "pBAjouterRetirer";
-            this.pBAjouterRetirer.Size = new System.Drawing.Size(61, 48);
-            this.pBAjouterRetirer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBAjouterRetirer.TabIndex = 19;
-            this.pBAjouterRetirer.TabStop = false;
-            this.pBAjouterRetirer.Click += new System.EventHandler(this.pBAjouterRetirer_Click);
+            this.pBRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBRetirer.Image")));
+            this.pBRetirer.InitialImage = null;
+            this.pBRetirer.Location = new System.Drawing.Point(829, 25);
+            this.pBRetirer.Name = "pBRetirer";
+            this.pBRetirer.Size = new System.Drawing.Size(61, 48);
+            this.pBRetirer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBRetirer.TabIndex = 19;
+            this.pBRetirer.TabStop = false;
+            this.pBRetirer.Click += new System.EventHandler(this.pBRetirer_Click);
             // 
             // UC_ElementCoursPersonnel
             // 
@@ -151,7 +151,7 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBRetirer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,6 +163,6 @@
         private System.Windows.Forms.TextBox tBCours;
         private System.Windows.Forms.Label lHoraires;
         private System.Windows.Forms.Label lTypeCours;
-        protected System.Windows.Forms.PictureBox pBAjouterRetirer;
+        protected System.Windows.Forms.PictureBox pBRetirer;
     }
 }

@@ -38,7 +38,11 @@ namespace dotnet.UserControler.Affichage
             {
                 flowLPanel.Controls.Add(e);
             }
+        }
 
+        public int getNombreElement()
+        {
+            return elements.Count;
         }
 
         public void setGroupBoxTiTre(String titre)

@@ -30,6 +30,7 @@
         {
             this.tBDesc = new System.Windows.Forms.TextBox();
             this.lDescAnnee = new System.Windows.Forms.Label();
+            this.cB_ECActive = new System.Windows.Forms.CheckBox();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
@@ -38,6 +39,7 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.cB_ECActive);
             this.panel.Controls.Add(this.tBDesc);
             this.panel.Controls.Add(this.lDescAnnee);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
@@ -45,6 +47,7 @@
             this.panel.Controls.SetChildIndex(this.tBDesc, 0);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
+            this.panel.Controls.SetChildIndex(this.cB_ECActive, 0);
             // 
             // pBModifier
             // 
@@ -59,7 +62,7 @@
             this.tBDesc.Enabled = false;
             this.tBDesc.Location = new System.Drawing.Point(99, 12);
             this.tBDesc.Name = "tBDesc";
-            this.tBDesc.Size = new System.Drawing.Size(752, 20);
+            this.tBDesc.Size = new System.Drawing.Size(649, 20);
             this.tBDesc.TabIndex = 6;
             // 
             // lDescAnnee
@@ -70,6 +73,21 @@
             this.lDescAnnee.Size = new System.Drawing.Size(69, 13);
             this.lDescAnnee.TabIndex = 5;
             this.lDescAnnee.Text = "Description : ";
+            // 
+            // cB_ECActive
+            // 
+            this.cB_ECActive.AutoSize = true;
+            this.cB_ECActive.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cB_ECActive.Checked = true;
+            this.cB_ECActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cB_ECActive.Enabled = false;
+            this.cB_ECActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cB_ECActive.Location = new System.Drawing.Point(767, 14);
+            this.cB_ECActive.Name = "cB_ECActive";
+            this.cB_ECActive.Size = new System.Drawing.Size(62, 17);
+            this.cB_ECActive.TabIndex = 7;
+            this.cB_ECActive.Text = "Active : ";
+            this.cB_ECActive.UseVisualStyleBackColor = true;
             // 
             // UC_ElementEC
             // 
@@ -89,5 +107,6 @@
 
         private System.Windows.Forms.TextBox tBDesc;
         private System.Windows.Forms.Label lDescAnnee;
+        private System.Windows.Forms.CheckBox cB_ECActive;
     }
 }

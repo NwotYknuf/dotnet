@@ -39,9 +39,9 @@
             // 
             this.gBTitreAjout.Controls.Add(this.panel);
             this.gBTitreAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBTitreAjout.Location = new System.Drawing.Point(0, 0);
+            this.gBTitreAjout.Location = new System.Drawing.Point(3, 3);
             this.gBTitreAjout.Name = "gBTitreAjout";
-            this.gBTitreAjout.Size = new System.Drawing.Size(975, 77);
+            this.gBTitreAjout.Size = new System.Drawing.Size(994, 77);
             this.gBTitreAjout.TabIndex = 0;
             this.gBTitreAjout.TabStop = false;
             this.gBTitreAjout.Text = "TitreAjout";
@@ -50,15 +50,15 @@
             // 
             this.panel.Controls.Add(this.bCreer);
             this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel.Location = new System.Drawing.Point(7, 20);
+            this.panel.Location = new System.Drawing.Point(6, 20);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(962, 51);
+            this.panel.Size = new System.Drawing.Size(982, 51);
             this.panel.TabIndex = 3;
             // 
             // bCreer
             // 
             this.bCreer.AutoSize = true;
-            this.bCreer.Location = new System.Drawing.Point(842, 13);
+            this.bCreer.Location = new System.Drawing.Point(862, 13);
             this.bCreer.Name = "bCreer";
             this.bCreer.Size = new System.Drawing.Size(117, 26);
             this.bCreer.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gBTitreAjout);
             this.Name = "UC_Ajout";
-            this.Size = new System.Drawing.Size(980, 80);
+            this.Size = new System.Drawing.Size(1000, 80);
             this.gBTitreAjout.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

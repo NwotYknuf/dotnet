@@ -28,29 +28,7 @@ namespace dotnet.UserControler.Affichage.Accueil
             tBPrenom.Text = _personnel.prenom;
             tBNbHeuresAttrib.Text = "";
             tBNbHeuresNonAttrib.Text = "";
-
-            /*if (_personnel.cours.ToString() == "")
-            {
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_cours.png");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-            else
-            {
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_cours.png");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }*/
+            
         }
 
         private void pBModifier_Click(object sender, EventArgs e)
@@ -63,16 +41,9 @@ namespace dotnet.UserControler.Affichage.Accueil
 
         }
 
-        private void pBAjouterRetirer_Click(object sender, EventArgs e)
+        private void panel_DoubleClick(object sender, EventArgs e)
         {
-            if (_personnel.cours.ToString() == "")
-            {
-                // Ajouter un cours
-            }
-            else
-            {
-                // Retirer un cours
-            }
+            
         }
     }
 }

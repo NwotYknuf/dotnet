@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.UserControler.Affichage
+namespace dotnet.UserControler.Affichage.Personnel
 {
     public partial class UC_ElementPersonnel : UC_ElementP
     {

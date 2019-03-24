@@ -38,8 +38,8 @@
             this.lHorloge = new System.Windows.Forms.Label();
             this.timerBienvenu = new System.Windows.Forms.Timer(this.components);
             this.timerHorloge = new System.Windows.Forms.Timer(this.components);
-            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
+            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pBienvenu.SuspendLayout();
             this.pAccueil.SuspendLayout();
             this.pAffCours.SuspendLayout();
@@ -57,7 +57,7 @@
             this.lBienvenu.Name = "lBienvenu";
             this.lBienvenu.Size = new System.Drawing.Size(858, 252);
             this.lBienvenu.TabIndex = 0;
-            this.lBienvenu.Text = "Bienvenu dans notre \r\n      application de gestion !";
+            this.lBienvenu.Text = "Bienvenu dans votre \r\n      application de gestion !";
             // 
             // pBienvenu
             // 
@@ -124,19 +124,19 @@
             // 
             this.timerHorloge.Tick += new System.EventHandler(this.timerHorloge_Tick);
             // 
-            // uC_AffPersonnel
-            // 
-            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
-            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
-            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
-            this.uC_AffPersonnel.TabIndex = 0;
-            // 
             // uC_AffCours
             // 
             this.uC_AffCours.Location = new System.Drawing.Point(13, 8);
             this.uC_AffCours.Name = "uC_AffCours";
             this.uC_AffCours.Size = new System.Drawing.Size(525, 555);
             this.uC_AffCours.TabIndex = 0;
+            // 
+            // uC_AffPersonnel
+            // 
+            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
+            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
+            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
+            this.uC_AffPersonnel.TabIndex = 0;
             // 
             // UC_OngletAccueil
             // 

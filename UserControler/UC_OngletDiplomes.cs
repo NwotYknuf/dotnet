@@ -21,15 +21,15 @@ namespace dotnet {
         private void UC_OngletDiplomes_Load(object sender, EventArgs e)
         {
             uC_FilArianeDiplome1.setOngletDiplome(this);
-            //afficheRacine();
+            afficheRacine();
         }
         
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
-            lTitre.Text = "Diplômes : ";
+            lTitre.Text = "Diplômes proposés à l'Université UFR MIM de Metz : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des diplômes : ");
 
-            cBActif.Visible = false;
+            cB_ECActive.Visible = false;
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
@@ -51,10 +51,10 @@ namespace dotnet {
 
             // changer l'UC ajout
 
-            lTitre.Text = "Années : ";
+            lTitre.Text = "Années proposées en " + d.nom + " : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
 
-            cBActif.Visible = false;
+            cB_ECActive.Visible = false;
 
             uC_FilArianeDiplome1.filArianeDiplomeApparait(d);
 
@@ -74,10 +74,10 @@ namespace dotnet {
         }
         
         public void afficheAnneeSelectionnee(annee a) {
-            lTitre.Text = "Période : ";
+            lTitre.Text = "Période proposées en " + a.nom + " : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
 
-            cBActif.Visible = false;
+            cB_ECActive.Visible = false;
 
             uC_FilArianeDiplome1.filArianeAnneeApparait(a);
 
@@ -96,10 +96,10 @@ namespace dotnet {
         }
 
         public void affichePeriodeSelectionnee(periode p) {
-            lTitre.Text = "UE : ";
+            lTitre.Text = "UE proposées au " + p.nom + " : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
 
-            cBActif.Visible = false;
+            cB_ECActive.Visible = false;
 
             uC_FilArianeDiplome1.filArianePeriodeApparait(p);
 
@@ -118,18 +118,10 @@ namespace dotnet {
         }
 
         public void afficheUESelectionnee(ue u) {
-            lTitre.Text = "EC : ";
+            lTitre.Text = "EC contenues dans l'UE " + u.nom + " : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
 
-            cBActif.Visible = true;
-
-            // Ajouter la compossante actif dans la table UE
-            /*if (u.actif == "oui")
-                cBActif.Checked = true;
-            else
-                cBActif.Checked = false;*/
-            
-            
+            cB_ECActive.Visible = false;
 
             uC_FilArianeDiplome1.filArianeUEApparait(u);
 
@@ -149,10 +141,10 @@ namespace dotnet {
 
         public void afficheECSelectionnee(ec e)
         {
-            lTitre.Text = "Cours : ";
+            lTitre.Text = "Cours proposés dans l'EC " + e.nom + " : ";
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 
-            cBActif.Visible = false;
+            cB_ECActive.Visible = true;
 
             uC_FilArianeDiplome1.filArianeECApparait(e);
 
@@ -168,6 +160,20 @@ namespace dotnet {
                 uC_Affichage1.addElement(new UC_ElementCoursDiplome(this, c));
             }
             uC_Affichage1.updateAffichage();
+        }
+
+        private void cB_ECActive_CheckedChanged(object sender, EventArgs e)
+        {
+            // Change l'état de l'EC dans la bdd si elle est active ou non
+
+            if(cB_ECActive.Checked)
+            {
+                // L'UE est active
+            }
+            else
+            {
+                // l'EC n'est plus active
+            }
         }
     }
 }

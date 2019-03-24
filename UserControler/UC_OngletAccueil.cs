@@ -26,7 +26,7 @@ namespace dotnet
             initialisePersonnels(uC_AffPersonnel);
             initialiseCours(uC_AffCours);
 
-            timerBienvenu.Interval = 3000; // 3 secondes
+            timerBienvenu.Interval = 3000; // 2 secondes
             timerBienvenu.Enabled = true;
             timerBienvenu.Start();
 
@@ -45,26 +45,40 @@ namespace dotnet
             var personnels = Database.instance.personnel;
             foreach (personnel p in personnels)
             {
+                //if(p.heure_affectees != ... )
                 uc.addElement(new UC_ElementPersonnelAccueil(this, p));
             }
+            
+            if (uc.getNombreElement() == 0)
+            {
+                uc.addElement(new UC_ElementLabel());
+            }
+
             uc.updateAffichage();
         }
 
         public void initialiseCours(UC_AffichageA uc)
         {
-            uC_AffCours.setGroupBoxTiTre("Les cours non affectés : ");
+            uc.setGroupBoxTiTre("Les cours non affectés : ");
 
             uc.clearElements();
 
             var cours = Database.instance.cours;
             foreach (cours c in cours)
             {
-                uc.addElement(new UC_ElementCoursAccueil(this, c));
+                if(c.id_personnel == null)
+                    uc.addElement(new UC_ElementCoursAccueil(this, c));
             }
+
+            if (uc.getNombreElement() == 0)
+            {
+                uc.addElement(new UC_ElementLabel());
+            }
+                
             uc.updateAffichage();
         }
 
-        //Après 3 secondes, fais disparaitre le panel de Bienvenu
+        //Après 2 secondes, fais disparaitre le panel de Bienvenu
         private void timerBienvenu_Tick(object sender, EventArgs e)
         {
             for(int i = 100; i >= 0; i--)

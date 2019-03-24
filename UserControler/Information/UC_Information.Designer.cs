@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.gbInfos = new System.Windows.Forms.GroupBox();
-            this.lNbHeuresNonAttrib = new System.Windows.Forms.Label();
-            this.lNbHeuresAttrib = new System.Windows.Forms.Label();
-            this.lNom = new System.Windows.Forms.Label();
+            this.tBNbHeuresAttrib = new System.Windows.Forms.TextBox();
+            this.tBNbHeuresNonAttrib = new System.Windows.Forms.TextBox();
             this.cBCategorie = new System.Windows.Forms.ComboBox();
             this.lCategorie = new System.Windows.Forms.Label();
             this.lTelephone = new System.Windows.Forms.Label();
@@ -43,8 +42,9 @@
             this.tBNom = new System.Windows.Forms.TextBox();
             this.lAdressePost = new System.Windows.Forms.Label();
             this.tBAdressePost = new System.Windows.Forms.TextBox();
-            this.tBNbHeuresAttrib = new System.Windows.Forms.TextBox();
-            this.tBNbHeuresNonAttrib = new System.Windows.Forms.TextBox();
+            this.lNbHeuresNonAttrib = new System.Windows.Forms.Label();
+            this.lNbHeuresAttrib = new System.Windows.Forms.Label();
+            this.lNom = new System.Windows.Forms.Label();
             this.gbInfos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,40 +69,24 @@
             this.gbInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfos.Location = new System.Drawing.Point(3, 3);
             this.gbInfos.Name = "gbInfos";
-            this.gbInfos.Size = new System.Drawing.Size(974, 122);
+            this.gbInfos.Size = new System.Drawing.Size(994, 122);
             this.gbInfos.TabIndex = 20;
             this.gbInfos.TabStop = false;
             this.gbInfos.Text = "Informations : ";
             // 
-            // lNbHeuresNonAttrib
+            // tBNbHeuresAttrib
             // 
-            this.lNbHeuresNonAttrib.AutoSize = true;
-            this.lNbHeuresNonAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNbHeuresNonAttrib.Location = new System.Drawing.Point(563, 59);
-            this.lNbHeuresNonAttrib.Name = "lNbHeuresNonAttrib";
-            this.lNbHeuresNonAttrib.Size = new System.Drawing.Size(166, 13);
-            this.lNbHeuresNonAttrib.TabIndex = 2;
-            this.lNbHeuresNonAttrib.Text = "Nombre d\'heures non attribuées : ";
+            this.tBNbHeuresAttrib.Location = new System.Drawing.Point(736, 28);
+            this.tBNbHeuresAttrib.Name = "tBNbHeuresAttrib";
+            this.tBNbHeuresAttrib.Size = new System.Drawing.Size(100, 22);
+            this.tBNbHeuresAttrib.TabIndex = 45;
             // 
-            // lNbHeuresAttrib
+            // tBNbHeuresNonAttrib
             // 
-            this.lNbHeuresAttrib.AutoSize = true;
-            this.lNbHeuresAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNbHeuresAttrib.Location = new System.Drawing.Point(563, 35);
-            this.lNbHeuresAttrib.Name = "lNbHeuresAttrib";
-            this.lNbHeuresAttrib.Size = new System.Drawing.Size(145, 13);
-            this.lNbHeuresAttrib.TabIndex = 1;
-            this.lNbHeuresAttrib.Text = "Nombre d\'heures attribuées : ";
-            // 
-            // lNom
-            // 
-            this.lNom.AutoSize = true;
-            this.lNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNom.Location = new System.Drawing.Point(37, 30);
-            this.lNom.Name = "lNom";
-            this.lNom.Size = new System.Drawing.Size(38, 13);
-            this.lNom.TabIndex = 0;
-            this.lNom.Text = "Nom : ";
+            this.tBNbHeuresNonAttrib.Location = new System.Drawing.Point(736, 54);
+            this.tBNbHeuresNonAttrib.Name = "tBNbHeuresNonAttrib";
+            this.tBNbHeuresNonAttrib.Size = new System.Drawing.Size(100, 22);
+            this.tBNbHeuresNonAttrib.TabIndex = 46;
             // 
             // cBCategorie
             // 
@@ -197,19 +181,35 @@
             this.tBAdressePost.Size = new System.Drawing.Size(100, 22);
             this.tBAdressePost.TabIndex = 44;
             // 
-            // tBNbHeuresAttrib
+            // lNbHeuresNonAttrib
             // 
-            this.tBNbHeuresAttrib.Location = new System.Drawing.Point(736, 28);
-            this.tBNbHeuresAttrib.Name = "tBNbHeuresAttrib";
-            this.tBNbHeuresAttrib.Size = new System.Drawing.Size(100, 22);
-            this.tBNbHeuresAttrib.TabIndex = 45;
+            this.lNbHeuresNonAttrib.AutoSize = true;
+            this.lNbHeuresNonAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNbHeuresNonAttrib.Location = new System.Drawing.Point(563, 59);
+            this.lNbHeuresNonAttrib.Name = "lNbHeuresNonAttrib";
+            this.lNbHeuresNonAttrib.Size = new System.Drawing.Size(166, 13);
+            this.lNbHeuresNonAttrib.TabIndex = 2;
+            this.lNbHeuresNonAttrib.Text = "Nombre d\'heures non attribuées : ";
             // 
-            // tBNbHeuresNonAttrib
+            // lNbHeuresAttrib
             // 
-            this.tBNbHeuresNonAttrib.Location = new System.Drawing.Point(736, 54);
-            this.tBNbHeuresNonAttrib.Name = "tBNbHeuresNonAttrib";
-            this.tBNbHeuresNonAttrib.Size = new System.Drawing.Size(100, 22);
-            this.tBNbHeuresNonAttrib.TabIndex = 46;
+            this.lNbHeuresAttrib.AutoSize = true;
+            this.lNbHeuresAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNbHeuresAttrib.Location = new System.Drawing.Point(563, 35);
+            this.lNbHeuresAttrib.Name = "lNbHeuresAttrib";
+            this.lNbHeuresAttrib.Size = new System.Drawing.Size(145, 13);
+            this.lNbHeuresAttrib.TabIndex = 1;
+            this.lNbHeuresAttrib.Text = "Nombre d\'heures attribuées : ";
+            // 
+            // lNom
+            // 
+            this.lNom.AutoSize = true;
+            this.lNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNom.Location = new System.Drawing.Point(37, 30);
+            this.lNom.Name = "lNom";
+            this.lNom.Size = new System.Drawing.Size(38, 13);
+            this.lNom.TabIndex = 0;
+            this.lNom.Text = "Nom : ";
             // 
             // UC_Information
             // 
@@ -217,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbInfos);
             this.Name = "UC_Information";
-            this.Size = new System.Drawing.Size(980, 128);
+            this.Size = new System.Drawing.Size(1000, 128);
             this.gbInfos.ResumeLayout(false);
             this.gbInfos.PerformLayout();
             this.ResumeLayout(false);

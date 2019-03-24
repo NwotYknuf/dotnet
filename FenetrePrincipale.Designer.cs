@@ -86,6 +86,7 @@
             // msMenu
             // 
             this.msMenu.AutoSize = false;
+            this.msMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.msMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.msMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
