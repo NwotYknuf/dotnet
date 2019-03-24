@@ -27,41 +27,62 @@ namespace dotnet.UserControler.Affichage
             tBCours.Text = _cours.type_cours.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();
 
-            if (_cours.personnel.ToString() == "")
+            if (_cours.personnel == null)
             {
                 tBPersonnel.Text = "Aucun";
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                initialiseImageAjout(pBAjouterRetirer);
             }
             else
             {
                 tBPersonnel.Text = _cours.personnel.ToString();
-                try
-                {
-                    pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_personnel.png");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                initialiseImageRetrait(pBAjouterRetirer);
+            }
+        }
+
+        private void initialiseImageAjout(PictureBox pB)
+        {
+            try
+            {
+                pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private void initialiseImageRetrait(PictureBox pB)
+        {
+            try
+            {
+                pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_personnel.png");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
 
         private void pBAjouterRetirer_Click(object sender, EventArgs e)
         {
-            if (_cours.personnel.ToString() == "")
+            if (_cours.personnel == null)
             {
                 // Ajouter un personnel
+
+                _cours.personnel = new personnel(); // A continuer
+
+                initialiseImageRetrait(pBAjouterRetirer);
+
+                this.Update();
             }
             else
             {
                 // Retirer un personnel
+
+                _cours.personnel = null;
+                initialiseImageAjout(pBAjouterRetirer);
+
+                this.Update();
             }
         }
 

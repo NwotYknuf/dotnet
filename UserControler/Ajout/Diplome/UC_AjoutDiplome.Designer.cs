@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tBNom = new System.Windows.Forms.TextBox();
+            this.lNom = new System.Windows.Forms.Label();
             this.lDescription = new System.Windows.Forms.Label();
             this.rtBDesc = new System.Windows.Forms.RichTextBox();
-            this.lNom = new System.Windows.Forms.Label();
-            this.tBNom = new System.Windows.Forms.TextBox();
             this.gBTitreAjout.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gBTitre
+            // gBTitreAjout
             // 
             this.gBTitreAjout.Text = "Ajouter un diplôme : ";
             // 
             // bCreer
             // 
+            this.bCreer.Location = new System.Drawing.Point(833, 7);
             this.bCreer.Text = "Créer un diplôme";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
             // 
@@ -51,44 +52,44 @@
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.lDescription);
             this.panel.Controls.Add(this.rtBDesc);
+            this.panel.Controls.SetChildIndex(this.bCreer, 0);
             this.panel.Controls.SetChildIndex(this.rtBDesc, 0);
             this.panel.Controls.SetChildIndex(this.lDescription, 0);
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
-            this.panel.Controls.SetChildIndex(this.bCreer, 0);
             // 
-            // lDescription
+            // tBNom
             // 
-            this.lDescription.AutoSize = true;
-            this.lDescription.Location = new System.Drawing.Point(332, 20);
-            this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(69, 13);
-            this.lDescription.TabIndex = 4;
-            this.lDescription.Text = "Description : ";
-            // 
-            // rtBDesc
-            // 
-            this.rtBDesc.Location = new System.Drawing.Point(426, 1);
-            this.rtBDesc.Name = "rtBDesc";
-            this.rtBDesc.Size = new System.Drawing.Size(231, 47);
-            this.rtBDesc.TabIndex = 3;
-            this.rtBDesc.Text = "";
+            this.tBNom.Location = new System.Drawing.Point(90, 17);
+            this.tBNom.Name = "tBNom";
+            this.tBNom.Size = new System.Drawing.Size(100, 20);
+            this.tBNom.TabIndex = 14;
             // 
             // lNom
             // 
             this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(17, 20);
+            this.lNom.Location = new System.Drawing.Point(30, 20);
             this.lNom.Name = "lNom";
             this.lNom.Size = new System.Drawing.Size(38, 13);
-            this.lNom.TabIndex = 5;
+            this.lNom.TabIndex = 13;
             this.lNom.Text = "Nom : ";
             // 
-            // tBNom
+            // lDescription
             // 
-            this.tBNom.Location = new System.Drawing.Point(104, 17);
-            this.tBNom.Name = "tBNom";
-            this.tBNom.Size = new System.Drawing.Size(100, 20);
-            this.tBNom.TabIndex = 6;
+            this.lDescription.AutoSize = true;
+            this.lDescription.Location = new System.Drawing.Point(244, 20);
+            this.lDescription.Name = "lDescription";
+            this.lDescription.Size = new System.Drawing.Size(69, 13);
+            this.lDescription.TabIndex = 12;
+            this.lDescription.Text = "Description : ";
+            // 
+            // rtBDesc
+            // 
+            this.rtBDesc.Location = new System.Drawing.Point(335, 17);
+            this.rtBDesc.Name = "rtBDesc";
+            this.rtBDesc.Size = new System.Drawing.Size(429, 20);
+            this.rtBDesc.TabIndex = 11;
+            this.rtBDesc.Text = "";
             // 
             // UC_AjoutDiplome
             // 
@@ -104,9 +105,9 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox tBNom;
         private System.Windows.Forms.Label lNom;
         private System.Windows.Forms.Label lDescription;
         private System.Windows.Forms.RichTextBox rtBDesc;
-        private System.Windows.Forms.TextBox tBNom;
     }
 }

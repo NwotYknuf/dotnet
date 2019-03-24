@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementAjoutCours));
             this.pBAjouterCours = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
@@ -75,6 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementAjoutCours";
             this.Size = new System.Drawing.Size(955, 81);
+            this.Load += new System.EventHandler(this.UC_ElementAjoutCours_Load);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
@@ -87,5 +90,6 @@
         #endregion
 
         protected System.Windows.Forms.PictureBox pBAjouterCours;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

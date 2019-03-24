@@ -55,6 +55,7 @@
             this.panel.Controls.Add(this.tBNom);
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.lTypeCours);
+            this.panel.Controls.SetChildIndex(this.lErreur, 0);
             this.panel.Controls.SetChildIndex(this.lTypeCours, 0);
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.bCreer, 0);
@@ -117,6 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_AjoutCours";
+            this.Load += new System.EventHandler(this.UC_AjoutCours_Load);
             this.gBTitreAjout.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

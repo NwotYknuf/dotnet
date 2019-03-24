@@ -27,5 +27,16 @@ namespace dotnet.UserControler.Ajout
         {
             // Ajouter un personnel
         }
+
+        private void UC_AjoutPersonnel_Load(object sender, EventArgs e)
+        {
+            initialiseCBCategorie();
+        }
+        private void initialiseCBCategorie()
+        {
+            var categories = Database.instance.categorie;
+            foreach (categorie c in categories)
+                cBCategorie.Items.Add(c.nom);
+        }
     }
 }

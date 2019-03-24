@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Element));
             this.gBAffElement = new System.Windows.Forms.GroupBox();
             this.panel = new System.Windows.Forms.Panel();
             this.pBModifier = new System.Windows.Forms.PictureBox();
             this.pBSupprimer = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
@@ -93,6 +95,7 @@
             this.Controls.Add(this.gBAffElement);
             this.Name = "UC_Element";
             this.Size = new System.Drawing.Size(955, 70);
+            this.Load += new System.EventHandler(this.UC_Element_Load);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
@@ -107,5 +110,6 @@
         protected System.Windows.Forms.Panel panel;
         protected System.Windows.Forms.PictureBox pBModifier;
         protected System.Windows.Forms.PictureBox pBSupprimer;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

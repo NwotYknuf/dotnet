@@ -27,7 +27,7 @@ namespace dotnet.UserControler.Affichage.Personnel
             tBCours.Text = _cours.type_cours.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();
             tBEC.Text = _cours.id_ec.ToString();
-            
+
         }
 
         private void pBModifier_Click(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace dotnet.UserControler.Affichage.Personnel
             // Retirer ce cours à ce personnel
 
             //_cadre.retirerCours(  );
+        }
+
+        private void UC_ElementCoursPersonnel_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(this.pBRetirer, "Retirer ce cours du personnel");
         }
     }
 }

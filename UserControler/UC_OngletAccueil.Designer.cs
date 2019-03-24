@@ -33,13 +33,13 @@
             this.pBienvenu = new System.Windows.Forms.Panel();
             this.pAccueil = new System.Windows.Forms.Panel();
             this.pAffCours = new System.Windows.Forms.Panel();
+            this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pAffPersonnel = new System.Windows.Forms.Panel();
+            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.lDate = new System.Windows.Forms.Label();
             this.lHorloge = new System.Windows.Forms.Label();
             this.timerBienvenu = new System.Windows.Forms.Timer(this.components);
             this.timerHorloge = new System.Windows.Forms.Timer(this.components);
-            this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
-            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pBienvenu.SuspendLayout();
             this.pAccueil.SuspendLayout();
             this.pAffCours.SuspendLayout();
@@ -52,7 +52,7 @@
             this.lBienvenu.AutoSize = true;
             this.lBienvenu.BackColor = System.Drawing.Color.Transparent;
             this.lBienvenu.Font = new System.Drawing.Font("Pristina", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBienvenu.ForeColor = System.Drawing.Color.White;
+            this.lBienvenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.lBienvenu.Location = new System.Drawing.Point(143, 194);
             this.lBienvenu.Name = "lBienvenu";
             this.lBienvenu.Size = new System.Drawing.Size(858, 252);
@@ -61,7 +61,7 @@
             // 
             // pBienvenu
             // 
-            this.pBienvenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
+            this.pBienvenu.BackColor = System.Drawing.Color.White;
             this.pBienvenu.Controls.Add(this.lBienvenu);
             this.pBienvenu.Location = new System.Drawing.Point(3, 3);
             this.pBienvenu.Name = "pBienvenu";
@@ -88,6 +88,13 @@
             this.pAffCours.Size = new System.Drawing.Size(550, 577);
             this.pAffCours.TabIndex = 3;
             // 
+            // uC_AffCours
+            // 
+            this.uC_AffCours.Location = new System.Drawing.Point(13, 8);
+            this.uC_AffCours.Name = "uC_AffCours";
+            this.uC_AffCours.Size = new System.Drawing.Size(525, 555);
+            this.uC_AffCours.TabIndex = 0;
+            // 
             // pAffPersonnel
             // 
             this.pAffPersonnel.Controls.Add(this.uC_AffPersonnel);
@@ -95,6 +102,13 @@
             this.pAffPersonnel.Name = "pAffPersonnel";
             this.pAffPersonnel.Size = new System.Drawing.Size(550, 577);
             this.pAffPersonnel.TabIndex = 2;
+            // 
+            // uC_AffPersonnel
+            // 
+            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
+            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
+            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
+            this.uC_AffPersonnel.TabIndex = 0;
             // 
             // lDate
             // 
@@ -123,20 +137,6 @@
             // timerHorloge
             // 
             this.timerHorloge.Tick += new System.EventHandler(this.timerHorloge_Tick);
-            // 
-            // uC_AffCours
-            // 
-            this.uC_AffCours.Location = new System.Drawing.Point(13, 8);
-            this.uC_AffCours.Name = "uC_AffCours";
-            this.uC_AffCours.Size = new System.Drawing.Size(525, 555);
-            this.uC_AffCours.TabIndex = 0;
-            // 
-            // uC_AffPersonnel
-            // 
-            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
-            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
-            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
-            this.uC_AffPersonnel.TabIndex = 0;
             // 
             // UC_OngletAccueil
             // 

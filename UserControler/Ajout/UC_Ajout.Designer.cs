@@ -31,6 +31,7 @@
             this.gBTitreAjout = new System.Windows.Forms.GroupBox();
             this.panel = new System.Windows.Forms.Panel();
             this.bCreer = new System.Windows.Forms.Button();
+            this.lErreur = new System.Windows.Forms.Label();
             this.gBTitreAjout.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.lErreur);
             this.panel.Controls.Add(this.bCreer);
             this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel.Location = new System.Drawing.Point(6, 20);
@@ -58,12 +60,25 @@
             // bCreer
             // 
             this.bCreer.AutoSize = true;
-            this.bCreer.Location = new System.Drawing.Point(862, 13);
+            this.bCreer.Location = new System.Drawing.Point(833, 7);
             this.bCreer.Name = "bCreer";
             this.bCreer.Size = new System.Drawing.Size(117, 26);
             this.bCreer.TabIndex = 2;
             this.bCreer.Text = "Créer";
             this.bCreer.UseVisualStyleBackColor = true;
+            // 
+            // lErreur
+            // 
+            this.lErreur.AutoSize = true;
+            this.lErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lErreur.ForeColor = System.Drawing.Color.Red;
+            this.lErreur.Location = new System.Drawing.Point(849, 35);
+            this.lErreur.Name = "lErreur";
+            this.lErreur.Size = new System.Drawing.Size(88, 13);
+            this.lErreur.TabIndex = 8;
+            this.lErreur.Text = "Erreur, réessayez";
+            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lErreur.Visible = false;
             // 
             // UC_Ajout
             // 
@@ -84,5 +99,6 @@
         protected System.Windows.Forms.GroupBox gBTitreAjout;
         protected System.Windows.Forms.Button bCreer;
         protected System.Windows.Forms.Panel panel;
+        protected System.Windows.Forms.Label lErreur;
     }
 }

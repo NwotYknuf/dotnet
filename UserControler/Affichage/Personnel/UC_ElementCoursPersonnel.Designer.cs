@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementCoursPersonnel));
             this.tBEC = new System.Windows.Forms.TextBox();
             this.lEC = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.lHoraires = new System.Windows.Forms.Label();
             this.lTypeCours = new System.Windows.Forms.Label();
             this.pBRetirer = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
@@ -146,6 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementCoursPersonnel";
             this.Size = new System.Drawing.Size(955, 126);
+            this.Load += new System.EventHandler(this.UC_ElementCoursPersonnel_Load);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
@@ -164,5 +167,6 @@
         private System.Windows.Forms.Label lHoraires;
         private System.Windows.Forms.Label lTypeCours;
         protected System.Windows.Forms.PictureBox pBRetirer;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

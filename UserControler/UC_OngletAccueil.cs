@@ -81,12 +81,13 @@ namespace dotnet
         //Après 2 secondes, fais disparaitre le panel de Bienvenu
         private void timerBienvenu_Tick(object sender, EventArgs e)
         {
-            for(int i = 100; i >= 0; i--)
+            /*for(int i = 100; i >= 0; i--)
             {
-                pBienvenu.BackColor = Color.FromArgb(i, 60, 185, 213);
+                pBienvenu.BackColor = Color.FromArgb(i, 255, 255, 255);
+                lBienvenu.ForeColor = Color.FromArgb(i, 60, 185, 213);
                 pBienvenu.Update();
                 
-            }
+            }*/
             pBienvenu.Visible = false;
             timerBienvenu.Stop();
         }

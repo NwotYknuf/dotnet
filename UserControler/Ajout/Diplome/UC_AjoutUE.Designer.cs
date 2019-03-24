@@ -59,7 +59,7 @@
             // 
             // tBNom
             // 
-            this.tBNom.Location = new System.Drawing.Point(104, 17);
+            this.tBNom.Location = new System.Drawing.Point(90, 17);
             this.tBNom.Name = "tBNom";
             this.tBNom.Size = new System.Drawing.Size(100, 20);
             this.tBNom.TabIndex = 18;
@@ -67,7 +67,7 @@
             // lNom
             // 
             this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(17, 20);
+            this.lNom.Location = new System.Drawing.Point(30, 20);
             this.lNom.Name = "lNom";
             this.lNom.Size = new System.Drawing.Size(38, 13);
             this.lNom.TabIndex = 17;
@@ -76,7 +76,7 @@
             // lDescription
             // 
             this.lDescription.AutoSize = true;
-            this.lDescription.Location = new System.Drawing.Point(332, 20);
+            this.lDescription.Location = new System.Drawing.Point(244, 20);
             this.lDescription.Name = "lDescription";
             this.lDescription.Size = new System.Drawing.Size(69, 13);
             this.lDescription.TabIndex = 16;
@@ -84,9 +84,9 @@
             // 
             // rtBDesc
             // 
-            this.rtBDesc.Location = new System.Drawing.Point(426, 1);
+            this.rtBDesc.Location = new System.Drawing.Point(335, 17);
             this.rtBDesc.Name = "rtBDesc";
-            this.rtBDesc.Size = new System.Drawing.Size(231, 47);
+            this.rtBDesc.Size = new System.Drawing.Size(429, 20);
             this.rtBDesc.TabIndex = 15;
             this.rtBDesc.Text = "";
             // 

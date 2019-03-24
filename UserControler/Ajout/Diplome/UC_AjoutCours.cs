@@ -23,9 +23,32 @@ namespace dotnet.UserControler.Ajout
             //this.gBTitre.Text = "Ajouter un cours : ";
         }
 
+        private void UC_AjoutCours_Load(object sender, EventArgs e)
+        {
+            initialiseCBType();
+        }
+
+        private void initialiseCBType()
+        {
+            var types = Database.instance.type_cours;
+            foreach(type_cours t in types)
+                cBType.Items.Add(t.nom);
+        }
+
         private void bCreer_Click(object sender, EventArgs e)
         {
-            // Ajouter un cours
+            if ((conditionsRespectees(tBNom.Text,true, true, true, false, 2, 100)) &&
+                (conditionsRespectees(tBHoraires.Text, false, true, true, true, 1, 3)) && 
+                (conditionsRespectees(cBType.Text, cBType)) )
+            {
+                lErreur.Visible = false;
+                // Ajouter un cours
+
+            }
+            else
+            {
+                lErreur.Visible = true;
+            }
         }
     }
 }

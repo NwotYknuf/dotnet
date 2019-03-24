@@ -25,7 +25,17 @@ namespace dotnet.UserControler.Ajout
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            // Créer une période
+            if ((conditionsRespectees(tBNom.Text, true, true, true, false, 2, 100)) &&
+                (conditionsRespectees(rtBDesc.Text, true, true, true, true, 2, 100)))
+            {
+                lErreur.Visible = false;
+                // Ajouter une période
+
+            }
+            else
+            {
+                lErreur.Visible = true;
+            }
         }
     }
 }

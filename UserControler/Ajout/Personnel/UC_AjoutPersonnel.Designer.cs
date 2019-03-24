@@ -51,7 +51,7 @@
             // 
             // bCreer
             // 
-            this.bCreer.Location = new System.Drawing.Point(862, 29);
+            this.bCreer.Location = new System.Drawing.Point(833, 17);
             this.bCreer.Text = "Créer un personnel";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
             // 
@@ -70,12 +70,13 @@
             this.panel.Controls.Add(this.lAdressePost);
             this.panel.Controls.Add(this.tBAdressePost);
             this.panel.Size = new System.Drawing.Size(982, 81);
+            this.panel.Controls.SetChildIndex(this.bCreer, 0);
+            this.panel.Controls.SetChildIndex(this.lErreur, 0);
             this.panel.Controls.SetChildIndex(this.tBAdressePost, 0);
             this.panel.Controls.SetChildIndex(this.lAdressePost, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.lAdresseEmail, 0);
-            this.panel.Controls.SetChildIndex(this.bCreer, 0);
             this.panel.Controls.SetChildIndex(this.tBAdresseEmail, 0);
             this.panel.Controls.SetChildIndex(this.tBPrenom, 0);
             this.panel.Controls.SetChildIndex(this.lPrenom, 0);
@@ -83,6 +84,10 @@
             this.panel.Controls.SetChildIndex(this.lTelephone, 0);
             this.panel.Controls.SetChildIndex(this.lCategorie, 0);
             this.panel.Controls.SetChildIndex(this.cBCategorie, 0);
+            // 
+            // lErreur
+            // 
+            this.lErreur.Location = new System.Drawing.Point(849, 47);
             // 
             // tBAdresseEmail
             // 
@@ -187,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_AjoutPersonnel";
             this.Size = new System.Drawing.Size(1000, 110);
+            this.Load += new System.EventHandler(this.UC_AjoutPersonnel_Load);
             this.gBTitreAjout.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

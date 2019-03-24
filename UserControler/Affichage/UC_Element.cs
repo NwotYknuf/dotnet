@@ -16,5 +16,11 @@ namespace dotnet.UserControler.Affichage
         {
             InitializeComponent();
         }
+
+        private void UC_Element_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(this.pBModifier, "Modifier ce cours");
+            toolTip1.SetToolTip(this.pBSupprimer, "Supprimer ce cours");
+        }
     }
 }

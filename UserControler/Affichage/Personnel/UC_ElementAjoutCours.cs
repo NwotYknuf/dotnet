@@ -29,5 +29,11 @@ namespace dotnet.UserControler.Affichage.Personnel
         {
             _cadre.ajouterCours(_personnel);
         }
+
+        private void UC_ElementAjoutCours_Load(object sender, EventArgs e)
+        {
+
+            toolTip1.SetToolTip(this.pBAjouterCours, "Ajouter un cours au personnel " + _personnel.nom + _personnel.prenom);
+        }
     }
 }

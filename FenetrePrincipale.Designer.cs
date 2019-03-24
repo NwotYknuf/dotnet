@@ -45,40 +45,48 @@
             // 
             // miAcceuil
             // 
+            this.miAcceuil.ForeColor = System.Drawing.Color.White;
             this.miAcceuil.Image = ((System.Drawing.Image)(resources.GetObject("miAcceuil.Image")));
-            this.miAcceuil.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
+            this.miAcceuil.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miAcceuil.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miAcceuil.Name = "miAcceuil";
-            this.miAcceuil.Size = new System.Drawing.Size(143, 35);
+            this.miAcceuil.Size = new System.Drawing.Size(143, 84);
             this.miAcceuil.Text = "Accueil";
             this.miAcceuil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miAcceuil.Click += new System.EventHandler(this.miAcceuil_Click);
             // 
             // miDiplome
             // 
+            this.miDiplome.ForeColor = System.Drawing.Color.White;
             this.miDiplome.Image = ((System.Drawing.Image)(resources.GetObject("miDiplome.Image")));
-            this.miDiplome.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
+            this.miDiplome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miDiplome.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miDiplome.Name = "miDiplome";
-            this.miDiplome.Size = new System.Drawing.Size(143, 35);
+            this.miDiplome.Size = new System.Drawing.Size(143, 84);
             this.miDiplome.Text = "Diplome";
             this.miDiplome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miDiplome.Click += new System.EventHandler(this.miDiplome_Click);
             // 
             // miPersonnel
             // 
+            this.miPersonnel.ForeColor = System.Drawing.Color.White;
             this.miPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("miPersonnel.Image")));
-            this.miPersonnel.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
+            this.miPersonnel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miPersonnel.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miPersonnel.Name = "miPersonnel";
-            this.miPersonnel.Size = new System.Drawing.Size(143, 35);
+            this.miPersonnel.Size = new System.Drawing.Size(143, 84);
             this.miPersonnel.Text = "Personnel";
             this.miPersonnel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miPersonnel.Click += new System.EventHandler(this.miPersonnel_Click);
             // 
             // miGestion
             // 
+            this.miGestion.ForeColor = System.Drawing.Color.White;
             this.miGestion.Image = ((System.Drawing.Image)(resources.GetObject("miGestion.Image")));
-            this.miGestion.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
+            this.miGestion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miGestion.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miGestion.Name = "miGestion";
-            this.miGestion.Size = new System.Drawing.Size(143, 35);
+            this.miGestion.Size = new System.Drawing.Size(143, 84);
             this.miGestion.Text = "Gestion";
             this.miGestion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miGestion.Click += new System.EventHandler(this.miGestion_Click);
@@ -87,8 +95,8 @@
             // 
             this.msMenu.AutoSize = false;
             this.msMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-            this.msMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.msMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.msMenu.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miAcceuil,
             this.miDiplome,
@@ -105,10 +113,12 @@
             // 
             // miRecherche
             // 
+            this.miRecherche.ForeColor = System.Drawing.Color.White;
             this.miRecherche.Image = ((System.Drawing.Image)(resources.GetObject("miRecherche.Image")));
-            this.miRecherche.Margin = new System.Windows.Forms.Padding(0, 40, 0, 40);
+            this.miRecherche.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.miRecherche.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miRecherche.Name = "miRecherche";
-            this.miRecherche.Size = new System.Drawing.Size(143, 35);
+            this.miRecherche.Size = new System.Drawing.Size(143, 84);
             this.miRecherche.Text = "Recherche";
             this.miRecherche.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.miRecherche.Click += new System.EventHandler(this.miRecherche_Click);
@@ -174,13 +184,13 @@
         private System.Windows.Forms.ToolStripMenuItem miDiplome;
         private System.Windows.Forms.ToolStripMenuItem miPersonnel;
         private System.Windows.Forms.ToolStripMenuItem miGestion;
-        private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem miRecherche;
         private UC_OngletAccueil ucAccueil1;
         private UC_OngletDiplomes ucListeDiplome1;
         private UC_OngletPersonnels ucListePersonnel1;
         private UC_OngletGestion ucGestion1;
         private UC_OngletRecherche ucRecherche1;
+        private System.Windows.Forms.MenuStrip msMenu;
     }
 }
 

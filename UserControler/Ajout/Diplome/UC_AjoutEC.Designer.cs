@@ -32,6 +32,7 @@
             this.lNom = new System.Windows.Forms.Label();
             this.lDescription = new System.Windows.Forms.Label();
             this.rtBDesc = new System.Windows.Forms.RichTextBox();
+            this.cB_ECActive = new System.Windows.Forms.CheckBox();
             this.gBTitreAjout.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -47,48 +48,65 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.cB_ECActive);
             this.panel.Controls.Add(this.tBNom);
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.lDescription);
             this.panel.Controls.Add(this.rtBDesc);
+            this.panel.Controls.SetChildIndex(this.lErreur, 0);
             this.panel.Controls.SetChildIndex(this.bCreer, 0);
             this.panel.Controls.SetChildIndex(this.rtBDesc, 0);
             this.panel.Controls.SetChildIndex(this.lDescription, 0);
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
+            this.panel.Controls.SetChildIndex(this.cB_ECActive, 0);
             // 
             // tBNom
             // 
-            this.tBNom.Location = new System.Drawing.Point(104, 17);
+            this.tBNom.Location = new System.Drawing.Point(90, 17);
             this.tBNom.Name = "tBNom";
             this.tBNom.Size = new System.Drawing.Size(100, 20);
-            this.tBNom.TabIndex = 22;
+            this.tBNom.TabIndex = 18;
             // 
             // lNom
             // 
             this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(17, 20);
+            this.lNom.Location = new System.Drawing.Point(30, 20);
             this.lNom.Name = "lNom";
             this.lNom.Size = new System.Drawing.Size(38, 13);
-            this.lNom.TabIndex = 21;
+            this.lNom.TabIndex = 17;
             this.lNom.Text = "Nom : ";
             // 
             // lDescription
             // 
             this.lDescription.AutoSize = true;
-            this.lDescription.Location = new System.Drawing.Point(332, 20);
+            this.lDescription.Location = new System.Drawing.Point(213, 20);
             this.lDescription.Name = "lDescription";
             this.lDescription.Size = new System.Drawing.Size(69, 13);
-            this.lDescription.TabIndex = 20;
+            this.lDescription.TabIndex = 16;
             this.lDescription.Text = "Description : ";
             // 
             // rtBDesc
             // 
-            this.rtBDesc.Location = new System.Drawing.Point(426, 1);
+            this.rtBDesc.Location = new System.Drawing.Point(304, 17);
             this.rtBDesc.Name = "rtBDesc";
-            this.rtBDesc.Size = new System.Drawing.Size(231, 47);
-            this.rtBDesc.TabIndex = 19;
+            this.rtBDesc.Size = new System.Drawing.Size(402, 20);
+            this.rtBDesc.TabIndex = 15;
             this.rtBDesc.Text = "";
+            // 
+            // cB_ECActive
+            // 
+            this.cB_ECActive.AutoSize = true;
+            this.cB_ECActive.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cB_ECActive.Checked = true;
+            this.cB_ECActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cB_ECActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cB_ECActive.Location = new System.Drawing.Point(739, 18);
+            this.cB_ECActive.Name = "cB_ECActive";
+            this.cB_ECActive.Size = new System.Drawing.Size(62, 17);
+            this.cB_ECActive.TabIndex = 19;
+            this.cB_ECActive.Text = "Active : ";
+            this.cB_ECActive.UseVisualStyleBackColor = true;
             // 
             // UC_AjoutEC
             // 
@@ -108,5 +126,6 @@
         private System.Windows.Forms.Label lNom;
         private System.Windows.Forms.Label lDescription;
         private System.Windows.Forms.RichTextBox rtBDesc;
+        private System.Windows.Forms.CheckBox cB_ECActive;
     }
 }

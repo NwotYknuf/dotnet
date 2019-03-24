@@ -21,8 +21,19 @@ namespace dotnet.UserControler.Ajout {
             //this.gBTitre.Text = "Ajouter un Diplome : ";
         }
 
-        private void bCreer_Click(object sender, EventArgs e) {
-            //ajouter un diplome
+        private void bCreer_Click(object sender, EventArgs e)
+        {
+            if ((conditionsRespectees(tBNom.Text, true, true, true, false, 2, 100)) &&
+                (conditionsRespectees(rtBDesc.Text, true, true, true, true, 2, 100)))
+            {
+                lErreur.Visible = false;
+                // Ajouter un diplome
+
+            }
+            else
+            {
+                lErreur.Visible = true;
+            }
         }
     }
 }

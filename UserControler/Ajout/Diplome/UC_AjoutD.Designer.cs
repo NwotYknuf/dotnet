@@ -28,8 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.gBTitreAjout.SuspendLayout();
+            this.panel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // bCreer
+            // 
+            this.bCreer.Location = new System.Drawing.Point(833, 7);
+            // 
+            // UC_AjoutD
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "UC_AjoutD";
+            this.gBTitreAjout.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
