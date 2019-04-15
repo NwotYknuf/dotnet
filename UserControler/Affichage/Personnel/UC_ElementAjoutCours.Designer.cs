@@ -54,10 +54,12 @@
             // pBModifier
             // 
             this.pBModifier.Location = new System.Drawing.Point(857, 9);
+            this.pBModifier.Visible = false;
             // 
             // pBSupprimer
             // 
             this.pBSupprimer.Location = new System.Drawing.Point(900, 9);
+            this.pBSupprimer.Visible = false;
             // 
             // pBAjouterCours
             // 
