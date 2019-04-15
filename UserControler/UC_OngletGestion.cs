@@ -72,7 +72,8 @@ namespace dotnet
 
                 Database.instance.categorie.Add(catAAjouter);
             }
-                
+
+            // Sauvegarde les modifications
             Database.instance.SaveChanges();
         }
 
@@ -101,6 +102,7 @@ namespace dotnet
                 Database.instance.categorie.Remove(catARetirer);
             }
 
+            // Sauvegarde les modifications
             Database.instance.SaveChanges();
         }
 
