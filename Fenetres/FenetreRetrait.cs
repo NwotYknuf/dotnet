@@ -68,27 +68,21 @@ namespace dotnet.Fenetres
                 {
                     case "ligne":
                         {
-                            var categories = Database.instance.categorie;
                             categorie categorieChoisie = new categorie();
+                            
+                            //Requete pour retrouver la categorie possedant le nom choisi
+                            categorieChoisie = Database.instance.categorie.Where(s => s.nom == cBListe.Text).FirstOrDefault<categorie>();
 
-                            foreach (categorie c in categories)
-                            {
-                                if (c.nom == cBListe.Text)
-                                    categorieChoisie = c;
-                            }
                             new FenetreSupprimer("Categorie", categorieChoisie, this).Show();
                             break;
                         }
                     case "colonne":
                         {
-                            var type_cours = Database.instance.type_cours;
                             type_cours typeDeCoursChoisie = new type_cours();
 
-                            foreach (type_cours tc in type_cours)
-                            {
-                                if (tc.nom == cBListe.Text)
-                                    typeDeCoursChoisie = tc;
-                            }
+                            //Requete pour retrouver le type_cours possedant le nom choisi
+                            typeDeCoursChoisie = Database.instance.type_cours.Where(s => s.nom == cBListe.Text).FirstOrDefault<type_cours>();
+
                             new FenetreSupprimer("Type_Cours", typeDeCoursChoisie, this).Show();
                             break;
                         }

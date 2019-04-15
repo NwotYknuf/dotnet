@@ -171,7 +171,6 @@
             this.Controls.Add(this.ucListePersonnel1);
             this.Name = "FenetrePrincipale";
             this.Text = "Application de gestion";
-            this.Load += new System.EventHandler(this.FenetrePrincipale_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);

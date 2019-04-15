@@ -16,9 +16,10 @@ namespace dotnet
         {
             InitializeComponent();
 
+            initialisation();
         }
 
-        private void FenetrePrincipale_Load(object sender, EventArgs e)
+        private void initialisation()
         {
             ucAccueil1.BringToFront();
         }

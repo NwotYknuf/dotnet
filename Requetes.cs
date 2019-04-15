@@ -26,5 +26,7 @@ namespace dotnet {
         public static int nbrHeureManquantes(personnel personnel) {
             return nbrHeureDues(personnel) - nbrHeureAttribuees(personnel);
         }
+
+
     }
 }
