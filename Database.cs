@@ -14,7 +14,7 @@ namespace dotnet {
                     _instance = new Database();
 
                     if ( ! _instance.Database.Exists()) {
-                        throw new Exception("No database was found");
+                        throw new PasDeConnexion();
                     }
 
                 }

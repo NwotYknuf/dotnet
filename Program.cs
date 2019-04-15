@@ -15,9 +15,16 @@ namespace dotnet
         static void Main()
         {
             //Bonjour
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FenetrePrincipale());
+
+            try {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FenetrePrincipale());
+            }
+            catch (PasDeConnexion e) {
+                MessageBox.Show("La connexion à la base de donnés n'a pas pu être etablie.\nL'application va se fermer.", "Erreur");
+            }
+            
         }
     }
 }
