@@ -25,8 +25,8 @@ namespace dotnet.UserControler.Ajout
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            if ((conditionsRespectees(tBNom.Text, true, true, true, false, 2, 100)) &&
-                (conditionsRespectees(rtBDesc.Text, true, true, false, true, 2, 100)))
+            if ((Utilitaires.conditionsRespectees(tBNom.Text, true, true, true, false, 2, 100)) &&
+                (Utilitaires.conditionsRespectees(rtBDesc.Text, true, true, false, true, 2, 100)))
             {
                 lErreur.Visible = false;
                 // Créer une année

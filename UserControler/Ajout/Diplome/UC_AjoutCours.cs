@@ -37,9 +37,9 @@ namespace dotnet.UserControler.Ajout
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            if ((conditionsRespectees(tBNom.Text,true, true, true, false, 2, 100)) &&
-                (conditionsRespectees(tBHoraires.Text, false, true, true, true, 1, 3)) && 
-                (conditionsRespectees(cBType.Text, cBType)) )
+            if ((Utilitaires.conditionsRespectees(tBNom.Text,true, true, true, false, 2, 100)) &&
+                (Utilitaires.conditionsRespectees(tBHoraires.Text, false, true, true, true, 1, 3)) && 
+                (Utilitaires.conditionsRespectees(cBType.Text, cBType)) )
             {
                 lErreur.Visible = false;
                 // Ajouter un cours
