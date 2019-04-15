@@ -22,7 +22,10 @@ namespace dotnet
         {
             toolTip1.SetToolTip(this.pBAjoutLigne, "Ajouter une catégorie (ligne)");
             toolTip1.SetToolTip(this.pBAjoutColonne, "Ajouter un type de cours (colonne)");
-
+            toolTip1.SetToolTip(this.pBRetraitLigne, "Retirer une catégorie (ligne)");
+            toolTip1.SetToolTip(this.pBRetraitColonne, "Retirer un type de cours (colonne)");
+            toolTip1.SetToolTip(this.pBEnregistrer, "Enregistrer les modifications");
+            
             var categories = Database.instance.categorie;
             var typesCours = Database.instance.type_cours;
             var ratios = Database.instance.equivalent_td;
@@ -61,13 +64,6 @@ namespace dotnet
                 dataGridView1.Rows.RemoveAt(index);
         }
 
-        private void bEnregistrer_Click(object sender, EventArgs e)
-        {
-            //Enregistrer dans les tables les modifications et / ou ajouts
-
-
-        }
-
         private void pBAjoutLigne_Click(object sender, EventArgs e)
         {
             new FenetreAjout("Entrez le nom de la catégorie :", this, "ligne").Show();
@@ -86,6 +82,13 @@ namespace dotnet
         private void pBRetraitColonne_Click(object sender, EventArgs e)
         {
             new FenetreRetrait("Quel type de cours voulez-vous retirer ?", this, "colonne").Show();
+        }
+
+        private void pBEnregistrer_Click(object sender, EventArgs e)
+        {
+            //Enregistrer dans les tables les modifications et / ou ajouts
+
+
         }
     }
 }

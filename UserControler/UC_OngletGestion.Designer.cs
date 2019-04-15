@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_OngletGestion));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bEnregistrer = new System.Windows.Forms.Button();
             this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
             this.lTitre1 = new System.Windows.Forms.Label();
             this.lTitre2 = new System.Windows.Forms.Label();
@@ -42,12 +41,14 @@
             this.pBAjoutColonne = new System.Windows.Forms.PictureBox();
             this.pBRetraitLigne = new System.Windows.Forms.PictureBox();
             this.pBRetraitColonne = new System.Windows.Forms.PictureBox();
+            this.pBEnregistrer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flpTitre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutLigne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutColonne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetraitLigne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetraitColonne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEnregistrer)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,20 +63,10 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column1.HeaderText = "Catégorie";
             this.Column1.Name = "Column1";
-            // 
-            // bEnregistrer
-            // 
-            this.bEnregistrer.Location = new System.Drawing.Point(842, 52);
-            this.bEnregistrer.Name = "bEnregistrer";
-            this.bEnregistrer.Size = new System.Drawing.Size(201, 23);
-            this.bEnregistrer.TabIndex = 22;
-            this.bEnregistrer.Text = "Enregistrer les modifications";
-            this.bEnregistrer.UseVisualStyleBackColor = true;
-            this.bEnregistrer.Click += new System.EventHandler(this.bEnregistrer_Click);
             // 
             // flpTitre
             // 
@@ -166,15 +157,28 @@
             this.pBRetraitColonne.TabStop = false;
             this.pBRetraitColonne.Click += new System.EventHandler(this.pBRetraitColonne_Click);
             // 
+            // pBEnregistrer
+            // 
+            this.pBEnregistrer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEnregistrer.Image = ((System.Drawing.Image)(resources.GetObject("pBEnregistrer.Image")));
+            this.pBEnregistrer.InitialImage = null;
+            this.pBEnregistrer.Location = new System.Drawing.Point(1026, 586);
+            this.pBEnregistrer.Name = "pBEnregistrer";
+            this.pBEnregistrer.Size = new System.Drawing.Size(50, 50);
+            this.pBEnregistrer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBEnregistrer.TabIndex = 28;
+            this.pBEnregistrer.TabStop = false;
+            this.pBEnregistrer.Click += new System.EventHandler(this.pBEnregistrer_Click);
+            // 
             // UC_OngletGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pBEnregistrer);
             this.Controls.Add(this.pBRetraitColonne);
             this.Controls.Add(this.pBRetraitLigne);
             this.Controls.Add(this.pBAjoutColonne);
             this.Controls.Add(this.pBAjoutLigne);
-            this.Controls.Add(this.bEnregistrer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flpTitre);
             this.Name = "UC_OngletGestion";
@@ -187,13 +191,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutColonne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetraitLigne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetraitColonne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEnregistrer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button bEnregistrer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.FlowLayoutPanel flpTitre;
         private System.Windows.Forms.Label lTitre1;
@@ -203,5 +207,6 @@
         protected System.Windows.Forms.PictureBox pBAjoutColonne;
         protected System.Windows.Forms.PictureBox pBRetraitLigne;
         protected System.Windows.Forms.PictureBox pBRetraitColonne;
+        protected System.Windows.Forms.PictureBox pBEnregistrer;
     }
 }
