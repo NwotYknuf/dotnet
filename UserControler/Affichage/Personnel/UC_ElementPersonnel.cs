@@ -44,7 +44,7 @@ namespace dotnet.UserControler.Affichage.Personnel
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Personnel", _personnel);
+            new FenetreSupprimer("Personnel", _personnel).Show(); ;
         }
     }
 }

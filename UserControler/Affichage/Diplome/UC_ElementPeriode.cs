@@ -42,7 +42,7 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Periode", _periode);
+            new FenetreSupprimer("Periode", _periode).Show(); ;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace dotnet.Fenetres
         private categorie _cat;
         private type_cours _typC;
 
-       
+        private FenetreRetrait _fen;
 
         public FenetreSupprimer()
         {
@@ -37,7 +37,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _d = d;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, annee a)
@@ -46,7 +45,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _a = a;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, periode p)
@@ -55,7 +53,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _p = p;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, ue u)
@@ -64,7 +61,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _u = u;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, ec e)
@@ -73,7 +69,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _e = e;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, cours c)
@@ -82,7 +77,6 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _c = c;
             initialisation();
-            this.Show();
         }
 
         public FenetreSupprimer(String typeDeSuppression, personnel per)
@@ -91,25 +85,24 @@ namespace dotnet.Fenetres
             _typeDeSuppression = typeDeSuppression;
             _per = per;
             initialisation();
-            this.Show();
         }
 
-        public FenetreSupprimer(String typeDeSuppression, categorie cat)
+        public FenetreSupprimer(String typeDeSuppression, categorie cat, FenetreRetrait fen)
         {
             InitializeComponent();
             _typeDeSuppression = typeDeSuppression;
             _cat = cat;
+            _fen = fen;
             initialisation();
-            this.Show();
         }
 
-        public FenetreSupprimer(String typeDeSuppression, type_cours typC)
+        public FenetreSupprimer(String typeDeSuppression, type_cours typC, FenetreRetrait fen)
         {
             InitializeComponent();
             _typeDeSuppression = typeDeSuppression;
             _typC = typC;
+            _fen = fen;
             initialisation();
-            this.Show();
         }
 
         private void initialisation()
@@ -181,11 +174,15 @@ namespace dotnet.Fenetres
                 case "Categorie":
                     {
                         // Supprimer la catégorie
+
+                        _fen.suppressionValidee();
                         break;
                     }
                 case "Type_Cours":
                     {
                         // Supprimer le type de cours
+
+                        _fen.suppressionValidee();
                         break;
                     }
                 default : break;

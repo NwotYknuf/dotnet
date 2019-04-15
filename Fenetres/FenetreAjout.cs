@@ -35,16 +35,26 @@ namespace dotnet
         
         private void bValider_Click(object sender, EventArgs e)
         {
-            if (Utilitaires.conditionsRespectees(tB.Text.Trim(), true, true, false, false, 2, 30))
+            if (Utilitaires.conditionsRespectees(tB.Text, true, true, false, false, 2, 30))
             {
                 lErreur.Visible = false;
-                _uC.ajout(_element, tB.Text.Trim());
+
+                // Ajout dans la BDD 
+
+                // Ajout dans le tableau
+                _uC.ajout(_element, tB.Text);
+
                 this.Dispose();
             }
             else
             {
                 lErreur.Visible = true;
             }
+        }
+
+        private void bAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

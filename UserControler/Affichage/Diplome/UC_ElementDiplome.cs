@@ -43,7 +43,7 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Diplome", _diplome);
+            new FenetreSupprimer("Diplome", _diplome).Show(); ;
         }
     }
 }

@@ -40,7 +40,7 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Annee", _annee);
+            new FenetreSupprimer("Annee", _annee).Show(); ;
         }
     }
 }

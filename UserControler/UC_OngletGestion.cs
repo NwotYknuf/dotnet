@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Fenetres;
 
 namespace dotnet
 {
@@ -39,12 +40,25 @@ namespace dotnet
             
         }
 
+        public DataGridView getDataGridView1()
+        {
+            return dataGridView1;
+        }
+
         public void ajout(String element, String nom)
         {
             if ( element == "colonne" )
-                dataGridView1.Columns.Add("Column", nom);
+                dataGridView1.Columns.Add("Column" + dataGridView1.Columns.Count + 1, nom);
             else
                 dataGridView1.Rows.Add(nom);
+        }
+
+        public void retrait(String element, String nom, int index)
+        {
+            if (element == "colonne")
+                dataGridView1.Columns.RemoveAt(index + 1);
+            else
+                dataGridView1.Rows.RemoveAt(index);
         }
 
         private void bEnregistrer_Click(object sender, EventArgs e)
@@ -66,12 +80,12 @@ namespace dotnet
 
         private void pBRetraitLigne_Click(object sender, EventArgs e)
         {
-
+            new FenetreRetrait("Quelle catégorie voulez-vous retirer ?", this, "ligne").Show();
         }
 
         private void pBRetraitColonne_Click(object sender, EventArgs e)
         {
-
+            new FenetreRetrait("Quel type de cours voulez-vous retirer ?", this, "colonne").Show();
         }
     }
 }

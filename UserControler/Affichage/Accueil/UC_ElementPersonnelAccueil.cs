@@ -39,7 +39,7 @@ namespace dotnet.UserControler.Affichage.Accueil
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Personnel", _personnel);
+            new FenetreSupprimer("Personnel", _personnel).Show(); ;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
