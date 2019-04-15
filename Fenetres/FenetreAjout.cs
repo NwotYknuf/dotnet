@@ -35,7 +35,7 @@ namespace dotnet
         
         private void bValider_Click(object sender, EventArgs e)
         {
-            if((tB.Text.Trim().Length > 2) && (tB.Text.Trim().Length < 30))
+            if (Utilitaires.conditionsRespectees(tB.Text.Trim(), true, true, false, false, 2, 30))
             {
                 lErreur.Visible = false;
                 _uC.ajout(_element, tB.Text.Trim());
