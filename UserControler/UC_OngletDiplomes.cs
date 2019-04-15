@@ -14,6 +14,8 @@ using dotnet.UserControler.Affichage;
 namespace dotnet {
     public partial class UC_OngletDiplomes : UserControl {
 
+        private ec _ecCourant;
+
         public UC_OngletDiplomes() {
             InitializeComponent();
         }
@@ -26,7 +28,6 @@ namespace dotnet {
         
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
-            lTitre.Text = "Diplômes proposés à l'Université UFR MIM de Metz : ";
             lTitre1.Text = "Diplômes"; lTitre2.Text = "proposés à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des diplômes : ");
@@ -52,8 +53,7 @@ namespace dotnet {
         public void afficheDiplomeSelectionne(diplome d) {
 
             // changer l'UC ajout
-
-            lTitre.Text = "Années proposées en " + d.nom + " : ";
+            
             lTitre1.Text = "Années"; lTitre2.Text = "proposées en"; lTitre3.Text = d.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
@@ -78,7 +78,6 @@ namespace dotnet {
         }
         
         public void afficheAnneeSelectionnee(annee a) {
-            lTitre.Text = "Période proposées en " + a.nom + " : ";
             lTitre1.Text = "Périodes"; lTitre2.Text = "proposées en"; lTitre3.Text = a.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
@@ -102,7 +101,6 @@ namespace dotnet {
         }
 
         public void affichePeriodeSelectionnee(periode p) {
-            lTitre.Text = "UE proposées au " + p.nom + " : ";
             lTitre1.Text = "UE"; lTitre2.Text = "proposées au"; lTitre3.Text = p.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
@@ -126,7 +124,6 @@ namespace dotnet {
         }
 
         public void afficheUESelectionnee(ue u) {
-            lTitre.Text = "EC contenues dans l'UE " + u.nom + " : ";
             lTitre1.Text = "EC"; lTitre2.Text = "contenues dans l'UE"; lTitre3.Text = u.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
@@ -151,12 +148,26 @@ namespace dotnet {
 
         public void afficheECSelectionnee(ec e)
         {
-            lTitre.Text = "Cours proposés dans l'EC " + e.nom + " : ";
+            _ecCourant = e;
+
             lTitre1.Text = "Cours"; lTitre2.Text = "proposés dans l'EC"; lTitre3.Text = e.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 
             cB_ECActive.Visible = true;
+            
+            if (_ecCourant.actif == true)
+            {
+                cB_ECActive.Checked = true;
+                cB_ECActive.Text = "EC Activée";
+                cB_ECActive.ForeColor = Color.FromArgb(83, 181, 0);
+            }
+            else
+            {
+                cB_ECActive.Checked = false;
+                cB_ECActive.Text = "EC Désactivée";
+                cB_ECActive.ForeColor = Color.FromArgb(230, 55, 0);
+            }
 
             uC_FilArianeDiplome1.filArianeECApparait(e);
 
@@ -181,10 +192,16 @@ namespace dotnet {
             if(cB_ECActive.Checked)
             {
                 // L'UE est active
+                _ecCourant.actif = true;
+                cB_ECActive.Text = "EC Activée";
+                cB_ECActive.ForeColor = Color.FromArgb(83, 181, 0);
             }
             else
             {
                 // l'EC n'est plus active
+                _ecCourant.actif = false;
+                cB_ECActive.Text = "EC Désactivée";
+                cB_ECActive.ForeColor = Color.FromArgb(230, 55, 0);
             }
         }
     }

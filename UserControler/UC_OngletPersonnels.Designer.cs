@@ -32,7 +32,6 @@ namespace dotnet
         /// </summary>
         private void InitializeComponent()
         {
-            this.lTitre = new System.Windows.Forms.Label();
             this.uC_FilArianePersonnel1 = new dotnet.UserControler.FilArianne.UC_FilArianePersonnel();
             this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
             this.uC_Information1 = new dotnet.UserControler.Affichage.UC_Information();
@@ -43,17 +42,6 @@ namespace dotnet
             this.lTitre3 = new System.Windows.Forms.Label();
             this.flpTitre.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lTitre
-            // 
-            this.lTitre.AutoSize = true;
-            this.lTitre.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
-            this.lTitre.Location = new System.Drawing.Point(66, 80);
-            this.lTitre.Name = "lTitre";
-            this.lTitre.Size = new System.Drawing.Size(85, 36);
-            this.lTitre.TabIndex = 11;
-            this.lTitre.Text = "Titre";
             // 
             // uC_FilArianePersonnel1
             // 
@@ -138,24 +126,21 @@ namespace dotnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flpTitre);
             this.Controls.Add(this.uC_FilArianePersonnel1);
             this.Controls.Add(this.uC_Affichage1);
-            this.Controls.Add(this.lTitre);
             this.Controls.Add(this.uC_Information1);
             this.Controls.Add(this.uC_Ajout1);
+            this.Controls.Add(this.flpTitre);
             this.Name = "UC_OngletPersonnels";
             this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletPersonnels_Load);
             this.flpTitre.ResumeLayout(false);
             this.flpTitre.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lTitre;
         private UC_Affichage uC_Affichage1;
         private UC_FilArianePersonnel uC_FilArianePersonnel1;
         private UC_Ajout uC_Ajout1;

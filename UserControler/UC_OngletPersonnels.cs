@@ -30,8 +30,7 @@ namespace dotnet
         {
             //TODO : Remplacer cette section par un truc plus propre
             uC_Information1.Visible = false;
-
-            lTitre.Text = "Personnels enseignants à l'UFR MIM de Metz : ";
+            
             lTitre1.Text = "Personnels"; lTitre2.Text = "enseignants à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des personnels : ");
@@ -54,7 +53,6 @@ namespace dotnet
 
         public void affichePersonnelSelectionne(personnel p)
         {
-            lTitre.Text = "Personnel " + p.nom + " " + p.prenom + " : ";
             lTitre1.Text = "Personnel"; lTitre2.Text = p.nom + " " + p.prenom + " : "; lTitre3.Text = "";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");

@@ -32,7 +32,6 @@ namespace dotnet
         /// </summary>
         private void InitializeComponent()
         {
-            this.lTitre = new System.Windows.Forms.Label();
             this.cB_ECActive = new System.Windows.Forms.CheckBox();
             this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
             this.lTitre1 = new System.Windows.Forms.Label();
@@ -44,32 +43,21 @@ namespace dotnet
             this.flpTitre.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lTitre
-            // 
-            this.lTitre.AutoSize = true;
-            this.lTitre.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
-            this.lTitre.Location = new System.Drawing.Point(66, 80);
-            this.lTitre.Name = "lTitre";
-            this.lTitre.Size = new System.Drawing.Size(85, 36);
-            this.lTitre.TabIndex = 0;
-            this.lTitre.Text = "Titre";
-            // 
             // cB_ECActive
             // 
+            this.cB_ECActive.AutoSize = true;
             this.cB_ECActive.BackColor = System.Drawing.Color.Transparent;
-            this.cB_ECActive.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cB_ECActive.Checked = true;
             this.cB_ECActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cB_ECActive.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             this.cB_ECActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cB_ECActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cB_ECActive.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cB_ECActive.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cB_ECActive.Location = new System.Drawing.Point(951, 84);
+            this.cB_ECActive.Location = new System.Drawing.Point(923, 89);
             this.cB_ECActive.Name = "cB_ECActive";
-            this.cB_ECActive.Size = new System.Drawing.Size(96, 26);
+            this.cB_ECActive.Size = new System.Drawing.Size(111, 23);
             this.cB_ECActive.TabIndex = 15;
-            this.cB_ECActive.Text = "EC Active :  ";
+            this.cB_ECActive.Text = "EC Activée ";
             this.cB_ECActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cB_ECActive.UseVisualStyleBackColor = false;
             this.cB_ECActive.Visible = false;
@@ -151,12 +139,11 @@ namespace dotnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flpTitre);
             this.Controls.Add(this.cB_ECActive);
             this.Controls.Add(this.uC_FilArianeDiplome1);
             this.Controls.Add(this.uC_Affichage1);
             this.Controls.Add(this.uC_Ajout1);
-            this.Controls.Add(this.lTitre);
+            this.Controls.Add(this.flpTitre);
             this.Name = "UC_OngletDiplomes";
             this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletDiplomes_Load);
@@ -168,8 +155,6 @@ namespace dotnet
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lTitre;
         private UC_Ajout uC_Ajout1;
         private UC_Affichage uC_Affichage1;
         private UC_FilArianeDiplome uC_FilArianeDiplome1;

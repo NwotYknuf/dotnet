@@ -25,7 +25,12 @@ namespace dotnet.UserControler.Affichage
             InitializeComponent();
             gBAffElement.Text = _ec.nom;
             tBDesc.Text = _ec.description;
-            //cB_ECActive.Checked = ;
+            //
+            if (_ec.actif == true) 
+                cB_ECActive.Checked = true;
+            else
+                cB_ECActive.Checked = false;
+
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
