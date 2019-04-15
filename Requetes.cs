@@ -8,13 +8,7 @@ namespace dotnet {
     public static class Requetes {
         
         public static List<cours> coursAttribues(personnel personnel) {
-            var coursAttribues = Database.instance.cours.Where(x => x.personnel.id == personnel.id).ToList();
-            List<cours> liste = new List<cours>();
-            foreach(cours c in coursAttribues) {
-                liste.Add(c);
-            }
-
-            return liste;
+            return Database.instance.cours.Where(x => x.personnel.id == personnel.id).ToList<cours>();
         }
 
         public static int nbrHeureAttribuees(personnel personnel) {
@@ -25,6 +19,12 @@ namespace dotnet {
             return res;
         }
 
+        public static int nbrHeureDues(personnel personnel) {
+            return (int)personnel.categorie.nbrHeureDues;
+        }
 
+        public static int nbrHeureManquantes(personnel personnel) {
+            return nbrHeureDues(personnel) - nbrHeureAttribuees(personnel);
+        }
     }
 }
