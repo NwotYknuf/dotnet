@@ -20,6 +20,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nbrHeureDues" Type="int" />
         </EntityType>
         <EntityType Name="cours">
           <Key>
@@ -300,6 +301,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="equivalent_td" Relationship="Self.equivalent_td_ibfk_1" FromRole="categorie" ToRole="equivalent_td" />
           <NavigationProperty Name="personnel" Relationship="Self.id_categorie" FromRole="categorie" ToRole="personnel" />
+          <Property Name="nbrHeureDues" Type="Int32" />
         </EntityType>
         <EntityType Name="cours">
           <Key>
@@ -592,6 +594,7 @@
           <EntitySetMapping Name="categorie">
             <EntityTypeMapping TypeName="sysModel.categorie">
               <MappingFragment StoreEntitySet="categorie">
+                <ScalarProperty Name="nbrHeureDues" ColumnName="nbrHeureDues" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
               </MappingFragment>
