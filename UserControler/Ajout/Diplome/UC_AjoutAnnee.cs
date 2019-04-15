@@ -30,7 +30,10 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
                 // Créer une année
-
+                annee annee = new annee();
+                annee.nom = this.tBNom.Text;
+                annee.description = this.rtBDesc.Text;
+                // Ajouter l'enregistrement à la BDD
             }
             else
             {

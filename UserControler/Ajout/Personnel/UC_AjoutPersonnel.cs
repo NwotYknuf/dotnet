@@ -26,6 +26,7 @@ namespace dotnet.UserControler.Ajout
         private void bCreer_Click(object sender, EventArgs e)
         {
             // Ajouter un personnel
+            Console.WriteLine("Créer personnel");
         }
 
         private void UC_AjoutPersonnel_Load(object sender, EventArgs e)

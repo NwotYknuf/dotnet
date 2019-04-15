@@ -43,7 +43,11 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
                 // Ajouter un cours
-
+                cours cours = new cours();
+                cours.nom = this.tBNom.Text;
+                type_cours tc = new type_cours();
+                cours.type_cours = this.cBType.SelectedValue;
+                // Ajouter l'enregistrement à la BDD
             }
             else
             {

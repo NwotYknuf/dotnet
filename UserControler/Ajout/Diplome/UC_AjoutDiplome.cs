@@ -28,7 +28,10 @@ namespace dotnet.UserControler.Ajout {
             {
                 lErreur.Visible = false;
                 // Ajouter un diplome
-
+                diplome d = new diplome();
+                d.nom = this.tBNom.Text;
+                d.description = this.rtBDesc.Text;
+                // Ajouter l'enregistrement à la BDD
             }
             else
             {
