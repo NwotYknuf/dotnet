@@ -31,7 +31,9 @@ namespace dotnet
             //TODO : Remplacer cette section par un truc plus propre
             uC_Information1.Visible = false;
 
-            lTitre.Text = "Personnels : ";
+            lTitre.Text = "Personnels enseignants à l'UFR MIM de Metz : ";
+            lTitre1.Text = "Personnels"; lTitre2.Text = "enseignants à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des personnels : ");
 
             Point loc = uC_Ajout1.Location;
@@ -52,7 +54,9 @@ namespace dotnet
 
         public void affichePersonnelSelectionne(personnel p)
         {
-            lTitre.Text = "Personnel : ";
+            lTitre.Text = "Personnel " + p.nom + " " + p.prenom + " : ";
+            lTitre1.Text = "Personnel"; lTitre2.Text = p.nom + " " + p.prenom + " : "; lTitre3.Text = "";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 
             uC_FilArianePersonnel1.filArianePersonnelApparait(p);

@@ -36,26 +36,26 @@
             // 
             // gBAffElement
             // 
-            this.gBAffElement.Size = new System.Drawing.Size(477, 114);
+            this.gBAffElement.Size = new System.Drawing.Size(430, 114);
             // 
             // panel
             // 
-            this.panel.Size = new System.Drawing.Size(465, 90);
+            this.panel.Size = new System.Drawing.Size(418, 90);
             // 
             // pBModifier
             // 
-            this.pBModifier.Location = new System.Drawing.Point(423, 6);
+            this.pBModifier.Location = new System.Drawing.Point(375, 6);
             // 
             // pBSupprimer
             // 
-            this.pBSupprimer.Location = new System.Drawing.Point(424, 49);
+            this.pBSupprimer.Location = new System.Drawing.Point(376, 49);
             // 
             // UC_ElementA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementA";
-            this.Size = new System.Drawing.Size(484, 118);
+            this.Size = new System.Drawing.Size(438, 118);
             this.Load += new System.EventHandler(this.UC_ElementA_Load);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);

@@ -42,10 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
             this.SuspendLayout();
             // 
-            // gBAffElement
-            // 
-            this.gBAffElement.Size = new System.Drawing.Size(477, 114);
-            // 
             // panel
             // 
             this.panel.Controls.Add(this.tBNbHeuresAttrib);
@@ -56,7 +52,6 @@
             this.panel.Controls.Add(this.tBPrenom);
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.tBNom);
-            this.panel.Size = new System.Drawing.Size(465, 90);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
@@ -71,18 +66,16 @@
             // 
             // pBModifier
             // 
-            this.pBModifier.Location = new System.Drawing.Point(423, 6);
             this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
             // 
             // pBSupprimer
             // 
-            this.pBSupprimer.Location = new System.Drawing.Point(424, 49);
             this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // lPrenom
             // 
             this.lPrenom.AutoSize = true;
-            this.lPrenom.Location = new System.Drawing.Point(13, 49);
+            this.lPrenom.Location = new System.Drawing.Point(11, 49);
             this.lPrenom.Name = "lPrenom";
             this.lPrenom.Size = new System.Drawing.Size(52, 13);
             this.lPrenom.TabIndex = 36;
@@ -91,7 +84,7 @@
             // tBPrenom
             // 
             this.tBPrenom.Enabled = false;
-            this.tBPrenom.Location = new System.Drawing.Point(67, 46);
+            this.tBPrenom.Location = new System.Drawing.Point(65, 46);
             this.tBPrenom.Name = "tBPrenom";
             this.tBPrenom.Size = new System.Drawing.Size(100, 20);
             this.tBPrenom.TabIndex = 37;
@@ -99,7 +92,7 @@
             // lNom
             // 
             this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(13, 27);
+            this.lNom.Location = new System.Drawing.Point(11, 27);
             this.lNom.Name = "lNom";
             this.lNom.Size = new System.Drawing.Size(38, 13);
             this.lNom.TabIndex = 34;
@@ -108,21 +101,23 @@
             // tBNom
             // 
             this.tBNom.Enabled = false;
-            this.tBNom.Location = new System.Drawing.Point(67, 20);
+            this.tBNom.Location = new System.Drawing.Point(65, 20);
             this.tBNom.Name = "tBNom";
             this.tBNom.Size = new System.Drawing.Size(100, 20);
             this.tBNom.TabIndex = 35;
             // 
             // tBNbHeuresAttrib
             // 
-            this.tBNbHeuresAttrib.Location = new System.Drawing.Point(305, 20);
+            this.tBNbHeuresAttrib.Enabled = false;
+            this.tBNbHeuresAttrib.Location = new System.Drawing.Point(299, 20);
             this.tBNbHeuresAttrib.Name = "tBNbHeuresAttrib";
             this.tBNbHeuresAttrib.Size = new System.Drawing.Size(66, 20);
             this.tBNbHeuresAttrib.TabIndex = 49;
             // 
             // tBNbHeuresNonAttrib
             // 
-            this.tBNbHeuresNonAttrib.Location = new System.Drawing.Point(305, 46);
+            this.tBNbHeuresNonAttrib.Enabled = false;
+            this.tBNbHeuresNonAttrib.Location = new System.Drawing.Point(299, 46);
             this.tBNbHeuresNonAttrib.Name = "tBNbHeuresNonAttrib";
             this.tBNbHeuresNonAttrib.Size = new System.Drawing.Size(66, 20);
             this.tBNbHeuresNonAttrib.TabIndex = 50;
@@ -131,7 +126,7 @@
             // 
             this.lNbHeuresNonAttrib.AutoSize = true;
             this.lNbHeuresNonAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNbHeuresNonAttrib.Location = new System.Drawing.Point(182, 51);
+            this.lNbHeuresNonAttrib.Location = new System.Drawing.Point(176, 51);
             this.lNbHeuresNonAttrib.Name = "lNbHeuresNonAttrib";
             this.lNbHeuresNonAttrib.Size = new System.Drawing.Size(120, 13);
             this.lNbHeuresNonAttrib.TabIndex = 48;
@@ -141,7 +136,7 @@
             // 
             this.lNbHeuresAttrib.AutoSize = true;
             this.lNbHeuresAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNbHeuresAttrib.Location = new System.Drawing.Point(182, 27);
+            this.lNbHeuresAttrib.Location = new System.Drawing.Point(176, 27);
             this.lNbHeuresAttrib.Name = "lNbHeuresAttrib";
             this.lNbHeuresAttrib.Size = new System.Drawing.Size(99, 13);
             this.lNbHeuresAttrib.TabIndex = 47;

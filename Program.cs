@@ -22,7 +22,7 @@ namespace dotnet
                 Application.Run(new FenetrePrincipale());
             }
             catch (PasDeConnexion e) {
-                MessageBox.Show("La connexion à la base de donnés n'a pas pu être etablie.\nL'application va se fermer.", "Erreur");
+                MessageBox.Show("La connexion avec la base de données n'a pas pu être etablie.\nL'application va se fermer.", "Erreur");
             }
             
         }

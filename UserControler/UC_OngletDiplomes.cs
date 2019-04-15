@@ -27,6 +27,8 @@ namespace dotnet {
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
             lTitre.Text = "Diplômes proposés à l'Université UFR MIM de Metz : ";
+            lTitre1.Text = "Diplômes"; lTitre2.Text = "proposés à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des diplômes : ");
 
             cB_ECActive.Visible = false;
@@ -52,6 +54,8 @@ namespace dotnet {
             // changer l'UC ajout
 
             lTitre.Text = "Années proposées en " + d.nom + " : ";
+            lTitre1.Text = "Années"; lTitre2.Text = "proposées en"; lTitre3.Text = d.nom + " : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
 
             cB_ECActive.Visible = false;
@@ -75,6 +79,8 @@ namespace dotnet {
         
         public void afficheAnneeSelectionnee(annee a) {
             lTitre.Text = "Période proposées en " + a.nom + " : ";
+            lTitre1.Text = "Périodes"; lTitre2.Text = "proposées en"; lTitre3.Text = a.nom + " : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
 
             cB_ECActive.Visible = false;
@@ -97,6 +103,8 @@ namespace dotnet {
 
         public void affichePeriodeSelectionnee(periode p) {
             lTitre.Text = "UE proposées au " + p.nom + " : ";
+            lTitre1.Text = "UE"; lTitre2.Text = "proposées au"; lTitre3.Text = p.nom + " : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
 
             cB_ECActive.Visible = false;
@@ -119,6 +127,8 @@ namespace dotnet {
 
         public void afficheUESelectionnee(ue u) {
             lTitre.Text = "EC contenues dans l'UE " + u.nom + " : ";
+            lTitre1.Text = "EC"; lTitre2.Text = "contenues dans l'UE"; lTitre3.Text = u.nom + " : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
 
             cB_ECActive.Visible = false;
@@ -142,6 +152,8 @@ namespace dotnet {
         public void afficheECSelectionnee(ec e)
         {
             lTitre.Text = "Cours proposés dans l'EC " + e.nom + " : ";
+            lTitre1.Text = "Cours"; lTitre2.Text = "proposés dans l'EC"; lTitre3.Text = e.nom + " : ";
+
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
 
             cB_ECActive.Visible = true;

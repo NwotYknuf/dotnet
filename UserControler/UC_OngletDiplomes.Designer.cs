@@ -34,18 +34,24 @@ namespace dotnet
         {
             this.lTitre = new System.Windows.Forms.Label();
             this.cB_ECActive = new System.Windows.Forms.CheckBox();
+            this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
+            this.lTitre1 = new System.Windows.Forms.Label();
+            this.lTitre2 = new System.Windows.Forms.Label();
+            this.lTitre3 = new System.Windows.Forms.Label();
             this.uC_FilArianeDiplome1 = new dotnet.UserControler.FilArianne.UC_FilArianeDiplome();
             this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
             this.uC_Ajout1 = new dotnet.UC_Ajout();
+            this.flpTitre.SuspendLayout();
             this.SuspendLayout();
             // 
             // lTitre
             // 
             this.lTitre.AutoSize = true;
-            this.lTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
             this.lTitre.Location = new System.Drawing.Point(66, 80);
             this.lTitre.Name = "lTitre";
-            this.lTitre.Size = new System.Drawing.Size(68, 29);
+            this.lTitre.Size = new System.Drawing.Size(85, 36);
             this.lTitre.TabIndex = 0;
             this.lTitre.Text = "Titre";
             // 
@@ -68,6 +74,57 @@ namespace dotnet
             this.cB_ECActive.UseVisualStyleBackColor = false;
             this.cB_ECActive.Visible = false;
             this.cB_ECActive.CheckedChanged += new System.EventHandler(this.cB_ECActive_CheckedChanged);
+            // 
+            // flpTitre
+            // 
+            this.flpTitre.Controls.Add(this.lTitre1);
+            this.flpTitre.Controls.Add(this.lTitre2);
+            this.flpTitre.Controls.Add(this.lTitre3);
+            this.flpTitre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.flpTitre.Location = new System.Drawing.Point(63, 79);
+            this.flpTitre.Margin = new System.Windows.Forms.Padding(0);
+            this.flpTitre.Name = "flpTitre";
+            this.flpTitre.Size = new System.Drawing.Size(848, 42);
+            this.flpTitre.TabIndex = 25;
+            // 
+            // lTitre1
+            // 
+            this.lTitre1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lTitre1.AutoSize = true;
+            this.lTitre1.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
+            this.lTitre1.Location = new System.Drawing.Point(3, 0);
+            this.lTitre1.Name = "lTitre1";
+            this.lTitre1.Size = new System.Drawing.Size(98, 36);
+            this.lTitre1.TabIndex = 19;
+            this.lTitre1.Text = "Titre1";
+            // 
+            // lTitre2
+            // 
+            this.lTitre2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lTitre2.AutoSize = true;
+            this.lTitre2.Font = new System.Drawing.Font("Heroes Legend", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(131)))), ((int)(((byte)(155)))));
+            this.lTitre2.Location = new System.Drawing.Point(104, 2);
+            this.lTitre2.Margin = new System.Windows.Forms.Padding(0);
+            this.lTitre2.Name = "lTitre2";
+            this.lTitre2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lTitre2.Size = new System.Drawing.Size(93, 34);
+            this.lTitre2.TabIndex = 20;
+            this.lTitre2.Text = "titre2";
+            // 
+            // lTitre3
+            // 
+            this.lTitre3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lTitre3.AutoSize = true;
+            this.lTitre3.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
+            this.lTitre3.Location = new System.Drawing.Point(197, 0);
+            this.lTitre3.Margin = new System.Windows.Forms.Padding(0);
+            this.lTitre3.Name = "lTitre3";
+            this.lTitre3.Size = new System.Drawing.Size(98, 36);
+            this.lTitre3.TabIndex = 21;
+            this.lTitre3.Text = "titre3";
             // 
             // uC_FilArianeDiplome1
             // 
@@ -94,6 +151,7 @@ namespace dotnet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flpTitre);
             this.Controls.Add(this.cB_ECActive);
             this.Controls.Add(this.uC_FilArianeDiplome1);
             this.Controls.Add(this.uC_Affichage1);
@@ -102,6 +160,8 @@ namespace dotnet
             this.Name = "UC_OngletDiplomes";
             this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletDiplomes_Load);
+            this.flpTitre.ResumeLayout(false);
+            this.flpTitre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +174,9 @@ namespace dotnet
         private UC_Affichage uC_Affichage1;
         private UC_FilArianeDiplome uC_FilArianeDiplome1;
         private System.Windows.Forms.CheckBox cB_ECActive;
+        private System.Windows.Forms.FlowLayoutPanel flpTitre;
+        private System.Windows.Forms.Label lTitre1;
+        private System.Windows.Forms.Label lTitre2;
+        private System.Windows.Forms.Label lTitre3;
     }
 }
