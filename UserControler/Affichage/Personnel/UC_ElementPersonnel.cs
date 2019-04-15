@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Fenetres;
 
 namespace dotnet.UserControler.Affichage.Personnel
 {
@@ -43,7 +44,7 @@ namespace dotnet.UserControler.Affichage.Personnel
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-
+            new FenetreSupprimer("Personnel", _personnel).Show(); ;
         }
     }
 }

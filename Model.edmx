@@ -20,6 +20,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="nbrHeureDues" Type="int" />
         </EntityType>
         <EntityType Name="cours">
           <Key>
@@ -48,6 +49,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="description" Type="varchar" MaxLength="100" />
+          <Property Name="actif" Type="bool" />
         </EntityType>
         <EntityType Name="equivalent_td">
           <Key>
@@ -300,6 +302,7 @@
           <Property Name="nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="equivalent_td" Relationship="Self.equivalent_td_ibfk_1" FromRole="categorie" ToRole="equivalent_td" />
           <NavigationProperty Name="personnel" Relationship="Self.id_categorie" FromRole="categorie" ToRole="personnel" />
+          <Property Name="nbrHeureDues" Type="Int32" />
         </EntityType>
         <EntityType Name="cours">
           <Key>
@@ -334,6 +337,7 @@
           <NavigationProperty Name="cours" Relationship="Self.id_ec" FromRole="ec" ToRole="cours" />
           <NavigationProperty Name="ue" Relationship="Self.id_ue" FromRole="ec" ToRole="ue" />
           <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="actif" Type="Boolean" />
         </EntityType>
         <EntityType Name="equivalent_td">
           <Key>
@@ -592,6 +596,7 @@
           <EntitySetMapping Name="categorie">
             <EntityTypeMapping TypeName="sysModel.categorie">
               <MappingFragment StoreEntitySet="categorie">
+                <ScalarProperty Name="nbrHeureDues" ColumnName="nbrHeureDues" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
               </MappingFragment>
@@ -621,6 +626,7 @@
           <EntitySetMapping Name="ec">
             <EntityTypeMapping TypeName="sysModel.ec">
               <MappingFragment StoreEntitySet="ec">
+                <ScalarProperty Name="actif" ColumnName="actif" />
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_ue" ColumnName="id_ue" />
                 <ScalarProperty Name="id" ColumnName="id" />

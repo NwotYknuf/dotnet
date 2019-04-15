@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Fenetres;
 
 namespace dotnet.UserControler.Affichage.Accueil
 {
@@ -32,7 +33,7 @@ namespace dotnet.UserControler.Affichage.Accueil
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-
+            new FenetreSupprimer("Cours", _cours);
         }
 
         private void pBModifier_Click(object sender, EventArgs e)

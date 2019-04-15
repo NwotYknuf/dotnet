@@ -12,6 +12,11 @@ namespace dotnet {
             get {
                 if (_instance == null) {
                     _instance = new Database();
+
+                    if ( ! _instance.Database.Exists()) {
+                        throw new PasDeConnexion();
+                    }
+
                 }
                 return _instance;
             }

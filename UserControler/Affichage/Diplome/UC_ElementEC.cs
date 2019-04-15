@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Fenetres;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -25,7 +26,12 @@ namespace dotnet.UserControler.Affichage
             InitializeComponent();
             gBAffElement.Text = _ec.nom;
             tBDesc.Text = _ec.description;
-            //cB_ECActive.Checked = ;
+            //
+            if (_ec.actif == true) 
+                cB_ECActive.Checked = true;
+            else
+                cB_ECActive.Checked = false;
+
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-
+            new FenetreSupprimer("EC", _ec).Show(); ;
         }
     }
 }

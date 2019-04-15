@@ -32,21 +32,22 @@
             this.tbRecherche = new System.Windows.Forms.TextBox();
             this.bLancerRech = new System.Windows.Forms.Button();
             this.gbRecherche = new System.Windows.Forms.GroupBox();
+            this.lErreur = new System.Windows.Forms.Label();
             this.cBCritere = new System.Windows.Forms.ComboBox();
             this.lCritere = new System.Windows.Forms.Label();
             this.lMotClef = new System.Windows.Forms.Label();
             this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
-            this.lErreur = new System.Windows.Forms.Label();
             this.gbRecherche.SuspendLayout();
             this.SuspendLayout();
             // 
             // lTitre
             // 
             this.lTitre.AutoSize = true;
-            this.lTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.Location = new System.Drawing.Point(66, 23);
+            this.lTitre.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
+            this.lTitre.Location = new System.Drawing.Point(66, 28);
             this.lTitre.Name = "lTitre";
-            this.lTitre.Size = new System.Drawing.Size(139, 29);
+            this.lTitre.Size = new System.Drawing.Size(146, 36);
             this.lTitre.TabIndex = 11;
             this.lTitre.Text = "Recherche";
             // 
@@ -78,12 +79,25 @@
             this.gbRecherche.Controls.Add(this.tbRecherche);
             this.gbRecherche.Controls.Add(this.bLancerRech);
             this.gbRecherche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbRecherche.Location = new System.Drawing.Point(71, 76);
+            this.gbRecherche.Location = new System.Drawing.Point(71, 106);
             this.gbRecherche.Name = "gbRecherche";
             this.gbRecherche.Size = new System.Drawing.Size(464, 100);
             this.gbRecherche.TabIndex = 12;
             this.gbRecherche.TabStop = false;
             this.gbRecherche.Text = "Effectuer une recherche : ";
+            // 
+            // lErreur
+            // 
+            this.lErreur.AutoSize = true;
+            this.lErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lErreur.ForeColor = System.Drawing.Color.Red;
+            this.lErreur.Location = new System.Drawing.Point(364, 71);
+            this.lErreur.Name = "lErreur";
+            this.lErreur.Size = new System.Drawing.Size(88, 13);
+            this.lErreur.TabIndex = 7;
+            this.lErreur.Text = "Erreur, réessayez";
+            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lErreur.Visible = false;
             // 
             // cBCritere
             // 
@@ -131,23 +145,10 @@
             // 
             // uC_Affichage1
             // 
-            this.uC_Affichage1.Location = new System.Drawing.Point(66, 198);
+            this.uC_Affichage1.Location = new System.Drawing.Point(66, 228);
             this.uC_Affichage1.Name = "uC_Affichage1";
             this.uC_Affichage1.Size = new System.Drawing.Size(980, 364);
             this.uC_Affichage1.TabIndex = 13;
-            // 
-            // lErreur
-            // 
-            this.lErreur.AutoSize = true;
-            this.lErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lErreur.ForeColor = System.Drawing.Color.Red;
-            this.lErreur.Location = new System.Drawing.Point(364, 71);
-            this.lErreur.Name = "lErreur";
-            this.lErreur.Size = new System.Drawing.Size(88, 13);
-            this.lErreur.TabIndex = 7;
-            this.lErreur.Text = "Erreur, réessayez";
-            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lErreur.Visible = false;
             // 
             // UC_OngletRecherche
             // 

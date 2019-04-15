@@ -40,10 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
             this.SuspendLayout();
             // 
-            // gBAffElement
-            // 
-            this.gBAffElement.Size = new System.Drawing.Size(477, 114);
-            // 
             // panel
             // 
             this.panel.Controls.Add(this.tBPersonnel);
@@ -52,7 +48,6 @@
             this.panel.Controls.Add(this.tBCours);
             this.panel.Controls.Add(this.lHoraires);
             this.panel.Controls.Add(this.lTypeCours);
-            this.panel.Size = new System.Drawing.Size(465, 90);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
@@ -65,12 +60,10 @@
             // 
             // pBModifier
             // 
-            this.pBModifier.Location = new System.Drawing.Point(423, 6);
             this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
             // 
             // pBSupprimer
             // 
-            this.pBSupprimer.Location = new System.Drawing.Point(424, 49);
             this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // tBPersonnel

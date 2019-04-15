@@ -22,6 +22,8 @@ namespace dotnet
         private void UC_OngletAccueil_Load(object sender, EventArgs e)
         {
             pBienvenu.BringToFront();
+
+            lTitre.Text = "Accueil";
             
             initialisePersonnels(uC_AffPersonnel);
             initialiseCours(uC_AffCours);
@@ -59,7 +61,7 @@ namespace dotnet
 
         public void initialiseCours(UC_AffichageA uc)
         {
-            uc.setGroupBoxTiTre("Les cours non affectés : ");
+            uc.setGroupBoxTiTre("Les cours non affectés à un personnel : ");
 
             uc.clearElements();
 

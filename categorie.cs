@@ -23,6 +23,7 @@ namespace dotnet
     
         public int id { get; set; }
         public string nom { get; set; }
+        public Nullable<int> nbrHeureDues { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<equivalent_td> equivalent_td { get; set; }

@@ -33,13 +33,14 @@
             this.pBienvenu = new System.Windows.Forms.Panel();
             this.pAccueil = new System.Windows.Forms.Panel();
             this.pAffCours = new System.Windows.Forms.Panel();
-            this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pAffPersonnel = new System.Windows.Forms.Panel();
-            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.lDate = new System.Windows.Forms.Label();
             this.lHorloge = new System.Windows.Forms.Label();
             this.timerBienvenu = new System.Windows.Forms.Timer(this.components);
             this.timerHorloge = new System.Windows.Forms.Timer(this.components);
+            this.lTitre = new System.Windows.Forms.Label();
+            this.uC_AffCours = new dotnet.UserControler.Affichage.UC_AffichageA();
+            this.uC_AffPersonnel = new dotnet.UserControler.Affichage.UC_AffichageA();
             this.pBienvenu.SuspendLayout();
             this.pAccueil.SuspendLayout();
             this.pAffCours.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // pAccueil
             // 
+            this.pAccueil.Controls.Add(this.lTitre);
             this.pAccueil.Controls.Add(this.pAffCours);
             this.pAccueil.Controls.Add(this.pAffPersonnel);
             this.pAccueil.Controls.Add(this.lDate);
@@ -85,30 +87,16 @@
             this.pAffCours.Controls.Add(this.uC_AffCours);
             this.pAffCours.Location = new System.Drawing.Point(553, 96);
             this.pAffCours.Name = "pAffCours";
-            this.pAffCours.Size = new System.Drawing.Size(550, 577);
+            this.pAffCours.Size = new System.Drawing.Size(498, 577);
             this.pAffCours.TabIndex = 3;
-            // 
-            // uC_AffCours
-            // 
-            this.uC_AffCours.Location = new System.Drawing.Point(13, 8);
-            this.uC_AffCours.Name = "uC_AffCours";
-            this.uC_AffCours.Size = new System.Drawing.Size(525, 555);
-            this.uC_AffCours.TabIndex = 0;
             // 
             // pAffPersonnel
             // 
             this.pAffPersonnel.Controls.Add(this.uC_AffPersonnel);
-            this.pAffPersonnel.Location = new System.Drawing.Point(3, 96);
+            this.pAffPersonnel.Location = new System.Drawing.Point(56, 96);
             this.pAffPersonnel.Name = "pAffPersonnel";
-            this.pAffPersonnel.Size = new System.Drawing.Size(550, 577);
+            this.pAffPersonnel.Size = new System.Drawing.Size(498, 577);
             this.pAffPersonnel.TabIndex = 2;
-            // 
-            // uC_AffPersonnel
-            // 
-            this.uC_AffPersonnel.Location = new System.Drawing.Point(13, 8);
-            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
-            this.uC_AffPersonnel.Size = new System.Drawing.Size(525, 555);
-            this.uC_AffPersonnel.TabIndex = 0;
             // 
             // lDate
             // 
@@ -137,6 +125,31 @@
             // timerHorloge
             // 
             this.timerHorloge.Tick += new System.EventHandler(this.timerHorloge_Tick);
+            // 
+            // lTitre
+            // 
+            this.lTitre.AutoSize = true;
+            this.lTitre.Font = new System.Drawing.Font("Heroes Legend", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(79)))), ((int)(((byte)(93)))));
+            this.lTitre.Location = new System.Drawing.Point(63, 25);
+            this.lTitre.Name = "lTitre";
+            this.lTitre.Size = new System.Drawing.Size(85, 36);
+            this.lTitre.TabIndex = 2;
+            this.lTitre.Text = "Titre";
+            // 
+            // uC_AffCours
+            // 
+            this.uC_AffCours.Location = new System.Drawing.Point(10, 8);
+            this.uC_AffCours.Name = "uC_AffCours";
+            this.uC_AffCours.Size = new System.Drawing.Size(480, 555);
+            this.uC_AffCours.TabIndex = 0;
+            // 
+            // uC_AffPersonnel
+            // 
+            this.uC_AffPersonnel.Location = new System.Drawing.Point(9, 8);
+            this.uC_AffPersonnel.Name = "uC_AffPersonnel";
+            this.uC_AffPersonnel.Size = new System.Drawing.Size(482, 555);
+            this.uC_AffPersonnel.TabIndex = 0;
             // 
             // UC_OngletAccueil
             // 
@@ -170,5 +183,6 @@
         private System.Windows.Forms.Panel pAffPersonnel;
         private UserControler.Affichage.UC_AffichageA uC_AffPersonnel;
         private UserControler.Affichage.UC_AffichageA uC_AffCours;
+        private System.Windows.Forms.Label lTitre;
     }
 }

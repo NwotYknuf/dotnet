@@ -39,7 +39,7 @@
             this.gBTitreAffichage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBTitreAffichage.Location = new System.Drawing.Point(3, 3);
             this.gBTitreAffichage.Name = "gBTitreAffichage";
-            this.gBTitreAffichage.Size = new System.Drawing.Size(519, 550);
+            this.gBTitreAffichage.Size = new System.Drawing.Size(472, 550);
             this.gBTitreAffichage.TabIndex = 1;
             this.gBTitreAffichage.TabStop = false;
             this.gBTitreAffichage.Text = "TitreAffichage";
@@ -51,7 +51,7 @@
             this.flowLPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLPanel.Location = new System.Drawing.Point(6, 21);
             this.flowLPanel.Name = "flowLPanel";
-            this.flowLPanel.Size = new System.Drawing.Size(507, 523);
+            this.flowLPanel.Size = new System.Drawing.Size(460, 523);
             this.flowLPanel.TabIndex = 0;
             this.flowLPanel.WrapContents = false;
             // 
@@ -59,7 +59,7 @@
             // 
             this.Controls.Add(this.gBTitreAffichage);
             this.Name = "UC_AffichageA";
-            this.Size = new System.Drawing.Size(525, 555);
+            this.Size = new System.Drawing.Size(480, 555);
             this.gBTitreAffichage.ResumeLayout(false);
             this.ResumeLayout(false);
 
