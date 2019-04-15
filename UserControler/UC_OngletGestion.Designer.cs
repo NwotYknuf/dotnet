@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_OngletGestion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
             this.lTitre1 = new System.Windows.Forms.Label();
             this.lTitre2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.pBRetraitLigne = new System.Windows.Forms.PictureBox();
             this.pBRetraitColonne = new System.Windows.Forms.PictureBox();
             this.pBEnregistrer = new System.Windows.Forms.PictureBox();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flpTitre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutLigne)).BeginInit();
@@ -53,21 +53,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.Column0});
             this.dataGridView1.Location = new System.Drawing.Point(71, 96);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(949, 484);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column1.HeaderText = "Catégorie";
-            this.Column1.Name = "Column1";
             // 
             // flpTitre
             // 
@@ -171,6 +165,13 @@
             this.pBEnregistrer.TabStop = false;
             this.pBEnregistrer.Click += new System.EventHandler(this.pBEnregistrer_Click);
             // 
+            // Column0
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column0.HeaderText = "Catégorie";
+            this.Column0.Name = "Column0";
+            // 
             // UC_OngletGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +200,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.FlowLayoutPanel flpTitre;
         private System.Windows.Forms.Label lTitre1;
         private System.Windows.Forms.Label lTitre2;
@@ -209,5 +209,6 @@
         protected System.Windows.Forms.PictureBox pBRetraitLigne;
         protected System.Windows.Forms.PictureBox pBRetraitColonne;
         protected System.Windows.Forms.PictureBox pBEnregistrer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
     }
 }

@@ -35,11 +35,7 @@ namespace dotnet.Fenetres
                     {
                         foreach(DataGridViewRow dgvr in dgv.Rows)
                         {
-                            try
-                            {
-                                cBListe.Items.Add(dgvr.Cells["Column1"].Value.ToString());
-                            }
-                            catch { } // Le dernier élément est vide et génère une exception inutile
+                            cBListe.Items.Add(dgvr.Cells[0].Value.ToString());
                         }
                         break;
                     }
@@ -98,13 +94,7 @@ namespace dotnet.Fenetres
     public void suppressionValidee()
         {
             lErreur.Visible = false;
-            // Retrait dans la BDD
-
-
-
-            // Retrait dans le tableau
             _uC.retrait(_element, cBListe.Text, cBListe.Items.IndexOf(cBListe.Text));
-
             this.Dispose();
         }
     }

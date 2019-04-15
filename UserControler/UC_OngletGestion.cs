@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
+using System.Data.Entity.Migrations;
 
 namespace dotnet
 {
@@ -20,8 +21,7 @@ namespace dotnet
 
         private void UC_OngletGestion_Load(object sender, EventArgs e)
         {
-            pBEnregistrer.Enabled = false;
-            pBEnregistrer.BackColor = Color.LightGray;
+            dataGridView1.Columns[0].ReadOnly = true;
 
             toolTip1.SetToolTip(this.pBAjoutLigne, "Ajouter une catégorie (ligne)");
             toolTip1.SetToolTip(this.pBAjoutColonne, "Ajouter un type de cours (colonne)");
@@ -34,7 +34,7 @@ namespace dotnet
                         
             foreach (type_cours tC in typesCours)
             {
-                dataGridView1.Columns.Add("Column", tC.nom);
+                dataGridView1.Columns.Add("Column" + dataGridView1.Columns.Count, tC.nom);
             }
 
             foreach (categorie c in categories)
@@ -43,6 +43,8 @@ namespace dotnet
             }
 
             initialiserValeurs();
+            
+            pBEnregistrer.Visible = false;
         }
 
         public DataGridView getDataGridView1()
@@ -52,21 +54,31 @@ namespace dotnet
 
         public void ajout(String element, String nom)
         {
-            if (element == "colonne")
-            {
-                // Colonne : Type de Cours
-                dataGridView1.Columns.Add("Column" + dataGridView1.Columns.Count + 1, nom);
+            if (element == "colonne") // Colonne : Type de Cours
+            {                
+                // Tableau
+                dataGridView1.Columns.Add("Column" + dataGridView1.Columns.Count, nom);
+                foreach(DataGridViewRow dgvr in dataGridView1.Rows)
+                {
+                    dgvr.Cells[dataGridView1.Columns.Count - 1].Value = 0.0; // Toutes les valeurs à 0 par défaut
+                }
 
+                // BDD
                 type_cours typCoursAAjouter = new type_cours();
                 typCoursAAjouter.nom = nom;
 
                 Database.instance.type_cours.Add(typCoursAAjouter);
             }
-            else
+            else // Ligne : Categorie 
             {
-                // Ligne : Categorie 
+                // Tableau
                 dataGridView1.Rows.Add(nom);
+                for (int i = 1; i < dataGridView1.Columns.Count; i++)
+                {
+                    dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[i].Value = 0.0; // Toutes les valeurs à 0 par défaut
+                }
 
+                // BDD
                 categorie catAAjouter = new categorie();
                 catAAjouter.nom = nom;
 
@@ -113,13 +125,13 @@ namespace dotnet
                 for (int i = 1; i < dataGridView1.Columns.Count; i++)
                 {
                     String nomColonne = dataGridView1.Columns[i].HeaderText;
-                    String nomLigne = row.Cells["Column1"].Value.ToString();
+                    String nomLigne = row.Cells[0].Value.ToString();
 
                     type_cours typC = Database.instance.type_cours.Where(s => s.nom == nomColonne).FirstOrDefault<type_cours>();
                     categorie cat = Database.instance.categorie.Where(s => s.nom == nomLigne).FirstOrDefault<categorie>();
 
                     equivalent_td equivalent = Database.instance.equivalent_td.Where(x => x.id_type_cours == typC.id && x.id_categ == cat.id).FirstOrDefault<equivalent_td>();
-
+                    
                     row.Cells[i].Value = equivalent.ratio;
                 }
             }
@@ -149,13 +161,39 @@ namespace dotnet
         {
             //Enregistrer dans les tables les modifications et / ou ajouts
 
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                for (int i = 1; i < dataGridView1.Columns.Count; i++)
+                {
+                    String nomColonne = dataGridView1.Columns[i].HeaderText;
+                    String nomLigne = row.Cells[0].Value.ToString();
 
+                    type_cours typC = Database.instance.type_cours.Where(s => s.nom == nomColonne).FirstOrDefault<type_cours>();
+                    categorie cat = Database.instance.categorie.Where(s => s.nom == nomLigne).FirstOrDefault<categorie>();
+
+                    equivalent_td equivalent = new equivalent_td();
+                                        
+                    equivalent.ratio = Convert.ToDouble(row.Cells[i].Value);
+                    equivalent.id_categ = cat.id;
+                    equivalent.id_type_cours = typC.id;
+
+                    equivalent.categorie = cat;
+                    equivalent.type_cours = typC;
+
+                    Database.instance.equivalent_td.AddOrUpdate(equivalent); //requiert : using System.Data.Entity.Migrations;
+                }
+            }
+
+            // Sauvegarde les modifications
+            Database.instance.SaveChanges();
+
+            MessageBox.Show("Les informations ont bien été mises à jour.");
+            pBEnregistrer.Visible = false;
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            pBEnregistrer.Enabled = true;
-            pBEnregistrer.BackColor = Color.Transparent;
+            pBEnregistrer.Visible = true;
         }
     }
 }
