@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using dotnet.UserControler.FilArianne;
 using dotnet.UserControler.Ajout;
 using dotnet.UserControler.Affichage;
+using System.Data.Entity.Migrations;
 
 namespace dotnet {
     public partial class UC_OngletDiplomes : UserControl {
@@ -203,6 +204,10 @@ namespace dotnet {
                 cB_ECActive.Text = "EC Désactivée";
                 cB_ECActive.ForeColor = Color.FromArgb(230, 55, 0);
             }
+
+            Database.instance.ec.AddOrUpdate(_ecCourant);
+
+            Database.instance.SaveChanges();
         }
     }
 }
