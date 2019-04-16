@@ -45,7 +45,9 @@ namespace dotnet.UserControler.Affichage.Personnel
         {
             // Retirer ce cours à ce personnel
 
-            //_cadre.retirerCours(  );
+            personnel p = Database.instance.personnel.Where(x => x.id == _cours.personnel.id).FirstOrDefault<personnel>();
+
+            _cadre.retirerCours(p, _cours);
         }
 
         private void UC_ElementCoursPersonnel_Load(object sender, EventArgs e)
