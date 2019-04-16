@@ -33,7 +33,7 @@ namespace dotnet.UserControler.Affichage.Accueil
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Cours", _cours);
+            new FenetreSupprimer("Cours", _cours).Show();
         }
 
         private void pBModifier_Click(object sender, EventArgs e)

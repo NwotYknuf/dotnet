@@ -22,7 +22,7 @@ namespace dotnet
         private void UC_OngletGestion_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns[0].ReadOnly = true;
-
+            
             toolTip1.SetToolTip(this.pBAjoutLigne, "Ajouter une catégorie (ligne)");
             toolTip1.SetToolTip(this.pBAjoutColonne, "Ajouter un type de cours (colonne)");
             toolTip1.SetToolTip(this.pBRetraitLigne, "Retirer une catégorie (ligne)");
@@ -35,6 +35,7 @@ namespace dotnet
             foreach (type_cours tC in typesCours)
             {
                 dataGridView1.Columns.Add("Column" + dataGridView1.Columns.Count, tC.nom);
+                dataGridView1.Columns[dataGridView1.ColumnCount - 1].MinimumWidth = 100;
             }
 
             foreach (categorie c in categories)
