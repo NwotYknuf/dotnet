@@ -30,7 +30,10 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
                 // Ajouter une période
-
+                periode periode = new periode();
+                periode.nom = this.tBNom.Text;
+                periode.description = this.rtBDesc.Text;
+                // Ajouter à la BDD
             }
             else
             {

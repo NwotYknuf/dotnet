@@ -30,7 +30,14 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
                 // Ajouter une EC
-
+                ec ec = new ec();
+                ec.nom = this.tBNom.Text;
+                ec.description = this.rtBDesc.Text;
+                if (this.cB_ECActive.Checked)
+                    ec.actif = true;
+                else
+                    ec.actif = false;
+                // Ajouter à la BDD
             }
             else
             {

@@ -31,7 +31,10 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
                 // Ajouter une UE
-
+                ue ue = new ue();
+                ue.nom = this.tBNom.Text;
+                ue.description = this.rtBDesc.Text;
+                // Ajouter à la BDD
             }
             else
             {
