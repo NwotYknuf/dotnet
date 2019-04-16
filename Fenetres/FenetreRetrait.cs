@@ -33,6 +33,7 @@ namespace dotnet.Fenetres
             {
                 case "ligne":
                     {
+                        //Récupérer les noms des lignes dans la comboBox
                         foreach(DataGridViewRow dgvr in dgv.Rows)
                         {                            
                              cBListe.Items.Add(dgvr.Cells[0].Value.ToString());
@@ -41,7 +42,8 @@ namespace dotnet.Fenetres
                     }
                 case "colonne":
                     {
-                        foreach (DataGridViewColumn dgvc in dgv.Columns.Cast<DataGridViewColumn>().Skip(1)) // Excepté le 1er élément
+                        //Récupérer les noms des colonnes dans la comboBox
+                        foreach (DataGridViewColumn dgvc in dgv.Columns.Cast<DataGridViewColumn>().Skip(2)) // Excepté les 2 premiers éléments
                         {
                             cBListe.Items.Add(dgvc.HeaderText);
                         }

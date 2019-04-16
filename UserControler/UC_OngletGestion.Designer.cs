@@ -44,6 +44,7 @@
             this.pBRetraitColonne = new System.Windows.Forms.PictureBox();
             this.pBEnregistrer = new System.Windows.Forms.PictureBox();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flpTitre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutLigne)).BeginInit();
@@ -67,7 +68,8 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column0});
+            this.Column0,
+            this.Column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10F);
@@ -189,9 +191,14 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Column0.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column0.HeaderText = "Catégorie";
-            this.Column0.MinimumWidth = 100;
             this.Column0.Name = "Column0";
             this.Column0.Width = 108;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Heures imposées";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 152;
             // 
             // UC_OngletGestion
             // 
@@ -231,5 +238,6 @@
         protected System.Windows.Forms.PictureBox pBRetraitColonne;
         protected System.Windows.Forms.PictureBox pBEnregistrer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
