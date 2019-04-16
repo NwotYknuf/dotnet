@@ -1,4 +1,4 @@
-﻿namespace dotnet.Fenetres
+﻿namespace dotnet.Fenetres.Assignation
 {
     partial class FenetreAssignationCours
     {

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dotnet.Fenetres
+namespace dotnet.Fenetres.Assignation
 {
     public partial class FenetreAssignationCours : Form
     {
