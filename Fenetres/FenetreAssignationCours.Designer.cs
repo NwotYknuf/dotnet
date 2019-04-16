@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.uC_AffichageFenAssign1 = new dotnet.UserControler.Affichage.Assignation.UC_AffichageFenAssign();
             this.lTitre = new System.Windows.Forms.Label();
+            this.uC_AffichageFenAssign1 = new dotnet.UserControler.Affichage.Assignation.UC_AffichageFenAssign();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +43,6 @@
             this.panel1.Size = new System.Drawing.Size(706, 488);
             this.panel1.TabIndex = 0;
             // 
-            // uC_AffichageFenAssign1
-            // 
-            this.uC_AffichageFenAssign1.Location = new System.Drawing.Point(4, 40);
-            this.uC_AffichageFenAssign1.Name = "uC_AffichageFenAssign1";
-            this.uC_AffichageFenAssign1.Size = new System.Drawing.Size(700, 445);
-            this.uC_AffichageFenAssign1.TabIndex = 0;
-            // 
             // lTitre
             // 
             this.lTitre.AutoSize = true;
@@ -58,6 +51,13 @@
             this.lTitre.Size = new System.Drawing.Size(272, 13);
             this.lTitre.TabIndex = 1;
             this.lTitre.Text = "Sélectionnez l\'ELEMENT que vous souhaitez assigner : ";
+            // 
+            // uC_AffichageFenAssign1
+            // 
+            this.uC_AffichageFenAssign1.Location = new System.Drawing.Point(4, 40);
+            this.uC_AffichageFenAssign1.Name = "uC_AffichageFenAssign1";
+            this.uC_AffichageFenAssign1.Size = new System.Drawing.Size(700, 445);
+            this.uC_AffichageFenAssign1.TabIndex = 0;
             // 
             // FenetreAssignationCours
             // 
@@ -68,6 +68,7 @@
             this.Name = "FenetreAssignationCours";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FenetreAssignationCours";
+            this.Load += new System.EventHandler(this.FenetreAssignationCours_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -51,7 +51,7 @@
             this.flowLPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLPanel.Location = new System.Drawing.Point(6, 21);
             this.flowLPanel.Name = "flowLPanel";
-            this.flowLPanel.Size = new System.Drawing.Size(679, 412);
+            this.flowLPanel.Size = new System.Drawing.Size(669, 412);
             this.flowLPanel.TabIndex = 0;
             this.flowLPanel.WrapContents = false;
             // 

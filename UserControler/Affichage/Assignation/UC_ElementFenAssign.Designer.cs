@@ -28,8 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.gBAffElement.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gBAffElement
+            // 
+            this.gBAffElement.Size = new System.Drawing.Size(639, 117);
+            // 
+            // panel
+            // 
+            this.panel.Size = new System.Drawing.Size(627, 94);
+            // 
+            // UC_ElementFenAssign
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "UC_ElementFenAssign";
+            this.Size = new System.Drawing.Size(648, 120);
+            this.gBAffElement.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

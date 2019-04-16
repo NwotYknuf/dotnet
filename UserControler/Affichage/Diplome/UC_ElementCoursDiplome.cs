@@ -70,6 +70,8 @@ namespace dotnet.UserControler.Affichage
             {
                 // Ajouter un personnel
 
+                
+
                 // BDD
                 _cours.personnel = new personnel(); // A continuer
 

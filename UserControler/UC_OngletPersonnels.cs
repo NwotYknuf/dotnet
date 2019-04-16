@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.UserControler.Ajout;
 using dotnet.UserControler.Affichage.Personnel;
+using dotnet.Fenetres;
 
 namespace dotnet
 {
@@ -83,6 +84,7 @@ namespace dotnet
         public void ajouterCours(personnel p)
         {
             // Ajouter un cours au personnel p
+            new FenetreAssignationCours(this, p).Show();
         }
 
         public void retirerCours(personnel p)
