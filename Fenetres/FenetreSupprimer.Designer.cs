@@ -91,6 +91,7 @@
             this.Controls.Add(this.lTitre);
             this.Controls.Add(this.panel1);
             this.Name = "FenetreSupprimer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FenetreSupprimer";
             this.ResumeLayout(false);
             this.PerformLayout();

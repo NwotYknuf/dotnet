@@ -22,6 +22,7 @@ namespace dotnet
         private void initialisation()
         {
             ucAccueil1.BringToFront();
+            changerCouleurDeFond(miAcceuil);
         }
 
         private void miAcceuil_Click(object sender, EventArgs e)

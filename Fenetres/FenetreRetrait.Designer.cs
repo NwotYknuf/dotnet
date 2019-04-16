@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lErreur = new System.Windows.Forms.Label();
+            this.cBListe = new System.Windows.Forms.ComboBox();
             this.bAnnuler = new System.Windows.Forms.Button();
             this.bValider = new System.Windows.Forms.Button();
             this.lTitre = new System.Windows.Forms.Label();
-            this.cBListe = new System.Windows.Forms.ComboBox();
-            this.lErreur = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(342, 105);
             this.panel1.TabIndex = 8;
+            // 
+            // lErreur
+            // 
+            this.lErreur.AutoSize = true;
+            this.lErreur.ForeColor = System.Drawing.Color.Red;
+            this.lErreur.Location = new System.Drawing.Point(223, 45);
+            this.lErreur.Name = "lErreur";
+            this.lErreur.Size = new System.Drawing.Size(88, 13);
+            this.lErreur.TabIndex = 11;
+            this.lErreur.Text = "Erreur, réessayez";
+            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lErreur.Visible = false;
+            // 
+            // cBListe
+            // 
+            this.cBListe.FormattingEnabled = true;
+            this.cBListe.Location = new System.Drawing.Point(42, 40);
+            this.cBListe.Name = "cBListe";
+            this.cBListe.Size = new System.Drawing.Size(153, 21);
+            this.cBListe.TabIndex = 10;
             // 
             // bAnnuler
             // 
@@ -78,26 +98,6 @@
             this.lTitre.TabIndex = 5;
             this.lTitre.Text = "Titre";
             // 
-            // cBListe
-            // 
-            this.cBListe.FormattingEnabled = true;
-            this.cBListe.Location = new System.Drawing.Point(42, 40);
-            this.cBListe.Name = "cBListe";
-            this.cBListe.Size = new System.Drawing.Size(153, 21);
-            this.cBListe.TabIndex = 10;
-            // 
-            // lErreur
-            // 
-            this.lErreur.AutoSize = true;
-            this.lErreur.ForeColor = System.Drawing.Color.Red;
-            this.lErreur.Location = new System.Drawing.Point(223, 45);
-            this.lErreur.Name = "lErreur";
-            this.lErreur.Size = new System.Drawing.Size(88, 13);
-            this.lErreur.TabIndex = 11;
-            this.lErreur.Text = "Erreur, réessayez";
-            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lErreur.Visible = false;
-            // 
             // FenetreRetrait
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +105,7 @@
             this.ClientSize = new System.Drawing.Size(366, 129);
             this.Controls.Add(this.panel1);
             this.Name = "FenetreRetrait";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FenetreRetrait";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

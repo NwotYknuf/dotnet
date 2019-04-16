@@ -170,6 +170,7 @@
             this.Controls.Add(this.ucGestion1);
             this.Controls.Add(this.ucListePersonnel1);
             this.Name = "FenetrePrincipale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application de gestion";
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();

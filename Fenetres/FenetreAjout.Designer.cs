@@ -104,6 +104,7 @@
             this.ClientSize = new System.Drawing.Size(366, 129);
             this.Controls.Add(this.panel1);
             this.Name = "FenetreAjout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fenetre d\'ajout";
             this.Load += new System.EventHandler(this.FenetreAjout_Load);
             this.panel1.ResumeLayout(false);
