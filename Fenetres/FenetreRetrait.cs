@@ -34,12 +34,8 @@ namespace dotnet.Fenetres
                 case "ligne":
                     {
                         foreach(DataGridViewRow dgvr in dgv.Rows)
-                        {
-                            try
-                            {
-                                cBListe.Items.Add(dgvr.Cells["Column1"].Value.ToString());
-                            }
-                            catch { } // Le dernier élément est vide et génère une exception inutile
+                        {                            
+                             cBListe.Items.Add(dgvr.Cells[0].Value.ToString());
                         }
                         break;
                     }
