@@ -35,7 +35,11 @@ namespace dotnet.Fenetres
                     {
                         foreach(DataGridViewRow dgvr in dgv.Rows)
                         {
-                            cBListe.Items.Add(dgvr.Cells[0].Value.ToString());
+                            try
+                            {
+                                cBListe.Items.Add(dgvr.Cells["Column1"].Value.ToString());
+                            }
+                            catch { } // Le dernier élément est vide et génère une exception inutile
                         }
                         break;
                     }
