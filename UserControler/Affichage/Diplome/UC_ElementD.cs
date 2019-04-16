@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage
 {
-    public partial class UC_ElementD : UC_Element
+    public partial class UC_ElementD : UC_ElementModifiable
     {
         protected UC_OngletDiplomes _cadre;
 

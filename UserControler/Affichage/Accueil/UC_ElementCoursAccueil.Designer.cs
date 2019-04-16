@@ -28,60 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tBPersonnel = new System.Windows.Forms.TextBox();
-            this.lPersonnel = new System.Windows.Forms.Label();
             this.tBHoraires = new System.Windows.Forms.TextBox();
             this.tBCours = new System.Windows.Forms.TextBox();
             this.lHoraires = new System.Windows.Forms.Label();
             this.lTypeCours = new System.Windows.Forms.Label();
+            this.tBEC = new System.Windows.Forms.TextBox();
+            this.lEC = new System.Windows.Forms.Label();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.tBPersonnel);
-            this.panel.Controls.Add(this.lPersonnel);
+            this.panel.Controls.Add(this.tBEC);
+            this.panel.Controls.Add(this.lEC);
             this.panel.Controls.Add(this.tBHoraires);
             this.panel.Controls.Add(this.tBCours);
             this.panel.Controls.Add(this.lHoraires);
             this.panel.Controls.Add(this.lTypeCours);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
-            this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.lTypeCours, 0);
             this.panel.Controls.SetChildIndex(this.lHoraires, 0);
             this.panel.Controls.SetChildIndex(this.tBCours, 0);
             this.panel.Controls.SetChildIndex(this.tBHoraires, 0);
-            this.panel.Controls.SetChildIndex(this.lPersonnel, 0);
-            this.panel.Controls.SetChildIndex(this.tBPersonnel, 0);
-            // 
-            // pBModifier
-            // 
-            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
-            // 
-            // tBPersonnel
-            // 
-            this.tBPersonnel.Enabled = false;
-            this.tBPersonnel.Location = new System.Drawing.Point(123, 58);
-            this.tBPersonnel.Name = "tBPersonnel";
-            this.tBPersonnel.Size = new System.Drawing.Size(100, 20);
-            this.tBPersonnel.TabIndex = 17;
-            // 
-            // lPersonnel
-            // 
-            this.lPersonnel.AutoSize = true;
-            this.lPersonnel.Location = new System.Drawing.Point(25, 62);
-            this.lPersonnel.Name = "lPersonnel";
-            this.lPersonnel.Size = new System.Drawing.Size(69, 13);
-            this.lPersonnel.TabIndex = 16;
-            this.lPersonnel.Text = "Enseignant : ";
+            this.panel.Controls.SetChildIndex(this.lEC, 0);
+            this.panel.Controls.SetChildIndex(this.tBEC, 0);
             // 
             // tBHoraires
             // 
@@ -117,6 +88,23 @@
             this.lTypeCours.TabIndex = 12;
             this.lTypeCours.Text = "Type de cours : ";
             // 
+            // tBEC
+            // 
+            this.tBEC.Enabled = false;
+            this.tBEC.Location = new System.Drawing.Point(123, 58);
+            this.tBEC.Name = "tBEC";
+            this.tBEC.Size = new System.Drawing.Size(100, 20);
+            this.tBEC.TabIndex = 17;
+            // 
+            // lEC
+            // 
+            this.lEC.AutoSize = true;
+            this.lEC.Location = new System.Drawing.Point(26, 61);
+            this.lEC.Name = "lEC";
+            this.lEC.Size = new System.Drawing.Size(30, 13);
+            this.lEC.TabIndex = 16;
+            this.lEC.Text = "EC : ";
+            // 
             // UC_ElementCoursAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,19 +113,16 @@
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tBPersonnel;
-        private System.Windows.Forms.Label lPersonnel;
         private System.Windows.Forms.TextBox tBHoraires;
         private System.Windows.Forms.TextBox tBCours;
         private System.Windows.Forms.Label lHoraires;
         private System.Windows.Forms.Label lTypeCours;
+        private System.Windows.Forms.TextBox tBEC;
+        private System.Windows.Forms.Label lEC;
     }
 }

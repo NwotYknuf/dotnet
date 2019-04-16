@@ -31,8 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
             this.SuspendLayout();
             // 
             // gBAffElement
@@ -45,19 +43,7 @@
             this.panel.Controls.Add(this.label1);
             this.panel.Location = new System.Drawing.Point(6, 14);
             this.panel.Size = new System.Drawing.Size(418, 43);
-            this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
-            this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.label1, 0);
-            // 
-            // pBModifier
-            // 
-            this.pBModifier.Location = new System.Drawing.Point(336, 3);
-            this.pBModifier.Visible = false;
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Location = new System.Drawing.Point(379, 3);
-            this.pBSupprimer.Visible = false;
             // 
             // label1
             // 
@@ -79,8 +65,6 @@
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.ResumeLayout(false);
 
         }

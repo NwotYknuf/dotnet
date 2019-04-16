@@ -27,7 +27,7 @@ namespace dotnet.UserControler.Affichage.Accueil
             gBAffElement.Text = _cours.nom;
             tBCours.Text = _cours.id_type.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();
-            tBPersonnel.Text = _cours.personnel.ToString();
+            tBEC.Text = _cours.id_ec.ToString(); // Database.instance.ec.Where(x => x.id == _cours.id_ec).FirstOrDefault<ec>().nom;
             
         }
 

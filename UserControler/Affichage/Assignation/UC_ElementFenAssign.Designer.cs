@@ -1,6 +1,6 @@
-﻿namespace dotnet.UserControler.Affichage.Accueil
+﻿namespace dotnet.UserControler.Affichage.Assignation
 {
-    partial class UC_ElementA
+    partial class UC_ElementFenAssign
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,29 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // gBAffElement
-            // 
-            this.gBAffElement.Size = new System.Drawing.Size(430, 114);
-            // 
-            // panel
-            // 
-            this.panel.Size = new System.Drawing.Size(418, 90);
-            // 
-            // UC_ElementA
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UC_ElementA";
-            this.Size = new System.Drawing.Size(438, 118);
-            this.Load += new System.EventHandler(this.UC_ElementA_Load);
-            this.gBAffElement.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

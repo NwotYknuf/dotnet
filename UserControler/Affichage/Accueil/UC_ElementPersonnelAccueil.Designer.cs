@@ -38,8 +38,6 @@
             this.lNbHeuresAttrib = new System.Windows.Forms.Label();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -53,8 +51,6 @@
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.tBNom);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
-            this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.tBNom, 0);
             this.panel.Controls.SetChildIndex(this.lNom, 0);
             this.panel.Controls.SetChildIndex(this.tBPrenom, 0);
@@ -63,14 +59,6 @@
             this.panel.Controls.SetChildIndex(this.lNbHeuresNonAttrib, 0);
             this.panel.Controls.SetChildIndex(this.tBNbHeuresNonAttrib, 0);
             this.panel.Controls.SetChildIndex(this.tBNbHeuresAttrib, 0);
-            // 
-            // pBModifier
-            // 
-            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // lPrenom
             // 
@@ -150,8 +138,6 @@
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.ResumeLayout(false);
 
         }
