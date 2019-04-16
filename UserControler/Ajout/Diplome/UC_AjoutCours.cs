@@ -45,8 +45,11 @@ namespace dotnet.UserControler.Ajout
                 // Ajouter un cours
                 cours cours = new cours();
                 cours.nom = this.tBNom.Text;
-                cours.id_type = this.cBType.SelectedIndex;
                 cours.volume_horraire = Convert.ToInt32(this.tBHoraires.Text);
+                
+                //type_cours tc = new type_cours();
+                //cours.type_cours = this.cBType.SelectedValue;
+                
                 // Ajouter l'enregistrement à la BDD
             }
             else

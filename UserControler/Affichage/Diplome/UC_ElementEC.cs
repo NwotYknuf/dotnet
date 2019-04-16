@@ -26,11 +26,17 @@ namespace dotnet.UserControler.Affichage
             InitializeComponent();
             gBAffElement.Text = _ec.nom;
             tBDesc.Text = _ec.description;
-            //
-            if (_ec.actif == true) 
+
+            if (_ec.actif == true)
+            {
                 cB_ECActive.Checked = true;
+                cB_ECActive.Text = "Activée";
+            }
             else
+            {
                 cB_ECActive.Checked = false;
+                cB_ECActive.Text = "Désactivée";
+            }
 
         }
 

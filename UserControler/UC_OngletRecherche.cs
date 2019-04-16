@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using dotnet.UserControler.Affichage;
 
 namespace dotnet
 {
@@ -32,12 +33,54 @@ namespace dotnet
 
                 // Rechercher
 
-                /*var resultats = Database.instance;
-                foreach (resultats)
+                switch(cBCritere.Text)
                 {
-                    uC_Affichage1.addElement(new UC_Element(this, d));
+                    case "diplome":
+                        {
+                            /*var resultats = Database.instance.diplome;
+                            foreach (diplome d in resultats)
+                            {
+                                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
+                            }
+                            uC_Affichage1.updateAffichage();*/
+                            break;
+                        }
+                    case "annee":
+                        {
+                            break;
+                        }
+                    case "periode":
+                        {
+                            break;
+                        }
+                    case "ue":
+                        {
+                            break;
+                        }
+                    case "ec":
+                        {
+                            break;
+                        }
+                    case "cours":
+                        {
+                            break;
+                        }
+                    case "personnel":
+                        {
+                            break;
+                        }
+                    case "categorie":
+                        {
+                                                        
+                            break;
+                        }
+                    case "Type_Cours":
+                        {                            
+                            break;
+                        }
+                    default: break;
                 }
-                uC_Affichage1.updateAffichage();*/
+               
             }
             else
             {

@@ -77,17 +77,17 @@
             // cB_ECActive
             // 
             this.cB_ECActive.AutoSize = true;
-            this.cB_ECActive.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cB_ECActive.BackColor = System.Drawing.Color.Transparent;
             this.cB_ECActive.Checked = true;
             this.cB_ECActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cB_ECActive.Enabled = false;
             this.cB_ECActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cB_ECActive.Location = new System.Drawing.Point(767, 14);
             this.cB_ECActive.Name = "cB_ECActive";
-            this.cB_ECActive.Size = new System.Drawing.Size(62, 17);
+            this.cB_ECActive.Size = new System.Drawing.Size(53, 17);
             this.cB_ECActive.TabIndex = 7;
-            this.cB_ECActive.Text = "Active : ";
-            this.cB_ECActive.UseVisualStyleBackColor = true;
+            this.cB_ECActive.Text = "Active";
+            this.cB_ECActive.UseVisualStyleBackColor = false;
             // 
             // UC_ElementEC
             // 
