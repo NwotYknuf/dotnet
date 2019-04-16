@@ -106,7 +106,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FenetreRetrait";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FenetreRetrait";
+            this.Text = "Fenêtre de retrait";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

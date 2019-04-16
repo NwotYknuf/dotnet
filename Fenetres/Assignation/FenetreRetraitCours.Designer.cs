@@ -32,10 +32,10 @@
             this.bValider = new System.Windows.Forms.Button();
             this.lTitre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lTitre3 = new System.Windows.Forms.Label();
+            this.lNomCours = new System.Windows.Forms.Label();
             this.lNomPersonnel = new System.Windows.Forms.Label();
             this.lTitre2 = new System.Windows.Forms.Label();
-            this.lNomCours = new System.Windows.Forms.Label();
-            this.lTitre3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,24 @@
             this.panel1.Size = new System.Drawing.Size(342, 105);
             this.panel1.TabIndex = 12;
             // 
+            // lTitre3
+            // 
+            this.lTitre3.AutoSize = true;
+            this.lTitre3.Location = new System.Drawing.Point(68, 50);
+            this.lTitre3.Name = "lTitre3";
+            this.lTitre3.Size = new System.Drawing.Size(83, 13);
+            this.lTitre3.TabIndex = 15;
+            this.lTitre3.Text = "- du personnel : ";
+            // 
+            // lNomCours
+            // 
+            this.lNomCours.AutoSize = true;
+            this.lNomCours.Location = new System.Drawing.Point(172, 30);
+            this.lNomCours.Name = "lNomCours";
+            this.lNomCours.Size = new System.Drawing.Size(62, 13);
+            this.lNomCours.TabIndex = 14;
+            this.lNomCours.Text = "Nom_Cours";
+            // 
             // lNomPersonnel
             // 
             this.lNomPersonnel.AutoSize = true;
@@ -97,24 +115,6 @@
             this.lTitre2.TabIndex = 0;
             this.lTitre2.Text = "- le cours : ";
             // 
-            // lNomCours
-            // 
-            this.lNomCours.AutoSize = true;
-            this.lNomCours.Location = new System.Drawing.Point(172, 30);
-            this.lNomCours.Name = "lNomCours";
-            this.lNomCours.Size = new System.Drawing.Size(62, 13);
-            this.lNomCours.TabIndex = 14;
-            this.lNomCours.Text = "Nom_Cours";
-            // 
-            // lTitre3
-            // 
-            this.lTitre3.AutoSize = true;
-            this.lTitre3.Location = new System.Drawing.Point(68, 50);
-            this.lTitre3.Name = "lTitre3";
-            this.lTitre3.Size = new System.Drawing.Size(83, 13);
-            this.lTitre3.TabIndex = 15;
-            this.lTitre3.Text = "- du personnel : ";
-            // 
             // FenetreRetraitCours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,7 +126,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FenetreRetraitCours";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FenetreRetraitCours";
+            this.Text = "Fenêtre de retrait d\'un cours à un personnel";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

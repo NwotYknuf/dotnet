@@ -34,6 +34,8 @@ namespace dotnet.Fenetres.Assignation
         {
             lTitre.Text = "Sélectionnez le cours que vous souhaitez assigner en appuyant sur le bouton correspondant : ";
 
+            uC_AffichageFenAssign1.setGroupBoxTiTre("Liste des cours non assignés à un personnel : ");
+
             var cours = Database.instance.cours;
             foreach (cours c in cours)
             {

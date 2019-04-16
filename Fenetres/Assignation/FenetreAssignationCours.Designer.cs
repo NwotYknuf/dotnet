@@ -67,7 +67,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FenetreAssignationCours";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FenetreAssignationCours";
+            this.Text = "Fenêtre d\'assignation d\'un cours à un personnel";
             this.Load += new System.EventHandler(this.FenetreAssignationCours_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

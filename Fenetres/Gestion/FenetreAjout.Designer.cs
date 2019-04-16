@@ -105,7 +105,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FenetreAjout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Fenetre d\'ajout";
+            this.Text = "Fenêtre d\'ajout";
             this.Load += new System.EventHandler(this.FenetreAjout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
