@@ -23,6 +23,10 @@ namespace dotnet
             reg += "]+$"; // + : Un à plusieurs caractères, $ : Fin de ligne
 
             Regex monRegex = new Regex(reg);
+                       
+            if (nbCaracteresMin == 0) // si le champs peut être vide
+                if (string.IsNullOrEmpty(champsAControler)) 
+                    return true;
 
             if ((champsAControler.Length >= nbCaracteresMin) && (champsAControler.Length <= nbCaracteresMax) && (monRegex.IsMatch(champsAControler)))
                 return true;
@@ -31,14 +35,36 @@ namespace dotnet
 
         }
 
-        public static bool conditionsRespectees(String champAControler, ComboBox cb)
+        public static bool conditionsRespectees(String champsAControler, ComboBox cb)
         {
             // Renvoie vrai si le champsAControler fait parti des champs de la combobox, faux sinon
 
-            if (cb.Items.IndexOf(champAControler) != -1)
+            if (cb.Items.IndexOf(champsAControler) != -1)
                 return true;
-            return false;
+            else
+                return false;
         }
 
+        public static bool conditionsRespecteesEmail(String champsAControler)
+        {
+            Regex monRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (monRegex.IsMatch(champsAControler))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool conditionsRespecteesTelephone(String champsAControler)
+        {
+            Regex monRegex = new Regex("^[0-9]+$");
+
+            if (string.IsNullOrEmpty(champsAControler)) // le champs peut être vide
+                return true;
+
+            if ((champsAControler.Length == 10) && (monRegex.IsMatch(champsAControler))) // le champs non vide doit être égal à 10 chiffres
+                return true;
+            else
+                return false;
+        }
     }
 }

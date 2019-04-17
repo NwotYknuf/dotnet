@@ -169,6 +169,7 @@ namespace dotnet.Fenetres
                 case "Personnel":
                     {
                         // Supprimer le personnel
+                        Database.instance.personnel.Remove(_per);
                         break;
                     }
                 case "Categorie":
@@ -187,6 +188,8 @@ namespace dotnet.Fenetres
                     }
                 default : break;
             }
+
+            Requetes.enregistreLaBDD();
 
             this.Dispose();
         }
