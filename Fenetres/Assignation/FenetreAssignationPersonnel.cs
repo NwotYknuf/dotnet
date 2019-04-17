@@ -37,9 +37,9 @@ namespace dotnet.Fenetres.Assignation
             uC_AffichageFenAssign1.setGroupBoxTiTre("Liste des personnels n'ayant pas toutes leurs heures de cours assignées : ");
 
             var personnels = Database.instance.personnel;
-            foreach (personnel p in personnels)
+            foreach (personnel p in personnels.ToList())
             {
-               //if (Requetes.nbrHeureManquantes(p) > 0)
+                if (Requetes.nbrHeureManquantes(p) > 0)
                     uC_AffichageFenAssign1.addElement(new UC_ElementFenPersonnel(this, p));
             }
             uC_AffichageFenAssign1.updateAffichage();

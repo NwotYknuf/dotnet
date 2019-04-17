@@ -37,9 +37,9 @@ namespace dotnet.Fenetres.Assignation
             uC_AffichageFenAssign1.setGroupBoxTiTre("Liste des cours non assignés à un personnel : ");
 
             var cours = Database.instance.cours;
-            foreach (cours c in cours)
+            foreach (cours c in cours.ToList())
             {
-                if (c.id_personnel == null)
+                if ((c.id_personnel == null) && (Requetes.obtientECduCours(c).actif == true))
                     uC_AffichageFenAssign1.addElement(new UC_ElementFenCours(this, c));
             }
             uC_AffichageFenAssign1.updateAffichage();

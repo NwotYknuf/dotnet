@@ -47,8 +47,8 @@ namespace dotnet
             var personnels = Database.instance.personnel;
             foreach (personnel p in personnels.ToList())
             {
-                //if(p.heure_affectees != ... )
-                uc.addElement(new UC_ElementPersonnelAccueil(this, p));
+                if(Requetes.nbrHeureManquantes(p) > 0)
+                    uc.addElement(new UC_ElementPersonnelAccueil(this, p));
             }
             
             if (uc.getNombreElement() == 0)
@@ -68,9 +68,7 @@ namespace dotnet
             var cours = Database.instance.cours;
             foreach (cours c in cours.ToList())
             {
-                ec e = Requetes.obtientECduCours(c);
-
-                if((c.id_personnel == null) && (e.actif == true))
+                if((c.id_personnel == null) && (Requetes.obtientECduCours(c).actif == true))
                     uc.addElement(new UC_ElementCoursAccueil(this, c));
             }
 
