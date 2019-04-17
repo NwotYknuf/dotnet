@@ -32,44 +32,16 @@ namespace dotnet
         /// </summary>
         private void InitializeComponent()
         {
-            this.uC_FilArianePersonnel1 = new dotnet.UserControler.FilArianne.UC_FilArianePersonnel();
-            this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
-            this.uC_Information1 = new dotnet.UserControler.Affichage.UC_Information();
-            this.uC_Ajout1 = new dotnet.UC_Ajout();
             this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
             this.lTitre1 = new System.Windows.Forms.Label();
             this.lTitre2 = new System.Windows.Forms.Label();
             this.lTitre3 = new System.Windows.Forms.Label();
+            this.gBPersonnel = new System.Windows.Forms.GroupBox();
+            this.uC_FilArianePersonnel1 = new dotnet.UserControler.FilArianne.UC_FilArianePersonnel();
+            this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
+            this.uC_Ajout1 = new dotnet.UC_Ajout();
             this.flpTitre.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // uC_FilArianePersonnel1
-            // 
-            this.uC_FilArianePersonnel1.Location = new System.Drawing.Point(67, 22);
-            this.uC_FilArianePersonnel1.Name = "uC_FilArianePersonnel1";
-            this.uC_FilArianePersonnel1.Size = new System.Drawing.Size(980, 49);
-            this.uC_FilArianePersonnel1.TabIndex = 20;
-            // 
-            // uC_Affichage1
-            // 
-            this.uC_Affichage1.Location = new System.Drawing.Point(67, 257);
-            this.uC_Affichage1.Name = "uC_Affichage1";
-            this.uC_Affichage1.Size = new System.Drawing.Size(1007, 364);
-            this.uC_Affichage1.TabIndex = 19;
-            // 
-            // uC_Information1
-            // 
-            this.uC_Information1.Location = new System.Drawing.Point(69, 123);
-            this.uC_Information1.Name = "uC_Information1";
-            this.uC_Information1.Size = new System.Drawing.Size(1005, 128);
-            this.uC_Information1.TabIndex = 22;
-            // 
-            // uC_Ajout1
-            // 
-            this.uC_Ajout1.Location = new System.Drawing.Point(69, 137);
-            this.uC_Ajout1.Name = "uC_Ajout1";
-            this.uC_Ajout1.Size = new System.Drawing.Size(1007, 89);
-            this.uC_Ajout1.TabIndex = 21;
             // 
             // flpTitre
             // 
@@ -122,13 +94,44 @@ namespace dotnet
             this.lTitre3.TabIndex = 21;
             this.lTitre3.Text = "titre3";
             // 
+            // gBPersonnel
+            // 
+            this.gBPersonnel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBPersonnel.Location = new System.Drawing.Point(72, 126);
+            this.gBPersonnel.Name = "gBPersonnel";
+            this.gBPersonnel.Size = new System.Drawing.Size(993, 159);
+            this.gBPersonnel.TabIndex = 25;
+            this.gBPersonnel.TabStop = false;
+            this.gBPersonnel.Text = "Informations : ";
+            // 
+            // uC_FilArianePersonnel1
+            // 
+            this.uC_FilArianePersonnel1.Location = new System.Drawing.Point(67, 22);
+            this.uC_FilArianePersonnel1.Name = "uC_FilArianePersonnel1";
+            this.uC_FilArianePersonnel1.Size = new System.Drawing.Size(980, 49);
+            this.uC_FilArianePersonnel1.TabIndex = 20;
+            // 
+            // uC_Affichage1
+            // 
+            this.uC_Affichage1.Location = new System.Drawing.Point(67, 288);
+            this.uC_Affichage1.Name = "uC_Affichage1";
+            this.uC_Affichage1.Size = new System.Drawing.Size(1007, 364);
+            this.uC_Affichage1.TabIndex = 19;
+            // 
+            // uC_Ajout1
+            // 
+            this.uC_Ajout1.Location = new System.Drawing.Point(69, 137);
+            this.uC_Ajout1.Name = "uC_Ajout1";
+            this.uC_Ajout1.Size = new System.Drawing.Size(1007, 89);
+            this.uC_Ajout1.TabIndex = 21;
+            // 
             // UC_OngletPersonnels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gBPersonnel);
             this.Controls.Add(this.uC_FilArianePersonnel1);
             this.Controls.Add(this.uC_Affichage1);
-            this.Controls.Add(this.uC_Information1);
             this.Controls.Add(this.uC_Ajout1);
             this.Controls.Add(this.flpTitre);
             this.Name = "UC_OngletPersonnels";
@@ -144,10 +147,10 @@ namespace dotnet
         private UC_Affichage uC_Affichage1;
         private UC_FilArianePersonnel uC_FilArianePersonnel1;
         private UC_Ajout uC_Ajout1;
-        private UC_Information uC_Information1;
         private System.Windows.Forms.FlowLayoutPanel flpTitre;
         private System.Windows.Forms.Label lTitre1;
         private System.Windows.Forms.Label lTitre2;
         private System.Windows.Forms.Label lTitre3;
+        private System.Windows.Forms.GroupBox gBPersonnel;
     }
 }

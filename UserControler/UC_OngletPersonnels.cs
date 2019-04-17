@@ -24,15 +24,14 @@ namespace dotnet
         private void UC_OngletPersonnels_Load(object sender, EventArgs e)
         {
             uC_FilArianePersonnel1.setOngletPersonnel(this);
-            uC_Information1.Visible = false;
+            gBPersonnel.Visible = false;
             afficheRacine();
         }
 
         public void afficheRacine()
         {
-            //TODO : Remplacer cette section par un truc plus propre
-            uC_Information1.Visible = false;
-            
+            gBPersonnel.Visible = false;
+
             lTitre1.Text = "Personnels"; lTitre2.Text = "enseignants à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des personnels : ");
@@ -57,22 +56,20 @@ namespace dotnet
         {
             lTitre1.Text = "Personnel"; lTitre2.Text = p.nom + " " + p.prenom + " : "; lTitre3.Text = "";
 
-            uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
+            uC_Affichage1.setGroupBoxTiTre("Liste des cours de " + p.nom + " " + p.prenom + " : ");
 
             uC_FilArianePersonnel1.filArianePersonnelApparait(p);
             
             uC_Ajout1.Visible = false;
-            uC_Information1.Visible = true;
-            uC_Information1.remplie(p);
-
+            gBPersonnel.Visible = true;
+            
+            UC_ElementPersonnel uc = new UC_ElementPersonnel(this, p);
+            uc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            uc.Location = new System.Drawing.Point(6, 22);
+            gBPersonnel.Controls.Add(uc);
+            
             uC_Affichage1.clearElements();
-
-            PictureBox pBAjouterCours = new PictureBox();
-            pBAjouterCours.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_cours.png");
-            pBAjouterCours.Name = "pBAjouterCours";
-            pBAjouterCours.Size = new System.Drawing.Size(37, 34);
-            pBAjouterCours.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-
+            
             uC_Affichage1.addElement(new UC_ElementAjoutCours(this, p));
 
             foreach (cours c in p.cours.ToList())

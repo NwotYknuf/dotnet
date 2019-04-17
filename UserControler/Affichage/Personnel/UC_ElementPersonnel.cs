@@ -27,7 +27,12 @@ namespace dotnet.UserControler.Affichage.Personnel
             gBAffElement.Text = "";
             tBNom.Text = _personnel.nom;
             tBPrenom.Text = _personnel.prenom;
+            tBTelephone.Text = _personnel.telephone;
+            tBAdresseEmail.Text = _personnel.email;
+            tBAdressePost.Text = _personnel.adresse;
             tBCategorie.Text = Requetes.obtientCategorieduPersonnel(_personnel).nom;
+            tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(_personnel).ToString();
+            tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
