@@ -38,12 +38,22 @@
             this.lTypeCours = new System.Windows.Forms.Label();
             this.pBRetirer = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
+            this.gBAffElement.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetirer)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pBModifier
+            // 
+            this.pBModifier.Location = new System.Drawing.Point(896, 8);
+            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
+            // 
+            // pBSupprimer
+            // 
+            this.pBSupprimer.Location = new System.Drawing.Point(897, 55);
+            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // gBAffElement
             // 
@@ -68,16 +78,6 @@
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.pBRetirer, 0);
-            // 
-            // pBModifier
-            // 
-            this.pBModifier.Location = new System.Drawing.Point(896, 8);
-            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Location = new System.Drawing.Point(897, 55);
-            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // tBEC
             // 
@@ -141,6 +141,8 @@
             this.pBRetirer.TabIndex = 19;
             this.pBRetirer.TabStop = false;
             this.pBRetirer.Click += new System.EventHandler(this.pBRetirer_Click);
+            this.pBRetirer.MouseEnter += new System.EventHandler(this.pBRetirer_MouseEnter);
+            this.pBRetirer.MouseLeave += new System.EventHandler(this.pBRetirer_MouseLeave);
             // 
             // UC_ElementCoursPersonnel
             // 
@@ -149,11 +151,11 @@
             this.Name = "UC_ElementCoursPersonnel";
             this.Size = new System.Drawing.Size(955, 126);
             this.Load += new System.EventHandler(this.UC_ElementCoursPersonnel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBRetirer)).EndInit();
             this.ResumeLayout(false);
 

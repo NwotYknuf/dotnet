@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_OngletGestion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flpTitre = new System.Windows.Forms.FlowLayoutPanel();
             this.lTitre1 = new System.Windows.Forms.Label();
             this.lTitre2 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.pBRetraitLigne = new System.Windows.Forms.PictureBox();
             this.pBRetraitColonne = new System.Windows.Forms.PictureBox();
             this.pBEnregistrer = new System.Windows.Forms.PictureBox();
-            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flpTitre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutLigne)).BeginInit();
@@ -58,31 +58,45 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0,
             this.Column1});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 10F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.Location = new System.Drawing.Point(71, 96);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(949, 484);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            // 
+            // Column0
+            // 
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Column0.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column0.HeaderText = "Catégorie";
+            this.Column0.Name = "Column0";
+            this.Column0.Width = 108;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Heures imposées";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 152;
             // 
             // flpTitre
             // 
@@ -133,9 +147,12 @@
             this.pBAjoutLigne.TabIndex = 24;
             this.pBAjoutLigne.TabStop = false;
             this.pBAjoutLigne.Click += new System.EventHandler(this.pBAjoutLigne_Click);
+            this.pBAjoutLigne.MouseEnter += new System.EventHandler(this.pBAjoutLigne_MouseEnter);
+            this.pBAjoutLigne.MouseLeave += new System.EventHandler(this.pBAjoutLigne_MouseLeave);
             // 
             // pBAjoutColonne
             // 
+            this.pBAjoutColonne.BackColor = System.Drawing.SystemColors.Control;
             this.pBAjoutColonne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pBAjoutColonne.Image = ((System.Drawing.Image)(resources.GetObject("pBAjoutColonne.Image")));
             this.pBAjoutColonne.InitialImage = null;
@@ -146,6 +163,8 @@
             this.pBAjoutColonne.TabIndex = 25;
             this.pBAjoutColonne.TabStop = false;
             this.pBAjoutColonne.Click += new System.EventHandler(this.pBAjoutColonne_Click);
+            this.pBAjoutColonne.MouseEnter += new System.EventHandler(this.pBAjoutColonne_MouseEnter);
+            this.pBAjoutColonne.MouseLeave += new System.EventHandler(this.pBAjoutColonne_MouseLeave);
             // 
             // pBRetraitLigne
             // 
@@ -159,6 +178,8 @@
             this.pBRetraitLigne.TabIndex = 26;
             this.pBRetraitLigne.TabStop = false;
             this.pBRetraitLigne.Click += new System.EventHandler(this.pBRetraitLigne_Click);
+            this.pBRetraitLigne.MouseEnter += new System.EventHandler(this.pBRetraitLigne_MouseEnter);
+            this.pBRetraitLigne.MouseLeave += new System.EventHandler(this.pBRetraitLigne_MouseLeave);
             // 
             // pBRetraitColonne
             // 
@@ -172,6 +193,8 @@
             this.pBRetraitColonne.TabIndex = 27;
             this.pBRetraitColonne.TabStop = false;
             this.pBRetraitColonne.Click += new System.EventHandler(this.pBRetraitColonne_Click);
+            this.pBRetraitColonne.MouseEnter += new System.EventHandler(this.pBRetraitColonne_MouseEnter);
+            this.pBRetraitColonne.MouseLeave += new System.EventHandler(this.pBRetraitColonne_MouseLeave);
             // 
             // pBEnregistrer
             // 
@@ -185,20 +208,8 @@
             this.pBEnregistrer.TabIndex = 28;
             this.pBEnregistrer.TabStop = false;
             this.pBEnregistrer.Click += new System.EventHandler(this.pBEnregistrer_Click);
-            // 
-            // Column0
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Column0.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column0.HeaderText = "Catégorie";
-            this.Column0.Name = "Column0";
-            this.Column0.Width = 108;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Heures imposées";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 152;
+            this.pBEnregistrer.MouseEnter += new System.EventHandler(this.pBEnregistrer_MouseEnter);
+            this.pBEnregistrer.MouseLeave += new System.EventHandler(this.pBEnregistrer_MouseLeave);
             // 
             // UC_OngletGestion
             // 

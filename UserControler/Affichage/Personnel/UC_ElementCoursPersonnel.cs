@@ -54,5 +54,16 @@ namespace dotnet.UserControler.Affichage.Personnel
         {
             toolTip1.SetToolTip(this.pBRetirer, "Retirer ce cours du personnel " + _personnel.nom + " " + _personnel.prenom);
         }
+
+        private void pBRetirer_MouseEnter(object sender, EventArgs e)
+        {
+            pBRetirer.BackColor = Color.FromArgb(20, 79, 93);
+        }
+
+        private void pBRetirer_MouseLeave(object sender, EventArgs e)
+        {
+            pBRetirer.BackColor = Color.FromArgb(60, 185, 213);
+        }
+        
     }
 }

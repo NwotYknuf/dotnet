@@ -43,8 +43,6 @@
             // 
             this.panel.Controls.Add(this.pBModifier);
             this.panel.Controls.Add(this.pBSupprimer);
-            this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
-            this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             // 
             // pBModifier
             // 
@@ -56,6 +54,8 @@
             this.pBModifier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBModifier.TabIndex = 3;
             this.pBModifier.TabStop = false;
+            this.pBModifier.MouseEnter += new System.EventHandler(this.pBModifier_MouseEnter);
+            this.pBModifier.MouseLeave += new System.EventHandler(this.pBModifier_MouseLeave);
             // 
             // pBSupprimer
             // 
@@ -67,12 +67,14 @@
             this.pBSupprimer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBSupprimer.TabIndex = 2;
             this.pBSupprimer.TabStop = false;
+            this.pBSupprimer.MouseEnter += new System.EventHandler(this.pBSupprimer_MouseEnter);
+            this.pBSupprimer.MouseLeave += new System.EventHandler(this.pBSupprimer_MouseLeave);
             // 
-            // UC_ElementModificable
+            // UC_ElementModifiable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UC_ElementModificable";
+            this.Name = "UC_ElementModifiable";
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();

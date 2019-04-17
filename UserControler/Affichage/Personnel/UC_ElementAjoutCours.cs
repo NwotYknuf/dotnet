@@ -35,5 +35,15 @@ namespace dotnet.UserControler.Affichage.Personnel
 
             toolTip1.SetToolTip(this.pBAjouterCours, "Ajouter un cours au personnel " + _personnel.nom + _personnel.prenom);
         }
+
+        private void pBAjouterCours_MouseEnter(object sender, EventArgs e)
+        {
+            pBAjouterCours.BackColor = Color.FromArgb(20, 79, 93);
+        }
+
+        private void pBAjouterCours_MouseLeave(object sender, EventArgs e)
+        {
+            pBAjouterCours.BackColor = Color.FromArgb(60, 185, 213);
+        }
     }
 }

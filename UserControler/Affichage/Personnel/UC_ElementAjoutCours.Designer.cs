@@ -32,12 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementAjoutCours));
             this.pBAjouterCours = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
+            this.gBAffElement.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjouterCours)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pBModifier
+            // 
+            this.pBModifier.Location = new System.Drawing.Point(857, 9);
+            this.pBModifier.Visible = false;
+            // 
+            // pBSupprimer
+            // 
+            this.pBSupprimer.Location = new System.Drawing.Point(900, 9);
+            this.pBSupprimer.Visible = false;
             // 
             // gBAffElement
             // 
@@ -51,16 +61,6 @@
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
             this.panel.Controls.SetChildIndex(this.pBAjouterCours, 0);
             // 
-            // pBModifier
-            // 
-            this.pBModifier.Location = new System.Drawing.Point(857, 9);
-            this.pBModifier.Visible = false;
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Location = new System.Drawing.Point(900, 9);
-            this.pBSupprimer.Visible = false;
-            // 
             // pBAjouterCours
             // 
             this.pBAjouterCours.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterCours.Image")));
@@ -72,6 +72,8 @@
             this.pBAjouterCours.TabIndex = 52;
             this.pBAjouterCours.TabStop = false;
             this.pBAjouterCours.Click += new System.EventHandler(this.pBAjouterCours_Click);
+            this.pBAjouterCours.MouseEnter += new System.EventHandler(this.pBAjouterCours_MouseEnter);
+            this.pBAjouterCours.MouseLeave += new System.EventHandler(this.pBAjouterCours_MouseLeave);
             // 
             // UC_ElementAjoutCours
             // 
@@ -80,10 +82,10 @@
             this.Name = "UC_ElementAjoutCours";
             this.Size = new System.Drawing.Size(955, 81);
             this.Load += new System.EventHandler(this.UC_ElementAjoutCours_Load);
-            this.gBAffElement.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
+            this.gBAffElement.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBAjouterCours)).EndInit();
             this.ResumeLayout(false);
 

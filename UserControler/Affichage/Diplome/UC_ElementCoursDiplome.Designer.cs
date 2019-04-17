@@ -36,12 +36,22 @@
             this.tBHoraires = new System.Windows.Forms.TextBox();
             this.tBCours = new System.Windows.Forms.TextBox();
             this.lHoraires = new System.Windows.Forms.Label();
-            this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
+            this.gBAffElement.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pBModifier
+            // 
+            this.pBModifier.Location = new System.Drawing.Point(897, 11);
+            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
+            // 
+            // pBSupprimer
+            // 
+            this.pBSupprimer.Location = new System.Drawing.Point(899, 53);
+            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // gBAffElement
             // 
@@ -68,16 +78,6 @@
             this.panel.Controls.SetChildIndex(this.lPersonnel, 0);
             this.panel.Controls.SetChildIndex(this.tBPersonnel, 0);
             // 
-            // pBModifier
-            // 
-            this.pBModifier.Location = new System.Drawing.Point(897, 11);
-            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Location = new System.Drawing.Point(899, 53);
-            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
-            // 
             // lTypeCours
             // 
             this.lTypeCours.AutoSize = true;
@@ -98,6 +98,8 @@
             this.pBAjouterRetirer.TabIndex = 7;
             this.pBAjouterRetirer.TabStop = false;
             this.pBAjouterRetirer.Click += new System.EventHandler(this.pBAjouterRetirer_Click);
+            this.pBAjouterRetirer.MouseEnter += new System.EventHandler(this.pBAjouterRetirer_MouseEnter);
+            this.pBAjouterRetirer.MouseLeave += new System.EventHandler(this.pBAjouterRetirer_MouseLeave);
             // 
             // tBPersonnel
             // 
@@ -147,11 +149,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementCoursDiplome";
             this.Size = new System.Drawing.Size(955, 126);
+            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjouterRetirer)).EndInit();
             this.ResumeLayout(false);
 

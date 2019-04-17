@@ -29,5 +29,10 @@ namespace dotnet.UserControler.Affichage.Accueil
         {
 
         }
+        
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }

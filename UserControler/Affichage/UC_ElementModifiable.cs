@@ -22,5 +22,35 @@ namespace dotnet.UserControler.Affichage
             toolTip1.SetToolTip(this.pBModifier, "Modifier ce cours");
             toolTip1.SetToolTip(this.pBSupprimer, "Supprimer ce cours");
         }
+
+        private void pBModifier_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBModifier);
+        }
+
+        private void pBModifier_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBModifier);
+        }
+
+        private void pBSupprimer_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBSupprimer);
+        }
+
+        private void pBSupprimer_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBSupprimer);
+        }
+
+        private void changeCouleurDeFondFoncee(PictureBox pb)
+        {
+            pb.BackColor = Color.FromArgb(20, 79, 93);
+        }
+
+        private void changeCouleurDeFondClaire(PictureBox pb)
+        {
+            pb.BackColor = Color.FromArgb(60, 185, 213);
+        }
     }
 }

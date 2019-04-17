@@ -24,5 +24,10 @@ namespace dotnet.UserControler.Affichage
             InitializeComponent();
             this._cadre = cadre;
         }
+
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }

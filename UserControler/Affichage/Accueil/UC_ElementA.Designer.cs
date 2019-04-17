@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBAffElement
@@ -39,6 +38,7 @@
             // panel
             // 
             this.panel.Size = new System.Drawing.Size(418, 90);
+            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             // 
             // UC_ElementA
             // 
@@ -48,7 +48,6 @@
             this.Size = new System.Drawing.Size(438, 118);
             this.Load += new System.EventHandler(this.UC_ElementA_Load);
             this.gBAffElement.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -86,5 +86,15 @@ namespace dotnet.UserControler.Affichage
         {
             new FenetreSupprimer("Cours", _cours).Show(); ;
         }
+
+        private void pBAjouterRetirer_MouseEnter(object sender, EventArgs e)
+        {
+            pBAjouterRetirer.BackColor = Color.FromArgb(20, 79, 93);
+        }
+
+        private void pBAjouterRetirer_MouseLeave(object sender, EventArgs e)
+        {
+            pBAjouterRetirer.BackColor = Color.FromArgb(60, 185, 213);
+        }
     }
 }

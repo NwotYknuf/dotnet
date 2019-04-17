@@ -223,5 +223,65 @@ namespace dotnet
         {
             this.Update();
         }
+
+        private void pBAjoutColonne_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBAjoutColonne);
+        }
+
+        private void pBAjoutColonne_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBAjoutColonne);
+        }
+
+        private void pBRetraitColonne_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBRetraitColonne);
+        }
+
+        private void pBRetraitColonne_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBRetraitColonne);
+        }
+
+        private void pBAjoutLigne_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBAjoutLigne);
+        }
+
+        private void pBAjoutLigne_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBAjoutLigne);
+        }
+
+        private void pBRetraitLigne_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBRetraitLigne);
+        }
+
+        private void pBRetraitLigne_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBRetraitLigne);
+        }
+
+        private void pBEnregistrer_MouseEnter(object sender, EventArgs e)
+        {
+            changeCouleurDeFondFoncee(pBEnregistrer);
+        }
+
+        private void pBEnregistrer_MouseLeave(object sender, EventArgs e)
+        {
+            changeCouleurDeFondClaire(pBEnregistrer);
+        }
+
+        private void changeCouleurDeFondFoncee(PictureBox pb)
+        {
+            pb.BackColor = SystemColors.ControlLight;
+        }
+
+        private void changeCouleurDeFondClaire(PictureBox pb)
+        {
+            pb.BackColor = SystemColors.Control;
+        }
     }
 }
