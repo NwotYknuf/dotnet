@@ -91,5 +91,10 @@ namespace dotnet
         {
             new FenetreRetraitCours(this, p, c).Show();
         }
+
+        public void Actualiser()
+        {
+            uC_FilArianePersonnel1.Actualiser();
+        }
     }
 }

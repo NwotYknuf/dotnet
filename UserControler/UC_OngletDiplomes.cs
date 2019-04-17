@@ -220,5 +220,10 @@ namespace dotnet {
         {
             new FenetreRetraitPersonnel(this, c).Show();
         }
+
+        public void Actualiser()
+        {
+            uC_FilArianeDiplome1.Actualiser();
+        }
     }
 }

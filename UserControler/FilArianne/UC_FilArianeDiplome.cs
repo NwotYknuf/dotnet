@@ -13,7 +13,8 @@ namespace dotnet.UserControler.FilArianne
     public partial class UC_FilArianeDiplome : UserControl
     {
         protected UC_OngletDiplomes _cadre;
-        
+
+        private int nbOngletsOuverts = 1;
         private diplome _d;
         private annee _a;
         private periode _p;
@@ -63,6 +64,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lRacine_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 1;
             //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");;
             //lRacine.ForeColor = System.Drawing.Color.White;
             lDiplome.Visible = false;
@@ -76,6 +78,7 @@ namespace dotnet.UserControler.FilArianne
         
         private void lDiplome_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 2;
             //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
             //lRacine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             couleurdeFondBleue(lDiplome);
@@ -90,6 +93,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lAnnee_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 3;
             couleurdeFondBleue(lAnnee);
 
             lPeriode.Visible = false;
@@ -101,6 +105,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lPeriode_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 4;
             couleurdeFondBleue(lPeriode);
             
             lUE.Visible = false;
@@ -111,6 +116,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lUE_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 5;
             couleurdeFondBleue(lUE);
             
             lEC.Visible = false;
@@ -120,6 +126,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lEC_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 6;
             couleurdeFondBleue(lEC);
 
             _cadre.afficheECSelectionnee(_e);
@@ -127,6 +134,7 @@ namespace dotnet.UserControler.FilArianne
 
         public void filArianeDiplomeApparait(diplome d)
         {
+            nbOngletsOuverts = 2;
             _d = d;
             couleurdeFondBleue(lDiplome);
 
@@ -136,6 +144,7 @@ namespace dotnet.UserControler.FilArianne
 
         public void filArianeAnneeApparait(annee a)
         {
+            nbOngletsOuverts = 3;
             _a = a;
             couleurdeFondBlanche(lDiplome);
             couleurdeFondBleue(lAnnee);
@@ -146,6 +155,7 @@ namespace dotnet.UserControler.FilArianne
 
         public void filArianePeriodeApparait(periode p)
         {
+            nbOngletsOuverts = 4;
             _p = p;
             couleurdeFondBlanche(lAnnee);
             couleurdeFondBleue(lPeriode);
@@ -156,6 +166,7 @@ namespace dotnet.UserControler.FilArianne
 
         public void filArianeUEApparait(ue u)
         {
+            nbOngletsOuverts = 5;
             _u = u;
             couleurdeFondBlanche(lPeriode);
             couleurdeFondBleue(lUE);
@@ -166,12 +177,27 @@ namespace dotnet.UserControler.FilArianne
 
         public void filArianeECApparait(ec c)
         {
+            nbOngletsOuverts = 6;
             _e = c;
             couleurdeFondBlanche(lUE);
             couleurdeFondBleue(lEC);
 
             lEC.Visible = true;
             lEC.Text = _e.nom.ToString();
+        }
+
+        public void Actualiser()
+        {
+            switch (nbOngletsOuverts)
+            {
+                case 1: { _cadre.afficheRacine(); break; }
+                case 2: { _cadre.afficheDiplomeSelectionne(_d); break; }
+                case 3: { _cadre.afficheAnneeSelectionnee(_a);  break; }
+                case 4: { _cadre.affichePeriodeSelectionnee(_p);  break; }
+                case 5: { _cadre.afficheUESelectionnee(_u); break; }
+                case 6: { _cadre.afficheECSelectionnee(_e); break; }
+                default:  { break; }
+            }
         }
 
     }

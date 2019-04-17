@@ -80,6 +80,12 @@ namespace dotnet
             uc.updateAffichage();
         }
 
+        public void Actualiser()
+        {
+            initialisePersonnels(uC_AffPersonnel);
+            initialiseCours(uC_AffCours);
+        }
+
         //Après 2 secondes, fais disparaitre le panel de Bienvenu
         private void timerBienvenu_Tick(object sender, EventArgs e)
         {

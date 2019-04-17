@@ -87,5 +87,10 @@ namespace dotnet
                 lErreur.Visible = true;
             }
         }
+
+        public void Actualiser()
+        {
+
+        }
     }
 }

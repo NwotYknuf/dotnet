@@ -13,7 +13,7 @@ namespace dotnet.UserControler.FilArianne
     public partial class UC_FilArianePersonnel : UserControl
     {
         protected UC_OngletPersonnels _cadre;
-        
+        private int nbOngletsOuverts = 1;
         private personnel _p;
 
         public UC_FilArianePersonnel()
@@ -59,6 +59,7 @@ namespace dotnet.UserControler.FilArianne
 
         private void lRacine_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 1;
             //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");;
             //lRacine.ForeColor = System.Drawing.Color.White;
             lPersonnel.Visible = false;
@@ -68,17 +69,29 @@ namespace dotnet.UserControler.FilArianne
 
         private void lPersonnel_Click(object sender, EventArgs e)
         {
+            nbOngletsOuverts = 2;
             //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
             //lRacine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
         }
 
         public void filArianePersonnelApparait(personnel p)
         {
+            nbOngletsOuverts = 2;
             _p = p;
             couleurdeFondBleue(lPersonnel);
 
             lPersonnel.Visible = true;
             lPersonnel.Text = _p.nom.ToString();
+        }
+
+        public void Actualiser()
+        {
+            switch (nbOngletsOuverts)
+            {
+                case 1: { _cadre.afficheRacine(); break; }
+                case 2: { _cadre.affichePersonnelSelectionne(_p); break; }
+                default: { break; }
+            }
         }
     }
 }

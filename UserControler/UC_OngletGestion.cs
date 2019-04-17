@@ -218,5 +218,10 @@ namespace dotnet
             // Sauvegarde les modifications
             Database.instance.SaveChanges();
         }
+
+        public void Actualiser()
+        {
+
+        }
     }
 }

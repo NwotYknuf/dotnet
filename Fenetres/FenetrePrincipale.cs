@@ -28,30 +28,35 @@ namespace dotnet
         private void miAcceuil_Click(object sender, EventArgs e)
         {
             ucAccueil1.BringToFront();
+            ucAccueil1.Actualiser();
             changerCouleurDeFond(miAcceuil);
         }
 
         private void miDiplome_Click(object sender, EventArgs e)
         {
             ucListeDiplome1.BringToFront();
+            ucListeDiplome1.Actualiser();
             changerCouleurDeFond(miDiplome);
         }
 
         private void miPersonnel_Click(object sender, EventArgs e)
         {
             ucListePersonnel1.BringToFront();
+            ucListePersonnel1.Actualiser();
             changerCouleurDeFond(miPersonnel);
         }
 
         private void miGestion_Click(object sender, EventArgs e)
         {
             ucGestion1.BringToFront();
+            ucGestion1.Actualiser();
             changerCouleurDeFond(miGestion);
         }
 
         private void miRecherche_Click(object sender, EventArgs e)
         {
             ucRecherche1.BringToFront();
+            ucRecherche1.Actualiser();
             changerCouleurDeFond(miRecherche);
         }
 
