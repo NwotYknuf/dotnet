@@ -218,7 +218,7 @@ namespace dotnet {
 
         public void retirerPersonnel(cours c)
         {
-            //new FenetreRetraitPersonnel(this, c).Show();
+            new FenetreRetraitPersonnel(this, c).Show();
         }
     }
 }
