@@ -140,7 +140,7 @@ namespace dotnet
             }
 
             // Sauvegarde les modifications
-            Database.instance.SaveChanges();
+            Requetes.enregistreLaBDD();
 
             MessageBox.Show("Les informations ont bien été mises à jour.");
             pBEnregistrer.Visible = false;
@@ -167,7 +167,7 @@ namespace dotnet
                 type_cours typCoursAAjouter = new type_cours();
                 typCoursAAjouter.nom = nom;
 
-                Database.instance.type_cours.Add(typCoursAAjouter);
+                Requetes.ajouterTypeDeCours(typCoursAAjouter);
             }
             else // Ligne : Categorie 
             {
@@ -183,11 +183,11 @@ namespace dotnet
                 categorie catAAjouter = new categorie();
                 catAAjouter.nom = nom;
 
-                Database.instance.categorie.Add(catAAjouter);
+                Requetes.ajouterCategorie(catAAjouter);
             }
 
             // Sauvegarde les modifications
-            Database.instance.SaveChanges();
+            Requetes.enregistreLaBDD();
         }
 
         public void retrait(String element, String nom, int index)
@@ -201,7 +201,7 @@ namespace dotnet
                 //Requete pour retrouver le type_cours possedant le nom choisi
                 type_cours typeDeCoursARetirer = Database.instance.type_cours.Where(s => s.nom == nom).FirstOrDefault<type_cours>();
 
-                Database.instance.type_cours.Remove(typeDeCoursARetirer);
+                Requetes.retirerTypeDeCours(typeDeCoursARetirer);
             }
             else // Ligne : Categorie
             {
@@ -212,11 +212,11 @@ namespace dotnet
                 //Requete pour retrouver la categorie possedant le nom choisi
                 categorie catARetirer = Database.instance.categorie.Where(s => s.nom == nom).FirstOrDefault<categorie>();
 
-                Database.instance.categorie.Remove(catARetirer);
+                Requetes.retirerCategorie(catARetirer);
             }
 
             // Sauvegarde les modifications
-            Database.instance.SaveChanges();
+            Requetes.enregistreLaBDD();
         }
 
         public void Actualiser()

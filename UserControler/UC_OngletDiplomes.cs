@@ -66,7 +66,7 @@ namespace dotnet {
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutAnnee(this);
+            uC_Ajout1 = new UC_AjoutAnnee(this, d);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
@@ -90,7 +90,7 @@ namespace dotnet {
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutPeriode(this);
+            uC_Ajout1 = new UC_AjoutPeriode(this, a);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
@@ -113,7 +113,7 @@ namespace dotnet {
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutUE(this);
+            uC_Ajout1 = new UC_AjoutUE(this, p);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
@@ -136,7 +136,7 @@ namespace dotnet {
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutEC(this);
+            uC_Ajout1 = new UC_AjoutEC(this, u);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 
@@ -175,7 +175,7 @@ namespace dotnet {
 
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
-            uC_Ajout1 = new UC_AjoutCours(this);
+            uC_Ajout1 = new UC_AjoutCours(this, e);
             uC_Ajout1.Location = loc;
             Controls.Add(uC_Ajout1);
 

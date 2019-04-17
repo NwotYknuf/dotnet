@@ -22,6 +22,7 @@ namespace dotnet
         private void UC_OngletRecherche_Load(object sender, EventArgs e)
         {
             uC_Affichage1.setGroupBoxTiTre("Résultats de la recherche : ");
+            cBCritere.SelectedIndex = 0;
         }
 
         private void bLancerRech_Click(object sender, EventArgs e)

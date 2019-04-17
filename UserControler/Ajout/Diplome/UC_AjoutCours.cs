@@ -12,15 +12,17 @@ namespace dotnet.UserControler.Ajout
 {
     public partial class UC_AjoutCours : UC_AjoutD
     {
+        private ec _e;
+
         public UC_AjoutCours()
         {
             InitializeComponent();
         }
 
-        public UC_AjoutCours(UC_OngletDiplomes cadre) : base(cadre)
+        public UC_AjoutCours(UC_OngletDiplomes cadre, ec e) : base(cadre)
         {
             InitializeComponent();
-            //this.gBTitre.Text = "Ajouter un cours : ";
+            _e = e;
         }
 
         private void UC_AjoutCours_Load(object sender, EventArgs e)
@@ -33,6 +35,8 @@ namespace dotnet.UserControler.Ajout
             var types = Database.instance.type_cours;
             foreach(type_cours t in types)
                 cBType.Items.Add(t.nom);
+
+            cBType.SelectedIndex = 0;
         }
 
         private void bCreer_Click(object sender, EventArgs e)
@@ -42,15 +46,25 @@ namespace dotnet.UserControler.Ajout
                 (Utilitaires.conditionsRespectees(cBType.Text, cBType)) )
             {
                 lErreur.Visible = false;
+
                 // Ajouter un cours
                 cours cours = new cours();
                 cours.nom = this.tBNom.Text;
                 cours.volume_horraire = Convert.ToInt32(this.tBHoraires.Text);
-                
-                //type_cours tc = new type_cours();
-                //cours.type_cours = this.cBType.SelectedValue;
-                
+
+                type_cours tc = Database.instance.type_cours.Where(s => s.nom == (String)this.cBType.SelectedValue).FirstOrDefault<type_cours>();
+                cours.type_cours = tc;
+                tc.cours.Add(cours);
+
+                cours.ec = _e;
+                _e.cours.Add(cours);
+
                 // Ajouter l'enregistrement à la BDD
+                Requetes.ajouterCours(cours);
+
+                Requetes.enregistreLaBDD();
+
+                MessageBox.Show("Le cours " + cours.nom + " a été ajouté avec succès.");
             }
             else
             {

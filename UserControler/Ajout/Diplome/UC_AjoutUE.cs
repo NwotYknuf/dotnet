@@ -13,15 +13,17 @@ namespace dotnet.UserControler.Ajout
 {
     public partial class UC_AjoutUE : UC_AjoutD
     {
+        private periode _p;
+
         public UC_AjoutUE()
         {
             InitializeComponent();
         }
 
-        public UC_AjoutUE(UC_OngletDiplomes cadre) : base(cadre)
+        public UC_AjoutUE(UC_OngletDiplomes cadre, periode p) : base(cadre)
         {
             InitializeComponent();
-            //this.gBTitre.Text = "Ajouter une UE : ";
+            _p = p;
         }
 
         private void bCreer_Click(object sender, EventArgs e)
@@ -30,11 +32,21 @@ namespace dotnet.UserControler.Ajout
                 (Utilitaires.conditionsRespectees(rtBDesc.Text, true, true, true, true, 2, 100)) )
             {
                 lErreur.Visible = false;
+
                 // Ajouter une UE
                 ue ue = new ue();
                 ue.nom = this.tBNom.Text;
                 ue.description = this.rtBDesc.Text;
+                ue.periode = _p;
+
+                _p.ue.Add(ue);
+
                 // Ajouter à la BDD
+                Requetes.ajouterUE(ue);
+
+                Requetes.enregistreLaBDD();
+
+                MessageBox.Show("L'UE " + ue.nom + " a été ajoutée avec succès.");
             }
             else
             {

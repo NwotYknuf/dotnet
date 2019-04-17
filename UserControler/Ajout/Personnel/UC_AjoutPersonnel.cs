@@ -20,9 +20,21 @@ namespace dotnet.UserControler.Ajout
         public UC_AjoutPersonnel(UC_OngletPersonnels cadre) : base(cadre)
         {
             InitializeComponent();
-            //this.gBTitre.Text = "Ajouter un personnel : ";
         }
+        
+        private void UC_AjoutPersonnel_Load(object sender, EventArgs e)
+        {
+            initialiseCBCategorie();
+        }
+        private void initialiseCBCategorie()
+        {
+            var categories = Database.instance.categorie;
+            foreach (categorie c in categories)
+                cBCategorie.Items.Add(c.nom);
 
+            cBCategorie.SelectedIndex = 0;
+        }
+        
         private void bCreer_Click(object sender, EventArgs e)
         {
             if ((Utilitaires.conditionsRespectees(tBNom.Text, true, false, false, false, 2, 50)) &&
@@ -34,7 +46,7 @@ namespace dotnet.UserControler.Ajout
             {
                 lErreur.Visible = false;
 
-                // Ajouter un personnel
+                // Créer un personnel
                 personnel per = new personnel();
                 per.nom = this.tBNom.Text;
                 per.prenom = this.tBPrenom.Text;
@@ -42,13 +54,13 @@ namespace dotnet.UserControler.Ajout
                 per.adresse = this.tBAdressePost.Text;
                 per.telephone = this.tBTelephone.Text;
 
-                categorie cat = Database.instance.categorie.Where(s => s.nom == cBCategorie.Text).FirstOrDefault<categorie>();
+                categorie cat = Requetes.obtientCategorieduPersonnel(per);
                 cat.personnel.Add(per);
 
                 per.categorie = cat;
 
                 // Ajouter à la BDD
-                Database.instance.personnel.Add(per);
+                Requetes.ajouterPersonnel(per);
 
                 Requetes.enregistreLaBDD();
 
@@ -56,17 +68,6 @@ namespace dotnet.UserControler.Ajout
             }
             else
                 lErreur.Visible = true;
-        }
-
-        private void UC_AjoutPersonnel_Load(object sender, EventArgs e)
-        {
-            initialiseCBCategorie();
-        }
-        private void initialiseCBCategorie()
-        {
-            var categories = Database.instance.categorie;
-            foreach (categorie c in categories)
-                cBCategorie.Items.Add(c.nom);
         }
     }
 }

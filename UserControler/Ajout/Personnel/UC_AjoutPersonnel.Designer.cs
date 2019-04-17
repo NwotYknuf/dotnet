@@ -47,15 +47,16 @@
             // 
             // gBTitreAjout
             // 
-            this.gBTitreAjout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gBTitreAjout.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBTitreAjout.Margin = new System.Windows.Forms.Padding(4);
+            this.gBTitreAjout.Padding = new System.Windows.Forms.Padding(4);
             this.gBTitreAjout.Size = new System.Drawing.Size(994, 130);
             this.gBTitreAjout.Text = "Ajouter un personnel : ";
             // 
             // bCreer
             // 
             this.bCreer.Location = new System.Drawing.Point(833, 17);
-            this.bCreer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bCreer.Margin = new System.Windows.Forms.Padding(4);
+            this.bCreer.TabIndex = 7;
             this.bCreer.Text = "Créer un personnel";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
             this.bCreer.MouseCaptureChanged += new System.EventHandler(this.bCreer_Click);
@@ -75,7 +76,7 @@
             this.panel.Controls.Add(this.tBNom);
             this.panel.Controls.Add(this.lAdressePost);
             this.panel.Controls.Add(this.tBAdressePost);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Size = new System.Drawing.Size(982, 103);
             this.panel.Controls.SetChildIndex(this.bCreer, 0);
             this.panel.Controls.SetChildIndex(this.lErreur, 0);
@@ -103,7 +104,7 @@
             this.tBAdresseEmail.Location = new System.Drawing.Point(417, 17);
             this.tBAdresseEmail.Name = "tBAdresseEmail";
             this.tBAdresseEmail.Size = new System.Drawing.Size(151, 20);
-            this.tBAdresseEmail.TabIndex = 25;
+            this.tBAdresseEmail.TabIndex = 4;
             // 
             // lAdresseEmail
             // 
@@ -119,7 +120,7 @@
             this.tBNom.Location = new System.Drawing.Point(129, 17);
             this.tBNom.Name = "tBNom";
             this.tBNom.Size = new System.Drawing.Size(100, 20);
-            this.tBNom.TabIndex = 23;
+            this.tBNom.TabIndex = 1;
             // 
             // lNom
             // 
@@ -144,7 +145,7 @@
             this.tBPrenom.Location = new System.Drawing.Point(129, 43);
             this.tBPrenom.Name = "tBPrenom";
             this.tBPrenom.Size = new System.Drawing.Size(100, 20);
-            this.tBPrenom.TabIndex = 27;
+            this.tBPrenom.TabIndex = 2;
             // 
             // lTelephone
             // 
@@ -160,7 +161,7 @@
             this.tBTelephone.Location = new System.Drawing.Point(129, 71);
             this.tBTelephone.Name = "tBTelephone";
             this.tBTelephone.Size = new System.Drawing.Size(100, 20);
-            this.tBTelephone.TabIndex = 29;
+            this.tBTelephone.TabIndex = 3;
             // 
             // cBCategorie
             // 
@@ -168,7 +169,7 @@
             this.cBCategorie.Location = new System.Drawing.Point(396, 71);
             this.cBCategorie.Name = "cBCategorie";
             this.cBCategorie.Size = new System.Drawing.Size(172, 21);
-            this.cBCategorie.TabIndex = 31;
+            this.cBCategorie.TabIndex = 6;
             // 
             // lCategorie
             // 
@@ -184,7 +185,7 @@
             this.tBAdressePost.Location = new System.Drawing.Point(417, 43);
             this.tBAdressePost.Name = "tBAdressePost";
             this.tBAdressePost.Size = new System.Drawing.Size(151, 20);
-            this.tBAdressePost.TabIndex = 33;
+            this.tBAdressePost.TabIndex = 5;
             // 
             // lAdressePost
             // 
@@ -208,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_AjoutPersonnel";
             this.Size = new System.Drawing.Size(1000, 139);
             this.Load += new System.EventHandler(this.UC_AjoutPersonnel_Load);

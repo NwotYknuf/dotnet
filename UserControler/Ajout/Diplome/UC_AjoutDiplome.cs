@@ -18,7 +18,6 @@ namespace dotnet.UserControler.Ajout {
 
         public UC_AjoutDiplome(UC_OngletDiplomes cadre) : base(cadre) {
             InitializeComponent();
-            //this.gBTitre.Text = "Ajouter un Diplome : ";
         }
 
         private void bCreer_Click(object sender, EventArgs e)
@@ -27,11 +26,18 @@ namespace dotnet.UserControler.Ajout {
                 (Utilitaires.conditionsRespectees(rtBDesc.Text, true, true, true, true, 2, 100)))
             {
                 lErreur.Visible = false;
+
                 // Ajouter un diplome
-                diplome d = new diplome();
-                d.nom = this.tBNom.Text;
-                d.description = this.rtBDesc.Text;
-                // Ajouter l'enregistrement à la BDD
+                diplome diplome = new diplome();
+                diplome.nom = this.tBNom.Text;
+                diplome.description = this.rtBDesc.Text;
+
+                // Ajouter à la BDD
+                Requetes.ajouterDiplome(diplome);
+
+                Requetes.enregistreLaBDD();
+
+                MessageBox.Show("Le diplôme " + diplome.nom + " a été ajoutée avec succès.");
             }
             else
             {

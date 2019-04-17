@@ -123,7 +123,7 @@ namespace dotnet
             // 
             // uC_Affichage1
             // 
-            this.uC_Affichage1.Location = new System.Drawing.Point(67, 236);
+            this.uC_Affichage1.Location = new System.Drawing.Point(67, 256);
             this.uC_Affichage1.Name = "uC_Affichage1";
             this.uC_Affichage1.Size = new System.Drawing.Size(1012, 364);
             this.uC_Affichage1.TabIndex = 12;

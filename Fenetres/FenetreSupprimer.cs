@@ -139,37 +139,43 @@ namespace dotnet.Fenetres
                 case "Diplome":
                     {
                         // Supprimer le diplome
+                        Requetes.retirerDiplome(_d);
                         break;
                     }
                 case "Annee":
                     {
                         // Supprimer l'annee
+                        Requetes.retirerAnnee(_a);
                         break;
                     }
                 case "Periode":
                     {
                         // Supprimer la période
+                        Requetes.retirerPeriode(_p);
                         break;
                     }
                 case "UE":
                     {
                         // Supprimer l'ue
+                        Requetes.retirerUE(_u);
                         break;
                     }
                 case "EC":
                     {
                         // Supprimer l'ec
+                        Requetes.retirerEC(_e);
                         break;
                     }
                 case "Cours":
                     {
                         // Supprimer le cours
+                        Requetes.retirerCours(_c);
                         break;
                     }
                 case "Personnel":
                     {
                         // Supprimer le personnel
-                        Database.instance.personnel.Remove(_per);
+                        Requetes.retirerPersonnel(_per);
                         break;
                     }
                 case "Categorie":

@@ -55,8 +55,8 @@
             // 
             this.tbRecherche.Location = new System.Drawing.Point(134, 29);
             this.tbRecherche.Name = "tbRecherche";
-            this.tbRecherche.Size = new System.Drawing.Size(112, 22);
-            this.tbRecherche.TabIndex = 3;
+            this.tbRecherche.Size = new System.Drawing.Size(163, 22);
+            this.tbRecherche.TabIndex = 1;
             // 
             // bLancerRech
             // 
@@ -65,7 +65,7 @@
             this.bLancerRech.Location = new System.Drawing.Point(357, 39);
             this.bLancerRech.Name = "bLancerRech";
             this.bLancerRech.Size = new System.Drawing.Size(101, 26);
-            this.bLancerRech.TabIndex = 1;
+            this.bLancerRech.TabIndex = 3;
             this.bLancerRech.Text = "Lancer";
             this.bLancerRech.UseVisualStyleBackColor = true;
             this.bLancerRech.Click += new System.EventHandler(this.bLancerRech_Click);
@@ -110,6 +110,7 @@
             "cours",
             "personnel"});
             this.cBCritere.FormattingEnabled = true;
+            this.cBCritere.ItemHeight = 16;
             this.cBCritere.Items.AddRange(new object[] {
             "diplome",
             "annee",

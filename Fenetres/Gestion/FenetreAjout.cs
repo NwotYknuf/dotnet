@@ -38,12 +38,7 @@ namespace dotnet
             if (Utilitaires.conditionsRespectees(tB.Text, true, true, false, false, 2, 30))
             {
                 lErreur.Visible = false;
-
-                // Ajout dans la BDD 
-
-                // Ajout dans le tableau
                 _uC.ajout(_element, tB.Text);
-
                 this.Dispose();
             }
             else

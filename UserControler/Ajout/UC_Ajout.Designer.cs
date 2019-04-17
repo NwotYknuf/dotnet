@@ -30,8 +30,8 @@
         {
             this.gBTitreAjout = new System.Windows.Forms.GroupBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.bCreer = new System.Windows.Forms.Button();
             this.lErreur = new System.Windows.Forms.Label();
+            this.bCreer = new System.Windows.Forms.Button();
             this.gBTitreAjout.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,8 @@
             // 
             // panel
             // 
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Controls.Add(this.lErreur);
             this.panel.Controls.Add(this.bCreer);
             this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -56,16 +58,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(982, 51);
             this.panel.TabIndex = 3;
-            // 
-            // bCreer
-            // 
-            this.bCreer.AutoSize = true;
-            this.bCreer.Location = new System.Drawing.Point(833, 7);
-            this.bCreer.Name = "bCreer";
-            this.bCreer.Size = new System.Drawing.Size(117, 26);
-            this.bCreer.TabIndex = 2;
-            this.bCreer.Text = "Créer";
-            this.bCreer.UseVisualStyleBackColor = true;
             // 
             // lErreur
             // 
@@ -79,6 +71,16 @@
             this.lErreur.Text = "Erreur, réessayez";
             this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lErreur.Visible = false;
+            // 
+            // bCreer
+            // 
+            this.bCreer.AutoSize = true;
+            this.bCreer.Location = new System.Drawing.Point(833, 7);
+            this.bCreer.Name = "bCreer";
+            this.bCreer.Size = new System.Drawing.Size(117, 26);
+            this.bCreer.TabIndex = 2;
+            this.bCreer.Text = "Créer";
+            this.bCreer.UseVisualStyleBackColor = true;
             // 
             // UC_Ajout
             // 
