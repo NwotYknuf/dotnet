@@ -14,6 +14,7 @@ namespace dotnet.UserControler.Affichage.Personnel
     public partial class UC_ElementCoursPersonnel : UC_ElementP
     {
         private cours _cours;
+        private personnel _personnel;
 
         public UC_ElementCoursPersonnel()
         {
@@ -25,10 +26,12 @@ namespace dotnet.UserControler.Affichage.Personnel
             _cours = c;
             InitializeComponent();
             gBAffElement.Text = _cours.nom;
-            tBCours.Text = _cours.type_cours.ToString();
+            tBCours.Text = Requetes.obtientTypeduCours(_cours).nom;
             tBHoraires.Text = _cours.volume_horraire.ToString();
-            tBEC.Text = _cours.id_ec.ToString();
+            tBEC.Text = Requetes.obtientECduCours(_cours).nom;
 
+            // Nous sommes sûr d'avoir un personnel assigné ici
+            _personnel = Requetes.obtientPersonnelduCours(c);
         }
 
         private void pBModifier_Click(object sender, EventArgs e)
@@ -44,15 +47,12 @@ namespace dotnet.UserControler.Affichage.Personnel
         private void pBRetirer_Click(object sender, EventArgs e)
         {
             // Retirer ce cours à ce personnel
-
-            personnel p = Database.instance.personnel.Where(x => x.id == _cours.personnel.id).FirstOrDefault<personnel>();
-
-            _cadre.retirerCours(p, _cours);
+            _cadre.retirerCours(_personnel, _cours);
         }
 
         private void UC_ElementCoursPersonnel_Load(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(this.pBRetirer, "Retirer ce cours du personnel");
+            toolTip1.SetToolTip(this.pBRetirer, "Retirer ce cours du personnel " + _personnel.nom + " " + _personnel.prenom);
         }
     }
 }

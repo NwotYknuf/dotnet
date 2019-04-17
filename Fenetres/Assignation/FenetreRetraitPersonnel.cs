@@ -51,9 +51,9 @@ namespace dotnet.Fenetres.Assignation
         {
             _cours.personnel = null;
 
-            Database.instance.SaveChanges();
-            
-            ec e = Database.instance.ec.Where(x => x.id == _cours.ec.id).FirstOrDefault<ec>();
+            Requetes.enregistreLaBDD();
+
+            ec e = Requetes.obtientECduCours(_cours);
 
             _cadre.afficheECSelectionnee(e);
         }

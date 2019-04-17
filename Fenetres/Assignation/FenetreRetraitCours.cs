@@ -51,7 +51,7 @@ namespace dotnet.Fenetres.Assignation
         {
             _personnel.cours.Remove(_cours);
 
-            Database.instance.SaveChanges();
+            Requetes.enregistreLaBDD();
 
             _cadre.affichePersonnelSelectionne(_personnel);
         }

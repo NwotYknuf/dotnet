@@ -30,10 +30,6 @@ namespace dotnet.UserControler.Affichage
         {
             // Afficher les années du diplôme séléctionné 
             _cadre.afficheDiplomeSelectionne(_diplome);
-
-            //Changer l'UC ajout en accord
-
-            //update le fils d'Arianne
         }
 
         private void pBModifier_Click(object sender, EventArgs e)

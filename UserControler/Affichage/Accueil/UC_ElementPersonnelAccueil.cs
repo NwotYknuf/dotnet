@@ -27,8 +27,8 @@ namespace dotnet.UserControler.Affichage.Accueil
             gBAffElement.Text = "";
             tBNom.Text = _personnel.nom;
             tBPrenom.Text = _personnel.prenom;
-            tBNbHeuresAttrib.Text = "";
-            tBNbHeuresNonAttrib.Text = "";
+            tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(_personnel).ToString();
+            tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
             
         }
 

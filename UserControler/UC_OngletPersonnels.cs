@@ -46,7 +46,7 @@ namespace dotnet
             uC_Affichage1.clearElements();
 
             var personnels = Database.instance.personnel;
-            foreach (personnel p in personnels)
+            foreach (personnel p in personnels.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementPersonnel(this, p));
             }
@@ -75,7 +75,7 @@ namespace dotnet
 
             uC_Affichage1.addElement(new UC_ElementAjoutCours(this, p));
 
-            foreach (cours c in p.cours)
+            foreach (cours c in p.cours.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementCoursPersonnel(this, c));
             }

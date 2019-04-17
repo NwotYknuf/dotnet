@@ -28,9 +28,9 @@ namespace dotnet.UserControler.Affichage.Assignation
             _cours = c;
 
             gBAffElement.Text = _cours.nom;
-            tBCours.Text = _cours.id_type.ToString();
+            tBCours.Text = Requetes.obtientTypeduCours(_cours).nom;
             tBHoraires.Text = _cours.volume_horraire.ToString();
-            tBEC.Text = _cours.id_ec.ToString(); // Database.instance.ec.Where(x => x.id == _cours.id_ec).FirstOrDefault<ec>().nom;
+            tBEC.Text = Requetes.obtientECduCours(_cours).nom;
 
             toolTip1.SetToolTip(this.pBAjouterCours, "Ajouter un cours au personnel");
         }

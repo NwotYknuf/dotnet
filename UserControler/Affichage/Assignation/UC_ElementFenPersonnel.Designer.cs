@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementFenPersonnel));
             this.tBNbHeuresAttrib = new System.Windows.Forms.TextBox();
             this.tBNbHeuresNonAttrib = new System.Windows.Forms.TextBox();
-            this.cBCategorie = new System.Windows.Forms.ComboBox();
             this.lCategorie = new System.Windows.Forms.Label();
             this.lTelephone = new System.Windows.Forms.Label();
             this.tBTelephone = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.lNom = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pBAjouterPersonnel = new System.Windows.Forms.PictureBox();
+            this.tBCategorie = new System.Windows.Forms.TextBox();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjouterPersonnel)).BeginInit();
@@ -55,12 +55,12 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.tBCategorie);
             this.panel.Controls.Add(this.pBAjouterPersonnel);
             this.panel.Controls.Add(this.tBNbHeuresAttrib);
             this.panel.Controls.Add(this.tBPrenom);
             this.panel.Controls.Add(this.tBNbHeuresNonAttrib);
             this.panel.Controls.Add(this.lNom);
-            this.panel.Controls.Add(this.cBCategorie);
             this.panel.Controls.Add(this.lNbHeuresAttrib);
             this.panel.Controls.Add(this.lCategorie);
             this.panel.Controls.Add(this.lNbHeuresNonAttrib);
@@ -86,14 +86,6 @@
             this.tBNbHeuresNonAttrib.Name = "tBNbHeuresNonAttrib";
             this.tBNbHeuresNonAttrib.Size = new System.Drawing.Size(54, 20);
             this.tBNbHeuresNonAttrib.TabIndex = 62;
-            // 
-            // cBCategorie
-            // 
-            this.cBCategorie.FormattingEnabled = true;
-            this.cBCategorie.Location = new System.Drawing.Point(248, 64);
-            this.cBCategorie.Name = "cBCategorie";
-            this.cBCategorie.Size = new System.Drawing.Size(121, 21);
-            this.cBCategorie.TabIndex = 58;
             // 
             // lCategorie
             // 
@@ -222,6 +214,13 @@
             this.pBAjouterPersonnel.TabStop = false;
             this.pBAjouterPersonnel.Click += new System.EventHandler(this.pBAjouterPersonnel_Click);
             // 
+            // tBCategorie
+            // 
+            this.tBCategorie.Location = new System.Drawing.Point(269, 64);
+            this.tBCategorie.Name = "tBCategorie";
+            this.tBCategorie.Size = new System.Drawing.Size(100, 20);
+            this.tBCategorie.TabIndex = 64;
+            // 
             // UC_ElementFenPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +238,6 @@
 
         private System.Windows.Forms.TextBox tBNbHeuresAttrib;
         private System.Windows.Forms.TextBox tBNbHeuresNonAttrib;
-        private System.Windows.Forms.ComboBox cBCategorie;
         private System.Windows.Forms.Label lCategorie;
         private System.Windows.Forms.Label lTelephone;
         private System.Windows.Forms.TextBox tBTelephone;
@@ -255,5 +253,6 @@
         private System.Windows.Forms.Label lNom;
         private System.Windows.Forms.ToolTip toolTip1;
         protected System.Windows.Forms.PictureBox pBAjouterPersonnel;
+        private System.Windows.Forms.TextBox tBCategorie;
     }
 }

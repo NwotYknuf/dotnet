@@ -34,11 +34,19 @@
             this.tBNom = new System.Windows.Forms.TextBox();
             this.lCategorie = new System.Windows.Forms.Label();
             this.tBCategorie = new System.Windows.Forms.TextBox();
-            this.gBAffElement.SuspendLayout();
-            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).BeginInit();
+            this.gBAffElement.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pBModifier
+            // 
+            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
+            // 
+            // pBSupprimer
+            // 
+            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // panel
             // 
@@ -57,14 +65,6 @@
             this.panel.Controls.SetChildIndex(this.tBCategorie, 0);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
-            // 
-            // pBModifier
-            // 
-            this.pBModifier.Click += new System.EventHandler(this.pBModifier_Click);
-            // 
-            // pBSupprimer
-            // 
-            this.pBSupprimer.Click += new System.EventHandler(this.pBSupprimer_Click);
             // 
             // lPrenom
             // 
@@ -114,7 +114,7 @@
             this.tBCategorie.Enabled = false;
             this.tBCategorie.Location = new System.Drawing.Point(583, 11);
             this.tBCategorie.Name = "tBCategorie";
-            this.tBCategorie.Size = new System.Drawing.Size(100, 20);
+            this.tBCategorie.Size = new System.Drawing.Size(162, 20);
             this.tBCategorie.TabIndex = 33;
             // 
             // UC_ElementPersonnel
@@ -122,11 +122,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementPersonnel";
+            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBSupprimer)).EndInit();
             this.ResumeLayout(false);
 
         }

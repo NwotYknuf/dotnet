@@ -25,7 +25,7 @@ namespace dotnet.UserControler.Affichage
             _cours = c;
             InitializeComponent();
             gBAffElement.Text = _cours.nom;
-            tBCours.Text = _cours.type_cours.ToString();
+            tBCours.Text = Requetes.obtientTypeduCours(_cours).nom;
             tBHoraires.Text = _cours.volume_horraire.ToString();
 
             if (_cours.personnel == null)
@@ -35,7 +35,8 @@ namespace dotnet.UserControler.Affichage
             }
             else
             {
-                tBPersonnel.Text = _cours.personnel.ToString();
+                personnel p = Requetes.obtientPersonnelduCours(_cours);
+                tBPersonnel.Text = p.nom + " " + p.prenom;
                 initialiseImageRetrait(pBAjouterRetirer);
             }
         }
@@ -68,30 +69,11 @@ namespace dotnet.UserControler.Affichage
         {
             if (_cours.personnel == null)
             {
-                // Ajouter un personnel
-
                 _cadre.ajouterPersonnel(_cours);
-                /*
-                // BDD
-                _cours.personnel = new personnel(); // A continuer
-
-                // Image
-                initialiseImageRetrait(pBAjouterRetirer);
-                this.Update();*/
             }
             else
-            {
-                // Retirer un personnel
-
+            {               
                 _cadre.retirerPersonnel(_cours);
-                /*
-                // BDD
-                _cours.personnel = null;
-                Database.instance.SaveChanges();
-
-                // Image
-                initialiseImageAjout(pBAjouterRetirer);
-                this.Update();*/
             }
         }
 

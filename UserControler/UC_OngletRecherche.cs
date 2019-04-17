@@ -38,7 +38,7 @@ namespace dotnet
                     case "diplome":
                         {
                             /*var resultats = Database.instance.diplome;
-                            foreach (diplome d in resultats)
+                            foreach (diplome d in resultats.ToList())
                             {
                                 uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
                             }
@@ -90,7 +90,7 @@ namespace dotnet
 
         public void Actualiser()
         {
-
+            this.Update();
         }
     }
 }

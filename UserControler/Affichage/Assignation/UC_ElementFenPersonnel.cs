@@ -33,10 +33,11 @@ namespace dotnet.UserControler.Affichage.Assignation
             tBTelephone.Text = _personnel.telephone;
             tBAdresseEmail.Text = _personnel.email;
             tBAdressePost.Text = _personnel.adresse;
-            //tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(_personnel).ToString();
-            //tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
+            tBCategorie.Text = Requetes.obtientCategorieduPersonnel(p).nom;
+            tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(_personnel).ToString();
+            tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
 
-            toolTip1.SetToolTip(this.pBAjouterPersonnel, "Ajouter un cours au personnel");
+            toolTip1.SetToolTip(this.pBAjouterPersonnel, "Ajouter un personnel au cours");
         }
 
         private void pBAjouterPersonnel_Click(object sender, EventArgs e)

@@ -45,7 +45,7 @@ namespace dotnet {
             uC_Affichage1.clearElements();
 
             var diplomes = Database.instance.diplome;
-            foreach (diplome d in diplomes)
+            foreach (diplome d in diplomes.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
             }
@@ -72,7 +72,7 @@ namespace dotnet {
 
             uC_Affichage1.clearElements();
 
-            foreach (annee a in d.annee) {
+            foreach (annee a in d.annee.ToList()) {
                 uC_Affichage1.addElement(new UC_ElementAnnee(this, a));
             }
             uC_Affichage1.updateAffichage();
@@ -95,7 +95,7 @@ namespace dotnet {
             Controls.Add(uC_Ajout1);
 
             uC_Affichage1.clearElements();
-            foreach (periode p in a.periode)
+            foreach (periode p in a.periode.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementPeriode(this, p));
             }
@@ -118,7 +118,7 @@ namespace dotnet {
             Controls.Add(uC_Ajout1);
 
             uC_Affichage1.clearElements();
-            foreach (ue u in p.ue)
+            foreach (ue u in p.ue.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementUE(this, u));
             }
@@ -141,7 +141,7 @@ namespace dotnet {
             Controls.Add(uC_Ajout1);
 
             uC_Affichage1.clearElements();
-            foreach (ec e in u.ec)
+            foreach (ec e in u.ec.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementEC(this, e));
             }
@@ -180,7 +180,7 @@ namespace dotnet {
             Controls.Add(uC_Ajout1);
 
             uC_Affichage1.clearElements();
-            foreach (cours c in e.cours)
+            foreach (cours c in e.cours.ToList())
             {
                 uC_Affichage1.addElement(new UC_ElementCoursDiplome(this, c));
             }
@@ -189,8 +189,6 @@ namespace dotnet {
 
         private void cB_ECActive_CheckedChanged(object sender, EventArgs e)
         {
-            // Change l'état de l'EC dans la bdd si elle est active ou non
-
             if(cB_ECActive.Checked)
             {
                 // L'UE est active
@@ -206,9 +204,8 @@ namespace dotnet {
                 cB_ECActive.ForeColor = Color.FromArgb(230, 55, 0);
             }
 
-            Database.instance.ec.AddOrUpdate(_ecCourant);
-
-            Database.instance.SaveChanges();
+            // Change l'état de l'EC dans la bdd si elle est active ou non
+            Requetes.enregistreLaBDD();
         }
 
         public void ajouterPersonnel(cours c)

@@ -45,7 +45,7 @@ namespace dotnet
             uc.clearElements();
 
             var personnels = Database.instance.personnel;
-            foreach (personnel p in personnels)
+            foreach (personnel p in personnels.ToList())
             {
                 //if(p.heure_affectees != ... )
                 uc.addElement(new UC_ElementPersonnelAccueil(this, p));
@@ -61,14 +61,16 @@ namespace dotnet
 
         public void initialiseCours(UC_AffichageA uc)
         {
-            uc.setGroupBoxTiTre("Les cours non affectés à un personnel : ");
+            uc.setGroupBoxTiTre("Les cours actifs non affectés à un personnel : ");
 
             uc.clearElements();
 
             var cours = Database.instance.cours;
-            foreach (cours c in cours)
+            foreach (cours c in cours.ToList())
             {
-                if(c.id_personnel == null)
+                ec e = Requetes.obtientECduCours(c);
+
+                if((c.id_personnel == null) && (e.actif == true))
                     uc.addElement(new UC_ElementCoursAccueil(this, c));
             }
 

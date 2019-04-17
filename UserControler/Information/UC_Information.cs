@@ -24,6 +24,7 @@ namespace dotnet.UserControler.Affichage
             tBTelephone.Text = p.telephone;
             tBAdresseEmail.Text = p.email;
             tBAdressePost.Text = p.adresse;
+            tBCategorie.Text = Requetes.obtientCategorieduPersonnel(p).nom;
             tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(p).ToString();
             tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(p).ToString();
 

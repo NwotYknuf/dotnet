@@ -27,13 +27,12 @@ namespace dotnet.UserControler.Affichage.Personnel
             gBAffElement.Text = "";
             tBNom.Text = _personnel.nom;
             tBPrenom.Text = _personnel.prenom;
-            //tBCategorie.Text = _personnel.categorie.ToString();
+            tBCategorie.Text = Requetes.obtientCategorieduPersonnel(_personnel).nom;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
             // Afficher les informations du personnel et la liste des cours qu'il présente
-
             _cadre.affichePersonnelSelectionne(_personnel);
         }
 
