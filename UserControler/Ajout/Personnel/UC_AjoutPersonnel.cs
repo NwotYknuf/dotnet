@@ -34,13 +34,13 @@ namespace dotnet.UserControler.Ajout
 
             cBCategorie.SelectedIndex = 0;
         }
-        
+
         private void bCreer_Click(object sender, EventArgs e)
         {
             if ((Utilitaires.conditionsRespectees(tBNom.Text, true, false, false, false, 2, 50)) &&
                 (Utilitaires.conditionsRespectees(tBPrenom.Text, true, false, false, false, 2, 50)) &&
                 (Utilitaires.conditionsRespecteesEmail(tBAdresseEmail.Text)) &&
-                (Utilitaires.conditionsRespectees(tBAdressePost.Text, true, true, true, false, 2, 50)) &&
+                (Utilitaires.conditionsRespecteesAdressePostale(tBAdressePost.Text)) &&
                 (Utilitaires.conditionsRespecteesTelephone(tBTelephone.Text)) &&
                 (Utilitaires.conditionsRespectees(cBCategorie.Text, cBCategorie)))
             {
@@ -54,7 +54,7 @@ namespace dotnet.UserControler.Ajout
                 per.adresse = this.tBAdressePost.Text;
                 per.telephone = this.tBTelephone.Text;
 
-                categorie cat = Requetes.obtientCategorieduPersonnel(per);
+                categorie cat = Database.instance.categorie.Where(s => s.nom == cBCategorie.Text).FirstOrDefault<categorie>();
                 cat.personnel.Add(per);
 
                 per.categorie = cat;
@@ -65,9 +65,13 @@ namespace dotnet.UserControler.Ajout
                 Requetes.enregistreLaBDD();
 
                 MessageBox.Show("Le personnel " + per.nom + " " + per.prenom + " a été ajouté avec succès.");
+
+                _cadre.Actualiser();
             }
             else
+            {
                 lErreur.Visible = true;
+            }
         }
     }
 }

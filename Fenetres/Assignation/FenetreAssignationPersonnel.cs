@@ -51,9 +51,7 @@ namespace dotnet.Fenetres.Assignation
 
             Requetes.enregistreLaBDD();
 
-            ec e = Requetes.obtientECduCours(_cours);
-
-            _cadre.afficheECSelectionnee(e);
+            _cadre.Actualiser();
         }
     }
 }

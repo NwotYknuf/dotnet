@@ -19,7 +19,7 @@ namespace dotnet
             if (accepteLesLettres) reg += "a-zA-Z"; // a - z : Tous les caractères minuscules, A-Z : Tous les caractères majuscules
             if (accepteLesChiffres) reg += "0-9"; // 0-9 : Tous les chiffres
             if (accepteLesEspaces) reg += "\\s"; // \s : Tous les caractères espaces
-            if (accepteLesCaracteresSpeciaux) reg += "\\W"; // Tous les carcatères spéciaux
+            if (accepteLesCaracteresSpeciaux) reg += "áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-"; // Tous les carcatères spéciaux accentués et les points (.) et tirets (-, _)
             reg += "]+$"; // + : Un à plusieurs caractères, $ : Fin de ligne
 
             Regex monRegex = new Regex(reg);
@@ -56,12 +56,32 @@ namespace dotnet
 
         public static bool conditionsRespecteesTelephone(String champsAControler)
         {
-            Regex monRegex = new Regex("^[0-9]+$");
+            Regex monRegex = new Regex(@"^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$");
 
             if (string.IsNullOrEmpty(champsAControler)) // le champs peut être vide
                 return true;
 
-            if ((champsAControler.Length == 10) && (monRegex.IsMatch(champsAControler))) // le champs non vide doit être égal à 10 chiffres
+            if (monRegex.IsMatch(champsAControler))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool conditionsRespecteesAdressePostale(String champsAControler)
+        {
+            Regex monRegex = new Regex(@"^([0-9a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ.\s-]{1,50})$");
+
+            if (monRegex.IsMatch(champsAControler))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool conditionsRespecteesCodePostal(String champsAControler)
+        {
+            Regex monRegex = new Regex(@"^((0[1-9])|([1-8][0-9])|(9[0-8])|(2A)|(2B))[0-9]{3}$");
+
+            if (monRegex.IsMatch(champsAControler)) 
                 return true;
             else
                 return false;

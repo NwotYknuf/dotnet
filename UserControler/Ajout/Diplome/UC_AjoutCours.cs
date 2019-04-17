@@ -41,8 +41,8 @@ namespace dotnet.UserControler.Ajout
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            if ((Utilitaires.conditionsRespectees(tBNom.Text,true, true, true, false, 2, 100)) &&
-                (Utilitaires.conditionsRespectees(tBHoraires.Text, false, true, true, true, 1, 3)) && 
+            if ((Utilitaires.conditionsRespectees(tBNom.Text,true, true, true, true, 2, 100)) &&
+                (Utilitaires.conditionsRespectees(tBHoraires.Text, false, true, false, false, 1, 3)) && 
                 (Utilitaires.conditionsRespectees(cBType.Text, cBType)) )
             {
                 lErreur.Visible = false;
@@ -52,7 +52,7 @@ namespace dotnet.UserControler.Ajout
                 cours.nom = this.tBNom.Text;
                 cours.volume_horraire = Convert.ToInt32(this.tBHoraires.Text);
 
-                type_cours tc = Database.instance.type_cours.Where(s => s.nom == (String)this.cBType.SelectedValue).FirstOrDefault<type_cours>();
+                type_cours tc = Database.instance.type_cours.Where(s => s.nom == cBType.Text).FirstOrDefault<type_cours>();
                 cours.type_cours = tc;
                 tc.cours.Add(cours);
 
@@ -65,6 +65,8 @@ namespace dotnet.UserControler.Ajout
                 Requetes.enregistreLaBDD();
 
                 MessageBox.Show("Le cours " + cours.nom + " a été ajouté avec succès.");
+
+                _cadre.Actualiser();
             }
             else
             {

@@ -56,7 +56,7 @@ namespace dotnet.Fenetres.Assignation
 
             Requetes.enregistreLaBDD();
 
-            _cadre.affichePersonnelSelectionne(_personnel);
+            _cadre.Actualiser();
         }
     }
 }
