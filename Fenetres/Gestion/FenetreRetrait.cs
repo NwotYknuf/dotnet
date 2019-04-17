@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dotnet.Fenetres.Suppression;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,7 +72,7 @@ namespace dotnet.Fenetres
                             //Requete pour retrouver la categorie possedant le nom choisi
                             categorieChoisie = Database.instance.categorie.Where(s => s.nom == cBListe.Text).FirstOrDefault<categorie>();
 
-                            new FenetreSupprimer("Categorie", categorieChoisie, this).Show();
+                            new FenetreSupprimerCategorie(this, categorieChoisie).Show();
                             break;
                         }
                     case "colonne":
@@ -81,7 +82,7 @@ namespace dotnet.Fenetres
                             //Requete pour retrouver le type_cours possedant le nom choisi
                             typeDeCoursChoisie = Database.instance.type_cours.Where(s => s.nom == cBListe.Text).FirstOrDefault<type_cours>();
 
-                            new FenetreSupprimer("Type_Cours", typeDeCoursChoisie, this).Show();
+                            new FenetreSupprimerTypeDeCours(this, typeDeCoursChoisie).Show();
                             break;
                         }
                     default: break;
@@ -93,7 +94,7 @@ namespace dotnet.Fenetres
             }
         }
 
-    public void suppressionValidee()
+    public void suppressionConfirmee()
         {
             lErreur.Visible = false;
             _uC.retrait(_element, cBListe.Text, cBListe.Items.IndexOf(cBListe.Text));

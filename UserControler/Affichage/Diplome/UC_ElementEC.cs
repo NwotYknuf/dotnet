@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
+using dotnet.Fenetres.Suppression;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -53,7 +54,14 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("EC", _ec).Show(); ;
+            new FenetreSupprimerEC(this, _ec).Show(); ;
+        }
+
+        public void suppressionConfirmee(ec e)
+        {
+            Requetes.retirerEC(e);
+            Requetes.enregistreLaBDD();
+            _cadre.Actualiser();
         }
     }
 }

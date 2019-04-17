@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
+using dotnet.Fenetres.Suppression;
 
 namespace dotnet.UserControler.Affichage.Personnel
 {
@@ -41,7 +42,7 @@ namespace dotnet.UserControler.Affichage.Personnel
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Cours", _cours).Show(); ;
+            new FenetreSupprimerCoursP(this, _cours).Show(); ;
         }
 
         private void pBRetirer_Click(object sender, EventArgs e)
@@ -64,6 +65,12 @@ namespace dotnet.UserControler.Affichage.Personnel
         {
             pBRetirer.BackColor = Color.FromArgb(60, 185, 213);
         }
-        
+
+        public void suppressionConfirmee(cours c)
+        {
+            Requetes.retirerCours(c);
+            Requetes.enregistreLaBDD();
+            _cadre.Actualiser();
+        }
     }
 }

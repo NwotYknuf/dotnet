@@ -1,4 +1,4 @@
-﻿namespace dotnet.Fenetres
+﻿namespace dotnet.Fenetres.Suppression
 {
     partial class FenetreSupprimer
     {
@@ -43,7 +43,6 @@
             this.bValider.TabIndex = 4;
             this.bValider.Text = "Valider";
             this.bValider.UseVisualStyleBackColor = true;
-            this.bValider.Click += new System.EventHandler(this.bValider_Click);
             // 
             // lTitre
             // 
@@ -62,11 +61,11 @@
             this.bAnnuler.TabIndex = 5;
             this.bAnnuler.Text = "Annuler";
             this.bAnnuler.UseVisualStyleBackColor = true;
-            this.bAnnuler.Click += new System.EventHandler(this.bAnnuler_Click);
             // 
             // lNomElement
             // 
             this.lNomElement.AutoSize = true;
+            this.lNomElement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
             this.lNomElement.Location = new System.Drawing.Point(142, 53);
             this.lNomElement.Name = "lNomElement";
             this.lNomElement.Size = new System.Drawing.Size(73, 13);
@@ -100,10 +99,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button bValider;
-        private System.Windows.Forms.Label lTitre;
-        private System.Windows.Forms.Button bAnnuler;
-        private System.Windows.Forms.Label lNomElement;
-        private System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Button bValider;
+        protected System.Windows.Forms.Label lTitre;
+        protected System.Windows.Forms.Button bAnnuler;
+        protected System.Windows.Forms.Label lNomElement;
+        protected System.Windows.Forms.Panel panel1;
     }
 }

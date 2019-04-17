@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
+using dotnet.Fenetres.Suppression;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -39,7 +40,14 @@ namespace dotnet.UserControler.Affichage
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimer("Diplome", _diplome).Show(); ;
+            new FenetreSupprimerDiplome(this, _diplome).Show();
+        }
+
+        public void suppressionConfirmee(diplome d)
+        {
+            Requetes.retirerDiplome(d);
+            Requetes.enregistreLaBDD();
+            _cadre.Actualiser();
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
+using dotnet.Fenetres.Suppression;
 
 namespace dotnet.UserControler.Affichage.Accueil
 {
@@ -28,16 +29,6 @@ namespace dotnet.UserControler.Affichage.Accueil
             tBCours.Text = Requetes.obtientTypeduCours(_cours).nom;
             tBHoraires.Text = _cours.volume_horraire.ToString();
             tBEC.Text = Requetes.obtientECduCours(_cours).nom;
-
-        }
-
-        private void pBSupprimer_Click(object sender, EventArgs e)
-        {
-            new FenetreSupprimer("Cours", _cours).Show();
-        }
-
-        private void pBModifier_Click(object sender, EventArgs e)
-        {
 
         }
 
