@@ -11,6 +11,7 @@ using dotnet.UserControler.FilArianne;
 using dotnet.UserControler.Ajout;
 using dotnet.UserControler.Affichage;
 using System.Data.Entity.Migrations;
+using dotnet.Fenetres.Assignation;
 
 namespace dotnet {
     public partial class UC_OngletDiplomes : UserControl {
@@ -208,6 +209,16 @@ namespace dotnet {
             Database.instance.ec.AddOrUpdate(_ecCourant);
 
             Database.instance.SaveChanges();
+        }
+
+        public void ajouterPersonnel(cours c)
+        {
+            new FenetreAssignationPersonnel(this, c).Show();
+        } 
+
+        public void retirerPersonnel(cours c)
+        {
+            //new FenetreRetraitPersonnel(this, c).Show();
         }
     }
 }

@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using dotnet.Fenetres.Assignation;
 
-namespace dotnet.UserControler.Affichage.Assignation
+namespace dotnet.Fenetres.Assignation
 {
-    public partial class UC_ElementFenAssign : UC_Element
+    public partial class FenetreAssignation : Form
     {
-        public UC_ElementFenAssign()
+        public FenetreAssignation()
         {
             InitializeComponent();
-        }        
+        }
     }
 }

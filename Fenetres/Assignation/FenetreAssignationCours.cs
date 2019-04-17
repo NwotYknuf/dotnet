@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace dotnet.Fenetres.Assignation
 {
-    public partial class FenetreAssignationCours : Form
+    public partial class FenetreAssignationCours : FenetreAssignation
     {
         private UC_OngletPersonnels _cadre;
         private personnel _personnel;

@@ -24,8 +24,23 @@ namespace dotnet.UserControler.Affichage
             tBTelephone.Text = p.telephone;
             tBAdresseEmail.Text = p.email;
             tBAdressePost.Text = p.adresse;
-            tBNbHeuresAttrib.Text = "";
-            tBNbHeuresNonAttrib.Text = "";
+            tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(p).ToString();
+            tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(p).ToString();
+
+        }
+
+        private void tBNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lPrenom_Click(object sender, EventArgs e)
+        {
 
         }
     }

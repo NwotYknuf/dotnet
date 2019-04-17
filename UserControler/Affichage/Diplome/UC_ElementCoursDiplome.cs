@@ -70,26 +70,28 @@ namespace dotnet.UserControler.Affichage
             {
                 // Ajouter un personnel
 
-                
-
+                _cadre.ajouterPersonnel(_cours);
+                /*
                 // BDD
                 _cours.personnel = new personnel(); // A continuer
 
                 // Image
                 initialiseImageRetrait(pBAjouterRetirer);
-                this.Update();
+                this.Update();*/
             }
             else
             {
                 // Retirer un personnel
 
+                _cadre.retirerPersonnel(_cours);
+                /*
                 // BDD
                 _cours.personnel = null;
                 Database.instance.SaveChanges();
 
                 // Image
                 initialiseImageAjout(pBAjouterRetirer);
-                this.Update();
+                this.Update();*/
             }
         }
 

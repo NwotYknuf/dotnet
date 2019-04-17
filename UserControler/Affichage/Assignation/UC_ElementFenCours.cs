@@ -14,16 +14,19 @@ namespace dotnet.UserControler.Affichage.Assignation
     public partial class UC_ElementFenCours : UC_ElementFenAssign
     {
         private cours _cours;
+        protected FenetreAssignationCours _cadre;
 
         public UC_ElementFenCours()
         {
             InitializeComponent();
         }
 
-        public UC_ElementFenCours(FenetreAssignationCours cadre, cours c) : base(cadre)
+        public UC_ElementFenCours(FenetreAssignationCours cadre, cours c)
         {
             InitializeComponent();
+            _cadre = cadre;
             _cours = c;
+
             gBAffElement.Text = _cours.nom;
             tBCours.Text = _cours.id_type.ToString();
             tBHoraires.Text = _cours.volume_horraire.ToString();

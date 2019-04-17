@@ -1,6 +1,6 @@
 ﻿namespace dotnet.Fenetres.Assignation
 {
-    partial class FenetreAssignationCours
+    partial class FenetreAssignationPersonnel
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FenetreAssignationCours
+            // FenetreAssignationPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 512);
-            this.Name = "FenetreAssignationCours";
+            this.Name = "FenetreAssignationPersonnel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Fenêtre d\'assignation d\'un cours à un personnel";
-            this.Load += new System.EventHandler(this.FenetreAssignationCours_Load);
+            this.Text = "Fenêtre d\'assignation d\'un personnel à un cours";
             this.ResumeLayout(false);
 
         }
