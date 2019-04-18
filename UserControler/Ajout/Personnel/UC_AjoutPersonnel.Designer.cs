@@ -134,7 +134,7 @@
             // lPrenom
             // 
             this.lPrenom.AutoSize = true;
-            this.lPrenom.Location = new System.Drawing.Point(59, 46);
+            this.lPrenom.Location = new System.Drawing.Point(59, 47);
             this.lPrenom.Name = "lPrenom";
             this.lPrenom.Size = new System.Drawing.Size(59, 13);
             this.lPrenom.TabIndex = 26;
@@ -142,7 +142,7 @@
             // 
             // tBPrenom
             // 
-            this.tBPrenom.Location = new System.Drawing.Point(129, 43);
+            this.tBPrenom.Location = new System.Drawing.Point(129, 44);
             this.tBPrenom.Name = "tBPrenom";
             this.tBPrenom.Size = new System.Drawing.Size(100, 20);
             this.tBPrenom.TabIndex = 2;
@@ -182,7 +182,7 @@
             // 
             // tBAdressePost
             // 
-            this.tBAdressePost.Location = new System.Drawing.Point(417, 43);
+            this.tBAdressePost.Location = new System.Drawing.Point(417, 44);
             this.tBAdressePost.Name = "tBAdressePost";
             this.tBAdressePost.Size = new System.Drawing.Size(151, 20);
             this.tBAdressePost.TabIndex = 5;
@@ -190,7 +190,7 @@
             // lAdressePost
             // 
             this.lAdressePost.AutoSize = true;
-            this.lAdressePost.Location = new System.Drawing.Point(320, 46);
+            this.lAdressePost.Location = new System.Drawing.Point(320, 47);
             this.lAdressePost.Name = "lAdressePost";
             this.lAdressePost.Size = new System.Drawing.Size(98, 13);
             this.lAdressePost.TabIndex = 32;

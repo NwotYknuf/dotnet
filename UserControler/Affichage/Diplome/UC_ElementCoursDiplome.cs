@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using dotnet.Fenetres;
 using dotnet.Fenetres.Suppression;
 using dotnet.Properties;
+using dotnet.Fenetres.Modification;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -83,12 +84,12 @@ namespace dotnet.UserControler.Affichage
 
         private void pBModifier_Click(object sender, EventArgs e)
         {
-
+            new FenetreModifCoursD(this, _cours).Show();
         }
 
         private void pBSupprimer_Click(object sender, EventArgs e)
         {
-            new FenetreSupprimerCoursD(this, _cours).Show(); ;
+            new FenetreSupprimerCoursD(this, _cours).Show();
         }
 
         private void pBAjouterRetirer_MouseEnter(object sender, EventArgs e)
@@ -104,6 +105,12 @@ namespace dotnet.UserControler.Affichage
         public void suppressionConfirmee(cours c)
         {
             Requetes.retirerCours(c);
+            Requetes.enregistreLaBDD();
+            _cadre.Actualiser();
+        }
+
+        public void modificationConfirmee()
+        {
             Requetes.enregistreLaBDD();
             _cadre.Actualiser();
         }

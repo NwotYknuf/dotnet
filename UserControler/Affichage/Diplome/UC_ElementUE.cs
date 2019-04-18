@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
 using dotnet.Fenetres.Suppression;
+using dotnet.Fenetres.Modification;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -37,7 +38,7 @@ namespace dotnet.UserControler.Affichage
 
         private void pBModifier_Click(object sender, EventArgs e)
         {
-
+            new FenetreModifUE(this, _ue).Show();
         }
 
         private void pBSupprimer_Click(object sender, EventArgs e)
@@ -48,6 +49,12 @@ namespace dotnet.UserControler.Affichage
         public void suppressionConfirmee(ue u)
         {
             Requetes.retirerUE(u);
+            Requetes.enregistreLaBDD();
+            _cadre.Actualiser();
+        }
+
+        public void modificationConfirmee()
+        {
             Requetes.enregistreLaBDD();
             _cadre.Actualiser();
         }

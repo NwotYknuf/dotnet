@@ -27,7 +27,7 @@ namespace dotnet.Fenetres.Suppression
             _cadre = cadre;
             _ue = u;
 
-            lTitre.Text = "Êtes vous sûr de vouloir supprimer l'année suivante : ";
+            lTitre.Text = "Êtes vous sûr de vouloir supprimer l'UE suivante : ";
             lNomElement.Text = _ue.nom;
         }
 
