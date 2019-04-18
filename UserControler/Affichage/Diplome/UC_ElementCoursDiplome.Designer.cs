@@ -67,6 +67,7 @@
             this.panel.Controls.Add(this.pBAjouterRetirer);
             this.panel.Controls.Add(this.lTypeCours);
             this.panel.Size = new System.Drawing.Size(938, 100);
+            this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
             this.panel.Controls.SetChildIndex(this.lTypeCours, 0);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);
             this.panel.Controls.SetChildIndex(this.pBModifier, 0);
@@ -105,7 +106,7 @@
             this.tBPersonnel.Enabled = false;
             this.tBPersonnel.Location = new System.Drawing.Point(118, 60);
             this.tBPersonnel.Name = "tBPersonnel";
-            this.tBPersonnel.Size = new System.Drawing.Size(100, 20);
+            this.tBPersonnel.Size = new System.Drawing.Size(158, 20);
             this.tBPersonnel.TabIndex = 22;
             // 
             // lPersonnel
@@ -122,7 +123,7 @@
             this.tBHoraires.Enabled = false;
             this.tBHoraires.Location = new System.Drawing.Point(118, 36);
             this.tBHoraires.Name = "tBHoraires";
-            this.tBHoraires.Size = new System.Drawing.Size(100, 20);
+            this.tBHoraires.Size = new System.Drawing.Size(158, 20);
             this.tBHoraires.TabIndex = 20;
             // 
             // tBCours
@@ -130,7 +131,7 @@
             this.tBCours.Enabled = false;
             this.tBCours.Location = new System.Drawing.Point(118, 12);
             this.tBCours.Name = "tBCours";
-            this.tBCours.Size = new System.Drawing.Size(100, 20);
+            this.tBCours.Size = new System.Drawing.Size(158, 20);
             this.tBCours.TabIndex = 19;
             // 
             // lHoraires

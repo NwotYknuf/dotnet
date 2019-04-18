@@ -34,7 +34,7 @@ namespace dotnet.UserControler.Affichage.Accueil
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
-
+            _cadre.afficheOngletCours(_cours);
         }
     }
 }

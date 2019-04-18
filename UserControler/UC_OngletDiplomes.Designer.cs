@@ -40,6 +40,7 @@ namespace dotnet.UserControler
             this.uC_FilArianeDiplome1 = new dotnet.UserControler.FilArianne.UC_FilArianeDiplome();
             this.uC_Affichage1 = new dotnet.UserControler.Affichage.UC_Affichage();
             this.uC_Ajout1 = new dotnet.UC_Ajout();
+            this.gBCours = new System.Windows.Forms.GroupBox();
             this.flpTitre.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,6 +136,17 @@ namespace dotnet.UserControler
             this.uC_Ajout1.Size = new System.Drawing.Size(1008, 88);
             this.uC_Ajout1.TabIndex = 10;
             // 
+            // gBCours
+            // 
+            this.gBCours.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBCours.Location = new System.Drawing.Point(72, 138);
+            this.gBCours.Name = "gBCours";
+            this.gBCours.Size = new System.Drawing.Size(993, 159);
+            this.gBCours.TabIndex = 26;
+            this.gBCours.TabStop = false;
+            this.gBCours.Text = "Informations : ";
+            this.gBCours.Visible = false;
+            // 
             // UC_OngletDiplomes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,8 +156,8 @@ namespace dotnet.UserControler
             this.Controls.Add(this.uC_Affichage1);
             this.Controls.Add(this.uC_Ajout1);
             this.Controls.Add(this.flpTitre);
+            this.Controls.Add(this.gBCours);
             this.Name = "UC_OngletDiplomes";
-            this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletDiplomes_Load);
             this.flpTitre.ResumeLayout(false);
             this.flpTitre.PerformLayout();
@@ -163,5 +175,6 @@ namespace dotnet.UserControler
         private System.Windows.Forms.Label lTitre1;
         private System.Windows.Forms.Label lTitre2;
         private System.Windows.Forms.Label lTitre3;
+        private System.Windows.Forms.GroupBox gBCours;
     }
 }

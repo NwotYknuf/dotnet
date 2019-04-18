@@ -13,7 +13,8 @@ namespace dotnet.UserControler.FilArianne
 {
     public partial class UC_FilArianePersonnel : UC_FilAriane
     {
-        protected UC_OngletPersonnels _cadre;
+        private UC_OngletPersonnels _cadre;
+
         private int nbOngletsOuverts = 1;
         private personnel _p;
 

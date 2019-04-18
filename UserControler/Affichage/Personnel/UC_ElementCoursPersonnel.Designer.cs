@@ -83,7 +83,7 @@
             this.tBEC.Enabled = false;
             this.tBEC.Location = new System.Drawing.Point(118, 61);
             this.tBEC.Name = "tBEC";
-            this.tBEC.Size = new System.Drawing.Size(100, 20);
+            this.tBEC.Size = new System.Drawing.Size(170, 20);
             this.tBEC.TabIndex = 12;
             // 
             // lEC
@@ -100,7 +100,7 @@
             this.tBHoraires.Enabled = false;
             this.tBHoraires.Location = new System.Drawing.Point(118, 36);
             this.tBHoraires.Name = "tBHoraires";
-            this.tBHoraires.Size = new System.Drawing.Size(100, 20);
+            this.tBHoraires.Size = new System.Drawing.Size(170, 20);
             this.tBHoraires.TabIndex = 10;
             // 
             // tBCours
@@ -108,7 +108,7 @@
             this.tBCours.Enabled = false;
             this.tBCours.Location = new System.Drawing.Point(118, 12);
             this.tBCours.Name = "tBCours";
-            this.tBCours.Size = new System.Drawing.Size(100, 20);
+            this.tBCours.Size = new System.Drawing.Size(170, 20);
             this.tBCours.TabIndex = 9;
             // 
             // lHoraires

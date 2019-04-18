@@ -68,10 +68,10 @@ namespace dotnet.Fenetres.Modification
                 _personnel.adresse = this.tBAdressePost.Text;
                 _personnel.telephone = this.tBTelephone.Text;
 
-                categorie catActuelle = Database.instance.categorie.Where(s => s.nom == _personnel.categorie.nom).FirstOrDefault<categorie>();
+                categorie catActuelle = Requetes.obtientCategorieduPersonnel(_personnel);
                 catActuelle.personnel.Remove(_personnel);
 
-                categorie catNouvelle = Database.instance.categorie.Where(s => s.nom == cBCategorie.Text).FirstOrDefault<categorie>();
+                categorie catNouvelle = Requetes.retrouveCategorieViaTexte(cBCategorie.Text);
                 _personnel.categorie = catNouvelle;
                 catNouvelle.personnel.Add(_personnel);
 

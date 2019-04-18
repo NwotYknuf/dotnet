@@ -35,6 +35,7 @@
             this.lPeriode = new System.Windows.Forms.Label();
             this.lUE = new System.Windows.Forms.Label();
             this.lEC = new System.Windows.Forms.Label();
+            this.lCours = new System.Windows.Forms.Label();
             this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.flowLayoutPanel.Controls.Add(this.lPeriode);
             this.flowLayoutPanel.Controls.Add(this.lUE);
             this.flowLayoutPanel.Controls.Add(this.lEC);
+            this.flowLayoutPanel.Controls.Add(this.lCours);
             this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -136,8 +138,8 @@
             this.lEC.AutoEllipsis = true;
             this.lEC.AutoSize = true;
             this.lEC.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEC.ForeColor = System.Drawing.Color.White;
-            this.lEC.Image = global::dotnet.Properties.Resources.fA_bleu_113x36;
+            this.lEC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
+            this.lEC.Image = global::dotnet.Properties.Resources.fA_blanc_113x36;
             this.lEC.Location = new System.Drawing.Point(603, 2);
             this.lEC.MinimumSize = new System.Drawing.Size(114, 37);
             this.lEC.Name = "lEC";
@@ -147,6 +149,23 @@
             this.lEC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lEC.Visible = false;
             this.lEC.Click += new System.EventHandler(this.lEC_Click);
+            // 
+            // lCours
+            // 
+            this.lCours.AutoEllipsis = true;
+            this.lCours.AutoSize = true;
+            this.lCours.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCours.ForeColor = System.Drawing.Color.White;
+            this.lCours.Image = global::dotnet.Properties.Resources.fA_bleu_113x36;
+            this.lCours.Location = new System.Drawing.Point(723, 2);
+            this.lCours.MinimumSize = new System.Drawing.Size(114, 37);
+            this.lCours.Name = "lCours";
+            this.lCours.Size = new System.Drawing.Size(114, 37);
+            this.lCours.TabIndex = 7;
+            this.lCours.Text = "Cours";
+            this.lCours.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lCours.Visible = false;
+            this.lCours.Click += new System.EventHandler(this.lCours_Click);
             // 
             // UC_FilArianeDiplome
             // 
@@ -170,5 +189,6 @@
         private System.Windows.Forms.Label lPeriode;
         private System.Windows.Forms.Label lUE;
         private System.Windows.Forms.Label lEC;
+        private System.Windows.Forms.Label lCours;
     }
 }

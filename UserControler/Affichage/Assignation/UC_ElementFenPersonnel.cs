@@ -45,5 +45,15 @@ namespace dotnet.UserControler.Affichage.Assignation
             _cadre.AssignePersonnel(_personnel);
             _cadre.Dispose();
         }
+
+        private void pBAjouterPersonnel_MouseEnter(object sender, EventArgs e)
+        {
+            pBAjouterPersonnel.BackColor = Color.FromArgb(20, 79, 93);
+        }
+
+        private void pBAjouterPersonnel_MouseLeave(object sender, EventArgs e)
+        {
+            pBAjouterPersonnel.BackColor = Color.FromArgb(60, 185, 213);
+        }
     }
 }

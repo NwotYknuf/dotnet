@@ -54,18 +54,19 @@ namespace dotnet.UserControler
             uC_Affichage1.updateAffichage();
         }
 
-        public void afficheDiplomeSelectionne(diplome d) {
-
-            // changer l'UC ajout
-            
-            lTitre1.Text = "Années"; lTitre2.Text = "proposées en"; lTitre3.Text = d.nom + " : ";
-
-            uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
-
+        public void afficheDiplomeSelectionne(diplome d)
+        {
+            gBCours.Visible = false;
+            uC_Affichage1.Visible = true;
             cB_ECActive.Visible = false;
 
+            lTitre1.Text = "Années"; lTitre2.Text = "proposées en"; lTitre3.Text = d.nom + " : ";
+            
+            uC_Affichage1.setGroupBoxTiTre("Liste des années : ");
+            
             uC_FilArianeDiplome1.filArianeDiplomeApparait(d);
 
+            // changer l'UC ajout
             Point loc = uC_Ajout1.Location;
             uC_Ajout1.Dispose();
             uC_Ajout1 = new UC_AjoutAnnee(this, d);
@@ -81,13 +82,16 @@ namespace dotnet.UserControler
 
         }
         
-        public void afficheAnneeSelectionnee(annee a) {
+        public void afficheAnneeSelectionnee(annee a)
+        {
+            gBCours.Visible = false;
+            uC_Affichage1.Visible = true;
+            cB_ECActive.Visible = false;
+
             lTitre1.Text = "Périodes"; lTitre2.Text = "proposées en"; lTitre3.Text = a.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des périodes : ");
-
-            cB_ECActive.Visible = false;
-
+            
             uC_FilArianeDiplome1.filArianeAnneeApparait(a);
 
             Point loc = uC_Ajout1.Location;
@@ -104,13 +108,16 @@ namespace dotnet.UserControler
             uC_Affichage1.updateAffichage();
         }
 
-        public void affichePeriodeSelectionnee(periode p) {
+        public void affichePeriodeSelectionnee(periode p)
+        {
+            gBCours.Visible = false;
+            uC_Affichage1.Visible = true;
+            cB_ECActive.Visible = false;
+
             lTitre1.Text = "UE"; lTitre2.Text = "proposées au"; lTitre3.Text = p.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
-
-            cB_ECActive.Visible = false;
-
+            
             uC_FilArianeDiplome1.filArianePeriodeApparait(p);
 
             Point loc = uC_Ajout1.Location;
@@ -128,12 +135,14 @@ namespace dotnet.UserControler
         }
 
         public void afficheUESelectionnee(ue u) {
+            gBCours.Visible = false;
+            uC_Affichage1.Visible = true;
+            cB_ECActive.Visible = false;
+
             lTitre1.Text = "EC"; lTitre2.Text = "contenues dans l'UE"; lTitre3.Text = u.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
-
-            cB_ECActive.Visible = false;
-
+            
             uC_FilArianeDiplome1.filArianeUEApparait(u);
 
             Point loc = uC_Ajout1.Location;
@@ -152,13 +161,15 @@ namespace dotnet.UserControler
 
         public void afficheECSelectionnee(ec e)
         {
+            gBCours.Visible = false;
+            uC_Affichage1.Visible = true;
+            cB_ECActive.Visible = true;
+
             _ecCourant = e;
 
             lTitre1.Text = "Cours"; lTitre2.Text = "proposés dans l'EC"; lTitre3.Text = e.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des cours : ");
-
-            cB_ECActive.Visible = true;
             
             if (_ecCourant.actif == true)
             {
@@ -187,6 +198,23 @@ namespace dotnet.UserControler
                 uC_Affichage1.addElement(new UC_ElementCoursDiplome(this, c));
             }
             uC_Affichage1.updateAffichage();
+        }
+
+        public void afficheCoursSelectionne(cours c)
+        {
+            cB_ECActive.Visible = false;
+            uC_Affichage1.Visible = false;
+            uC_Ajout1.Visible = false;
+            gBCours.Visible = true;
+
+            lTitre1.Text = "Cours "; lTitre2.Text = c.nom + " : "; lTitre3.Text = "";
+            
+            uC_FilArianeDiplome1.filArianeCoursApparait(c);
+            
+            UC_ElementCoursDiplome uc = new UC_ElementCoursDiplome(this, c);
+            uc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            uc.Location = new System.Drawing.Point(6, 22);
+            gBCours.Controls.Add(uc);
         }
 
         private void cB_ECActive_CheckedChanged(object sender, EventArgs e)
@@ -222,6 +250,24 @@ namespace dotnet.UserControler
 
         public override void Actualiser()
         {
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void afficheCoursSelectionneDansAccueil(cours cours)
+        {
+            ec ec = Requetes.obtientECduCours(cours);
+            ue ue = Requetes.obtientUEdelEC(ec);
+            periode periode = Requetes.obtientPeriodedelUE(ue);
+            annee annee = Requetes.obtientAnneedelaPeriode(periode);
+            diplome diplome = Requetes.obtientDiplomedelAnnee(annee);
+
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+            uC_FilArianeDiplome1.filArianeAnneeApparait(annee);
+            uC_FilArianeDiplome1.filArianePeriodeApparait(periode);
+            uC_FilArianeDiplome1.filArianeUEApparait(ue);
+            uC_FilArianeDiplome1.filArianeECApparait(ec);
+            uC_FilArianeDiplome1.filArianeCoursApparait(cours);
+
             uC_FilArianeDiplome1.Actualiser();
         }
     }

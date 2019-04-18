@@ -12,7 +12,7 @@ namespace dotnet.UserControler.FilArianne
 {
     public partial class UC_FilArianeDiplome : UC_FilAriane
     {
-        protected UC_OngletDiplomes _cadre;
+        private UC_OngletDiplomes _cadre;
 
         private int nbOngletsOuverts = 1;
         private diplome _d;
@@ -20,6 +20,7 @@ namespace dotnet.UserControler.FilArianne
         private periode _p;
         private ue _u;
         private ec _e;
+        private cours _c;
         
         public UC_FilArianeDiplome()
         {
@@ -46,6 +47,7 @@ namespace dotnet.UserControler.FilArianne
             lPeriode.Visible = false;
             lUE.Visible = false;
             lEC.Visible = false;
+            lCours.Visible = false;
 
             _cadre.afficheRacine();
         }
@@ -59,6 +61,7 @@ namespace dotnet.UserControler.FilArianne
             lPeriode.Visible = false;
             lUE.Visible = false;
             lEC.Visible = false;
+            lCours.Visible = false;
 
             _cadre.afficheDiplomeSelectionne(_d);
         }
@@ -71,6 +74,7 @@ namespace dotnet.UserControler.FilArianne
             lPeriode.Visible = false;
             lUE.Visible = false;
             lEC.Visible = false;
+            lCours.Visible = false;
 
             _cadre.afficheAnneeSelectionnee(_a);
         }
@@ -82,6 +86,7 @@ namespace dotnet.UserControler.FilArianne
             
             lUE.Visible = false;
             lEC.Visible = false;
+            lCours.Visible = false;
 
             _cadre.affichePeriodeSelectionnee(_p);
         }
@@ -92,6 +97,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lUE);
             
             lEC.Visible = false;
+            lCours.Visible = false;
 
             _cadre.afficheUESelectionnee(_u);
         }
@@ -100,8 +106,18 @@ namespace dotnet.UserControler.FilArianne
         {
             nbOngletsOuverts = 6;
             couleurdeFondBleue(lEC);
+            
+            lCours.Visible = false;
 
             _cadre.afficheECSelectionnee(_e);
+        }
+
+        private void lCours_Click(object sender, EventArgs e)
+        {
+            nbOngletsOuverts = 7;
+            couleurdeFondBleue(lCours);
+
+            _cadre.afficheCoursSelectionne(_c);
         }
 
         public void filArianeDiplomeApparait(diplome d)
@@ -114,7 +130,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lDiplome);
 
             lDiplome.Visible = true;
-            lDiplome.Text = "Diplôme :" + Environment.NewLine + _d.nom.ToString();
+            lDiplome.Text = "Diplôme :" + Environment.NewLine + _d.nom;
         }
 
         public void filArianeAnneeApparait(annee a)
@@ -125,7 +141,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lAnnee);
 
             lAnnee.Visible = true;
-            lAnnee.Text = "Année :" + Environment.NewLine + _a.nom.ToString();
+            lAnnee.Text = "Année :" + Environment.NewLine + _a.nom;
         }
 
         public void filArianePeriodeApparait(periode p)
@@ -136,7 +152,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lPeriode);
 
             lPeriode.Visible = true;
-            lPeriode.Text = "Période :" + Environment.NewLine + _p.nom.ToString();
+            lPeriode.Text = "Période :" + Environment.NewLine + _p.nom;
         }
 
         public void filArianeUEApparait(ue u)
@@ -147,18 +163,29 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lUE);
 
             lUE.Visible = true;
-            lUE.Text = "UE :" + Environment.NewLine + _u.nom.ToString();
+            lUE.Text = "UE :" + Environment.NewLine + _u.nom;
         }
 
-        public void filArianeECApparait(ec c)
+        public void filArianeECApparait(ec e)
         {
             nbOngletsOuverts = 6;
-            _e = c;
+            _e = e;
             couleurdeFondBlanche(lUE);
             couleurdeFondBleue(lEC);
 
             lEC.Visible = true;
-            lEC.Text = "EC :" + Environment.NewLine + _e.nom.ToString();
+            lEC.Text = "EC :" + Environment.NewLine + _e.nom;
+        }
+
+        public void filArianeCoursApparait(cours c)
+        {
+            nbOngletsOuverts = 7;
+            _c = c;
+            couleurdeFondBlanche(lEC);
+            couleurdeFondBleue(lCours);
+
+            lCours.Visible = true;
+            lCours.Text = "Cours :" + Environment.NewLine + _c.nom;
         }
 
         private String retournerALaLigne(String txt)
@@ -183,9 +210,9 @@ namespace dotnet.UserControler.FilArianne
                 case 4: { _cadre.affichePeriodeSelectionnee(_p);  break; }
                 case 5: { _cadre.afficheUESelectionnee(_u); break; }
                 case 6: { _cadre.afficheECSelectionnee(_e); break; }
+                case 7: { _cadre.afficheCoursSelectionne(_c); break; }
                 default:  { break; }
             }
         }
-
     }
 }

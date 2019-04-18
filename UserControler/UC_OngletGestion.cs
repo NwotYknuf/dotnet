@@ -71,10 +71,10 @@ namespace dotnet.UserControler
                     String nomColonne = dataGridView1.Columns[i].HeaderText;
                     String nomLigne = row.Cells[0].Value.ToString();
 
-                    type_cours typC = Database.instance.type_cours.Where(s => s.nom == nomColonne).FirstOrDefault<type_cours>();
-                    categorie cat = Database.instance.categorie.Where(s => s.nom == nomLigne).FirstOrDefault<categorie>();
+                    type_cours typC = Requetes.retrouveTypeDeCoursViaTexte(nomColonne);
+                    categorie cat = Requetes.retrouveCategorieViaTexte(nomLigne);
 
-                    equivalent_td equivalent = Database.instance.equivalent_td.Where(x => x.id_type_cours == typC.id && x.id_categ == cat.id).FirstOrDefault<equivalent_td>();
+                    equivalent_td equivalent = Requetes.obtientEquivalentTD(typC, cat);
                     
                     row.Cells[i].Value = equivalent.ratio;
                 }
@@ -112,10 +112,11 @@ namespace dotnet.UserControler
                 // Enregistre le nombre d'heures dans la classe Categorie :
                 nomLigne = row.Cells[0].Value.ToString();
 
-                categorie categorie = Database.instance.categorie.Where(s => s.nom == nomLigne).FirstOrDefault<categorie>();
+                categorie categorie = Requetes.retrouveCategorieViaTexte(nomLigne);
+
                 categorie.nbrHeureDues = Convert.ToInt32(row.Cells[1].Value);
 
-                Database.instance.categorie.AddOrUpdate(categorie);
+                //Database.instance.categorie.AddOrUpdate(categorie);
 
                 // Enregistre les ratios entre catégories et type de cours dans la classe equivalent_td
                 for (int i = 2; i < dataGridView1.Columns.Count; i++)
@@ -123,8 +124,8 @@ namespace dotnet.UserControler
                     nomColonne = dataGridView1.Columns[i].HeaderText;
                     nomLigne = row.Cells[0].Value.ToString();
 
-                    type_cours typC = Database.instance.type_cours.Where(s => s.nom == nomColonne).FirstOrDefault<type_cours>();
-                    categorie cat = Database.instance.categorie.Where(s => s.nom == nomLigne).FirstOrDefault<categorie>();
+                    type_cours typC = Requetes.retrouveTypeDeCoursViaTexte(nomColonne);
+                    categorie cat = Requetes.retrouveCategorieViaTexte(nomLigne);
 
                     equivalent_td equivalent = new equivalent_td();
                                         
@@ -135,7 +136,8 @@ namespace dotnet.UserControler
                     equivalent.categorie = cat;
                     equivalent.type_cours = typC;
 
-                    Database.instance.equivalent_td.AddOrUpdate(equivalent); //requiert : using System.Data.Entity.Migrations;
+                    // Ajoute ou met à jour
+                    Requetes.ajouterEquivalentTD(equivalent);
                 }
             }
 
@@ -199,7 +201,7 @@ namespace dotnet.UserControler
 
                 // BDD
                 //Requete pour retrouver le type_cours possedant le nom choisi
-                type_cours typeDeCoursARetirer = Database.instance.type_cours.Where(s => s.nom == nom).FirstOrDefault<type_cours>();
+                type_cours typeDeCoursARetirer = Requetes.retrouveTypeDeCoursViaTexte(nom);
 
                 Requetes.retirerTypeDeCours(typeDeCoursARetirer);
             }
@@ -210,7 +212,7 @@ namespace dotnet.UserControler
 
                 // BDD
                 //Requete pour retrouver la categorie possedant le nom choisi
-                categorie catARetirer = Database.instance.categorie.Where(s => s.nom == nom).FirstOrDefault<categorie>();
+                categorie catARetirer = Requetes.retrouveCategorieViaTexte(nom);
 
                 Requetes.retirerCategorie(catARetirer);
             }

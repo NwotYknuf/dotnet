@@ -52,7 +52,7 @@ namespace dotnet.UserControler.Ajout
                 cours.nom = this.tBNom.Text;
                 cours.volume_horraire = Convert.ToInt32(this.tBHoraires.Text);
 
-                type_cours tc = Database.instance.type_cours.Where(s => s.nom == cBType.Text).FirstOrDefault<type_cours>();
+                type_cours tc = Requetes.retrouveTypeDeCoursViaTexte(cBType.Text);
                 cours.type_cours = tc;
                 tc.cours.Add(cours);
 

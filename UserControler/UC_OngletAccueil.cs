@@ -156,5 +156,15 @@ namespace dotnet.UserControler
             pBienvenu.Visible = false;
             timerBienvenu.Stop();
         }
+
+        public void afficheOngletCours(cours c)
+        {
+            _fenetrePrincipale.afficherCoursSelectionne(c);
+        }
+
+        public void afficheOngletPersonnel(personnel p)
+        {
+            _fenetrePrincipale.afficherPersonnelSelectionne(p);
+        }
     }
 }

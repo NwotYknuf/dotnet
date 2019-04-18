@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace dotnet {
     public static class Requetes {
-
-        
-
+           
         // Requêtes spécifiques à un personnel
 
         public static List<cours> coursAttribues(personnel personnel) {
@@ -35,6 +34,34 @@ namespace dotnet {
         {
             return Database.instance.categorie.Where(x => x.id == p.id_categorie).FirstOrDefault<categorie>();
         }
+        
+        // Requêtes spécifiques à une année :
+
+        public static diplome obtientDiplomedelAnnee(annee a)
+        {
+            return Database.instance.diplome.Where(x => x.id == a.id_diplome).FirstOrDefault<diplome>();
+        }
+
+        // Requêtes spécifiques à une période :
+
+        public static annee obtientAnneedelaPeriode(periode p)
+        {
+            return Database.instance.annee.Where(x => x.id == p.id_annee).FirstOrDefault<annee>();
+        }
+
+        // Requêtes spécifiques à une UE :
+
+        public static periode obtientPeriodedelUE(ue u)
+        {
+            return Database.instance.periode.Where(x => x.id == u.id_periode).FirstOrDefault<periode>();
+        }
+
+        // Requêtes spécifiques à une EC :
+
+        public static ue obtientUEdelEC(ec e)
+        {
+            return Database.instance.ue.Where(x => x.id == e.id_ue).FirstOrDefault<ue>();
+        }
 
         // Requêtes spécifiques à un cours :
 
@@ -51,6 +78,25 @@ namespace dotnet {
         public static personnel obtientPersonnelduCours(cours c)
         {
             return Database.instance.personnel.Where(x => x.id == c.personnel.id).FirstOrDefault<personnel>();
+        }
+
+        // Requête spécifiques pour récupérer un Equivalent_TD à partir du type_cours et de la categorie
+
+        public static equivalent_td obtientEquivalentTD(type_cours typC, categorie cat)
+        {
+            return Database.instance.equivalent_td.Where(x => x.id_type_cours == typC.id && x.id_categ == cat.id).FirstOrDefault<equivalent_td>();
+        }
+
+        // Requêtes spécifiques à partir d'un champs texte
+
+        public static type_cours retrouveTypeDeCoursViaTexte(String txt)
+        {
+            return Database.instance.type_cours.Where(s => s.nom == txt).FirstOrDefault<type_cours>();
+        }
+
+        public static categorie retrouveCategorieViaTexte(String txt)
+        {
+            return Database.instance.categorie.Where(s => s.nom == txt).FirstOrDefault<categorie>();
         }
 
         // Requête d'enregistrement
@@ -109,7 +155,7 @@ namespace dotnet {
 
         public static void ajouterEquivalentTD(equivalent_td e)
         {
-            Database.instance.equivalent_td.Add(e);
+            Database.instance.equivalent_td.AddOrUpdate(e);
         }
 
         // Requetes de retrait

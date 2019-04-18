@@ -12,7 +12,7 @@ namespace dotnet.UserControler
 {
     public partial class UC_Onglet : UserControl
     {
-        private FenetrePrincipale _fenetrePrincipale;
+        protected FenetrePrincipale _fenetrePrincipale;
 
         public UC_Onglet()
         {

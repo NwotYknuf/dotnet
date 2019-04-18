@@ -115,6 +115,8 @@
             this.pBAjouterCours.TabIndex = 53;
             this.pBAjouterCours.TabStop = false;
             this.pBAjouterCours.Click += new System.EventHandler(this.pBAjouterCours_Click);
+            this.pBAjouterCours.MouseEnter += new System.EventHandler(this.pBAjouterCours_MouseEnter);
+            this.pBAjouterCours.MouseLeave += new System.EventHandler(this.pBAjouterCours_MouseLeave);
             // 
             // UC_ElementFenCours
             // 

@@ -213,6 +213,8 @@
             this.pBAjouterPersonnel.TabIndex = 63;
             this.pBAjouterPersonnel.TabStop = false;
             this.pBAjouterPersonnel.Click += new System.EventHandler(this.pBAjouterPersonnel_Click);
+            this.pBAjouterPersonnel.MouseEnter += new System.EventHandler(this.pBAjouterPersonnel_MouseEnter);
+            this.pBAjouterPersonnel.MouseLeave += new System.EventHandler(this.pBAjouterPersonnel_MouseLeave);
             // 
             // tBCategorie
             // 

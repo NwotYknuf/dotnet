@@ -114,5 +114,11 @@ namespace dotnet.UserControler.Affichage
             Requetes.enregistreLaBDD();
             _cadre.Actualiser();
         }
+
+        private void panel_DoubleClick(object sender, EventArgs e)
+        {
+            // Afficher les cours de l'EC séléctionné
+            _cadre.afficheCoursSelectionne(_cours);
+        }
     }
 }

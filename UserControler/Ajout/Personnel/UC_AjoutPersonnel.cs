@@ -54,7 +54,7 @@ namespace dotnet.UserControler.Ajout
                 per.adresse = this.tBAdressePost.Text;
                 per.telephone = this.tBTelephone.Text;
 
-                categorie cat = Database.instance.categorie.Where(s => s.nom == cBCategorie.Text).FirstOrDefault<categorie>();
+                categorie cat = Requetes.retrouveCategorieViaTexte(cBCategorie.Text);
                 cat.personnel.Add(per);
 
                 per.categorie = cat;

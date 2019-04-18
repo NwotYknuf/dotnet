@@ -59,10 +59,10 @@ namespace dotnet.Fenetres.Modification
                 _cours.nom = tBNom.Text;
                 _cours.volume_horraire = Convert.ToInt32(tBHoraires.Text);
 
-                type_cours tcActuel = Database.instance.type_cours.Where(s => s.nom == _cours.type_cours.nom).FirstOrDefault<type_cours>();
+                type_cours tcActuel = Requetes.obtientTypeduCours(_cours);
                 tcActuel.cours.Remove(_cours);
 
-                type_cours tcNouveau = Database.instance.type_cours.Where(s => s.nom == cBType.Text).FirstOrDefault<type_cours>();
+                type_cours tcNouveau = Requetes.retrouveTypeDeCoursViaTexte(cBType.Text);
                 _cours.type_cours = tcNouveau;
                 tcNouveau.cours.Add(_cours);
 

@@ -31,36 +31,48 @@ namespace dotnet
             ucRecherche1.attribuerFenetrePrincipale(this);
         }
 
-        private void OngletChange(ToolStripMenuItem menu, UC_Onglet uc)
+        private void ongletChange(ToolStripMenuItem menu, UC_Onglet uc)
         {
             uc.BringToFront();
             uc.Actualiser();
             changerCouleurDeFond(menu);
         }
 
+        public void afficherCoursSelectionne(cours c)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.afficheCoursSelectionneDansAccueil(c);
+        }
+
+        public void afficherPersonnelSelectionne(personnel p)
+        {
+            ongletChange(miPersonnel, ucListePersonnel1);
+            ucListePersonnel1.affichePersonnelSelectionneDansAccueil(p);
+        }
+
         private void miAcceuil_Click(object sender, EventArgs e)
         {
-            OngletChange(miAcceuil, ucAccueil1);
+            ongletChange(miAcceuil, ucAccueil1);
         }
 
         private void miDiplome_Click(object sender, EventArgs e)
         {
-            OngletChange(miDiplome, ucListeDiplome1);
+            ongletChange(miDiplome, ucListeDiplome1);
         }
 
         private void miPersonnel_Click(object sender, EventArgs e)
         {
-            OngletChange(miPersonnel, ucListePersonnel1);
+            ongletChange(miPersonnel, ucListePersonnel1);
         }
 
         private void miGestion_Click(object sender, EventArgs e)
         {
-            OngletChange(miGestion, ucGestion1);
+            ongletChange(miGestion, ucGestion1);
         }
 
         private void miRecherche_Click(object sender, EventArgs e)
         {
-            OngletChange(miRecherche, ucRecherche1);
+            ongletChange(miRecherche, ucRecherche1);
         }
 
         private void changerCouleurDeFond(ToolStripMenuItem ms)
