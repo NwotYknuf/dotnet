@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementCoursPersonnel));
             this.tBEC = new System.Windows.Forms.TextBox();
             this.lEC = new System.Windows.Forms.Label();
             this.tBHoraires = new System.Windows.Forms.TextBox();
@@ -132,7 +131,7 @@
             // 
             // pBRetirer
             // 
-            this.pBRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBRetirer.Image")));
+            this.pBRetirer.Image = global::dotnet.Properties.Resources.retirer_cours;
             this.pBRetirer.InitialImage = null;
             this.pBRetirer.Location = new System.Drawing.Point(829, 25);
             this.pBRetirer.Name = "pBRetirer";

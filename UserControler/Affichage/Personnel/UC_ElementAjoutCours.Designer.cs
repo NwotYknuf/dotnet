@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementAjoutCours));
             this.pBAjouterCours = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pBModifier)).BeginInit();
@@ -63,7 +62,7 @@
             // 
             // pBAjouterCours
             // 
-            this.pBAjouterCours.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterCours.Image")));
+            this.pBAjouterCours.Image = global::dotnet.Properties.Resources.ajouter_cours;
             this.pBAjouterCours.InitialImage = null;
             this.pBAjouterCours.Location = new System.Drawing.Point(431, 3);
             this.pBAjouterCours.Name = "pBAjouterCours";

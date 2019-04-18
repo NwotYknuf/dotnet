@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_FilArianeDiplome));
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lRacine = new System.Windows.Forms.Label();
             this.lDiplome = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             // 
             // lRacine
             // 
-            this.lRacine.Image = ((System.Drawing.Image)(resources.GetObject("lRacine.Image")));
+            this.lRacine.Image = global::dotnet.Properties.Resources.fA_racine_blanc_113x36;
             this.lRacine.Location = new System.Drawing.Point(3, 2);
             this.lRacine.Name = "lRacine";
             this.lRacine.Size = new System.Drawing.Size(113, 36);
@@ -68,7 +67,7 @@
             this.lDiplome.AutoEllipsis = true;
             this.lDiplome.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDiplome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-            this.lDiplome.Image = ((System.Drawing.Image)(resources.GetObject("lDiplome.Image")));
+            this.lDiplome.Image = global::dotnet.Properties.Resources.fA_blanc_113x36;
             this.lDiplome.Location = new System.Drawing.Point(122, 2);
             this.lDiplome.Name = "lDiplome";
             this.lDiplome.Size = new System.Drawing.Size(113, 36);
@@ -83,7 +82,7 @@
             this.lAnnee.AutoEllipsis = true;
             this.lAnnee.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lAnnee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-            this.lAnnee.Image = ((System.Drawing.Image)(resources.GetObject("lAnnee.Image")));
+            this.lAnnee.Image = global::dotnet.Properties.Resources.fA_blanc_113x36;
             this.lAnnee.Location = new System.Drawing.Point(241, 2);
             this.lAnnee.Name = "lAnnee";
             this.lAnnee.Size = new System.Drawing.Size(113, 36);
@@ -98,7 +97,7 @@
             this.lPeriode.AutoEllipsis = true;
             this.lPeriode.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPeriode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-            this.lPeriode.Image = ((System.Drawing.Image)(resources.GetObject("lPeriode.Image")));
+            this.lPeriode.Image = global::dotnet.Properties.Resources.fA_blanc_113x36;
             this.lPeriode.Location = new System.Drawing.Point(360, 2);
             this.lPeriode.Name = "lPeriode";
             this.lPeriode.Size = new System.Drawing.Size(113, 36);
@@ -113,7 +112,7 @@
             this.lUE.AutoEllipsis = true;
             this.lUE.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lUE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-            this.lUE.Image = ((System.Drawing.Image)(resources.GetObject("lUE.Image")));
+            this.lUE.Image = global::dotnet.Properties.Resources.fA_blanc_113x36;
             this.lUE.Location = new System.Drawing.Point(479, 2);
             this.lUE.Name = "lUE";
             this.lUE.Size = new System.Drawing.Size(113, 36);
@@ -128,7 +127,7 @@
             this.lEC.AutoEllipsis = true;
             this.lEC.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lEC.ForeColor = System.Drawing.Color.White;
-            this.lEC.Image = ((System.Drawing.Image)(resources.GetObject("lEC.Image")));
+            this.lEC.Image = global::dotnet.Properties.Resources.fA_bleu_113x36;
             this.lEC.Location = new System.Drawing.Point(598, 2);
             this.lEC.Name = "lEC";
             this.lEC.Size = new System.Drawing.Size(113, 36);

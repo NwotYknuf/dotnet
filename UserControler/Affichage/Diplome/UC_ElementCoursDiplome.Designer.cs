@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementCoursDiplome));
             this.lTypeCours = new System.Windows.Forms.Label();
             this.pBAjouterRetirer = new System.Windows.Forms.PictureBox();
             this.tBPersonnel = new System.Windows.Forms.TextBox();
@@ -89,7 +88,7 @@
             // 
             // pBAjouterRetirer
             // 
-            this.pBAjouterRetirer.Image = ((System.Drawing.Image)(resources.GetObject("pBAjouterRetirer.Image")));
+            this.pBAjouterRetirer.Image = global::dotnet.Properties.Resources.ajouter_personnel;
             this.pBAjouterRetirer.InitialImage = null;
             this.pBAjouterRetirer.Location = new System.Drawing.Point(828, 26);
             this.pBAjouterRetirer.Name = "pBAjouterRetirer";

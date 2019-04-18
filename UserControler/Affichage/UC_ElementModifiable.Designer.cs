@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElementModifiable));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pBModifier = new System.Windows.Forms.PictureBox();
             this.pBSupprimer = new System.Windows.Forms.PictureBox();
@@ -46,11 +45,11 @@
             // 
             // pBModifier
             // 
-            this.pBModifier.Image = ((System.Drawing.Image)(resources.GetObject("pBModifier.Image")));
+            this.pBModifier.Image = global::dotnet.Properties.Resources.modifier;
             this.pBModifier.InitialImage = null;
-            this.pBModifier.Location = new System.Drawing.Point(857, 3);
+            this.pBModifier.Location = new System.Drawing.Point(856, 2);
             this.pBModifier.Name = "pBModifier";
-            this.pBModifier.Size = new System.Drawing.Size(37, 34);
+            this.pBModifier.Size = new System.Drawing.Size(37, 37);
             this.pBModifier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBModifier.TabIndex = 3;
             this.pBModifier.TabStop = false;
@@ -59,11 +58,11 @@
             // 
             // pBSupprimer
             // 
-            this.pBSupprimer.Image = ((System.Drawing.Image)(resources.GetObject("pBSupprimer.Image")));
+            this.pBSupprimer.Image = global::dotnet.Properties.Resources.supprimer;
             this.pBSupprimer.InitialImage = null;
-            this.pBSupprimer.Location = new System.Drawing.Point(900, 3);
+            this.pBSupprimer.Location = new System.Drawing.Point(895, 2);
             this.pBSupprimer.Name = "pBSupprimer";
-            this.pBSupprimer.Size = new System.Drawing.Size(33, 34);
+            this.pBSupprimer.Size = new System.Drawing.Size(37, 37);
             this.pBSupprimer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBSupprimer.TabIndex = 2;
             this.pBSupprimer.TabStop = false;

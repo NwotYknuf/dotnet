@@ -44,7 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 129);
             this.Name = "FenetreSupprimerEC";
-            this.Text = "FenetreSupprimerEC";
+            this.Text = "Fenêtre de suppression d\'une EC";
             this.ResumeLayout(false);
             this.PerformLayout();
 

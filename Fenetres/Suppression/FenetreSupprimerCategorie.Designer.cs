@@ -44,7 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 129);
             this.Name = "FenetreSupprimerCategorie";
-            this.Text = "FenetreSupprimerCategorie";
+            this.Text = "Fenêtre de suppression d\'une catégorie";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Properties;
 
 namespace dotnet.UserControler.FilArianne
 {
-    public partial class UC_FilArianePersonnel : UserControl
+    public partial class UC_FilArianePersonnel : UC_FilAriane
     {
         protected UC_OngletPersonnels _cadre;
         private int nbOngletsOuverts = 1;
@@ -23,45 +24,20 @@ namespace dotnet.UserControler.FilArianne
 
         private void UC_FilArianePersonnel_Load(object sender, EventArgs e)
         {
-
+            couleurdeFondRacineBleue(lRacine);
         }
 
         public void setOngletPersonnel(UC_OngletPersonnels cadre)
         {
             this._cadre = cadre;
         }
-
-        private void couleurdeFondBleue(Label l)
-        {
-            try
-            {
-                l.Image = Image.FromFile(@"..\..\Images\FilAriane\FilBleu.png");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            l.ForeColor = System.Drawing.Color.White;
-        }
-
-        private void couleurdeFondBlanche(Label l)
-        {
-            try
-            { 
-                l.Image = Image.FromFile(@"..\..\Images\FilAriane\FilBlanc.png"); ;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            l.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-        }
+               
 
         private void lRacine_Click(object sender, EventArgs e)
         {
             nbOngletsOuverts = 1;
-            //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");;
-            //lRacine.ForeColor = System.Drawing.Color.White;
+            couleurdeFondRacineBleue(lRacine);
+
             lPersonnel.Visible = false;
 
             _cadre.afficheRacine();
@@ -69,15 +45,19 @@ namespace dotnet.UserControler.FilArianne
 
         private void lPersonnel_Click(object sender, EventArgs e)
         {
+            //Actualisation
             nbOngletsOuverts = 2;
-            //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
-            //lRacine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
+            couleurdeFondBleue(lPersonnel);
+
+            _cadre.affichePersonnelSelectionne(_p);
         }
 
         public void filArianePersonnelApparait(personnel p)
         {
             nbOngletsOuverts = 2;
             _p = p;
+
+            couleurdeFondRacineBlanche(lRacine);
             couleurdeFondBleue(lPersonnel);
 
             lPersonnel.Visible = true;

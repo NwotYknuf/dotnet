@@ -38,13 +38,13 @@
             // 
             this.bAnnuler.Click += new System.EventHandler(this.bAnnuler_Click);
             // 
-            // FenetreSupprimerCours
+            // FenetreSupprimerCoursD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 129);
-            this.Name = "FenetreSupprimerCours";
-            this.Text = "FenetreSupprimerCours";
+            this.Name = "FenetreSupprimerCoursD";
+            this.Text = "Fenêtre de suppression d\'un cours";
             this.ResumeLayout(false);
             this.PerformLayout();
 

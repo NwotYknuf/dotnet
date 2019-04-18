@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.FilArianne
 {
-    public partial class UC_FilArianeDiplome : UserControl
+    public partial class UC_FilArianeDiplome : UC_FilAriane
     {
         protected UC_OngletDiplomes _cadre;
 
@@ -28,7 +28,7 @@ namespace dotnet.UserControler.FilArianne
         
         private void UC_FilArianeDiplome_Load(object sender, EventArgs e)
         {
-
+            couleurdeFondRacineBleue(lRacine);
         }
 
         public void setOngletDiplome(UC_OngletDiplomes cadre)
@@ -36,37 +36,11 @@ namespace dotnet.UserControler.FilArianne
             this._cadre = cadre;
         }
 
-        private void couleurdeFondBleue(Label l)
-        {
-            try
-            {
-                l.Image = Image.FromFile(@"..\..\Images\FilAriane\FilBleu.png");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            l.ForeColor = System.Drawing.Color.White;
-        }
-
-        private void couleurdeFondBlanche(Label l)
-        {
-            try
-            {
-                l.Image = Image.FromFile(@"..\..\Images\FilAriane\FilBlanc.png"); ;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            l.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
-        }
-
         private void lRacine_Click(object sender, EventArgs e)
         {
             nbOngletsOuverts = 1;
-            //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBleu.png");;
-            //lRacine.ForeColor = System.Drawing.Color.White;
+            couleurdeFondRacineBleue(lRacine);
+
             lDiplome.Visible = false;
             lAnnee.Visible = false;
             lPeriode.Visible = false;
@@ -79,8 +53,6 @@ namespace dotnet.UserControler.FilArianne
         private void lDiplome_Click(object sender, EventArgs e)
         {
             nbOngletsOuverts = 2;
-            //lRacine.Image = Image.FromFile(@"..\..\Images\FilAriane\FilDebutBlanc.png");
-            //lRacine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(185)))), ((int)(((byte)(213)))));
             couleurdeFondBleue(lDiplome);
 
             lAnnee.Visible = false;
@@ -136,6 +108,8 @@ namespace dotnet.UserControler.FilArianne
         {
             nbOngletsOuverts = 2;
             _d = d;
+
+            couleurdeFondRacineBlanche(lRacine);
             couleurdeFondBleue(lDiplome);
 
             lDiplome.Visible = true;

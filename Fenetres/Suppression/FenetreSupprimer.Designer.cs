@@ -37,7 +37,7 @@
             // 
             // bValider
             // 
-            this.bValider.Location = new System.Drawing.Point(240, 84);
+            this.bValider.Location = new System.Drawing.Point(240, 79);
             this.bValider.Name = "bValider";
             this.bValider.Size = new System.Drawing.Size(75, 23);
             this.bValider.TabIndex = 4;
@@ -47,7 +47,7 @@
             // lTitre
             // 
             this.lTitre.AutoSize = true;
-            this.lTitre.Location = new System.Drawing.Point(51, 23);
+            this.lTitre.Location = new System.Drawing.Point(51, 29);
             this.lTitre.Name = "lTitre";
             this.lTitre.Size = new System.Drawing.Size(258, 13);
             this.lTitre.TabIndex = 3;
@@ -55,7 +55,7 @@
             // 
             // bAnnuler
             // 
-            this.bAnnuler.Location = new System.Drawing.Point(54, 84);
+            this.bAnnuler.Location = new System.Drawing.Point(54, 79);
             this.bAnnuler.Name = "bAnnuler";
             this.bAnnuler.Size = new System.Drawing.Size(75, 23);
             this.bAnnuler.TabIndex = 5;
@@ -66,7 +66,7 @@
             // 
             this.lNomElement.AutoSize = true;
             this.lNomElement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(181)))), ((int)(((byte)(0)))));
-            this.lNomElement.Location = new System.Drawing.Point(142, 53);
+            this.lNomElement.Location = new System.Drawing.Point(142, 55);
             this.lNomElement.Name = "lNomElement";
             this.lNomElement.Size = new System.Drawing.Size(73, 13);
             this.lNomElement.TabIndex = 6;

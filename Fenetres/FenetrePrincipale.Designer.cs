@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FenetrePrincipale));
             this.miAcceuil = new System.Windows.Forms.ToolStripMenuItem();
             this.miDiplome = new System.Windows.Forms.ToolStripMenuItem();
             this.miPersonnel = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +45,7 @@
             // miAcceuil
             // 
             this.miAcceuil.ForeColor = System.Drawing.Color.White;
-            this.miAcceuil.Image = ((System.Drawing.Image)(resources.GetObject("miAcceuil.Image")));
+            this.miAcceuil.Image = global::dotnet.Properties.Resources.accueil_60_60;
             this.miAcceuil.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miAcceuil.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miAcceuil.Name = "miAcceuil";
@@ -58,7 +57,7 @@
             // miDiplome
             // 
             this.miDiplome.ForeColor = System.Drawing.Color.White;
-            this.miDiplome.Image = ((System.Drawing.Image)(resources.GetObject("miDiplome.Image")));
+            this.miDiplome.Image = global::dotnet.Properties.Resources.diplome_60_60;
             this.miDiplome.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miDiplome.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miDiplome.Name = "miDiplome";
@@ -70,7 +69,7 @@
             // miPersonnel
             // 
             this.miPersonnel.ForeColor = System.Drawing.Color.White;
-            this.miPersonnel.Image = ((System.Drawing.Image)(resources.GetObject("miPersonnel.Image")));
+            this.miPersonnel.Image = global::dotnet.Properties.Resources.personnel_60_60;
             this.miPersonnel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miPersonnel.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miPersonnel.Name = "miPersonnel";
@@ -82,7 +81,7 @@
             // miGestion
             // 
             this.miGestion.ForeColor = System.Drawing.Color.White;
-            this.miGestion.Image = ((System.Drawing.Image)(resources.GetObject("miGestion.Image")));
+            this.miGestion.Image = global::dotnet.Properties.Resources.gestion_60_60;
             this.miGestion.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miGestion.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miGestion.Name = "miGestion";
@@ -114,7 +113,7 @@
             // miRecherche
             // 
             this.miRecherche.ForeColor = System.Drawing.Color.White;
-            this.miRecherche.Image = ((System.Drawing.Image)(resources.GetObject("miRecherche.Image")));
+            this.miRecherche.Image = global::dotnet.Properties.Resources.loupe_60_60;
             this.miRecherche.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.miRecherche.Margin = new System.Windows.Forms.Padding(0, 25, 0, 25);
             this.miRecherche.Name = "miRecherche";

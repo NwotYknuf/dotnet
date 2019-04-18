@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dotnet.Fenetres;
 using dotnet.Fenetres.Suppression;
+using dotnet.Properties;
 
 namespace dotnet.UserControler.Affichage
 {
@@ -46,7 +47,8 @@ namespace dotnet.UserControler.Affichage
         {
             try
             {
-                pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
+                pBAjouterRetirer.Image = Resources.ajouter_personnel;
+                //pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\ajouter_personnel.png");
             }
             catch (Exception e)
             {
@@ -58,7 +60,8 @@ namespace dotnet.UserControler.Affichage
         {
             try
             {
-                pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_personnel.png");
+                pBAjouterRetirer.Image = Resources.retirer_personnel;
+                //pBAjouterRetirer.Image = Image.FromFile(@"..\..\Images\Icones\retirer_personnel.png");
             }
             catch (Exception e)
             {

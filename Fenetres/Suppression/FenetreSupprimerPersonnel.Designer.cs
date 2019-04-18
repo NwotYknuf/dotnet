@@ -44,7 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 129);
             this.Name = "FenetreSupprimerPersonnel";
-            this.Text = "FenetreSupprimerPersonnel";
+            this.Text = "Fenêtre de suppression d\'un personnel";
             this.ResumeLayout(false);
             this.PerformLayout();
 
