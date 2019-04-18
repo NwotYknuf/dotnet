@@ -10,15 +10,15 @@ using System.Windows.Forms;
 using dotnet.UserControler.Affichage;
 using dotnet.UserControler.Affichage.Accueil;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
-    public partial class UC_OngletAccueil : UserControl
+    public partial class UC_OngletAccueil : UC_Onglet
     {
         public UC_OngletAccueil()
         {
             InitializeComponent();
         }
-
+        
         private void UC_OngletAccueil_Load(object sender, EventArgs e)
         {
             pBienvenu.BringToFront();
@@ -80,7 +80,7 @@ namespace dotnet
             uc.updateAffichage();
         }
 
-        public void Actualiser()
+        public override void Actualiser()
         {
             initialisePersonnels(uC_AffPersonnel);
             initialiseCours(uC_AffCours);

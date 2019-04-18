@@ -61,7 +61,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lPersonnel);
 
             lPersonnel.Visible = true;
-            lPersonnel.Text = _p.nom.ToString();
+            lPersonnel.Text = "Personnel :" + Environment.NewLine + _p.nom.ToString();
         }
 
         public void Actualiser()

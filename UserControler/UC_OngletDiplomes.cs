@@ -13,9 +13,11 @@ using dotnet.UserControler.Affichage;
 using System.Data.Entity.Migrations;
 using dotnet.Fenetres.Assignation;
 
-namespace dotnet {
-    public partial class UC_OngletDiplomes : UserControl {
-
+namespace dotnet.UserControler
+{
+    public partial class UC_OngletDiplomes : UC_Onglet
+    {
+        
         private ec _ecCourant;
 
         public UC_OngletDiplomes() {
@@ -27,7 +29,7 @@ namespace dotnet {
             uC_FilArianeDiplome1.setOngletDiplome(this);
             afficheRacine();
         }
-        
+
         public void afficheRacine() {
             //TODO : Remplacer cette section par un truc plus propre
             lTitre1.Text = "Diplômes"; lTitre2.Text = "proposés à l'"; lTitre3.Text = "Université UFR MIM de Metz : ";
@@ -218,7 +220,7 @@ namespace dotnet {
             new FenetreRetraitPersonnel(this, c).Show();
         }
 
-        public void Actualiser()
+        public override void Actualiser()
         {
             uC_FilArianeDiplome1.Actualiser();
         }

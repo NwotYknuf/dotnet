@@ -2,7 +2,7 @@
 using dotnet.UserControler.Affichage;
 using dotnet.UserControler.FilArianne;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
     partial class UC_OngletDiplomes
     {

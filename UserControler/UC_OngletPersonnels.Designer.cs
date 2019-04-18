@@ -2,7 +2,7 @@
 using dotnet.UserControler.Ajout;
 using dotnet.UserControler.FilArianne;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
     partial class UC_OngletPersonnels
     {

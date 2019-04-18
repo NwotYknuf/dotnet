@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using dotnet.Fenetres;
 using System.Data.Entity.Migrations;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
-    public partial class UC_OngletGestion : UserControl
+    public partial class UC_OngletGestion : UC_Onglet
     {
         public UC_OngletGestion()
         {
@@ -34,7 +34,7 @@ namespace dotnet
             
             pBEnregistrer.Visible = false;
         }
-
+        
         public DataGridView getDataGridView1()
         {
             return dataGridView1;
@@ -219,7 +219,7 @@ namespace dotnet
             Requetes.enregistreLaBDD();
         }
 
-        public void Actualiser()
+        public override void Actualiser()
         {
             this.Update();
         }

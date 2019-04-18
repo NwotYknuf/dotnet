@@ -12,9 +12,9 @@ using dotnet.UserControler.Affichage.Personnel;
 using dotnet.Fenetres;
 using dotnet.Fenetres.Assignation;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
-    public partial class UC_OngletPersonnels : UserControl
+    public partial class UC_OngletPersonnels : UC_Onglet
     {
         public UC_OngletPersonnels()
         {
@@ -89,7 +89,7 @@ namespace dotnet
             new FenetreRetraitCours(this, p, c).Show();
         }
 
-        public void Actualiser()
+        public override void Actualiser()
         {
             uC_FilArianePersonnel1.Actualiser();
         }

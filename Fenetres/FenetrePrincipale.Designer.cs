@@ -1,4 +1,6 @@
-﻿namespace dotnet
+﻿using dotnet.UserControler;
+
+namespace dotnet
 {
     partial class FenetrePrincipale
     {
@@ -34,11 +36,11 @@
             this.miGestion = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.miRecherche = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucRecherche1 = new dotnet.UC_OngletRecherche();
-            this.ucGestion1 = new dotnet.UC_OngletGestion();
-            this.ucListePersonnel1 = new dotnet.UC_OngletPersonnels();
-            this.ucListeDiplome1 = new dotnet.UC_OngletDiplomes();
-            this.ucAccueil1 = new dotnet.UC_OngletAccueil();
+            this.ucRecherche1 = new dotnet.UserControler.UC_OngletRecherche();
+            this.ucGestion1 = new dotnet.UserControler.UC_OngletGestion();
+            this.ucListePersonnel1 = new dotnet.UserControler.UC_OngletPersonnels();
+            this.ucListeDiplome1 = new dotnet.UserControler.UC_OngletDiplomes();
+            this.ucAccueil1 = new dotnet.UserControler.UC_OngletAccueil();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 

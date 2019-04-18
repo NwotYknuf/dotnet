@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using dotnet.UserControler.Affichage;
 
-namespace dotnet
+namespace dotnet.UserControler
 {
-    public partial class UC_OngletRecherche : UserControl
+    public partial class UC_OngletRecherche : UC_Onglet
     {
         public UC_OngletRecherche()
         {
@@ -24,7 +24,6 @@ namespace dotnet
             uC_Affichage1.setGroupBoxTiTre("Résultats de la recherche : ");
             cBCritere.SelectedIndex = 0;
         }
-
         private void bLancerRech_Click(object sender, EventArgs e)
         {
             if((Utilitaires.conditionsRespectees(tbRecherche.Text.Trim(), true, true, true, false, 2, 100)) && 
@@ -89,7 +88,7 @@ namespace dotnet
             }
         }
 
-        public void Actualiser()
+        public override void Actualiser()
         {
             this.Update();
         }

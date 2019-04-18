@@ -1,4 +1,4 @@
-﻿namespace dotnet
+﻿namespace dotnet.UserControler
 {
     partial class UC_OngletAccueil
     {

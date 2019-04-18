@@ -108,12 +108,13 @@ namespace dotnet.UserControler.FilArianne
         {
             nbOngletsOuverts = 2;
             _d = d;
+            
 
             couleurdeFondRacineBlanche(lRacine);
             couleurdeFondBleue(lDiplome);
 
             lDiplome.Visible = true;
-            lDiplome.Text = _d.nom.ToString();
+            lDiplome.Text = "Diplôme :" + Environment.NewLine + _d.nom.ToString();
         }
 
         public void filArianeAnneeApparait(annee a)
@@ -124,7 +125,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lAnnee);
 
             lAnnee.Visible = true;
-            lAnnee.Text = _a.nom.ToString();
+            lAnnee.Text = "Année :" + Environment.NewLine + _a.nom.ToString();
         }
 
         public void filArianePeriodeApparait(periode p)
@@ -135,7 +136,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lPeriode);
 
             lPeriode.Visible = true;
-            lPeriode.Text = _p.nom.ToString();
+            lPeriode.Text = "Période :" + Environment.NewLine + _p.nom.ToString();
         }
 
         public void filArianeUEApparait(ue u)
@@ -146,7 +147,7 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lUE);
 
             lUE.Visible = true;
-            lUE.Text = _u.nom.ToString();
+            lUE.Text = "UE :" + Environment.NewLine + _u.nom.ToString();
         }
 
         public void filArianeECApparait(ec c)
@@ -157,7 +158,19 @@ namespace dotnet.UserControler.FilArianne
             couleurdeFondBleue(lEC);
 
             lEC.Visible = true;
-            lEC.Text = _e.nom.ToString();
+            lEC.Text = "EC :" + Environment.NewLine + _e.nom.ToString();
+        }
+
+        private String retournerALaLigne(String txt)
+        {
+            if (txt.Contains(" "))
+            {
+                String[] data = txt.Split(' ');
+                txt = data[0] + Environment.NewLine + data[1];
+
+                return txt;
+            }
+            return txt;
         }
 
         public void Actualiser()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dotnet.UserControler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,6 @@ namespace dotnet
         public FenetrePrincipale()
         {
             InitializeComponent();
-
             initialisation();
         }
 
@@ -23,41 +23,44 @@ namespace dotnet
         {
             ucAccueil1.BringToFront();
             changerCouleurDeFond(miAcceuil);
+
+            ucAccueil1.attribuerFenetrePrincipale(this);
+            ucListeDiplome1.attribuerFenetrePrincipale(this);
+            ucListePersonnel1.attribuerFenetrePrincipale(this);
+            ucGestion1.attribuerFenetrePrincipale(this);
+            ucRecherche1.attribuerFenetrePrincipale(this);
+        }
+
+        private void OngletChange(ToolStripMenuItem menu, UC_Onglet uc)
+        {
+            uc.BringToFront();
+            uc.Actualiser();
+            changerCouleurDeFond(menu);
         }
 
         private void miAcceuil_Click(object sender, EventArgs e)
         {
-            ucAccueil1.BringToFront();
-            ucAccueil1.Actualiser();
-            changerCouleurDeFond(miAcceuil);
+            OngletChange(miAcceuil, ucAccueil1);
         }
 
         private void miDiplome_Click(object sender, EventArgs e)
         {
-            ucListeDiplome1.BringToFront();
-            ucListeDiplome1.Actualiser();
-            changerCouleurDeFond(miDiplome);
+            OngletChange(miDiplome, ucListeDiplome1);
         }
 
         private void miPersonnel_Click(object sender, EventArgs e)
         {
-            ucListePersonnel1.BringToFront();
-            ucListePersonnel1.Actualiser();
-            changerCouleurDeFond(miPersonnel);
+            OngletChange(miPersonnel, ucListePersonnel1);
         }
 
         private void miGestion_Click(object sender, EventArgs e)
         {
-            ucGestion1.BringToFront();
-            ucGestion1.Actualiser();
-            changerCouleurDeFond(miGestion);
+            OngletChange(miGestion, ucGestion1);
         }
 
         private void miRecherche_Click(object sender, EventArgs e)
         {
-            ucRecherche1.BringToFront();
-            ucRecherche1.Actualiser();
-            changerCouleurDeFond(miRecherche);
+            OngletChange(miRecherche, ucRecherche1);
         }
 
         private void changerCouleurDeFond(ToolStripMenuItem ms)
