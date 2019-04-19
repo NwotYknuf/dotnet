@@ -88,6 +88,28 @@ namespace dotnet
                 return false;
         }
 
+        public static bool conditionsRespecteesNombre(String champsAControler)
+        {
+            Regex monRegex = new Regex(@"^[0-9]+$"); // Chiffres
+
+            if (monRegex.IsMatch(champsAControler))
+                return true;
+            else
+                return false;
+        }
+
+        public static bool conditionsRespecteesNombreDecimaux(String champsAControler)
+        {
+            Regex monRegex = new Regex(@"^[0-9]+$"); // Chiffres
+            Regex monRegex2 = new Regex(@"^([0-9]+)[,\.]{1}([0-9]+)$"); // Chiffres autour d'une virgule ou d'un point
+            Regex monRegex3 = new Regex(@"^([0-9]+)\/{1}([0-9]+)$"); // Chiffres autour d'un slash
+
+            if ( (monRegex.IsMatch(champsAControler)) || (monRegex2.IsMatch(champsAControler)) || (monRegex3.IsMatch(champsAControler)) )
+                return true;
+            else
+                return false;
+        }
+
         public static Color couleurBleuTurquoise()
         {
             return Color.FromArgb(60, 185, 213);

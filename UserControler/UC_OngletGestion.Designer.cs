@@ -45,6 +45,7 @@
             this.pBRetraitLigne = new System.Windows.Forms.PictureBox();
             this.pBRetraitColonne = new System.Windows.Forms.PictureBox();
             this.pBEnregistrer = new System.Windows.Forms.PictureBox();
+            this.lErreur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flpTitre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAjoutLigne)).BeginInit();
@@ -211,10 +212,24 @@
             this.pBEnregistrer.MouseEnter += new System.EventHandler(this.pBEnregistrer_MouseEnter);
             this.pBEnregistrer.MouseLeave += new System.EventHandler(this.pBEnregistrer_MouseLeave);
             // 
+            // lErreur
+            // 
+            this.lErreur.AutoSize = true;
+            this.lErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lErreur.ForeColor = System.Drawing.Color.Red;
+            this.lErreur.Location = new System.Drawing.Point(1006, 641);
+            this.lErreur.Name = "lErreur";
+            this.lErreur.Size = new System.Drawing.Size(88, 13);
+            this.lErreur.TabIndex = 29;
+            this.lErreur.Text = "Erreur, réessayez";
+            this.lErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lErreur.Visible = false;
+            // 
             // UC_OngletGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lErreur);
             this.Controls.Add(this.pBEnregistrer);
             this.Controls.Add(this.pBRetraitColonne);
             this.Controls.Add(this.pBRetraitLigne);
@@ -233,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBRetraitColonne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEnregistrer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -249,5 +265,6 @@
         protected System.Windows.Forms.PictureBox pBEnregistrer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label lErreur;
     }
 }

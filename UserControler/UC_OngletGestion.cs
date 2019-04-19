@@ -22,24 +22,24 @@ namespace dotnet.UserControler
         private void UC_OngletGestion_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns[0].ReadOnly = true;
-            
+
             toolTip1.SetToolTip(this.pBAjoutLigne, "Ajouter une catégorie (ligne)");
             toolTip1.SetToolTip(this.pBAjoutColonne, "Ajouter un type de cours (colonne)");
             toolTip1.SetToolTip(this.pBRetraitLigne, "Retirer une catégorie (ligne)");
             toolTip1.SetToolTip(this.pBRetraitColonne, "Retirer un type de cours (colonne)");
             toolTip1.SetToolTip(this.pBEnregistrer, "Enregistrer les modifications du tableau");
-                        
+
             initialiserTableau();
             initialiserValeurs();
-            
+
             pBEnregistrer.Visible = false;
         }
-        
+
         public DataGridView getDataGridView1()
         {
             return dataGridView1;
         }
-        
+
         private void initialiserTableau()
         {
             var categories = Database.instance.categorie;
@@ -75,9 +75,23 @@ namespace dotnet.UserControler
                     categorie cat = Requetes.retrouveCategorieViaTexte(nomLigne);
 
                     equivalent_td equivalent = Requetes.obtientEquivalentTD(typC, cat);
-                    
+
                     row.Cells[i].Value = equivalent.ratio;
                 }
+            }
+        }
+
+        private void viderTableau()
+        {
+            int nbLigne = (dataGridView1.Rows.Count - 1);
+            for (int i = nbLigne; i >= 0; i--)
+            {
+                    dataGridView1.Rows.RemoveAt(i);
+            }
+            int nbColonne = (dataGridView1.Columns.Count-1);
+            for (int i = nbColonne; i >= 2; i--)
+            {
+                dataGridView1.Columns.RemoveAt(i);
             }
         }
 
@@ -103,49 +117,89 @@ namespace dotnet.UserControler
 
         private void pBEnregistrer_Click(object sender, EventArgs e)
         {
-            //Enregistrer dans les tables les modifications et / ou ajouts
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            if (remplieDeChiffres())
             {
-                String nomColonne, nomLigne;
+                lErreur.Visible = false;
 
-                // Enregistre le nombre d'heures dans la classe Categorie :
-                nomLigne = row.Cells[0].Value.ToString();
+                //Enregistrer dans les tables les modifications et / ou ajouts
 
-                categorie categorie = Requetes.retrouveCategorieViaTexte(nomLigne);
-
-                categorie.nbrHeureDues = Convert.ToInt32(row.Cells[1].Value);
-
-                //Database.instance.categorie.AddOrUpdate(categorie);
-
-                // Enregistre les ratios entre catégories et type de cours dans la classe equivalent_td
-                for (int i = 2; i < dataGridView1.Columns.Count; i++)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    nomColonne = dataGridView1.Columns[i].HeaderText;
+                    String nomColonne, nomLigne;
+
+                    // Enregistre le nombre d'heures dans la classe Categorie :
                     nomLigne = row.Cells[0].Value.ToString();
 
-                    type_cours typC = Requetes.retrouveTypeDeCoursViaTexte(nomColonne);
-                    categorie cat = Requetes.retrouveCategorieViaTexte(nomLigne);
+                    categorie categorie = Requetes.retrouveCategorieViaTexte(nomLigne);
 
-                    equivalent_td equivalent = new equivalent_td();
-                                        
-                    equivalent.ratio = Convert.ToDouble(row.Cells[i].Value);
-                    equivalent.id_categ = cat.id;
-                    equivalent.id_type_cours = typC.id;
+                    categorie.nbrHeureDues = Convert.ToInt32(row.Cells[1].Value);
 
-                    equivalent.categorie = cat;
-                    equivalent.type_cours = typC;
+                    // Enregistre les ratios entre catégories et type de cours dans la classe equivalent_td
+                    for (int i = 2; i < dataGridView1.Columns.Count; i++)
+                    {
+                        nomColonne = dataGridView1.Columns[i].HeaderText;
+                        nomLigne = row.Cells[0].Value.ToString();
 
-                    // Ajoute ou met à jour
-                    Requetes.ajouterEquivalentTD(equivalent);
+                        type_cours typC = Requetes.retrouveTypeDeCoursViaTexte(nomColonne);
+                        categorie cat = Requetes.retrouveCategorieViaTexte(nomLigne);
+
+                        equivalent_td equivalent = new equivalent_td();
+
+                        if (row.Cells[i].Value.ToString().Contains('.')) // Format décimal avec un point comme virgule (a.aaaa)
+                            equivalent.ratio = Math.Round(Convert.ToDouble(row.Cells[i].Value.ToString().Replace('.', ',')), 6);
+
+                        else if (row.Cells[i].Value.ToString().Contains('/')) // Format décimal sous forme de fraction (a/b)
+                        {
+                            String[] data = row.Cells[i].Value.ToString().Split('/');
+                            equivalent.ratio = Math.Round((Convert.ToDouble(data[0]) / Convert.ToDouble(data[1])), 6);
+                        }
+
+                        else // Format décimal classique avec une virgule (a,aaaa)
+                            equivalent.ratio = Math.Round(Convert.ToDouble(row.Cells[i].Value), 6);
+
+                        equivalent.id_categ = cat.id;
+                        equivalent.id_type_cours = typC.id;
+
+                        equivalent.categorie = cat;
+                        equivalent.type_cours = typC;
+
+                        // Ajoute ou met à jour
+                        Requetes.ajouterEquivalentTD(equivalent);
+                    }
                 }
+
+                // Sauvegarde les modifications
+                Requetes.enregistreLaBDD();
+
+                MessageBox.Show("Les informations ont bien été mises à jour.");
+                Actualiser();
+                pBEnregistrer.Visible = false;
             }
-
-            // Sauvegarde les modifications
-            Requetes.enregistreLaBDD();
-
-            MessageBox.Show("Les informations ont bien été mises à jour.");
-            pBEnregistrer.Visible = false;
+            else
+            {
+                lErreur.Visible = true;
+            }
+        }
+        
+        private bool remplieDeChiffres()
+        {
+            bool remplieDeChiffres = false;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (Utilitaires.conditionsRespecteesNombre(row.Cells[1].Value.ToString()))
+                {
+                    for (int i = 2; i < dataGridView1.Columns.Count; i++)
+                    {
+                        if (Utilitaires.conditionsRespecteesNombreDecimaux(row.Cells[i].Value.ToString()))
+                            remplieDeChiffres = true;
+                        else
+                            return false;
+                    }
+                }
+                else
+                    return false;
+            }
+            return remplieDeChiffres;
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -223,7 +277,9 @@ namespace dotnet.UserControler
 
         public override void Actualiser()
         {
-            this.Update();
+            viderTableau();
+            initialiserTableau();
+            initialiserValeurs();
         }
 
         private void pBAjoutColonne_MouseEnter(object sender, EventArgs e)
