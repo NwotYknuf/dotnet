@@ -117,10 +117,24 @@ namespace dotnet.UserControler
 
         private void pBEnregistrer_Click(object sender, EventArgs e)
         {
+
             if (remplieDeChiffres())
             {
                 lErreur.Visible = false;
 
+                enregistrer();
+
+                MessageBox.Show("Les informations ont bien été mises à jour.");
+                pBEnregistrer.Visible = false;
+            }
+            else
+            {
+                lErreur.Visible = true;
+            }
+        }
+
+        private void enregistrer()
+        {
                 //Enregistrer dans les tables les modifications et / ou ajouts
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -170,15 +184,7 @@ namespace dotnet.UserControler
 
                 // Sauvegarde les modifications
                 Requetes.enregistreLaBDD();
-
-                MessageBox.Show("Les informations ont bien été mises à jour.");
-                Actualiser();
-                pBEnregistrer.Visible = false;
-            }
-            else
-            {
-                lErreur.Visible = true;
-            }
+                Actualiser();            
         }
         
         private bool remplieDeChiffres()
@@ -244,6 +250,8 @@ namespace dotnet.UserControler
 
             // Sauvegarde les modifications
             Requetes.enregistreLaBDD();
+
+            enregistrer();
         }
 
         public void retrait(String element, String nom, int index)
@@ -273,6 +281,8 @@ namespace dotnet.UserControler
 
             // Sauvegarde les modifications
             Requetes.enregistreLaBDD();
+
+            enregistrer();
         }
 
         public override void Actualiser()
