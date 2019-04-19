@@ -114,7 +114,7 @@ namespace dotnet.UserControler
             uC_Affichage1.Visible = true;
             cB_ECActive.Visible = false;
 
-            lTitre1.Text = "UE"; lTitre2.Text = "proposées au"; lTitre3.Text = p.nom + " : ";
+            lTitre1.Text = "Unités d'enseignement (UE)"; lTitre2.Text = "proposées au"; lTitre3.Text = p.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des UE : ");
             
@@ -139,7 +139,7 @@ namespace dotnet.UserControler
             uC_Affichage1.Visible = true;
             cB_ECActive.Visible = false;
 
-            lTitre1.Text = "EC"; lTitre2.Text = "contenues dans l'UE"; lTitre3.Text = u.nom + " : ";
+            lTitre1.Text = "Éléments constitutifs (EC)"; lTitre2.Text = "contenues dans l'UE"; lTitre3.Text = u.nom + " : ";
 
             uC_Affichage1.setGroupBoxTiTre("Liste des EC : ");
             
@@ -253,7 +253,66 @@ namespace dotnet.UserControler
             uC_FilArianeDiplome1.Actualiser();
         }
 
-        public void afficheCoursSelectionneDansAccueil(cours cours)
+        public void afficheDiplomeSelectionneDansAutreOnglet(diplome diplome)
+        {
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void afficheAnneeSelectionneeDansAutreOnglet(annee annee)
+        {
+            diplome diplome = Requetes.obtientDiplomedelAnnee(annee);
+
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+            uC_FilArianeDiplome1.filArianeAnneeApparait(annee);
+
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void affichePeriodeSelectionneeDansAutreOnglet(periode periode)
+        {
+            annee annee = Requetes.obtientAnneedelaPeriode(periode);
+            diplome diplome = Requetes.obtientDiplomedelAnnee(annee);
+
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+            uC_FilArianeDiplome1.filArianeAnneeApparait(annee);
+            uC_FilArianeDiplome1.filArianePeriodeApparait(periode);
+
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void afficheUESelectionneeDansAutreOnglet(ue ue)
+        {
+            periode periode = Requetes.obtientPeriodedelUE(ue);
+            annee annee = Requetes.obtientAnneedelaPeriode(periode);
+            diplome diplome = Requetes.obtientDiplomedelAnnee(annee);
+
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+            uC_FilArianeDiplome1.filArianeAnneeApparait(annee);
+            uC_FilArianeDiplome1.filArianePeriodeApparait(periode);
+            uC_FilArianeDiplome1.filArianeUEApparait(ue);
+
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void afficheECSelectionneeDansAutreOnglet(ec ec)
+        {
+            ue ue = Requetes.obtientUEdelEC(ec);
+            periode periode = Requetes.obtientPeriodedelUE(ue);
+            annee annee = Requetes.obtientAnneedelaPeriode(periode);
+            diplome diplome = Requetes.obtientDiplomedelAnnee(annee);
+
+            uC_FilArianeDiplome1.filArianeDiplomeApparait(diplome);
+            uC_FilArianeDiplome1.filArianeAnneeApparait(annee);
+            uC_FilArianeDiplome1.filArianePeriodeApparait(periode);
+            uC_FilArianeDiplome1.filArianeUEApparait(ue);
+            uC_FilArianeDiplome1.filArianeECApparait(ec);
+
+            uC_FilArianeDiplome1.Actualiser();
+        }
+
+        public void afficheCoursSelectionneDansAutreOnglet(cours cours)
         {
             ec ec = Requetes.obtientECduCours(cours);
             ue ue = Requetes.obtientUEdelEC(ec);

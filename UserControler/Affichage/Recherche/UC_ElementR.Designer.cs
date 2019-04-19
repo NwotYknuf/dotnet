@@ -31,17 +31,20 @@
             this.gBAffElement.SuspendLayout();
             this.SuspendLayout();
             // 
+            // gBAffElement
+            // 
+            this.gBAffElement.Size = new System.Drawing.Size(951, 90);
+            // 
             // panel
             // 
-            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
-            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
-            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
+            this.panel.Size = new System.Drawing.Size(938, 67);
             // 
             // UC_ElementR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementR";
+            this.Size = new System.Drawing.Size(955, 93);
             this.gBAffElement.ResumeLayout(false);
             this.ResumeLayout(false);
 

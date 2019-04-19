@@ -24,6 +24,42 @@ namespace dotnet.UserControler
             _fenetrePrincipale = f;
         }
 
+        public void afficheOngletDiplome(diplome d)
+        {
+            _fenetrePrincipale.afficherDiplomeSelectionne(d);
+        }
+
+        public void afficheOngletAnnee(annee a)
+        {
+            _fenetrePrincipale.afficherAnneeSelectionnee(a);
+        }
+
+        public void afficheOngletPeriode(periode p)
+        {
+            _fenetrePrincipale.afficherPeriodeSelectionnee(p);
+        }
+
+        public void afficheOngletUE(ue u)
+        {
+            _fenetrePrincipale.afficherUESelectionnee(u);
+        }
+
+        public void afficheOngletEC(ec e)
+        {
+            _fenetrePrincipale.afficherECSelectionnee(e);
+        }
+
+        public void afficheOngletCours(cours c)
+        {
+            _fenetrePrincipale.afficherCoursSelectionne(c);
+        }
+
+        public void afficheOngletPersonnel(personnel p)
+        {
+            _fenetrePrincipale.afficherPersonnelSelectionne(p);
+        }
+
+
         public virtual void Actualiser()
         {
 

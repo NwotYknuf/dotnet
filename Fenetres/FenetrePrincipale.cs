@@ -38,16 +38,46 @@ namespace dotnet
             changerCouleurDeFond(menu);
         }
 
+        public void afficherDiplomeSelectionne(diplome d)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.afficheDiplomeSelectionneDansAutreOnglet(d);
+        }
+
+        public void afficherAnneeSelectionnee(annee a)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.afficheAnneeSelectionneeDansAutreOnglet(a);
+        }
+
+        public void afficherPeriodeSelectionnee(periode p)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.affichePeriodeSelectionneeDansAutreOnglet(p);
+        }
+
+        public void afficherUESelectionnee(ue u)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.afficheUESelectionneeDansAutreOnglet(u);
+        }
+
+        public void afficherECSelectionnee(ec e)
+        {
+            ongletChange(miDiplome, ucListeDiplome1);
+            ucListeDiplome1.afficheECSelectionneeDansAutreOnglet(e);
+        }
+
         public void afficherCoursSelectionne(cours c)
         {
             ongletChange(miDiplome, ucListeDiplome1);
-            ucListeDiplome1.afficheCoursSelectionneDansAccueil(c);
+            ucListeDiplome1.afficheCoursSelectionneDansAutreOnglet(c);
         }
 
         public void afficherPersonnelSelectionne(personnel p)
         {
             ongletChange(miPersonnel, ucListePersonnel1);
-            ucListePersonnel1.affichePersonnelSelectionneDansAccueil(p);
+            ucListePersonnel1.affichePersonnelSelectionneDansAutreOnglet(p);
         }
 
         private void miAcceuil_Click(object sender, EventArgs e)

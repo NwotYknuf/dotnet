@@ -101,10 +101,13 @@
             // 
             // tBAdresseEmail
             // 
+            this.tBAdresseEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.tBAdresseEmail.Location = new System.Drawing.Point(417, 17);
             this.tBAdresseEmail.Name = "tBAdresseEmail";
-            this.tBAdresseEmail.Size = new System.Drawing.Size(151, 20);
+            this.tBAdresseEmail.Size = new System.Drawing.Size(203, 20);
             this.tBAdresseEmail.TabIndex = 4;
+            this.tBAdresseEmail.Text = "nom.prenom@exemple.com";
+            this.tBAdresseEmail.Enter += new System.EventHandler(this.tBAdresseEmail_Enter);
             // 
             // lAdresseEmail
             // 
@@ -168,7 +171,7 @@
             this.cBCategorie.FormattingEnabled = true;
             this.cBCategorie.Location = new System.Drawing.Point(396, 71);
             this.cBCategorie.Name = "cBCategorie";
-            this.cBCategorie.Size = new System.Drawing.Size(172, 21);
+            this.cBCategorie.Size = new System.Drawing.Size(224, 21);
             this.cBCategorie.TabIndex = 6;
             // 
             // lCategorie
@@ -182,10 +185,13 @@
             // 
             // tBAdressePost
             // 
+            this.tBAdressePost.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.tBAdressePost.Location = new System.Drawing.Point(417, 44);
             this.tBAdressePost.Name = "tBAdressePost";
-            this.tBAdressePost.Size = new System.Drawing.Size(151, 20);
+            this.tBAdressePost.Size = new System.Drawing.Size(203, 20);
             this.tBAdressePost.TabIndex = 5;
+            this.tBAdressePost.Text = "3 rue Augustin Fresnel 57073 METZ";
+            this.tBAdressePost.Enter += new System.EventHandler(this.tBAdressePost_Enter);
             // 
             // lAdressePost
             // 

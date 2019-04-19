@@ -81,7 +81,7 @@
             // tBEC
             // 
             this.tBEC.Enabled = false;
-            this.tBEC.Location = new System.Drawing.Point(118, 61);
+            this.tBEC.Location = new System.Drawing.Point(155, 61);
             this.tBEC.Name = "tBEC";
             this.tBEC.Size = new System.Drawing.Size(170, 20);
             this.tBEC.TabIndex = 12;
@@ -91,14 +91,14 @@
             this.lEC.AutoSize = true;
             this.lEC.Location = new System.Drawing.Point(20, 64);
             this.lEC.Name = "lEC";
-            this.lEC.Size = new System.Drawing.Size(30, 13);
+            this.lEC.Size = new System.Drawing.Size(125, 13);
             this.lEC.TabIndex = 11;
-            this.lEC.Text = "EC : ";
+            this.lEC.Text = "Élément constitutif (EC) : ";
             // 
             // tBHoraires
             // 
             this.tBHoraires.Enabled = false;
-            this.tBHoraires.Location = new System.Drawing.Point(118, 36);
+            this.tBHoraires.Location = new System.Drawing.Point(155, 36);
             this.tBHoraires.Name = "tBHoraires";
             this.tBHoraires.Size = new System.Drawing.Size(170, 20);
             this.tBHoraires.TabIndex = 10;
@@ -106,7 +106,7 @@
             // tBCours
             // 
             this.tBCours.Enabled = false;
-            this.tBCours.Location = new System.Drawing.Point(118, 12);
+            this.tBCours.Location = new System.Drawing.Point(155, 12);
             this.tBCours.Name = "tBCours";
             this.tBCours.Size = new System.Drawing.Size(170, 20);
             this.tBCours.TabIndex = 9;

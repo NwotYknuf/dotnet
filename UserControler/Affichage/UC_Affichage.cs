@@ -34,6 +34,11 @@ namespace dotnet.UserControler.Affichage
             }
 
         }
+        
+        public int getNombreElement()
+        {
+            return elements.Count;
+        }
 
         public void setGroupBoxTiTre(String titre)
         {

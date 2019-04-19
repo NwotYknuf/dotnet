@@ -150,6 +150,7 @@
             this.uC_Affichage1.Name = "uC_Affichage1";
             this.uC_Affichage1.Size = new System.Drawing.Size(1004, 364);
             this.uC_Affichage1.TabIndex = 13;
+            this.uC_Affichage1.Visible = false;
             // 
             // UC_OngletRecherche
             // 

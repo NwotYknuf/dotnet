@@ -73,5 +73,23 @@ namespace dotnet.UserControler.Ajout
                 lErreur.Visible = true;
             }
         }
+
+        private void tBAdresseEmail_Enter(object sender, EventArgs e)
+        {
+            if (tBAdresseEmail.Text == "nom.prenom@exemple.com")
+            {
+                tBAdresseEmail.Text = "";
+                tBAdresseEmail.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void tBAdressePost_Enter(object sender, EventArgs e)
+        {
+            if (tBAdressePost.Text == "3 rue Augustin Fresnel 57073 METZ")
+            {
+                tBAdressePost.Text = "";
+                tBAdressePost.ForeColor = SystemColors.WindowText;
+            }
+        }
     }
 }

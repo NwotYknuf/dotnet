@@ -94,7 +94,7 @@ namespace dotnet.UserControler
             uC_FilArianePersonnel1.Actualiser();
         }
 
-        public void affichePersonnelSelectionneDansAccueil(personnel p)
+        public void affichePersonnelSelectionneDansAutreOnglet(personnel p)
         {
             uC_FilArianePersonnel1.filArianePersonnelApparait(p);
             uC_FilArianePersonnel1.Actualiser();

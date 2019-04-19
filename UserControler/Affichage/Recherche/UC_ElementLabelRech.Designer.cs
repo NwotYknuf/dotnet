@@ -1,6 +1,6 @@
 ﻿namespace dotnet.UserControler.Affichage.Recherche
 {
-    partial class UC_ElementPeriodeRech
+    partial class UC_ElementLabelRech
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -28,43 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tBDesc = new System.Windows.Forms.TextBox();
-            this.lDescPeriode = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gBAffElement.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
+            // gBAffElement
+            // 
+            this.gBAffElement.Text = "";
+            // 
             // panel
             // 
-            this.panel.Controls.Add(this.tBDesc);
-            this.panel.Controls.Add(this.lDescPeriode);
-            this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
-            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
-            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
+            this.panel.Controls.Add(this.label1);
             // 
-            // tBDesc
+            // label1
             // 
-            this.tBDesc.Enabled = false;
-            this.tBDesc.Location = new System.Drawing.Point(99, 23);
-            this.tBDesc.Name = "tBDesc";
-            this.tBDesc.Size = new System.Drawing.Size(752, 20);
-            this.tBDesc.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(395, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Aucun résultat ! ";
             // 
-            // lDescPeriode
-            // 
-            this.lDescPeriode.AutoSize = true;
-            this.lDescPeriode.Location = new System.Drawing.Point(24, 26);
-            this.lDescPeriode.Name = "lDescPeriode";
-            this.lDescPeriode.Size = new System.Drawing.Size(69, 13);
-            this.lDescPeriode.TabIndex = 5;
-            this.lDescPeriode.Text = "Description : ";
-            // 
-            // UC_ElementPeriodeRech
+            // UC_ElementLabelRech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UC_ElementPeriodeRech";
+            this.Name = "UC_ElementLabelRech";
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
@@ -74,7 +66,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tBDesc;
-        private System.Windows.Forms.Label lDescPeriode;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -23,11 +23,40 @@ namespace dotnet.UserControler.Affichage.Recherche
         {
             InitializeComponent();
             _ec = e;
+            
+            gBAffElement.Text = _ec.nom;
+            tBDesc.Text = _ec.description;
+            
+            if (_ec.actif == true)
+            {
+                cB_ECActive.Checked = true;
+                cB_ECActive.Text = "Activée";
+            }
+            else
+            {
+                cB_ECActive.Checked = false;
+                cB_ECActive.Text = "Désactivée";
+            }
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
+            _cadre.afficheOngletEC(_ec);
+        }
 
+        private void panel_MouseEnter(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoiseFonce();
+        }
+
+        private void panel_MouseLeave(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoise();
+        }
+
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
         }
     }
 }

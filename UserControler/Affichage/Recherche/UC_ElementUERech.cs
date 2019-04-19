@@ -23,11 +23,29 @@ namespace dotnet.UserControler.Affichage.Recherche
         {
             InitializeComponent();
             _ue = u;
+
+            gBAffElement.Text = _ue.nom;
+            tBDesc.Text = _ue.description;
         }
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
+            _cadre.afficheOngletUE(_ue);
+        }
 
+        private void panel_MouseEnter(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoiseFonce();
+        }
+
+        private void panel_MouseLeave(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoise();
+        }
+
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
         }
     }
 }

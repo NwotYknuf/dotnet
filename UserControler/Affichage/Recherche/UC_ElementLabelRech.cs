@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace dotnet.UserControler.Affichage.Recherche
 {
-    public partial class UC_ElementR : UC_Element
+    public partial class UC_ElementLabelRech : UC_ElementR
     {
-        protected UC_OngletRecherche _cadre;
-
-        public UC_ElementR()
+        public UC_ElementLabelRech()
         {
             InitializeComponent();
         }
-
-        public UC_ElementR(UC_OngletRecherche cadre)
-        {
-            InitializeComponent();
-            this._cadre = cadre;
-        }        
     }
 }
