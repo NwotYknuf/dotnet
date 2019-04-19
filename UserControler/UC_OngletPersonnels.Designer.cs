@@ -108,7 +108,7 @@ namespace dotnet.UserControler
             // 
             this.uC_FilArianePersonnel1.Location = new System.Drawing.Point(67, 22);
             this.uC_FilArianePersonnel1.Name = "uC_FilArianePersonnel1";
-            this.uC_FilArianePersonnel1.Size = new System.Drawing.Size(980, 49);
+            this.uC_FilArianePersonnel1.Size = new System.Drawing.Size(980, 56);
             this.uC_FilArianePersonnel1.TabIndex = 20;
             // 
             // uC_Affichage1
@@ -135,7 +135,6 @@ namespace dotnet.UserControler
             this.Controls.Add(this.uC_Ajout1);
             this.Controls.Add(this.flpTitre);
             this.Name = "UC_OngletPersonnels";
-            this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletPersonnels_Load);
             this.flpTitre.ResumeLayout(false);
             this.flpTitre.PerformLayout();

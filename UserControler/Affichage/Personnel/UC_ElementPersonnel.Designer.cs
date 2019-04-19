@@ -109,7 +109,7 @@
             // tBCategorie
             // 
             this.tBCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBCategorie.Location = new System.Drawing.Point(322, 62);
+            this.tBCategorie.Location = new System.Drawing.Point(322, 64);
             this.tBCategorie.Name = "tBCategorie";
             this.tBCategorie.Size = new System.Drawing.Size(175, 20);
             this.tBCategorie.TabIndex = 63;
@@ -134,7 +134,7 @@
             // 
             this.lCategorie.AutoSize = true;
             this.lCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCategorie.Location = new System.Drawing.Point(228, 69);
+            this.lCategorie.Location = new System.Drawing.Point(225, 67);
             this.lCategorie.Name = "lCategorie";
             this.lCategorie.Size = new System.Drawing.Size(61, 13);
             this.lCategorie.TabIndex = 58;

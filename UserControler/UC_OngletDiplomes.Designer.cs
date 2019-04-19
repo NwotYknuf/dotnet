@@ -119,7 +119,7 @@ namespace dotnet.UserControler
             // 
             this.uC_FilArianeDiplome1.Location = new System.Drawing.Point(67, 22);
             this.uC_FilArianeDiplome1.Name = "uC_FilArianeDiplome1";
-            this.uC_FilArianeDiplome1.Size = new System.Drawing.Size(980, 42);
+            this.uC_FilArianeDiplome1.Size = new System.Drawing.Size(980, 54);
             this.uC_FilArianeDiplome1.TabIndex = 14;
             // 
             // uC_Affichage1
