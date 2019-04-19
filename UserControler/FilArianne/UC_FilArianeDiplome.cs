@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dotnet.Properties;
 
 namespace dotnet.UserControler.FilArianne
 {
@@ -213,6 +214,76 @@ namespace dotnet.UserControler.FilArianne
                 case 7: { _cadre.afficheCoursSelectionne(_c); break; }
                 default:  { break; }
             }
+        }
+
+        private void lRacine_MouseEnter(object sender, EventArgs e)
+        {
+            labelRacineSurvolDebute(lRacine);
+        }
+
+        private void lRacine_MouseLeave(object sender, EventArgs e)
+        {
+            labelRacineSurvolTermine(lRacine);
+        }
+
+        private void lDiplome_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lDiplome);
+        }
+
+        private void lDiplome_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lDiplome);
+        }
+
+        private void lAnnee_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lAnnee);
+        }
+
+        private void lAnnee_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lAnnee);
+        }
+
+        private void lPeriode_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lPeriode);
+        }
+
+        private void lPeriode_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lPeriode);
+        }
+
+        private void lUE_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lUE);
+        }
+
+        private void lUE_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lUE);
+        }
+
+        private void lEC_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lEC);
+        }
+
+        private void lEC_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lEC);
+        }
+
+        private void lCours_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lCours);
+        }
+
+        private void lCours_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lCours);
         }
     }
 }

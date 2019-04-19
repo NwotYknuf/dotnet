@@ -94,12 +94,12 @@ namespace dotnet.UserControler.Affichage
 
         private void pBAjouterRetirer_MouseEnter(object sender, EventArgs e)
         {
-            pBAjouterRetirer.BackColor = Color.FromArgb(20, 79, 93);
+            pBAjouterRetirer.BackColor = Utilitaires.couleurBleuFonce();
         }
 
         private void pBAjouterRetirer_MouseLeave(object sender, EventArgs e)
         {
-            pBAjouterRetirer.BackColor = Color.FromArgb(60, 185, 213);
+            pBAjouterRetirer.BackColor = Utilitaires.couleurBleuTurquoise();
         }
 
         public void suppressionConfirmee(cours c)
@@ -119,6 +119,21 @@ namespace dotnet.UserControler.Affichage
         {
             // Afficher les cours de l'EC séléctionné
             _cadre.afficheCoursSelectionne(_cours);
+        }
+
+        private void panel_MouseEnter(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoiseFonce();
+        }
+
+        private void panel_MouseLeave(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoise();
+        }
+
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
         }
     }
 }

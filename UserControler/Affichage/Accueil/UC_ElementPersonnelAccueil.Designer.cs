@@ -51,14 +51,9 @@
             this.panel.Controls.Add(this.lNom);
             this.panel.Controls.Add(this.tBNom);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            this.panel.Controls.SetChildIndex(this.tBNom, 0);
-            this.panel.Controls.SetChildIndex(this.lNom, 0);
-            this.panel.Controls.SetChildIndex(this.tBPrenom, 0);
-            this.panel.Controls.SetChildIndex(this.lPrenom, 0);
-            this.panel.Controls.SetChildIndex(this.lNbHeuresAttrib, 0);
-            this.panel.Controls.SetChildIndex(this.lNbHeuresNonAttrib, 0);
-            this.panel.Controls.SetChildIndex(this.tBNbHeuresNonAttrib, 0);
-            this.panel.Controls.SetChildIndex(this.tBNbHeuresAttrib, 0);
+            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
+            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             // 
             // lPrenom
             // 

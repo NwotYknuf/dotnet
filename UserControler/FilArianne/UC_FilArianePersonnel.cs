@@ -74,5 +74,25 @@ namespace dotnet.UserControler.FilArianne
                 default: { break; }
             }
         }
+
+        private void lRacine_MouseEnter(object sender, EventArgs e)
+        {
+            labelRacineSurvolDebute(lRacine);
+        }
+
+        private void lRacine_MouseLeave(object sender, EventArgs e)
+        {
+            labelRacineSurvolTermine(lRacine);
+        }
+
+        private void lPersonnel_MouseEnter(object sender, EventArgs e)
+        {
+            labelSurvolDebute(lPersonnel);
+        }
+
+        private void lPersonnel_MouseLeave(object sender, EventArgs e)
+        {
+            labelSurvolTermine(lPersonnel);
+        }
     }
 }

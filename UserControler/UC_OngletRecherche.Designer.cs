@@ -102,23 +102,23 @@
             // cBCritere
             // 
             this.cBCritere.AutoCompleteCustomSource.AddRange(new string[] {
-            "diplome",
-            "annee",
-            "periode",
-            "ue",
-            "ec",
-            "cours",
-            "personnel"});
+            "Diplôme",
+            "Année",
+            "Période",
+            "UE",
+            "EC",
+            "Cours",
+            "Personnel"});
             this.cBCritere.FormattingEnabled = true;
             this.cBCritere.ItemHeight = 16;
             this.cBCritere.Items.AddRange(new object[] {
-            "diplome",
-            "annee",
-            "periode",
-            "ue",
-            "ec",
-            "cours",
-            "personnel"});
+            "Diplôme",
+            "Année",
+            "Période",
+            "UE",
+            "EC",
+            "Cours",
+            "Personnel"});
             this.cBCritere.Location = new System.Drawing.Point(176, 57);
             this.cBCritere.Name = "cBCritere";
             this.cBCritere.Size = new System.Drawing.Size(121, 24);
@@ -148,7 +148,7 @@
             // 
             this.uC_Affichage1.Location = new System.Drawing.Point(66, 228);
             this.uC_Affichage1.Name = "uC_Affichage1";
-            this.uC_Affichage1.Size = new System.Drawing.Size(980, 364);
+            this.uC_Affichage1.Size = new System.Drawing.Size(1004, 364);
             this.uC_Affichage1.TabIndex = 13;
             // 
             // UC_OngletRecherche
@@ -159,7 +159,6 @@
             this.Controls.Add(this.lTitre);
             this.Controls.Add(this.gbRecherche);
             this.Name = "UC_OngletRecherche";
-            this.Size = new System.Drawing.Size(1112, 682);
             this.Load += new System.EventHandler(this.UC_OngletRecherche_Load);
             this.gbRecherche.ResumeLayout(false);
             this.gbRecherche.PerformLayout();

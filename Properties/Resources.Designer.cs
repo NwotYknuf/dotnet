@@ -193,6 +193,16 @@ namespace dotnet.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fA_blanc_fonce_113x36 {
+            get {
+                object obj = ResourceManager.GetObject("fA_blanc_fonce_113x36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fA_bleu_113x36 {
             get {
                 object obj = ResourceManager.GetObject("fA_bleu_113x36", resourceCulture);
@@ -206,6 +216,16 @@ namespace dotnet.Properties {
         internal static System.Drawing.Bitmap fA_bleu_227x72 {
             get {
                 object obj = ResourceManager.GetObject("fA_bleu_227x72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fA_bleu_fonce_113x36 {
+            get {
+                object obj = ResourceManager.GetObject("fA_bleu_fonce_113x36", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +253,16 @@ namespace dotnet.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fA_racine_blanc_fonce_113x36 {
+            get {
+                object obj = ResourceManager.GetObject("fA_racine_blanc_fonce_113x36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fA_racine_bleu_113x36 {
             get {
                 object obj = ResourceManager.GetObject("fA_racine_bleu_113x36", resourceCulture);
@@ -246,6 +276,16 @@ namespace dotnet.Properties {
         internal static System.Drawing.Bitmap fA_racine_bleu_227x72 {
             get {
                 object obj = ResourceManager.GetObject("fA_racine_bleu_227x72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fA_racine_bleu_fonce_113x36 {
+            get {
+                object obj = ResourceManager.GetObject("fA_racine_bleu_fonce_113x36", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

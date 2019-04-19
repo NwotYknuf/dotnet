@@ -38,14 +38,13 @@
             // panel
             // 
             this.panel.Size = new System.Drawing.Size(418, 90);
-            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             // 
             // UC_ElementA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementA";
-            this.Size = new System.Drawing.Size(438, 118);
+            this.Size = new System.Drawing.Size(435, 118);
             this.Load += new System.EventHandler(this.UC_ElementA_Load);
             this.gBAffElement.ResumeLayout(false);
             this.ResumeLayout(false);

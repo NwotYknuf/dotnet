@@ -65,7 +65,6 @@
             this.Controls.Add(this.gBAffElement);
             this.Name = "UC_Element";
             this.Size = new System.Drawing.Size(955, 70);
-            this.Load += new System.EventHandler(this.UC_Element_Load);
             this.gBAffElement.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -85,6 +86,21 @@ namespace dotnet
                 return true;
             else
                 return false;
+        }
+
+        public static Color couleurBleuTurquoise()
+        {
+            return Color.FromArgb(60, 185, 213);
+        }
+
+        public static Color couleurBleuFonce()
+        {
+            return Color.FromArgb(20, 79, 93);
+        }
+
+        public static Color couleurBleuTurquoiseFonce()
+        {
+            return Color.FromArgb(53, 153, 175);
         }
     }
 }

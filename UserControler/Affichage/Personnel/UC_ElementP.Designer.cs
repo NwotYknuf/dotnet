@@ -34,10 +34,6 @@
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel
-            // 
-            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
-            // 
             // UC_ElementP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

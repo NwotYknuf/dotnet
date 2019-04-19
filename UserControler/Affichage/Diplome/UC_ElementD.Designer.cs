@@ -49,7 +49,6 @@
             // panel
             // 
             this.panel.Size = new System.Drawing.Size(938, 67);
-            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             // 
             // UC_ElementD
             // 

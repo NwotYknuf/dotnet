@@ -47,12 +47,9 @@
             this.panel.Controls.Add(this.lHoraires);
             this.panel.Controls.Add(this.lTypeCours);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
-            this.panel.Controls.SetChildIndex(this.lTypeCours, 0);
-            this.panel.Controls.SetChildIndex(this.lHoraires, 0);
-            this.panel.Controls.SetChildIndex(this.tBCours, 0);
-            this.panel.Controls.SetChildIndex(this.tBHoraires, 0);
-            this.panel.Controls.SetChildIndex(this.lEC, 0);
-            this.panel.Controls.SetChildIndex(this.tBEC, 0);
+            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
+            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             // 
             // tBHoraires
             // 

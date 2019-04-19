@@ -53,6 +53,9 @@
             this.panel.Controls.Add(this.tBDesc);
             this.panel.Controls.Add(this.lDescDiplome);
             this.panel.DoubleClick += new System.EventHandler(this.panel_DoubleClick);
+            this.panel.MouseEnter += new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave += new System.EventHandler(this.panel_MouseLeave);
+            this.panel.MouseHover += new System.EventHandler(this.panel_MouseHover);
             this.panel.Controls.SetChildIndex(this.lDescDiplome, 0);
             this.panel.Controls.SetChildIndex(this.tBDesc, 0);
             this.panel.Controls.SetChildIndex(this.pBSupprimer, 0);

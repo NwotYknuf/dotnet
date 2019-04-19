@@ -70,5 +70,20 @@ namespace dotnet.UserControler.Affichage
             Requetes.enregistreLaBDD();
             _cadre.Actualiser();
         }
+
+        private void panel_MouseEnter(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoiseFonce();
+        }
+
+        private void panel_MouseLeave(object sender, EventArgs e)
+        {
+            panel.BackColor = Utilitaires.couleurBleuTurquoise();
+        }
+
+        private void panel_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Hand;
+        }
     }
 }

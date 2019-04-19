@@ -59,12 +59,12 @@ namespace dotnet.UserControler.Affichage.Personnel
 
         private void pBRetirer_MouseEnter(object sender, EventArgs e)
         {
-            pBRetirer.BackColor = Color.FromArgb(20, 79, 93);
+            pBRetirer.BackColor = Utilitaires.couleurBleuFonce();
         }
 
         private void pBRetirer_MouseLeave(object sender, EventArgs e)
         {
-            pBRetirer.BackColor = Color.FromArgb(60, 185, 213);
+            pBRetirer.BackColor = Utilitaires.couleurBleuTurquoise();
         }
 
         public void suppressionConfirmee(cours c)
@@ -78,6 +78,6 @@ namespace dotnet.UserControler.Affichage.Personnel
         {
             Requetes.enregistreLaBDD();
             _cadre.Actualiser();
-        }
+        }        
     }
 }

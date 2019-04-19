@@ -16,9 +16,5 @@ namespace dotnet.UserControler.Affichage
         {
             InitializeComponent();
         }
-
-        private void UC_Element_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

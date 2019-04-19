@@ -48,12 +48,12 @@ namespace dotnet.UserControler.Affichage.Assignation
 
         private void pBAjouterPersonnel_MouseEnter(object sender, EventArgs e)
         {
-            pBAjouterPersonnel.BackColor = Color.FromArgb(20, 79, 93);
+            pBAjouterPersonnel.BackColor = Utilitaires.couleurBleuFonce();
         }
 
         private void pBAjouterPersonnel_MouseLeave(object sender, EventArgs e)
         {
-            pBAjouterPersonnel.BackColor = Color.FromArgb(60, 185, 213);
+            pBAjouterPersonnel.BackColor = Utilitaires.couleurBleuTurquoise();
         }
     }
 }

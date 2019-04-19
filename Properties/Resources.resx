@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="modifier2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icones\modifier2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="moins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icones\moins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ajouter_cours" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\ajouter_cours.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,17 +130,26 @@
   <data name="loupe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\loupe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fA_bleu_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_bleu_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loupe_60_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\loupe_60_60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ajouter_personnel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icones\ajouter_personnel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modifier2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icones\modifier2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enregistrer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icones\enregistrer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="supprimer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icones\supprimer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fA_racine_blanc_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_blanc_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ajouter_personnel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icones\ajouter_personnel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="supprimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\supprimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -156,6 +165,9 @@
   </data>
   <data name="valider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\valider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fA_blanc_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_blanc_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="modifier0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\modifier0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +199,12 @@
   <data name="diplome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\diplome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fA_racine_blanc_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_blanc_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fA_racine_bleu_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_bleu_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\plus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,20 +220,26 @@
   <data name="accueil_60_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\accueil_60_60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="supprimer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icones\supprimer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enregistrer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icones\enregistrer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="annuler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\annuler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moins" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icones\moins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fA_racine_bleu_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_bleu_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Personnel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\Personnel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fA_blanc_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_blanc_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="diplome2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\diplome2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fA_bleu_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_bleu_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="modifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\modifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,28 +247,16 @@
   <data name="accueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icones\accueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fA_blanc_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_blanc_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fA_blanc_fonce_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_blanc_fonce_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fA_blanc_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_blanc_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fA_bleu_fonce_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_bleu_fonce_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fA_bleu_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_bleu_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fA_racine_blanc_fonce_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_blanc_fonce_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fA_bleu_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_bleu_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fA_racine_blanc_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_racine_blanc_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fA_racine_blanc_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_racine_blanc_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fA_racine_bleu_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_racine_bleu_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fA_racine_bleu_227x72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\FilAriane\fA_racine_bleu_227x72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fA_racine_bleu_fonce_113x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FilAriane\fA_racine_bleu_fonce_113x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

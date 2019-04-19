@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using dotnet.UserControler.Affichage;
+using dotnet.UserControler.Affichage.Recherche;
 
 namespace dotnet.UserControler
 {
@@ -24,9 +24,10 @@ namespace dotnet.UserControler
             uC_Affichage1.setGroupBoxTiTre("Résultats de la recherche : ");
             cBCritere.SelectedIndex = 0;
         }
+
         private void bLancerRech_Click(object sender, EventArgs e)
         {
-            if((Utilitaires.conditionsRespectees(tbRecherche.Text.Trim(), true, true, true, false, 2, 100)) && 
+            if((Utilitaires.conditionsRespectees(tbRecherche.Text.Trim(), true, true, true, true, 2, 100)) && 
                (Utilitaires.conditionsRespectees(cBCritere.Text, cBCritere)) )
             {
                 lErreur.Visible = false;
@@ -35,47 +36,88 @@ namespace dotnet.UserControler
 
                 switch(cBCritere.Text)
                 {
-                    case "diplome":
+                    case "Diplôme":
                         {
-                            /*var resultats = Database.instance.diplome;
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.diplome;
                             foreach (diplome d in resultats.ToList())
                             {
-                                uC_Affichage1.addElement(new UC_ElementDiplome(this, d));
+                                uC_Affichage1.addElement(new UC_ElementDiplomeRech(this, d));
                             }
-                            uC_Affichage1.updateAffichage();*/
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "annee":
+                    case "Année":
                         {
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.annee;
+                            foreach (annee a in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementAnneeRech(this, a));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "periode":
+                    case "Période":
                         {
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.periode;
+                            foreach (periode p in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementPeriodeRech(this, p));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "ue":
+                    case "UE":
                         {
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.ue;
+                            foreach (ue u in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementUERech(this, u));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "ec":
+                    case "EC":
                         {
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.ec;
+                            foreach (ec ec in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementECRech(this, ec));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "cours":
+                    case "Cours":
                         {
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.cours;
+                            foreach (cours c in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementCoursRech(this, c));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
-                    case "personnel":
+                    case "Personnel":
                         {
-                            break;
-                        }
-                    case "categorie":
-                        {
-                                                        
-                            break;
-                        }
-                    case "Type_Cours":
-                        {                            
+                            uC_Affichage1.clearElements();
+
+                            var resultats = Database.instance.personnel;
+                            foreach (personnel p in resultats.ToList())
+                            {
+                                uC_Affichage1.addElement(new UC_ElementPersonnelRech(this, p));
+                            }
+                            uC_Affichage1.updateAffichage();
                             break;
                         }
                     default: break;

@@ -64,6 +64,8 @@
             this.lRacine.TabIndex = 1;
             this.lRacine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lRacine.Click += new System.EventHandler(this.lRacine_Click);
+            this.lRacine.MouseEnter += new System.EventHandler(this.lRacine_MouseEnter);
+            this.lRacine.MouseLeave += new System.EventHandler(this.lRacine_MouseLeave);
             // 
             // lDiplome
             // 
@@ -81,6 +83,8 @@
             this.lDiplome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lDiplome.Visible = false;
             this.lDiplome.Click += new System.EventHandler(this.lDiplome_Click);
+            this.lDiplome.MouseEnter += new System.EventHandler(this.lDiplome_MouseEnter);
+            this.lDiplome.MouseLeave += new System.EventHandler(this.lDiplome_MouseLeave);
             // 
             // lAnnee
             // 
@@ -98,6 +102,8 @@
             this.lAnnee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lAnnee.Visible = false;
             this.lAnnee.Click += new System.EventHandler(this.lAnnee_Click);
+            this.lAnnee.MouseEnter += new System.EventHandler(this.lAnnee_MouseEnter);
+            this.lAnnee.MouseLeave += new System.EventHandler(this.lAnnee_MouseLeave);
             // 
             // lPeriode
             // 
@@ -115,6 +121,8 @@
             this.lPeriode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lPeriode.Visible = false;
             this.lPeriode.Click += new System.EventHandler(this.lPeriode_Click);
+            this.lPeriode.MouseEnter += new System.EventHandler(this.lPeriode_MouseEnter);
+            this.lPeriode.MouseLeave += new System.EventHandler(this.lPeriode_MouseLeave);
             // 
             // lUE
             // 
@@ -132,6 +140,8 @@
             this.lUE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lUE.Visible = false;
             this.lUE.Click += new System.EventHandler(this.lUE_Click);
+            this.lUE.MouseEnter += new System.EventHandler(this.lUE_MouseEnter);
+            this.lUE.MouseLeave += new System.EventHandler(this.lUE_MouseLeave);
             // 
             // lEC
             // 
@@ -149,6 +159,8 @@
             this.lEC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lEC.Visible = false;
             this.lEC.Click += new System.EventHandler(this.lEC_Click);
+            this.lEC.MouseEnter += new System.EventHandler(this.lEC_MouseEnter);
+            this.lEC.MouseLeave += new System.EventHandler(this.lEC_MouseLeave);
             // 
             // lCours
             // 
@@ -166,6 +178,8 @@
             this.lCours.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lCours.Visible = false;
             this.lCours.Click += new System.EventHandler(this.lCours_Click);
+            this.lCours.MouseEnter += new System.EventHandler(this.lCours_MouseEnter);
+            this.lCours.MouseLeave += new System.EventHandler(this.lCours_MouseLeave);
             // 
             // UC_FilArianeDiplome
             // 

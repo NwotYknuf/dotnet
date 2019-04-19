@@ -45,12 +45,12 @@ namespace dotnet.UserControler.Affichage
 
         private void changeCouleurDeFondFoncee(PictureBox pb)
         {
-            pb.BackColor = Color.FromArgb(20, 79, 93);
+            pb.BackColor = Utilitaires.couleurBleuFonce();
         }
 
         private void changeCouleurDeFondClaire(PictureBox pb)
         {
-            pb.BackColor = Color.FromArgb(60, 185, 213);
+            pb.BackColor = Utilitaires.couleurBleuTurquoise();
         }
     }
 }

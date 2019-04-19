@@ -43,12 +43,12 @@ namespace dotnet.UserControler.Affichage.Assignation
 
         private void pBAjouterCours_MouseEnter(object sender, EventArgs e)
         {
-            pBAjouterCours.BackColor = Color.FromArgb(20, 79, 93);
+            pBAjouterCours.BackColor = Utilitaires.couleurBleuFonce();
         }
 
         private void pBAjouterCours_MouseLeave(object sender, EventArgs e)
         {
-            pBAjouterCours.BackColor = Color.FromArgb(60, 185, 213);
+            pBAjouterCours.BackColor = Utilitaires.couleurBleuTurquoise();
         }
     }
 }

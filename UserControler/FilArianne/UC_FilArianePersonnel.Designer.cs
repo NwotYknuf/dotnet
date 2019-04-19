@@ -54,6 +54,8 @@
             this.lRacine.TabIndex = 0;
             this.lRacine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lRacine.Click += new System.EventHandler(this.lRacine_Click);
+            this.lRacine.MouseEnter += new System.EventHandler(this.lRacine_MouseEnter);
+            this.lRacine.MouseLeave += new System.EventHandler(this.lRacine_MouseLeave);
             // 
             // lPersonnel
             // 
@@ -71,6 +73,8 @@
             this.lPersonnel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lPersonnel.Visible = false;
             this.lPersonnel.Click += new System.EventHandler(this.lPersonnel_Click);
+            this.lPersonnel.MouseEnter += new System.EventHandler(this.lPersonnel_MouseEnter);
+            this.lPersonnel.MouseLeave += new System.EventHandler(this.lPersonnel_MouseLeave);
             // 
             // UC_FilArianePersonnel
             // 

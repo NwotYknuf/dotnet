@@ -43,7 +43,6 @@
             this.panel.Controls.Add(this.label1);
             this.panel.Location = new System.Drawing.Point(6, 14);
             this.panel.Size = new System.Drawing.Size(418, 43);
-            this.panel.Controls.SetChildIndex(this.label1, 0);
             // 
             // label1
             // 
@@ -61,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ElementLabel";
-            this.Size = new System.Drawing.Size(440, 67);
+            this.Size = new System.Drawing.Size(436, 67);
             this.gBAffElement.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
