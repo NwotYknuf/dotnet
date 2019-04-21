@@ -37,6 +37,23 @@ namespace dotnet.UserControler.Affichage.Personnel
             tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
         }
 
+        public void nonModifiable()
+        {
+            this.panel.MouseEnter -= new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave -= new System.EventHandler(this.panel_MouseLeave);
+            this.panel.MouseHover -= new System.EventHandler(this.panel_MouseHover);
+            this.panel.DoubleClick -= new System.EventHandler(this.panel_DoubleClick);
+            
+            tBNom.Enabled = false;
+            tBPrenom.Enabled = false;
+            tBTelephone.Enabled = false;
+            tBAdresseEmail.Enabled = false;
+            tBAdressePost.Enabled = false;
+            tBCategorie.Enabled = false;
+            tBNbHeuresAttrib.Enabled = false;
+            tBNbHeuresNonAttrib.Enabled = false;
+        }
+
         private void panel_DoubleClick(object sender, EventArgs e)
         {
             // Afficher les informations du personnel et la liste des cours qu'il présente

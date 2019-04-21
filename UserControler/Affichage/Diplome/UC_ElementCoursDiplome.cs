@@ -70,6 +70,19 @@ namespace dotnet.UserControler.Affichage
             }
         }
 
+
+        public void nonModifiable()
+        {
+            this.panel.MouseEnter -= new System.EventHandler(this.panel_MouseEnter);
+            this.panel.MouseLeave -= new System.EventHandler(this.panel_MouseLeave);
+            this.panel.MouseHover -= new System.EventHandler(this.panel_MouseHover);
+            this.panel.DoubleClick -= new System.EventHandler(this.panel_DoubleClick);
+
+            tBCours.Enabled = false;
+            tBHoraires.Enabled = false;
+            tBPersonnel.Enabled = false;
+        }
+
         private void pBAjouterRetirer_Click(object sender, EventArgs e)
         {
             if (_cours.personnel == null)

@@ -214,6 +214,7 @@ namespace dotnet.UserControler
             UC_ElementCoursDiplome uc = new UC_ElementCoursDiplome(this, c);
             uc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             uc.Location = new System.Drawing.Point(6, 22);
+            uc.nonModifiable();
             gBCours.Controls.Add(uc);
         }
 

@@ -66,6 +66,7 @@ namespace dotnet.UserControler
             UC_ElementPersonnel uc = new UC_ElementPersonnel(this, p);
             uc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             uc.Location = new System.Drawing.Point(6, 22);
+            uc.nonModifiable();
             gBPersonnel.Controls.Add(uc);
             
             uC_Affichage1.clearElements();
