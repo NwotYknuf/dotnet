@@ -280,15 +280,19 @@ namespace dotnet.UserControler
 
         private bool txtTrouveDans(personnel p)
         {
-            if ((p.nom.ToLower().Contains(tbRecherche.Text.ToLower())) ||
-                (p.prenom.ToLower().Contains(tbRecherche.Text.ToLower())) || 
+            try
+            {
+                if ((p.nom.ToLower().Contains(tbRecherche.Text.ToLower())) ||
+                (p.prenom.ToLower().Contains(tbRecherche.Text.ToLower())) ||
                 (p.telephone.ToLower().Contains(tbRecherche.Text.ToLower())) ||
                 (p.email.ToLower().Contains(tbRecherche.Text.ToLower())) ||
                 (p.adresse.ToLower().Contains(tbRecherche.Text.ToLower())) ||
-                (p.categorie.nom.ToLower().Contains(tbRecherche.Text.ToLower())) )
-            {
-                return true;
+                (p.categorie.nom.ToLower().Contains(tbRecherche.Text.ToLower())))
+                {
+                    return true;
+                }
             }
+            catch { }
             return false;
         }
 

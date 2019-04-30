@@ -124,9 +124,7 @@ namespace dotnet.UserControler.FilArianne
         public void filArianeDiplomeApparait(diplome d)
         {
             nbOngletsOuverts = 2;
-            _d = d;
-            
-
+            _d = d;            
             couleurdeFondRacineBlanche(lRacine);
             couleurdeFondBleue(lDiplome);
 

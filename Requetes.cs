@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace dotnet {
     public static class Requetes {
@@ -32,71 +33,137 @@ namespace dotnet {
 
         public static categorie obtientCategorieduPersonnel(personnel p)
         {
-            return Database.instance.categorie.Where(x => x.id == p.id_categorie).FirstOrDefault<categorie>();
+            try
+            {
+                return Database.instance.categorie.Where(x => x.id == p.id_categorie).FirstOrDefault<categorie>();
+            }
+            catch { }
+            
+            return null;
         }
         
         // Requêtes spécifiques à une année :
 
         public static diplome obtientDiplomedelAnnee(annee a)
         {
-            return Database.instance.diplome.Where(x => x.id == a.id_diplome).FirstOrDefault<diplome>();
+            try
+            {
+                return Database.instance.diplome.Where(x => x.id == a.id_diplome).FirstOrDefault<diplome>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requêtes spécifiques à une période :
 
         public static annee obtientAnneedelaPeriode(periode p)
         {
-            return Database.instance.annee.Where(x => x.id == p.id_annee).FirstOrDefault<annee>();
+            try
+            {
+                return Database.instance.annee.Where(x => x.id == p.id_annee).FirstOrDefault<annee>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requêtes spécifiques à une UE :
 
         public static periode obtientPeriodedelUE(ue u)
         {
-            return Database.instance.periode.Where(x => x.id == u.id_periode).FirstOrDefault<periode>();
+            try
+            {
+                return Database.instance.periode.Where(x => x.id == u.id_periode).FirstOrDefault<periode>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requêtes spécifiques à une EC :
 
         public static ue obtientUEdelEC(ec e)
         {
-            return Database.instance.ue.Where(x => x.id == e.id_ue).FirstOrDefault<ue>();
+            try
+            {
+                return Database.instance.ue.Where(x => x.id == e.id_ue).FirstOrDefault<ue>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requêtes spécifiques à un cours :
 
         public static ec obtientECduCours(cours c)
         {
-            return Database.instance.ec.Where(x => x.id == c.id_ec).FirstOrDefault<ec>();
+            try
+            {
+                return Database.instance.ec.Where(x => x.id == c.id_ec).FirstOrDefault<ec>();
+            }
+            catch { }
+            
+            return null;
         }
 
         public static type_cours obtientTypeduCours(cours c)
         {
-            return Database.instance.type_cours.Where(x => x.id == c.id_type).FirstOrDefault<type_cours>();
+            try
+            {
+                return Database.instance.type_cours.Where(x => x.id == c.id_type).FirstOrDefault<type_cours>();
+            }
+            catch { }
+            
+            return null;
         }
 
         public static personnel obtientPersonnelduCours(cours c)
         {
-            return Database.instance.personnel.Where(x => x.id == c.personnel.id).FirstOrDefault<personnel>();
+            try
+            {
+                return Database.instance.personnel.Where(x => x.id == c.personnel.id).FirstOrDefault<personnel>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requête spécifiques pour récupérer un Equivalent_TD à partir du type_cours et de la categorie
 
         public static equivalent_td obtientEquivalentTD(type_cours typC, categorie cat)
         {
-            return Database.instance.equivalent_td.Where(x => x.id_type_cours == typC.id && x.id_categ == cat.id).FirstOrDefault<equivalent_td>();
+            try
+            {
+                return Database.instance.equivalent_td.Where(x => x.id_type_cours == typC.id && x.id_categ == cat.id).FirstOrDefault<equivalent_td>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requêtes spécifiques à partir d'un champs texte
 
         public static type_cours retrouveTypeDeCoursViaTexte(String txt)
         {
-            return Database.instance.type_cours.Where(s => s.nom == txt).FirstOrDefault<type_cours>();
+            try
+            {
+                return Database.instance.type_cours.Where(s => s.nom == txt).FirstOrDefault<type_cours>();
+            }
+            catch { }
+            
+            return null;
         }
 
         public static categorie retrouveCategorieViaTexte(String txt)
         {
-            return Database.instance.categorie.Where(s => s.nom == txt).FirstOrDefault<categorie>();
+            try
+            {
+                return Database.instance.categorie.Where(s => s.nom == txt).FirstOrDefault<categorie>();
+            }
+            catch { }
+            
+            return null;
         }
 
         // Requête d'enregistrement
@@ -140,7 +207,18 @@ namespace dotnet {
 
         public static void ajouterPersonnel(personnel p)
         {
-            Database.instance.personnel.Add(p);
+            var resultats = Database.instance.personnel;
+            bool exist = false;
+
+            foreach (personnel per in resultats.ToList())
+                if ((p.nom.ToLower().Equals(per.nom.ToLower())) &&
+                (p.prenom.ToLower().Equals(per.prenom.ToLower())) )
+                {
+                    exist = true;
+                }
+
+            //if (!exist)
+                //Database.instance.personnel.Add(p);
         }
 
         public static void ajouterTypeDeCours(type_cours tc)

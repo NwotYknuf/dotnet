@@ -53,9 +53,15 @@ namespace dotnet.Fenetres.Assignation
 
         public void AssigneCours(cours c)
         {
-            _personnel.cours.Add(c);
-
-            Requetes.enregistreLaBDD();
+            if ((Requetes.nbrHeureManquantes(_personnel) - c.volume_horraire) >= 0)
+            {
+                _personnel.cours.Add(c);
+                Requetes.enregistreLaBDD();
+            }
+            else
+            {
+                MessageBox.Show("Le volume horraire disponible est insuffisant");
+            }
 
             _cadre.Actualiser();
         }
