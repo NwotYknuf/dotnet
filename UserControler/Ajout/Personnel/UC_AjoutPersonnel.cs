@@ -37,39 +37,35 @@ namespace dotnet.UserControler.Ajout
 
         private void bCreer_Click(object sender, EventArgs e)
         {
-            if ((Utilitaires.conditionsRespectees(tBNom.Text, true, false, false, false, 2, 50)) &&
+            if (
+                (Utilitaires.conditionsRespectees(tBNom.Text, true, false, false, false, 2, 50)) &&
                 (Utilitaires.conditionsRespectees(tBPrenom.Text, true, false, false, false, 2, 50)) &&
                 (Utilitaires.conditionsRespecteesEmail(tBAdresseEmail.Text)) &&
                 (Utilitaires.conditionsRespecteesAdressePostale(tBAdressePost.Text)) &&
                 (Utilitaires.conditionsRespecteesTelephone(tBTelephone.Text)) &&
-                (Utilitaires.conditionsRespectees(cBCategorie.Text, cBCategorie)))
-            {
-                lErreur.Visible = false;
+                (Utilitaires.conditionsRespectees(cBCategorie.Text, cBCategorie))) {
+                    lErreur.Visible = false;
 
-                // Créer un personnel
-                personnel per = new personnel();
-                per.nom = this.tBNom.Text;
-                per.prenom = this.tBPrenom.Text;
-                per.email = this.tBAdresseEmail.Text;
-                per.adresse = this.tBAdressePost.Text;
-                per.telephone = this.tBTelephone.Text;
+                    // Créer un personnel
+                    personnel per = new personnel();
+                    per.nom = this.tBNom.Text;
+                    per.prenom = this.tBPrenom.Text;
+                    per.email = this.tBAdresseEmail.Text;
+                    per.adresse = this.tBAdressePost.Text;
+                    per.telephone = this.tBTelephone.Text;
 
-                categorie cat = Requetes.retrouveCategorieViaTexte(cBCategorie.Text);
-                cat.personnel.Add(per);
+                    categorie cat = Requetes.retrouveCategorieViaTexte(cBCategorie.Text);
+                    cat.personnel.Add(per);
 
-                per.categorie = cat;
+                    per.categorie = cat;
 
-                // Ajouter à la BDD
-                Requetes.ajouterPersonnel(per);
-
-                Requetes.enregistreLaBDD();
-
-                MessageBox.Show("Le personnel " + per.nom + " " + per.prenom + " a été ajouté avec succès.");
-
-                _cadre.Actualiser();
+                    // Ajouter à la BDD
+                    Requetes.ajouterPersonnel(per);
+                    Requetes.enregistreLaBDD();
+                    MessageBox.Show("Le personnel " + per.nom + " " + per.prenom + " a été ajouté avec succès.");
+                    _cadre.Actualiser();
             }
-            else
-            {
+            else{
                 lErreur.Visible = true;
             }
         }
