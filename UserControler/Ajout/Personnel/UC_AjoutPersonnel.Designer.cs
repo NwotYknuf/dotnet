@@ -59,7 +59,6 @@
             this.bCreer.TabIndex = 7;
             this.bCreer.Text = "Créer un personnel";
             this.bCreer.Click += new System.EventHandler(this.bCreer_Click);
-            this.bCreer.MouseCaptureChanged += new System.EventHandler(this.bCreer_Click);
             // 
             // panel
             // 
