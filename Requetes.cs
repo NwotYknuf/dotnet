@@ -207,18 +207,15 @@ namespace dotnet {
 
         public static void ajouterPersonnel(personnel p)
         {
-            var resultats = Database.instance.personnel;
-            bool exist = false;
+            var test = Database.instance.personnel.Where(
+                s =>
+                    s.nom.ToLower() == p.nom.ToLower() &&
+                    s.prenom.ToLower() == p.prenom.ToLower());
 
-            foreach (personnel per in resultats.ToList())
-                if ((p.nom.ToLower().Equals(per.nom.ToLower())) &&
-                (p.prenom.ToLower().Equals(per.prenom.ToLower())) )
-                {
-                    exist = true;
-                }
+            if(! test.Any()) {
+                Database.instance.personnel.Add(p);
+            }
 
-            //if (!exist)
-                //Database.instance.personnel.Add(p);
         }
 
         public static void ajouterTypeDeCours(type_cours tc)
