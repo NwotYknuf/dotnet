@@ -20,7 +20,7 @@ namespace dotnet
             if (accepteLesLettres) reg += "a-zA-Z"; // a - z : Tous les caractères minuscules, A-Z : Tous les caractères majuscules
             if (accepteLesChiffres) reg += "0-9"; // 0-9 : Tous les chiffres
             if (accepteLesEspaces) reg += "\\s"; // \s : Tous les caractères espaces
-            if (accepteLesCaracteresSpeciaux) reg += "áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\"'():._-"; // Tous les carcatères spéciaux accentués et les points (.) et tirets (-, _)
+            if (accepteLesCaracteresSpeciaux) reg += "áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\"'():.,;:\\/!?*°=+_-"; // Tous les carcatères spéciaux accentués et les points (.) et tirets (-, _)
             reg += "]+$"; // + : Un à plusieurs caractères, $ : Fin de ligne
 
             Regex monRegex = new Regex(reg);
