@@ -24,7 +24,13 @@ namespace dotnet {
         }
 
         public static int nbrHeureDues(personnel personnel) {
-            return (int)personnel.categorie.nbrHeureDues;
+            int res = 0;
+            try {
+                res = (int)personnel.categorie.nbrHeureDues;
+            }
+            catch { 
+}
+            return res;
         }
 
         public static int nbrHeureManquantes(personnel personnel) {

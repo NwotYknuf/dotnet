@@ -32,7 +32,9 @@ namespace dotnet.UserControler.Affichage.Personnel
             tBTelephone.Text = _personnel.telephone;
             tBAdresseEmail.Text = _personnel.email;
             tBAdressePost.Text = _personnel.adresse;
-            tBCategorie.Text = Requetes.obtientCategorieduPersonnel(_personnel).nom;
+            categorie categ = Requetes.obtientCategorieduPersonnel(_personnel);
+            if (categ != null)
+                tBCategorie.Text = categ.nom;
             tBNbHeuresAttrib.Text = Requetes.nbrHeureAttribuees(_personnel).ToString();
             tBNbHeuresNonAttrib.Text = Requetes.nbrHeureManquantes(_personnel).ToString();
         }

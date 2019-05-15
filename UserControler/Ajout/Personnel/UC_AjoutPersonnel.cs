@@ -32,7 +32,7 @@ namespace dotnet.UserControler.Ajout
             foreach (categorie c in categories)
                 cBCategorie.Items.Add(c.nom);
 
-            cBCategorie.SelectedIndex = 0;
+            //cBCategorie.SelectedIndex = 0;
         }
 
         private void bCreer_Click(object sender, EventArgs e)
