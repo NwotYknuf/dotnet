@@ -42,7 +42,7 @@ namespace dotnet.Fenetres.Modification
             foreach (categorie c in categories)
                 cBCategorie.Items.Add(c.nom);
 
-            cBCategorie.SelectedIndex = cBCategorie.Items.IndexOf(_personnel.categorie.nom);
+            //cBCategorie.SelectedIndex = cBCategorie.Items.IndexOf(_personnel.categorie.nom);
         }
 
         private void bAnnuler_Click(object sender, EventArgs e)

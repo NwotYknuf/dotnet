@@ -243,26 +243,55 @@ namespace dotnet {
 
         public static void retirerDiplome(diplome d)
         {
+
+            List<annee> annees = Database.instance.annee.Where(a => a.diplome.id == d.id).ToList<annee>();
+
+            foreach (annee a in annees) {
+                retirerAnnee(a);
+            }
+
             Database.instance.diplome.Remove(d);
         }
 
         public static void retirerAnnee(annee a)
         {
+            List<periode> periodes = Database.instance.periode.Where(p => p.annee.id == a.id).ToList<periode>();
+
+            foreach (periode p in periodes) {
+                retirerPeriode(p);
+            }
+
             Database.instance.annee.Remove(a);
         }
 
         public static void retirerPeriode(periode p)
         {
+            List<ue> ues = Database.instance.ue.Where(u => u.periode.id == p.id).ToList<ue>();
+
+            foreach(ue u in ues) {
+                retirerUE(u);
+            }
+            
             Database.instance.periode.Remove(p);
         }
 
         public static void retirerUE(ue u)
         {
+            List<ec> ecs = Database.instance.ec.Where(e => e.ue.id == u.id).ToList<ec>();
+
+            foreach (ec e in ecs) {
+                retirerEC(e);
+            }
             Database.instance.ue.Remove(u);
         }
 
         public static void retirerEC(ec e)
         {
+            List<cours> cours = Database.instance.cours.Where(c => c.ec.id == e.id).ToList<cours>();
+
+            foreach(cours c in cours) {
+                    retirerCours(c);
+            }
             Database.instance.ec.Remove(e);
         }
 
