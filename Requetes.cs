@@ -161,6 +161,14 @@ namespace dotnet {
             return null;
         }
 
+        public static bool peutSupprimer(type_cours t) {
+            return ! Database.instance.cours.Where(c => c.type_cours.id == t.id).Any<cours>();
+        }
+
+        public static bool peutSupprimer(categorie c) {
+            return ! Database.instance.personnel.Where(p => p.categorie.id == c.id).Any<personnel>();
+        }
+
         public static categorie retrouveCategorieViaTexte(String txt)
         {
             try

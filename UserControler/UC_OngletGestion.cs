@@ -265,7 +265,13 @@ namespace dotnet.UserControler
                 //Requete pour retrouver le type_cours possedant le nom choisi
                 type_cours typeDeCoursARetirer = Requetes.retrouveTypeDeCoursViaTexte(nom);
 
-                Requetes.retirerTypeDeCours(typeDeCoursARetirer);
+                if (Requetes.peutSupprimer(typeDeCoursARetirer)) {
+                    Requetes.retirerTypeDeCours(typeDeCoursARetirer);
+                }
+                else {
+                    MessageBox.Show("Il existe encore des cours de ce type, suppression impossible");
+                }
+
             }
             else // Ligne : Categorie
             {
@@ -276,7 +282,12 @@ namespace dotnet.UserControler
                 //Requete pour retrouver la categorie possedant le nom choisi
                 categorie catARetirer = Requetes.retrouveCategorieViaTexte(nom);
 
-                Requetes.retirerCategorie(catARetirer);
+                if (Requetes.peutSupprimer(catARetirer)) {
+                    Requetes.retirerCategorie(catARetirer);
+                }
+                else {
+                    MessageBox.Show("Il existe encore des proffesseurs de cette categorie, suppression impossible");
+                }
             }
 
             // Sauvegarde les modifications
